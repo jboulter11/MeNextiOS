@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C38E62919496A220035FA82 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C38E62819496A220035FA82 /* SettingsViewController.m */; };
 		0CF520C219453E1C0043AC8F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CF520C119453E1C0043AC8F /* Foundation.framework */; };
 		0CF520C419453E1C0043AC8F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CF520C319453E1C0043AC8F /* CoreGraphics.framework */; };
 		0CF520C619453E1C0043AC8F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CF520C519453E1C0043AC8F /* UIKit.framework */; };
@@ -36,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C38E62719496A220035FA82 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		0C38E62819496A220035FA82 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		0CF520BE19453E1C0043AC8F /* MeNext.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeNext.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CF520C119453E1C0043AC8F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0CF520C319453E1C0043AC8F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -120,6 +123,8 @@
 				0CF520D019453E1C0043AC8F /* AppDelegate.h */,
 				0CF520D119453E1C0043AC8F /* AppDelegate.m */,
 				0CF520D319453E1C0043AC8F /* Main_iPhone.storyboard */,
+				0C38E62719496A220035FA82 /* SettingsViewController.h */,
+				0C38E62819496A220035FA82 /* SettingsViewController.m */,
 				0CF520D619453E1C0043AC8F /* Main_iPad.storyboard */,
 				0CF520D919453E1C0043AC8F /* MasterViewController.h */,
 				0CF520DA19453E1C0043AC8F /* MasterViewController.m */,
@@ -260,6 +265,7 @@
 			files = (
 				0CF520D219453E1C0043AC8F /* AppDelegate.m in Sources */,
 				0CF520DB19453E1C0043AC8F /* MasterViewController.m in Sources */,
+				0C38E62919496A220035FA82 /* SettingsViewController.m in Sources */,
 				0CF520CE19453E1C0043AC8F /* main.m in Sources */,
 				0CF520DE19453E1C0043AC8F /* DetailViewController.m in Sources */,
 			);
@@ -476,6 +482,7 @@
 				0CF520F819453E1C0043AC8F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0CF520F919453E1C0043AC8F /* Build configuration list for PBXNativeTarget "MeNextTests" */ = {
 			isa = XCConfigurationList;
@@ -484,6 +491,7 @@
 				0CF520FB19453E1C0043AC8F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
