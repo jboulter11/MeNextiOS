@@ -60,10 +60,11 @@
                         <barButtonItem key="leftBarButtonItem" systemItem="add" id="r5A-ZY-isJ"/>
                         <barButtonItem key="rightBarButtonItem" title="Settings" id="e8y-wG-cfP">
                             <connections>
-                                <segue destination="DYL-Nm-7SO" kind="modal" modalTransitionStyle="flipHorizontal" id="8Cg-TF-L4n"/>
+                                <segue destination="DYL-Nm-7SO" kind="modal" identifier="showSettings" modalTransitionStyle="flipHorizontal" id="8Cg-TF-L4n"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <keyCommands/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Cn-md-YlS" sceneMemberID="firstResponder"/>
             </objects>
@@ -111,7 +112,11 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Settings" id="M2p-oo-igv">
-                                        <barButtonItem key="rightBarButtonItem" title="Done" id="QyM-hM-WDw"/>
+                                        <barButtonItem key="rightBarButtonItem" title="Done" id="QyM-hM-WDw">
+                                            <connections>
+                                                <action selector="done:" destination="DYL-Nm-7SO" id="RDH-Sh-HD0"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -187,7 +192,11 @@
                     </view>
                     <navigationItem key="navigationItem" title="Queue" id="cra-N8-TIN">
                         <barButtonItem key="leftBarButtonItem" systemItem="add" id="SUw-S0-qe3"/>
-                        <barButtonItem key="rightBarButtonItem" title="Settings" id="1KM-Ug-H2r"/>
+                        <barButtonItem key="rightBarButtonItem" title="Settings" id="1KM-Ug-H2r">
+                            <connections>
+                                <segue destination="DYL-Nm-7SO" kind="modal" identifier="showSettings" modalTransitionStyle="flipHorizontal" id="xZ0-Bn-iaZ"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lrm-kH-fPn" sceneMemberID="firstResponder"/>
@@ -200,4 +209,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="8Cg-TF-L4n"/>
+    </inferredMetricsTieBreakers>
 </document>

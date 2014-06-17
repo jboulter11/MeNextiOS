@@ -8,6 +8,8 @@
 
 #import "DetailViewController.h"
 
+static NSString* _KEY = @"AIzaSyAbh1CseUDq0NKangT-QRIeyOoZLz6jCII";
+
 @interface DetailViewController ()
 @property (strong, nonatomic) UIPopoverController *masterPopoverController;
 - (void)configureView;
@@ -43,6 +45,24 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    //httpget for tracks
+    NSArray* tracks;
+    
+    for(NSString* trackId in tracks)
+    {
+        NSString* _URL = [NSString stringWithFormat:@"https://www.googleapis.com/youtube/v3/videos?id=%@&key=%@&fields=items(id, snippet(title, thumbnails(default)))&part=snippet", trackId, _KEY];
+        
+        //make our json request
+        NSData* jsonResults = [[NSString stringWithContentsOfURL:[NSURL URLWithString: _URL] encoding:NSUTF8StringEncoding error:nil] dataUsingEncoding:NSUTF8StringEncoding];
+        
+        NSError* error = nil;//this is to catch an error if we get one back from our server
+        
+        NSDictionary* results = [NSJSONSerialization JSONObjectWithData:jsonResults options:NSJSONReadingMutableContainers | NSJSONReadingMutableLeaves error:&error];
+        
+    }
+    
+    
 	// Do any additional setup after loading the view, typically from a nib.
     [self configureView];
 }
