@@ -8,9 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DetailViewController : UIViewController <UISplitViewControllerDelegate>
+@interface DetailViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UISplitViewControllerDelegate, NSURLSessionDelegate>
 
 @property (strong, nonatomic) id detailItem;
 
-@property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
+@property (weak, nonatomic) IBOutlet UITableView* tableView;
 @end

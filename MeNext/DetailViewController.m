@@ -11,6 +11,9 @@
 static NSString* _KEY = @"AIzaSyAbh1CseUDq0NKangT-QRIeyOoZLz6jCII";
 
 @interface DetailViewController ()
+{
+    NSMutableArray* _tracks;
+}
 @property (strong, nonatomic) UIPopoverController *masterPopoverController;
 - (void)configureView;
 @end
@@ -37,8 +40,9 @@ static NSString* _KEY = @"AIzaSyAbh1CseUDq0NKangT-QRIeyOoZLz6jCII";
 {
     // Update the user interface for the detail item.
 
-    if (self.detailItem) {
-        self.detailDescriptionLabel.text = [self.detailItem description];
+    if (self.detailItem)//if group exists
+    {
+        //self.detailDescriptionLabel.text = [self.detailItem description];
     }
 }
 
@@ -46,25 +50,49 @@ static NSString* _KEY = @"AIzaSyAbh1CseUDq0NKangT-QRIeyOoZLz6jCII";
 {
     [super viewDidLoad];
     
-    //httpget for tracks
+    //TODO: httpget for tracks from MeNext Server API
+    
+    
+    //TODO: httpget for track details from youtube
     NSArray* tracks;
     
-    for(NSString* trackId in tracks)
-    {
-        NSString* _URL = [NSString stringWithFormat:@"https://www.googleapis.com/youtube/v3/videos?id=%@&key=%@&fields=items(id, snippet(title, thumbnails(default)))&part=snippet", trackId, _KEY];
-        
-        //make our json request
-        NSData* jsonResults = [[NSString stringWithContentsOfURL:[NSURL URLWithString: _URL] encoding:NSUTF8StringEncoding error:nil] dataUsingEncoding:NSUTF8StringEncoding];
-        
-        NSError* error = nil;//this is to catch an error if we get one back from our server
-        
-        NSDictionary* results = [NSJSONSerialization JSONObjectWithData:jsonResults options:NSJSONReadingMutableContainers | NSJSONReadingMutableLeaves error:&error];
-        
-    }
+    //[_activityIndicator startAnimating];
     
+    dispatch_queue_t queue = dispatch_get_global_queue(0,0);
     
-	// Do any additional setup after loading the view, typically from a nib.
-    [self configureView];
+    //send the actual request asyncronously
+    dispatch_async(queue, ^{
+        
+        NSURLSessionConfiguration* sessionConfig = [NSURLSessionConfiguration defaultSessionConfiguration];
+        NSURLSession* session = [NSURLSession sessionWithConfiguration:sessionConfig delegate:self delegateQueue:nil];
+        
+        for(NSString* trackId in tracks)
+        {
+            NSString* _URL = [NSString stringWithFormat:@"https://www.googleapis.com/youtube/v3/videos?id=%@&key=%@&fields=items(id, snippet(title, thumbnails(default)))&part=snippet", trackId, _KEY];
+            
+            NSURLSessionDataTask* dataTask = [session dataTaskWithURL:[NSURL URLWithString:_URL] completionHandler:^(NSData *data, NSURLResponse *response, NSError *error)
+            {
+                //completion handler
+                if(!error)
+                {
+                    NSError* jsonError = nil; //this is to catch an error if we get one back from our JSON Parser
+                    
+                    NSArray* results = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers | NSJSONReadingMutableLeaves error:&jsonError];
+                    
+                    if(!jsonError)
+                    {
+                        //Parse results into where each piece of data belongs
+                        for(NSArray* track in results)
+                        {
+                            
+                        }
+                    }
+                }
+            }];
+            
+        }
+    });
+    //[_activityIndicator stopAnimating];
 }
 
 - (void)didReceiveMemoryWarning
@@ -72,6 +100,46 @@ static NSString* _KEY = @"AIzaSyAbh1CseUDq0NKangT-QRIeyOoZLz6jCII";
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return _tracks.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    
+    cell.textLabel.text = [_tracks[indexPath.row] description];
+    return cell;
+}
+
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    // Return NO if you do not want the specified item to be editable.
+    return NO;
+}
+
+/*
+ // Override to support rearranging the table view.
+ - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
+ {
+ }
+ */
+
+/*
+ // Override to support conditional rearranging of the table view.
+ - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
+ {
+ // Return NO if you do not want the item to be re-orderable.
+ return YES;
+ }
+ */
 
 #pragma mark - Split view
 
