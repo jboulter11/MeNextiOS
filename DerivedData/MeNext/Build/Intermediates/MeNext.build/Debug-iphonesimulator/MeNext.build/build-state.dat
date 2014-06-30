@@ -255,24 +255,24 @@ t1402368088
 s71020
 
 N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/MeNext.build/Debug-iphonesimulator/MeNext.build/Objects-normal/x86_64/DetailTableViewCell.o
-t1403818727
+t1404092973
 s48512
 
 N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/MeNext.build/Debug-iphonesimulator/MeNext.build/Objects-normal/x86_64/DetailViewController.o
-t1403818727
+t1404092973
 s90676
 
 N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/MeNext.build/Debug-iphonesimulator/MeNext.build/Objects-normal/x86_64/LoginViewController.o
-t1404092826
-s79840
+t1404094238
+s79808
 
 N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/MeNext.build/Debug-iphonesimulator/MeNext.build/Objects-normal/x86_64/MasterViewController.o
-t1403634100
+t1404092973
 s79664
 
 N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/MeNext.build/Debug-iphonesimulator/MeNext.build/Objects-normal/x86_64/MeNext.LinkFileList
-c0000000053AC92E600000000000004B0
-t1403818726
+c0000000053B0C22D00000000000004B0
+t1404092973
 s1200
 
 N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/MeNext.build/Debug-iphonesimulator/MeNext.build/Objects-normal/x86_64/SettingsViewController.o
@@ -304,11 +304,11 @@ t1402368088
 s116916
 
 N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator/MeNext.app
-t1404092826
+t1404103969
 s306
 
 N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator/MeNext.app.dSYM
-t1404092315
+t1404094238
 s102
 
 N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator/MeNext.app/Base.lproj/Main_iPad.storyboardc
@@ -316,7 +316,7 @@ t1402275830
 s204
 
 N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator/MeNext.app/Base.lproj/Main_iPhone.storyboardc
-t1404091958
+t1404103969
 s374
 
 N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator/MeNext.app/Info.plist
@@ -324,7 +324,7 @@ t1402367961
 s1391
 
 N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator/MeNext.app/MeNext
-t1404092826
+t1404094238
 s77696
 
 N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator/MeNext.app/PkgInfo
@@ -336,13 +336,13 @@ t1402275828
 s42
 
 N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DetailTableViewCell.h
-c0000000053AC92E6000000000000014C
-t1403818726
+c0000000053B0C22D000000000000014C
+t1404092973
 s332
 
 N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DetailTableViewCell.m
-c0000000053AC92E600000000000002A4
-t1403818726
+c0000000053B0C22D00000000000002A4
+t1404092973
 s676
 
 N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/MeNext/AppDelegate.h
@@ -361,18 +361,18 @@ t1402275484
 s10196
 
 N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/MeNext/Base.lproj/Main_iPhone.storyboard
-c0000000053B0BE32000000000000696C
-t1404091954
-s26988
+c0000000053B0ED2000000000000062D7
+t1404103968
+s25303
 
 N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/MeNext/DetailViewController.h
-c0000000053A9C1B300000000000001AE
-t1403634099
+c0000000053B0C22D00000000000001AE
+t1404092973
 s430
 
 N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/MeNext/DetailViewController.m
-c0000000053AC92E600000000000013C4
-t1403818726
+c0000000053B0C22D00000000000013C4
+t1404092973
 s5060
 
 N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/MeNext/Images.xcassets
@@ -381,23 +381,23 @@ t1402275484
 s136
 
 N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/MeNext/LoginViewController.h
-c0000000053A33C3500000000000000E0
-t1403206709
+c0000000053B0C22D00000000000000E0
+t1404092973
 s224
 
 N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/MeNext/LoginViewController.m
-c0000000053B0C199000000000000189F
-t1404092825
-s6303
+c0000000053B0C71D000000000000186B
+t1404094237
+s6251
 
 N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/MeNext/MasterViewController.h
-c0000000053A32980000000000000017C
-t1403201920
+c0000000053B0C22D000000000000017C
+t1404092973
 s380
 
 N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/MeNext/MasterViewController.m
-c0000000053A32DA5000000000000111C
-t1403202981
+c0000000053B0C22D000000000000111C
+t1404092973
 s4380
 
 N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/MeNext/MeNext-Info.plist
@@ -596,7 +596,7 @@ r0
 
 CCheck dependencies
 r0
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependenciese8f9c71af960b941^b379c81af960b941^---0#1#1#--18"Check dependencies36"9EAE154E-9211-478C-A0C8-B2B59501E996-
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependencies1cd2a4b32461b941^f627a5b32461b941^---0#1#1#--18"Check dependencies36"29C1CC2A-4091-44D0-B726-AFD0B110C190-
 
 CCompileAssetCatalog /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator/MeNext.app /Users/jimboulter/Dropbox/MeNextiOS/MeNext/MeNext/Images.xcassets
 s423968628.518089
@@ -735,8 +735,8 @@ lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection80"Compile
 bD54EC8AD-DAF0-464E-B18A-25108A4A7778
 
 CCompileC DerivedData/MeNext/Build/Intermediates/MeNext.build/Debug-iphonesimulator/MeNext.build/Objects-normal/x86_64/LoginViewController.o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/MeNext/LoginViewController.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s425785626.782610
-e425785626.875784
+s425787037.844386
+e425787038.694625
 r1
 xCompileC
 xDerivedData/MeNext/Build/Intermediates/MeNext.build/Debug-iphonesimulator/MeNext.build/Objects-normal/x86_64/LoginViewController.o
@@ -750,18 +750,18 @@ d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/MeNext/LoginViewController.h
 o/Users/jimboulter/Dropbox/MeNextiOS/MeNext/MeNext/LoginViewController.m:63:31: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
 o                        NSLog([loginResponse description]);
 o                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~
-o/Users/jimboulter/Dropbox/MeNextiOS/MeNext/MeNext/LoginViewController.m:84:39: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+o/Users/jimboulter/Dropbox/MeNextiOS/MeNext/MeNext/LoginViewController.m:83:39: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
 o                                NSLog([jsonError description]);
 o                                      ^~~~~~~~~~~~~~~~~~~~~~~
-o/Users/jimboulter/Dropbox/MeNextiOS/MeNext/MeNext/LoginViewController.m:89:31: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+o/Users/jimboulter/Dropbox/MeNextiOS/MeNext/MeNext/LoginViewController.m:88:31: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
 o                        NSLog([error description]);
 o                              ^~~~~~~~~~~~~~~~~~~
-o/Users/jimboulter/Dropbox/MeNextiOS/MeNext/MeNext/LoginViewController.m:94:27: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+o/Users/jimboulter/Dropbox/MeNextiOS/MeNext/MeNext/LoginViewController.m:93:27: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
 o                    NSLog([response description]);
 o                          ^~~~~~~~~~~~~~~~~~~~~~
 o4 warnings generated.
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection79"Compile /Users/jimboulter/Dropbox/MeNextiOS/MeNext/MeNext/LoginViewController.m238"CompileC DerivedData/MeNext/Build/Intermediates/MeNext.build/Debug-iphonesimulator/MeNext.build/Objects-normal/x86_64/LoginViewController.o MeNext/LoginViewController.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler6877c81af960b941^0531e01af960b941^-1144"/Users/jimboulter/Dropbox/MeNextiOS/MeNext/MeNext/LoginViewController.m:63:31: warning: format string is not a string literal (potentially insecure) [-Wformat-security]                        NSLog([loginResponse description]);                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~/Users/jimboulter/Dropbox/MeNextiOS/MeNext/MeNext/LoginViewController.m:84:39: warning: format string is not a string literal (potentially insecure) [-Wformat-security]                                NSLog([jsonError description]);                                      ^~~~~~~~~~~~~~~~~~~~~~~/Users/jimboulter/Dropbox/MeNextiOS/MeNext/MeNext/LoginViewController.m:89:31: warning: format string is not a string literal (potentially insecure) [-Wformat-security]                        NSLog([error description]);                              ^~~~~~~~~~~~~~~~~~~/Users/jimboulter/Dropbox/MeNextiOS/MeNext/MeNext/LoginViewController.m:94:27: warning: format string is not a string literal (potentially insecure) [-Wformat-security]                    NSLog([response description]);                          ^~~~~~~~~~~~~~~~~~~~~~4 warnings generated.4(36%IDEClangDiagnosticActivityLogMessage2@60"Format string is not a string literal (potentially insecure)-425785626#18446744073709551615#0#-1#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@78"file:///Users/jimboulter/Dropbox/MeNextiOS/MeNext/MeNext/LoginViewController.m0000000000000000^62#30#62#30#2761#0#19"Format String Issue1(3@78"file:///Users/jimboulter/Dropbox/MeNextiOS/MeNext/MeNext/LoginViewController.m0000000000000000^62#30#62#57#2761#26#-2@60"Format string is not a string literal (potentially insecure)-425785626#18446744073709551615#0#-1#27"com.apple.dt.IDE.diagnostic3@78"file:///Users/jimboulter/Dropbox/MeNextiOS/MeNext/MeNext/LoginViewController.m0000000000000000^83#38#83#38#3874#0#19"Format String Issue1(3@78"file:///Users/jimboulter/Dropbox/MeNextiOS/MeNext/MeNext/LoginViewController.m0000000000000000^83#38#83#61#3874#22#-2@60"Format string is not a string literal (potentially insecure)-425785626#18446744073709551615#0#-1#27"com.apple.dt.IDE.diagnostic3@78"file:///Users/jimboulter/Dropbox/MeNextiOS/MeNext/MeNext/LoginViewController.m0000000000000000^88#30#88#30#4029#0#19"Format String Issue1(3@78"file:///Users/jimboulter/Dropbox/MeNextiOS/MeNext/MeNext/LoginViewController.m0000000000000000^88#30#88#49#4029#18#-2@60"Format string is not a string literal (potentially insecure)-425785626#18446744073709551615#0#-1#27"com.apple.dt.IDE.diagnostic3@78"file:///Users/jimboulter/Dropbox/MeNextiOS/MeNext/MeNext/LoginViewController.m0000000000000000^93#26#93#26#4156#0#19"Format String Issue1(3@78"file:///Users/jimboulter/Dropbox/MeNextiOS/MeNext/MeNext/LoginViewController.m0000000000000000^93#26#93#48#4156#21#-0#0#1#-19%DVTDocumentLocation4@78"file:///Users/jimboulter/Dropbox/MeNextiOS/MeNext/MeNext/LoginViewController.m0000000000000000^3994"CompileC DerivedData/MeNext/Build/Intermediates/MeNext.build/Debug-iphonesimulator/MeNext.build/Objects-normal/x86_64/LoginViewController.o MeNext/LoginViewController.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/jimboulter/Dropbox/MeNextiOS/MeNext    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wconditional-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.1 -iquote /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/MeNext.build/Debug-iphonesimulator/MeNext.build/MeNext-generated-files.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/MeNext.build/Debug-iphonesimulator/MeNext.build/MeNext-own-target-headers.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/MeNext.build/Debug-iphonesimulator/MeNext.build/MeNext-all-target-headers.hmap -iquote /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/MeNext.build/Debug-iphonesimulator/MeNext.build/MeNext-project-headers.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/MeNext.build/Debug-iphonesimulator/MeNext.build/DerivedSources/x86_64 -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/MeNext.build/Debug-iphonesimulator/MeNext.build/DerivedSources -F/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator -include /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/PrecompiledHeaders/MeNext-Prefix-gzuvcrvsgvvyhzgrswsevdcwtyuc/MeNext-Prefix.pch -MMD -MT dependencies -MF /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/MeNext.build/Debug-iphonesimulator/MeNext.build/Objects-normal/x86_64/LoginViewController.d --serialize-diagnostics /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/MeNext.build/Debug-iphonesimulator/MeNext.build/Objects-normal/x86_64/LoginViewController.dia -c /Users/jimboulter/Dropbox/MeNextiOS/MeNext/MeNext/LoginViewController.m -o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/MeNext.build/Debug-iphonesimulator/MeNext.build/Objects-normal/x86_64/LoginViewController.o36"F52C2D5B-6698-4FF4-BF06-81C5045FB4A5-
-bEE1ADCD8-8888-409D-B54F-8C73B36756DA
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection79"Compile /Users/jimboulter/Dropbox/MeNextiOS/MeNext/MeNext/LoginViewController.m238"CompileC DerivedData/MeNext/Build/Intermediates/MeNext.build/Debug-iphonesimulator/MeNext.build/Objects-normal/x86_64/LoginViewController.o MeNext/LoginViewController.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compilera06ed89dfe60b941^fed3b19efe60b941^-1144"/Users/jimboulter/Dropbox/MeNextiOS/MeNext/MeNext/LoginViewController.m:63:31: warning: format string is not a string literal (potentially insecure) [-Wformat-security]                        NSLog([loginResponse description]);                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~/Users/jimboulter/Dropbox/MeNextiOS/MeNext/MeNext/LoginViewController.m:83:39: warning: format string is not a string literal (potentially insecure) [-Wformat-security]                                NSLog([jsonError description]);                                      ^~~~~~~~~~~~~~~~~~~~~~~/Users/jimboulter/Dropbox/MeNextiOS/MeNext/MeNext/LoginViewController.m:88:31: warning: format string is not a string literal (potentially insecure) [-Wformat-security]                        NSLog([error description]);                              ^~~~~~~~~~~~~~~~~~~/Users/jimboulter/Dropbox/MeNextiOS/MeNext/MeNext/LoginViewController.m:93:27: warning: format string is not a string literal (potentially insecure) [-Wformat-security]                    NSLog([response description]);                          ^~~~~~~~~~~~~~~~~~~~~~4 warnings generated.4(36%IDEClangDiagnosticActivityLogMessage2@60"Format string is not a string literal (potentially insecure)-425787038#18446744073709551615#0#-1#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@78"file:///Users/jimboulter/Dropbox/MeNextiOS/MeNext/MeNext/LoginViewController.m0000000000000000^62#30#62#30#2761#0#19"Format String Issue1(3@78"file:///Users/jimboulter/Dropbox/MeNextiOS/MeNext/MeNext/LoginViewController.m0000000000000000^62#30#62#57#2761#26#-2@60"Format string is not a string literal (potentially insecure)-425787038#18446744073709551615#0#-1#27"com.apple.dt.IDE.diagnostic3@78"file:///Users/jimboulter/Dropbox/MeNextiOS/MeNext/MeNext/LoginViewController.m0000000000000000^82#38#82#38#3822#0#19"Format String Issue1(3@78"file:///Users/jimboulter/Dropbox/MeNextiOS/MeNext/MeNext/LoginViewController.m0000000000000000^82#38#82#61#3822#22#-2@60"Format string is not a string literal (potentially insecure)-425787038#18446744073709551615#0#-1#27"com.apple.dt.IDE.diagnostic3@78"file:///Users/jimboulter/Dropbox/MeNextiOS/MeNext/MeNext/LoginViewController.m0000000000000000^87#30#87#30#3977#0#19"Format String Issue1(3@78"file:///Users/jimboulter/Dropbox/MeNextiOS/MeNext/MeNext/LoginViewController.m0000000000000000^87#30#87#49#3977#18#-2@60"Format string is not a string literal (potentially insecure)-425787038#18446744073709551615#0#-1#27"com.apple.dt.IDE.diagnostic3@78"file:///Users/jimboulter/Dropbox/MeNextiOS/MeNext/MeNext/LoginViewController.m0000000000000000^92#26#92#26#4104#0#19"Format String Issue1(3@78"file:///Users/jimboulter/Dropbox/MeNextiOS/MeNext/MeNext/LoginViewController.m0000000000000000^92#26#92#48#4104#21#-0#0#1#-19%DVTDocumentLocation4@78"file:///Users/jimboulter/Dropbox/MeNextiOS/MeNext/MeNext/LoginViewController.m0000000000000000^3994"CompileC DerivedData/MeNext/Build/Intermediates/MeNext.build/Debug-iphonesimulator/MeNext.build/Objects-normal/x86_64/LoginViewController.o MeNext/LoginViewController.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/jimboulter/Dropbox/MeNextiOS/MeNext    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wconditional-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.1 -iquote /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/MeNext.build/Debug-iphonesimulator/MeNext.build/MeNext-generated-files.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/MeNext.build/Debug-iphonesimulator/MeNext.build/MeNext-own-target-headers.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/MeNext.build/Debug-iphonesimulator/MeNext.build/MeNext-all-target-headers.hmap -iquote /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/MeNext.build/Debug-iphonesimulator/MeNext.build/MeNext-project-headers.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/MeNext.build/Debug-iphonesimulator/MeNext.build/DerivedSources/x86_64 -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/MeNext.build/Debug-iphonesimulator/MeNext.build/DerivedSources -F/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator -include /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/PrecompiledHeaders/MeNext-Prefix-gzuvcrvsgvvyhzgrswsevdcwtyuc/MeNext-Prefix.pch -MMD -MT dependencies -MF /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/MeNext.build/Debug-iphonesimulator/MeNext.build/Objects-normal/x86_64/LoginViewController.d --serialize-diagnostics /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/MeNext.build/Debug-iphonesimulator/MeNext.build/Objects-normal/x86_64/LoginViewController.dia -c /Users/jimboulter/Dropbox/MeNextiOS/MeNext/MeNext/LoginViewController.m -o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/MeNext.build/Debug-iphonesimulator/MeNext.build/Objects-normal/x86_64/LoginViewController.o36"891A2FE1-2953-44D3-972D-6B501EDB2FCC-
+bAD925B94-2DF3-4CE1-B978-18F56FBD6CBC
 
 CCompileC DerivedData/MeNext/Build/Intermediates/MeNext.build/Debug-iphonesimulator/MeNext.build/Objects-normal/x86_64/MasterViewController.o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/MeNext/MasterViewController.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 s425326899.855864
@@ -827,15 +827,13 @@ lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection56"Compile
 b77716F50-3030-463A-AC1F-F57B3680A886
 
 CCompileStoryboard /Users/jimboulter/Dropbox/MeNextiOS/MeNext/MeNext/Base.lproj/Main_iPhone.storyboard
-s425784754.975432
-e425784758.484732
+s425796769.229348
+e425796769.586138
 r1
 xCompileStoryboard
 x/Users/jimboulter/Dropbox/MeNextiOS/MeNext/MeNext/Base.lproj/Main_iPhone.storyboard
-o2014-06-29 21:32:36.945 Interface Builder Cocoa Touch Tool[14911:303] CFPreferences: user home directory at file:///Users/jimboulter/Library/Application%20Support/iPhone%20Simulator/User/ is unavailable. User domains will be volatile.
-o2014-06-29 21:32:38.180 Interface Builder Cocoa Touch Tool[14913:303] CFPreferences: user home directory at file:///Users/jimboulter/Library/Application%20Support/iPhone%20Simulator/User/ is unavailable. User domains will be volatile.
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection58"CompileStoryboard MeNext/Base.lproj/Main_iPhone.storyboard58"CompileStoryboard MeNext/Base.lproj/Main_iPhone.storyboard69c7f9b2f560b941^ca177cb6f560b941^-470"2014-06-29 21:32:36.945 Interface Builder Cocoa Touch Tool[14911:303] CFPreferences: user home directory at file:///Users/jimboulter/Library/Application%20Support/iPhone%20Simulator/User/ is unavailable. User domains will be volatile.2014-06-29 21:32:38.180 Interface Builder Cocoa Touch Tool[14913:303] CFPreferences: user home directory at file:///Users/jimboulter/Library/Application%20Support/iPhone%20Simulator/User/ is unavailable. User domains will be volatile.-0#0#1#-19%DVTDocumentLocation2@90"file:///Users/jimboulter/Dropbox/MeNextiOS/MeNext/MeNext/Base.lproj/Main_iPhone.storyboard0000000000000000^888"CompileStoryboard MeNext/Base.lproj/Main_iPhone.storyboard    cd /Users/jimboulter/Dropbox/MeNextiOS/MeNext    export IBSC_MINIMUM_COMPATIBILITY_VERSION=7.1    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    export XCODE_DEVELOPER_USR_PATH=/Applications/Xcode.app/Contents/Developer/usr/bin/..    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/ibtool --errors --warnings --notices --minimum-deployment-target 7.1 --output-format human-readable-text --compile /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator/MeNext.app/Base.lproj/Main_iPhone.storyboardc /Users/jimboulter/Dropbox/MeNextiOS/MeNext/MeNext/Base.lproj/Main_iPhone.storyboard36"7A171877-32F5-4BDA-BCE7-78AADA862461-
-b731F069C-91F6-44DB-B1FA-705420CE4BB5
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection58"CompileStoryboard MeNext/Base.lproj/Main_iPhone.storyboard58"CompileStoryboard MeNext/Base.lproj/Main_iPhone.storyboard08c93aa12461b941^344b96a12461b941^---0#0#1#-19%DVTDocumentLocation2@90"file:///Users/jimboulter/Dropbox/MeNextiOS/MeNext/MeNext/Base.lproj/Main_iPhone.storyboard0000000000000000^888"CompileStoryboard MeNext/Base.lproj/Main_iPhone.storyboard    cd /Users/jimboulter/Dropbox/MeNextiOS/MeNext    export IBSC_MINIMUM_COMPATIBILITY_VERSION=7.1    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    export XCODE_DEVELOPER_USR_PATH=/Applications/Xcode.app/Contents/Developer/usr/bin/..    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/ibtool --errors --warnings --notices --minimum-deployment-target 7.1 --output-format human-readable-text --compile /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator/MeNext.app/Base.lproj/Main_iPhone.storyboardc /Users/jimboulter/Dropbox/MeNextiOS/MeNext/MeNext/Base.lproj/Main_iPhone.storyboard36"9EDAB749-4EC8-4046-84EF-9D01D6B65BCC-
+b7F31F428-A008-478E-9EE9-70FC83BAB74A
 
 CCopyStringsFile /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator/MeNext.app/en.lproj/InfoPlist.strings MeNext/en.lproj/InfoPlist.strings
 s423968628.517144
@@ -848,14 +846,14 @@ lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection38"Copy Me
 b77716F50-3030-463A-AC1F-F57B3680A886
 
 CGenerateDSYMFile /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator/MeNext.app.dSYM /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator/MeNext.app/MeNext
-s425785626.931286
-e425785626.958309
+s425787038.831788
+e425787038.862668
 r1
 xGenerateDSYMFile
 x/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator/MeNext.app.dSYM
 x/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator/MeNext.app/MeNext
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection123"Generate /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator/MeNext.app.dSYM162"GenerateDSYMFile DerivedData/MeNext/Build/Products/Debug-iphonesimulator/MeNext.app.dSYM DerivedData/MeNext/Build/Products/Debug-iphonesimulator/MeNext.app/MeNext6073ee1af960b941^a854f51af960b941^---0#0#1#-19%DVTDocumentLocation2@122"file:///Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator/MeNext.app.dSYM/0000000000000000^743"GenerateDSYMFile DerivedData/MeNext/Build/Products/Debug-iphonesimulator/MeNext.app.dSYM DerivedData/MeNext/Build/Products/Debug-iphonesimulator/MeNext.app/MeNext    cd /Users/jimboulter/Dropbox/MeNextiOS/MeNext    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/dsymutil /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator/MeNext.app/MeNext -o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator/MeNext.app.dSYM36"746AB1D5-DCD2-4051-9C88-EB86F0DA923D-
-bEE1ADCD8-8888-409D-B54F-8C73B36756DA
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection123"Generate /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator/MeNext.app.dSYM162"GenerateDSYMFile DerivedData/MeNext/Build/Products/Debug-iphonesimulator/MeNext.app.dSYM DerivedData/MeNext/Build/Products/Debug-iphonesimulator/MeNext.app/MeNext50fcd49efe60b941^40dddc9efe60b941^---0#0#1#-19%DVTDocumentLocation2@122"file:///Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator/MeNext.app.dSYM/0000000000000000^743"GenerateDSYMFile DerivedData/MeNext/Build/Products/Debug-iphonesimulator/MeNext.app.dSYM DerivedData/MeNext/Build/Products/Debug-iphonesimulator/MeNext.app/MeNext    cd /Users/jimboulter/Dropbox/MeNextiOS/MeNext    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/dsymutil /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator/MeNext.app/MeNext -o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator/MeNext.app.dSYM36"DB59E475-439A-4297-9070-A3F47E721D4B-
+bAD925B94-2DF3-4CE1-B978-18F56FBD6CBC
 
 CLd /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator/MeNext.app/MeNext normal i386
 s424060759.854902
@@ -938,8 +936,8 @@ lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection121"Link /
 bE54A5646-E56E-484B-9985-8CF99FEBCD5C
 
 CLd /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator/MeNext.app/MeNext normal x86_64
-s425785626.878381
-e425785626.929814
+s425787038.696453
+e425787038.829798
 r1
 xLd
 x/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator/MeNext.app/MeNext
@@ -1019,8 +1017,8 @@ d/usr/lib/system/libsystem_stats.dylib
 d/usr/lib/system/libunc.dylib
 d/usr/lib/system/libunwind.dylib
 d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/host/libdyld.dylib
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection121"Link /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator/MeNext.app/MeNext90"Ld DerivedData/MeNext/Build/Products/Debug-iphonesimulator/MeNext.app/MeNext normal x86_6416f6e01af960b941^e108ee1af960b941^---0#0#1#--1525"Ld DerivedData/MeNext/Build/Products/Debug-iphonesimulator/MeNext.app/MeNext normal x86_64    cd /Users/jimboulter/Dropbox/MeNextiOS/MeNext    export IPHONEOS_DEPLOYMENT_TARGET=7.1    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -L/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator -F/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator -filelist /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/MeNext.build/Debug-iphonesimulator/MeNext.build/Objects-normal/x86_64/MeNext.LinkFileList -Xlinker -objc_abi_version -Xlinker 2 -fobjc-arc -fobjc-link-runtime -Xlinker -no_implicit_dylibs -mios-simulator-version-min=7.1 -framework CoreGraphics -framework UIKit -framework Foundation -Xlinker -dependency_info -Xlinker /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/MeNext.build/Debug-iphonesimulator/MeNext.build/Objects-normal/x86_64/MeNext_dependency_info.dat -o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator/MeNext.app/MeNext36"33BF999E-6B53-4039-91F8-6C59EEF8052C-
-bEE1ADCD8-8888-409D-B54F-8C73B36756DA
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection121"Link /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator/MeNext.app/MeNext90"Ld DerivedData/MeNext/Build/Products/Debug-iphonesimulator/MeNext.app/MeNext normal x86_64795ab29efe60b941^8670d49efe60b941^---0#0#1#--1525"Ld DerivedData/MeNext/Build/Products/Debug-iphonesimulator/MeNext.app/MeNext normal x86_64    cd /Users/jimboulter/Dropbox/MeNextiOS/MeNext    export IPHONEOS_DEPLOYMENT_TARGET=7.1    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -L/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator -F/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator -filelist /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/MeNext.build/Debug-iphonesimulator/MeNext.build/Objects-normal/x86_64/MeNext.LinkFileList -Xlinker -objc_abi_version -Xlinker 2 -fobjc-arc -fobjc-link-runtime -Xlinker -no_implicit_dylibs -mios-simulator-version-min=7.1 -framework CoreGraphics -framework UIKit -framework Foundation -Xlinker -dependency_info -Xlinker /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/MeNext.build/Debug-iphonesimulator/MeNext.build/Objects-normal/x86_64/MeNext_dependency_info.dat -o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator/MeNext.app/MeNext36"08D5D645-F1CA-4F24-99AB-DA86C12A6C61-
+bAD925B94-2DF3-4CE1-B978-18F56FBD6CBC
 
 CProcessInfoPlistFile /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator/MeNext.app/Info.plist /Users/jimboulter/Dropbox/MeNextiOS/MeNext/MeNext/MeNext-Info.plist
 s424060761.295591
@@ -1087,11 +1085,11 @@ CProcessPCH /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Index/
 r0
 
 CTouch /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator/MeNext.app
-s425784758.485940
-e425784758.491716
+s425796769.587479
+e425796769.592193
 r1
 xTouch
 x/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator/MeNext.app
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection115"Touch /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator/MeNext.app72"Touch DerivedData/MeNext/Build/Products/Debug-iphonesimulator/MeNext.appa3757cb6f560b941^7ee17db6f560b941^---0#0#1#--450"Touch DerivedData/MeNext/Build/Products/Debug-iphonesimulator/MeNext.app    cd /Users/jimboulter/Dropbox/MeNextiOS/MeNext    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator/MeNext.app36"C21AB645-8CC3-448F-9268-24A015CFD66C-
-b731F069C-91F6-44DB-B1FA-705420CE4BB5
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection115"Touch /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator/MeNext.app72"Touch DerivedData/MeNext/Build/Products/Debug-iphonesimulator/MeNext.appfc7296a12461b941^5b9a97a12461b941^---0#0#1#--450"Touch DerivedData/MeNext/Build/Products/Debug-iphonesimulator/MeNext.app    cd /Users/jimboulter/Dropbox/MeNextiOS/MeNext    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator/MeNext.app36"C3752941-15CF-43E1-BD64-C753236F5CAF-
+b7F31F428-A008-478E-9EE9-70FC83BAB74A
 

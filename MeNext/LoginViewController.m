@@ -65,10 +65,9 @@
                         {
                             if(![loginResponse[@"token"] isEqual:@"-1"])
                             {
-                                //TODO: Is this saving?
                                 [[NSUserDefaults standardUserDefaults] setObject:loginResponse[@"token"] forKey:@"sessionId"];
-                                [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
                                 dispatch_async(dispatch_get_main_queue(), ^{
+                                    [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
                                     [_activityIndicator stopAnimating];
                                     [self performSegueWithIdentifier:@"LoginSuccess" sender:self];
                                 });
