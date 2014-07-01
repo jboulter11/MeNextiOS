@@ -16,19 +16,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tgf-Z6-PXW">
+                            <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tgf-Z6-PXW">
                                 <rect key="frame" x="20" y="86" width="280" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sif-xO-oTC">
+                            <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sif-xO-oTC">
                                 <rect key="frame" x="20" y="124" width="280" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fXG-ed-U7Z">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fXG-ed-U7Z">
                                 <rect key="frame" x="0.0" y="191" width="320" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.92156862745098034" green="0.15294117647058825" blue="0.20784313725490194" alpha="1" colorSpace="calibratedRGB"/>
@@ -44,7 +44,7 @@
                                     <action selector="login:" destination="oAH-gE-EPL" eventType="touchUpInside" id="rdO-nY-AIq"/>
                                 </connections>
                             </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q77-5Y-ky3">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q77-5Y-ky3">
                                 <rect key="frame" x="0.0" y="246" width="320" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.53333333333333333" green="0.17254901960784313" blue="0.84313725490196079" alpha="1" colorSpace="calibratedRGB"/>
@@ -57,7 +57,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="X4B-Rf-yUS">
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="X4B-Rf-yUS">
                                 <rect key="frame" x="150" y="333" width="20" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </activityIndicatorView>
@@ -66,16 +66,19 @@
                         <constraints>
                             <constraint firstItem="fXG-ed-U7Z" firstAttribute="leading" secondItem="eTZ-M4-Upd" secondAttribute="leading" id="08i-9x-OZH"/>
                             <constraint firstItem="Q77-5Y-ky3" firstAttribute="top" secondItem="sif-xO-oTC" secondAttribute="bottom" constant="92" id="3oz-5b-vNP"/>
+                            <constraint firstItem="Q77-5Y-ky3" firstAttribute="top" secondItem="eTZ-M4-Upd" secondAttribute="top" constant="246" id="5qu-AA-Whu"/>
                             <constraint firstItem="fXG-ed-U7Z" firstAttribute="top" secondItem="sif-xO-oTC" secondAttribute="bottom" constant="37" id="D5r-Fn-SqN"/>
                             <constraint firstItem="fXG-ed-U7Z" firstAttribute="top" secondItem="sif-xO-oTC" secondAttribute="bottom" constant="37" id="L7B-MT-Am9"/>
                             <constraint firstAttribute="trailing" secondItem="Q77-5Y-ky3" secondAttribute="trailing" id="TEk-aD-tbt"/>
                             <constraint firstAttribute="trailing" secondItem="sif-xO-oTC" secondAttribute="trailing" constant="20" id="UTs-1n-AcG"/>
+                            <constraint firstItem="Q77-5Y-ky3" firstAttribute="centerX" secondItem="X4B-Rf-yUS" secondAttribute="centerX" id="Z55-ng-Ua9"/>
                             <constraint firstItem="Q77-5Y-ky3" firstAttribute="leading" secondItem="eTZ-M4-Upd" secondAttribute="leading" id="aBp-cp-8Kf"/>
                             <constraint firstItem="sif-xO-oTC" firstAttribute="top" secondItem="tgf-Z6-PXW" secondAttribute="bottom" constant="8" id="amX-lL-lyQ"/>
                             <constraint firstAttribute="trailing" secondItem="tgf-Z6-PXW" secondAttribute="trailing" constant="20" id="g7H-5x-jDg"/>
                             <constraint firstAttribute="trailing" secondItem="fXG-ed-U7Z" secondAttribute="trailing" id="jFS-Zm-Kms"/>
                             <constraint firstItem="tgf-Z6-PXW" firstAttribute="leading" secondItem="eTZ-M4-Upd" secondAttribute="leading" constant="20" id="kx1-E3-DsM"/>
                             <constraint firstItem="sif-xO-oTC" firstAttribute="leading" secondItem="eTZ-M4-Upd" secondAttribute="leading" constant="20" id="nuP-eH-4Me"/>
+                            <constraint firstItem="X4B-Rf-yUS" firstAttribute="top" secondItem="Q77-5Y-ky3" secondAttribute="bottom" constant="32" id="oh4-CH-ftN"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Log In" id="b2X-vj-rW4"/>
@@ -188,6 +191,13 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="There's nothing to set." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j1w-ai-Aci">
+                                <rect key="frame" x="74" y="273" width="172" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>

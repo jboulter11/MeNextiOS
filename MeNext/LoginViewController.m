@@ -15,6 +15,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *usernameTextField;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 
+-(NSMutableString *) sanitizeNSString:(NSString *)string;
+
 @end
 
 @implementation LoginViewController
@@ -26,6 +28,13 @@
         // Custom initialization
     }
     return self;
+}
+
+-(NSMutableString *) sanitizeNSString:(NSString *)string {
+    NSMutableString *sanitized = [[string stringByReplacingOccurrencesOfString:@"&" withString:@""] copy];
+    sanitized = [[sanitized stringByReplacingOccurrencesOfString:@"=" withString:@""] copy];
+    
+    return sanitized;
 }
 
 - (IBAction)login:(id)sender
@@ -41,11 +50,14 @@
         [_activityIndicator startAnimating];
         [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
         
-        dispatch_queue_t queue = dispatch_get_global_queue(0,0);
-        NSString* postString = [NSString stringWithFormat:@"action=login&username=%@&password=%@", _usernameTextField.text, _passwordTextField.text];
-        //TODO: SANITIZE!
+        //SANITIZE INPUTS
+        NSMutableString* username = [self sanitizeNSString:_usernameTextField.text];
+        NSMutableString* password = [self sanitizeNSString:_passwordTextField.text];
+        
+        NSString* postString = [NSString stringWithFormat:@"action=login&username=%@&password=%@", username, password];
         
         //send the actual request asyncronously
+        dispatch_queue_t queue = dispatch_get_global_queue(0,0);
         dispatch_async(queue, ^{
             NSURLSessionConfiguration* sessionConfig = [NSURLSessionConfiguration defaultSessionConfiguration];\
             NSURLSession* session = [NSURLSession sessionWithConfiguration:sessionConfig];
@@ -60,7 +72,7 @@
                     {
                         NSError* jsonError;
                         NSDictionary* loginResponse = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers | NSJSONReadingMutableLeaves | NSJSONReadingAllowFragments error:&jsonError];
-                        NSLog([loginResponse description]);
+                        //NSLog([loginResponse description]);
                         if(!jsonError)
                         {
                             if(![loginResponse[@"token"] isEqual:@"-1"])
@@ -80,17 +92,17 @@
                             else
                             {
                                 //error!
-                                NSLog([jsonError description]);
+                                //NSLog([jsonError description]);
                             }
                     }
                     else
                     {
-                        NSLog([error description]);
+                        //NSLog([error description]);
                     }
                 }
                 else
                 {
-                    NSLog([response description]);
+                    //NSLog([response description]);
                 }
             }];
             [dt resume];
