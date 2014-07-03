@@ -13,6 +13,7 @@ static NSString* _KEY = @"AIzaSyAbh1CseUDq0NKangT-QRIeyOoZLz6jCII";
 @interface DetailViewController ()
 {
     NSMutableArray* _tracks;
+    NSMutableArray* _thumbnails;
 }
 @property (strong, nonatomic) UIPopoverController *masterPopoverController;
 - (void)configureView;
@@ -49,49 +50,80 @@ static NSString* _KEY = @"AIzaSyAbh1CseUDq0NKangT-QRIeyOoZLz6jCII";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    _tracks = [[NSMutableArray alloc] init];
+    _thumbnails = [[NSMutableArray alloc] init];
     
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
     //TODO: httpget for tracks from MeNext Server API
-    
-    
-    //TODO: httpget for track details from youtube
-    NSArray* tracks;
-    
-    //[_activityIndicator startAnimating];
-    
-    dispatch_queue_t queue = dispatch_get_global_queue(0,0);
-    
-    //send the actual request asyncronously
-    dispatch_async(queue, ^{
-        
+    dispatch_async(dispatch_get_global_queue(0,0), ^{
         NSURLSessionConfiguration* sessionConfig = [NSURLSessionConfiguration defaultSessionConfiguration];
         NSURLSession* session = [NSURLSession sessionWithConfiguration:sessionConfig delegate:self delegateQueue:nil];
         
-        for(NSString* trackId in tracks)
-        {
-            NSString* _URL = [NSString stringWithFormat:@"https://www.googleapis.com/youtube/v3/videos?id=%@&key=%@&fields=items(id, snippet(title, thumbnails(default)))&part=snippet", trackId, _KEY];
-            
-            NSURLSessionDataTask* dataTask = [session dataTaskWithURL:[NSURL URLWithString:_URL] completionHandler:^(NSData *data, NSURLResponse *response, NSError *error)
+        NSString* _URL = [NSString stringWithFormat:@"http://www.vmutti.com/handler.php"];
+        NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:_URL]];
+        request.HTTPMethod = @"POST";
+        request.HTTPBody = [[NSString stringWithFormat:@"action=listvideos&partyId=%@", _detailItem] dataUsingEncoding:NSUTF8StringEncoding];
+        NSURLSessionDataTask* dt = [session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+            //completion handler
+            if(!error && ((NSHTTPURLResponse*)response).statusCode == 200)
             {
-                //completion handler
-                if(!error)
+                NSError* jsonError = nil;
+                NSArray* results = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers | NSJSONReadingMutableLeaves error:&jsonError];
+                
+                if(!jsonError)
                 {
-                    NSError* jsonError = nil; //this is to catch an error if we get one back from our JSON Parser
-                    
-                    NSArray* results = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers | NSJSONReadingMutableLeaves error:&jsonError];
-                    
-                    if(!jsonError)
+                    for(NSDictionary* track in results)
                     {
-                        //Parse results into where each piece of data belongs
-                        for(NSArray* track in results)
-                        {
-                            
-                        }
+                        [_tracks addObject:track[@"title"]];
                     }
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+                    });
                 }
-            }];
-            
-        }
+            }
+        }];
+        [dt resume];
     });
+    
+    
+    //TODO: httpget for track details from youtube
+    
+    //[_activityIndicator startAnimating];
+    
+//    dispatch_queue_t queue = dispatch_get_global_queue(0,0);
+//    
+//    //send the actual request asyncronously
+//    dispatch_async(queue, ^{
+//        NSURLSessionConfiguration* sessionConfig = [NSURLSessionConfiguration defaultSessionConfiguration];
+//        NSURLSession* session = [NSURLSession sessionWithConfiguration:sessionConfig delegate:self delegateQueue:nil];
+//        
+//        for(NSString* trackId in _tracks)
+//        {
+//            NSString* _URL = [NSString stringWithFormat:@"https://www.googleapis.com/youtube/v3/videos?id=%@&key=%@&part=snippet&fields=items(id, snippet(title, thumbnails(default)))", trackId, _KEY];
+//            
+//            NSURLSessionDataTask* dt = [session dataTaskWithURL:[NSURL URLWithString:_URL] completionHandler:^(NSData *data, NSURLResponse *response, NSError *error)
+//            {
+//                //completion handler
+//                if(!error && ((NSHTTPURLResponse*)response).statusCode == 200)
+//                {
+//                    NSError* jsonError = nil; //this is to catch an error if we get one back from our JSON Parser
+//                    
+//                    NSDictionary* results = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers | NSJSONReadingMutableLeaves error:&jsonError];
+//                    
+//                    if(!jsonError)
+//                    {
+//                        
+//                        //go get resources needed from Dictionary
+//                        NSData* thumbnailAsData = results[@"snippet"][@"thumbnails"][@"default"];
+//                        UIImage* thumbnail = [UIImage imageWithData:thumbnailAsData];
+//                        [_thumbnails addObject:thumbnail];
+//                    }
+//                }
+//            }];
+//            [dt resume];
+//            
+//        }
+//    });
     //[_activityIndicator stopAnimating];
 }
 
@@ -113,9 +145,10 @@ static NSString* _KEY = @"AIzaSyAbh1CseUDq0NKangT-QRIeyOoZLz6jCII";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"QueueCell" forIndexPath:indexPath];
     
     cell.textLabel.text = [_tracks[indexPath.row] description];
+    [cell.imageView setImage:_thumbnails[indexPath.row]];
     return cell;
 }
 
