@@ -33,6 +33,7 @@
 -(NSMutableString *) sanitizeNSString:(NSString *)string {
     NSMutableString *sanitized = [[string stringByReplacingOccurrencesOfString:@"&" withString:@""] copy];
     sanitized = [[sanitized stringByReplacingOccurrencesOfString:@"=" withString:@""] copy];
+    sanitized = [[sanitized stringByReplacingOccurrencesOfString:@"?" withString:@""] copy];
     
     return sanitized;
 }
@@ -73,7 +74,7 @@
                         NSError* jsonError;
                         NSDictionary* loginResponse = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers | NSJSONReadingMutableLeaves | NSJSONReadingAllowFragments error:&jsonError];
                         //NSLog([loginResponse description]);
-                        if(!jsonError)
+                        if(!jsonError && loginResponse)
                         {
                             if(![loginResponse[@"token"] isEqual:@"-1"])
                             {

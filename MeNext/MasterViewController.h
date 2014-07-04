@@ -10,7 +10,7 @@
 
 @class DetailViewController;
 
-@interface MasterViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate>
+@interface MasterViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate, NSURLSessionDelegate>
 
 @property (strong, nonatomic) DetailViewController *detailViewController;
 

@@ -11,7 +11,7 @@
 #import "DetailViewController.h"
 
 @interface MasterViewController () {
-    NSMutableArray *_objects;
+    NSMutableArray* _objects;
 }
 @end
 
@@ -23,7 +23,7 @@
     if (!_objects) {
         _objects = [[NSMutableArray alloc] init];
     }
-    [_objects insertObject:[[NSString alloc] initWithFormat:@"Placeholder Group"] atIndex:0];
+    [_objects insertObject:[[NSDictionary alloc] initWithObjectsAndKeys:@"Placeholder Party", @"name", @"1", @"partyId", @"none", @"username", nil] atIndex:0];
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
     [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
     
@@ -41,6 +41,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    _objects = [[NSMutableArray alloc] init];
     
 	// Do any additional setup after loading the view, typically from a nib.
 //    self.navigationItem.leftBarButtonItem = self.editButtonItem;
@@ -48,6 +49,37 @@
 //    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
 //    self.navigationItem.rightBarButtonItem = addButton;
 //    self.detailViewController = (DetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
+    
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+    NSString* sessionId = [[NSUserDefaults standardUserDefaults] stringForKey: @"sessionId"];
+    //fetch parties from MeNext server
+    dispatch_async(dispatch_get_global_queue(0,0), ^{
+        NSURLSessionConfiguration* sessionConfig = [NSURLSessionConfiguration defaultSessionConfiguration];
+        NSURLSession* session = [NSURLSession sessionWithConfiguration:sessionConfig delegate:self delegateQueue:nil];
+        
+        NSString* _URL = [NSString stringWithFormat:@"http://www.vmutti.com/handler.php?action=listJoinedParties&token=%@", sessionId];
+        NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:_URL]];
+        request.HTTPMethod = @"GET";
+        NSURLSessionDataTask* dt = [session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+            //completion handler
+            if(!error && ((NSHTTPURLResponse*)response).statusCode == 200)
+            {
+                NSError* jsonError = nil;
+                NSArray* results = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers | NSJSONReadingMutableLeaves error:&jsonError];
+                
+                if(!jsonError && results)
+                {
+                    //parse parties into _objects
+                    [_objects addObjectsFromArray:results];
+                    
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+                    });
+                }
+            }
+        }];
+        [dt resume];
+    });
 }
 
 - (void)didReceiveMemoryWarning
@@ -72,7 +104,7 @@
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
 
-    cell.textLabel.text = [_objects[indexPath.row] description];
+    cell.textLabel.text = _objects[indexPath.row][@"name"];
     return cell;
 }
 

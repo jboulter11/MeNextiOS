@@ -14,6 +14,8 @@ static NSString* _KEY = @"AIzaSyAbh1CseUDq0NKangT-QRIeyOoZLz6jCII";
 {
     NSMutableArray* _tracks;
     NSMutableArray* _thumbnails;
+    NSString* _partyId;
+    NSString* _partyName;
 }
 @property (strong, nonatomic) UIPopoverController *masterPopoverController;
 - (void)configureView;
@@ -53,16 +55,19 @@ static NSString* _KEY = @"AIzaSyAbh1CseUDq0NKangT-QRIeyOoZLz6jCII";
     _tracks = [[NSMutableArray alloc] init];
     _thumbnails = [[NSMutableArray alloc] init];
     
+    _partyId = _detailItem[@"partyId"];
+    _partyName = _detailItem[@"name"];
+    
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
     //TODO: httpget for tracks from MeNext Server API
     dispatch_async(dispatch_get_global_queue(0,0), ^{
         NSURLSessionConfiguration* sessionConfig = [NSURLSessionConfiguration defaultSessionConfiguration];
         NSURLSession* session = [NSURLSession sessionWithConfiguration:sessionConfig delegate:self delegateQueue:nil];
         
-        NSString* _URL = [NSString stringWithFormat:@"http://www.vmutti.com/handler.php"];
+        NSString* _URL = [NSString stringWithFormat:@"http://www.vmutti.com/handler.php?action=listvideos&partyId=%@", _partyId];
         NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:_URL]];
-        request.HTTPMethod = @"POST";
-        request.HTTPBody = [[NSString stringWithFormat:@"action=listvideos&partyId=%@", _detailItem] dataUsingEncoding:NSUTF8StringEncoding];
+        request.HTTPMethod = @"GET";
+        //request.HTTPBody = [[NSString stringWithFormat:@"action=listvideos&partyId=%@", _detailItem] dataUsingEncoding:NSUTF8StringEncoding];
         NSURLSessionDataTask* dt = [session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
             //completion handler
             if(!error && ((NSHTTPURLResponse*)response).statusCode == 200)
@@ -70,14 +75,14 @@ static NSString* _KEY = @"AIzaSyAbh1CseUDq0NKangT-QRIeyOoZLz6jCII";
                 NSError* jsonError = nil;
                 NSArray* results = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers | NSJSONReadingMutableLeaves error:&jsonError];
                 
-                if(!jsonError)
+                if(!jsonError && results)
                 {
                     for(NSDictionary* track in results)
                     {
                         [_tracks addObject:track[@"title"]];
                     }
                     dispatch_async(dispatch_get_main_queue(), ^{
-                        [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+                        [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
                     });
                 }
             }
