@@ -25,8 +25,8 @@
     }
     [_objects insertObject:[[NSDictionary alloc] initWithObjectsAndKeys:@"Placeholder Party", @"name", @"1", @"partyId", @"none", @"username", nil] atIndex:0];
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+    NSLog([_objects description]);
     [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
-    
 }
 
 - (void)awakeFromNib
@@ -44,11 +44,7 @@
     _objects = [[NSMutableArray alloc] init];
     
 	// Do any additional setup after loading the view, typically from a nib.
-//    self.navigationItem.leftBarButtonItem = self.editButtonItem;
-//
-//    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
-//    self.navigationItem.rightBarButtonItem = addButton;
-//    self.detailViewController = (DetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
+    //[self.detailViewController = (DetailViewController*)[[self.splitViewController.viewControllers lastObject] topViewController];
     
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
     NSString* sessionId = [[NSUserDefaults standardUserDefaults] stringForKey: @"sessionId"];
@@ -58,9 +54,7 @@
         NSURLSession* session = [NSURLSession sessionWithConfiguration:sessionConfig delegate:self delegateQueue:nil];
         
         NSString* _URL = [NSString stringWithFormat:@"http://www.vmutti.com/handler.php?action=listJoinedParties&token=%@", sessionId];
-        NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:_URL]];
-        request.HTTPMethod = @"GET";
-        NSURLSessionDataTask* dt = [session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+        NSURLSessionDataTask* dt = [session dataTaskWithURL:[NSURL URLWithString:_URL] completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
             //completion handler
             if(!error && ((NSHTTPURLResponse*)response).statusCode == 200)
             {
@@ -74,6 +68,7 @@
                     
                     dispatch_async(dispatch_get_main_queue(), ^{
                         [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+                        [self.tableView reloadData];
                     });
                 }
             }
@@ -86,6 +81,7 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+    _objects = nil;
 }
 
 #pragma mark - Table View
@@ -121,8 +117,7 @@
         [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
-        [_objects addObject:[[NSString alloc]initWithFormat:@"Placeholder Group"]];
-        [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+        [self addGroup:self];
     }
 }
 

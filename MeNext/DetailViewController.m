@@ -64,11 +64,8 @@ static NSString* _KEY = @"AIzaSyAbh1CseUDq0NKangT-QRIeyOoZLz6jCII";
         NSURLSessionConfiguration* sessionConfig = [NSURLSessionConfiguration defaultSessionConfiguration];
         NSURLSession* session = [NSURLSession sessionWithConfiguration:sessionConfig delegate:self delegateQueue:nil];
         
-        NSString* _URL = [NSString stringWithFormat:@"http://www.vmutti.com/handler.php?action=listvideos&partyId=%@", _partyId];
-        NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:_URL]];
-        request.HTTPMethod = @"GET";
-        //request.HTTPBody = [[NSString stringWithFormat:@"action=listvideos&partyId=%@", _detailItem] dataUsingEncoding:NSUTF8StringEncoding];
-        NSURLSessionDataTask* dt = [session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+        NSString* _URL = [NSString stringWithFormat:@"http://www.vmutti.com/handler.php?action=listVideos&partyId=%@&token=%@", _partyId, [[NSUserDefaults standardUserDefaults] stringForKey:@"sessionId"]];
+        NSURLSessionDataTask* dt = [session dataTaskWithURL:[NSURL URLWithString:_URL] completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
             //completion handler
             if(!error && ((NSHTTPURLResponse*)response).statusCode == 200)
             {
@@ -83,6 +80,7 @@ static NSString* _KEY = @"AIzaSyAbh1CseUDq0NKangT-QRIeyOoZLz6jCII";
                     }
                     dispatch_async(dispatch_get_main_queue(), ^{
                         [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+                        [self.tableView reloadData];
                     });
                 }
             }
@@ -104,7 +102,7 @@ static NSString* _KEY = @"AIzaSyAbh1CseUDq0NKangT-QRIeyOoZLz6jCII";
 //        
 //        for(NSString* trackId in _tracks)
 //        {
-//            NSString* _URL = [NSString stringWithFormat:@"https://www.googleapis.com/youtube/v3/videos?id=%@&key=%@&part=snippet&fields=items(id, snippet(title, thumbnails(default)))", trackId, _KEY];
+//            NSString* _URL = [NSString stringWithFormat:@"https://www.googleapis.com/youtube/v3/videos?id=%@&key=%@&part=snippet&fields=items(id,snippet(title,thumbnails(default)))", trackId, _KEY];
 //            
 //            NSURLSessionDataTask* dt = [session dataTaskWithURL:[NSURL URLWithString:_URL] completionHandler:^(NSData *data, NSURLResponse *response, NSError *error)
 //            {
@@ -136,6 +134,8 @@ static NSString* _KEY = @"AIzaSyAbh1CseUDq0NKangT-QRIeyOoZLz6jCII";
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+    _tracks = nil;
+    _thumbnails = nil;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
