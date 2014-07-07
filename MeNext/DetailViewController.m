@@ -76,7 +76,7 @@ static NSString* _KEY = @"AIzaSyAbh1CseUDq0NKangT-QRIeyOoZLz6jCII";
                 {
                     for(NSDictionary* track in results)
                     {
-                        [_tracks addObject:track[@"title"]];
+                        [_tracks addObject:[[NSString alloc] initWithData:track[@"title"] encoding:NSUTF8StringEncoding]];
                     }
                     dispatch_async(dispatch_get_main_queue(), ^{
                         [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
@@ -152,8 +152,8 @@ static NSString* _KEY = @"AIzaSyAbh1CseUDq0NKangT-QRIeyOoZLz6jCII";
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"QueueCell" forIndexPath:indexPath];
     
-    cell.textLabel.text = [_tracks[indexPath.row] description];
-    [cell.imageView setImage:_thumbnails[indexPath.row]];
+    cell.textLabel.text = _tracks[indexPath.row];
+    //[cell.imageView setImage:_thumbnails[indexPath.row]];
     return cell;
 }
 

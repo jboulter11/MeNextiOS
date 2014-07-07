@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SettingsViewController : UIViewController
+@interface SettingsViewController : UIViewController <UINavigationBarDelegate, UIBarPositioningDelegate>
+
+@property (weak, nonatomic) IBOutlet UINavigationBar *bar;
+
 
 @end

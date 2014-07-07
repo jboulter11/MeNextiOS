@@ -25,7 +25,7 @@
     }
     [_objects insertObject:[[NSDictionary alloc] initWithObjectsAndKeys:@"Placeholder Party", @"name", @"1", @"partyId", @"none", @"username", nil] atIndex:0];
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
-    NSLog([_objects description]);
+    //NSLog([_objects description]);
     [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
 }
 

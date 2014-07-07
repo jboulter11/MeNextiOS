@@ -111,17 +111,20 @@
     }
 }
 
-- (void)viewDidLoad
+-(void)viewWillAppear:(BOOL)animated
 {
-    [super viewDidLoad];
-    //Check the login status of the user
     //use the sessionId NSUserDefault.  If it exists, user should be logged in.
-    NSString* sessionId = [[NSUserDefaults standardUserDefaults] stringForKey:@"sessionId"];
-    if(sessionId)
+    if([[NSUserDefaults standardUserDefaults] stringForKey:@"sessionId"])
     {
         //we're logged in, send the sessionId as the sender
         [self performSegueWithIdentifier:@"LoginSuccess" sender:self];
     }
+}
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    //Check the login status of the user
     
     NSString* username = [[NSUserDefaults standardUserDefaults] stringForKey:@"username"];
     NSString* password = [[NSUserDefaults standardUserDefaults] stringForKey:@"password"];
