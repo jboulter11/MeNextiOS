@@ -8,7 +8,7 @@
 
 #import "DetailViewController.h"
 
-static NSString* _KEY = @"AIzaSyAbh1CseUDq0NKangT-QRIeyOoZLz6jCII";
+static NSString* _KEY = @"AIzaSyAbh1CseUDq0NKangT-QRIeyOoZLz6jCII";//MeNext Youtube iOS API Key
 
 @interface DetailViewController ()
 {
@@ -58,8 +58,8 @@ static NSString* _KEY = @"AIzaSyAbh1CseUDq0NKangT-QRIeyOoZLz6jCII";
     _partyId = _detailItem[@"partyId"];
     _partyName = _detailItem[@"name"];
     
+    //get the track data from the server
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
-    //TODO: httpget for tracks from MeNext Server API
     dispatch_async(dispatch_get_global_queue(0,0), ^{
         NSURLSessionConfiguration* sessionConfig = [NSURLSessionConfiguration defaultSessionConfiguration];
         NSURLSession* session = [NSURLSession sessionWithConfiguration:sessionConfig delegate:self delegateQueue:nil];
@@ -76,7 +76,7 @@ static NSString* _KEY = @"AIzaSyAbh1CseUDq0NKangT-QRIeyOoZLz6jCII";
                 {
                     for(NSDictionary* track in results)
                     {
-                        [_tracks addObject:[[NSString alloc] initWithData:track[@"title"] encoding:NSUTF8StringEncoding]];
+                        [_tracks addObject:track[@"title"]];
                     }
                     dispatch_async(dispatch_get_main_queue(), ^{
                         [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;

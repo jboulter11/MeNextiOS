@@ -37,6 +37,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    //TODO: Add the ability to change the host address from vmutti.com to other servers (low priority)
+    
 }
 
 - (void)didReceiveMemoryWarning

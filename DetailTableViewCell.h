@@ -9,7 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface DetailTableViewCell : UITableViewCell
-@property (weak, nonatomic) IBOutlet UILabel *text;
-@property (weak, nonatomic) IBOutlet UIImageView *image;
 
 @end
