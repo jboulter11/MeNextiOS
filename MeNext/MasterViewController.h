@@ -7,11 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SharedData.h"
 
 @class DetailViewController;
 
 @interface MasterViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate, NSURLSessionDelegate>
 
 @property (strong, nonatomic) DetailViewController *detailViewController;
+@property (strong, nonatomic) SharedData* sharedData;
 
 @end

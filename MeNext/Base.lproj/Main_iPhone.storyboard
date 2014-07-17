@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="rS3-R9-Ivy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="rS3-R9-Ivy">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -251,7 +251,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title of Song" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="146" translatesAutoresizingMaskIntoConstraints="NO" id="TMm-XE-Pjk">
-                                                    <rect key="frame" x="80" y="3" width="146" height="42"/>
+                                                    <rect key="frame" x="80" y="1" width="146" height="42"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -291,13 +291,13 @@
                                                 <constraint firstItem="zfm-ga-h69" firstAttribute="top" secondItem="fRZ-Kb-21o" secondAttribute="top" constant="15" id="EJm-xe-8UP"/>
                                                 <constraint firstItem="jhm-vj-jbr" firstAttribute="leading" secondItem="zfm-ga-h69" secondAttribute="trailing" constant="8" symbolic="YES" id="EYe-lY-52b"/>
                                                 <constraint firstItem="a9D-yp-4f5" firstAttribute="leading" secondItem="TMm-XE-Pjk" secondAttribute="trailing" constant="8" symbolic="YES" id="Pdl-yt-mET"/>
-                                                <constraint firstItem="TMm-XE-Pjk" firstAttribute="top" secondItem="fRZ-Kb-21o" secondAttribute="top" constant="3" id="Rd9-yN-ip6"/>
+                                                <constraint firstItem="TMm-XE-Pjk" firstAttribute="top" secondItem="fRZ-Kb-21o" secondAttribute="top" constant="1" id="Rd9-yN-ip6"/>
                                                 <constraint firstItem="TMm-XE-Pjk" firstAttribute="leading" secondItem="jhm-vj-jbr" secondAttribute="trailing" constant="8" symbolic="YES" id="X8y-to-dBi"/>
                                                 <constraint firstAttribute="trailing" secondItem="a9D-yp-4f5" secondAttribute="trailing" id="XdV-2x-T38"/>
                                                 <constraint firstItem="a9D-yp-4f5" firstAttribute="top" secondItem="fRZ-Kb-21o" secondAttribute="top" id="ahh-i4-hJf"/>
                                                 <constraint firstItem="zfm-ga-h69" firstAttribute="leading" secondItem="fRZ-Kb-21o" secondAttribute="leading" constant="10" id="cmC-uz-70s"/>
                                                 <constraint firstItem="jhm-vj-jbr" firstAttribute="top" secondItem="zfm-ga-h69" secondAttribute="top" id="eZW-Ha-hcL"/>
-                                                <constraint firstAttribute="bottom" secondItem="TMm-XE-Pjk" secondAttribute="bottom" constant="-2" id="fCV-Sm-oCf"/>
+                                                <constraint firstAttribute="bottom" secondItem="TMm-XE-Pjk" secondAttribute="bottom" id="fCV-Sm-oCf"/>
                                                 <constraint firstAttribute="bottom" secondItem="zfm-ga-h69" secondAttribute="bottom" constant="11" id="ieQ-DW-E0f"/>
                                                 <constraint firstItem="zfm-ga-h69" firstAttribute="bottom" secondItem="jhm-vj-jbr" secondAttribute="bottom" id="ykc-hK-CrM"/>
                                             </constraints>
@@ -325,7 +325,7 @@
                     <navigationItem key="navigationItem" title="Queue" id="cra-N8-TIN">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="SUw-S0-qe3">
                             <connections>
-                                <segue destination="jcc-L1-THs" kind="push" id="kGv-yY-FY6"/>
+                                <segue destination="jcc-L1-THs" kind="push" id="nCG-GS-akz"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -432,14 +432,14 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ike-Rb-iwE">
-                                <rect key="frame" x="40" y="76" width="240" height="142"/>
+                                <rect key="frame" x="40" y="32" width="240" height="142"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="142" id="HZh-wL-464"/>
                                 </constraints>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3eU-xk-dqk">
-                                <rect key="frame" x="40" y="282" width="240" height="223"/>
+                                <rect key="frame" x="40" y="238" width="240" height="267"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
@@ -464,7 +464,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Title Goes Here And Stuff" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="240" translatesAutoresizingMaskIntoConstraints="NO" id="0tC-Dx-1Cz">
-                                <rect key="frame" x="40" y="226" width="240" height="48"/>
+                                <rect key="frame" x="40" y="182" width="240" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="F35-yI-hvn"/>

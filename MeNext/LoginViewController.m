@@ -7,6 +7,8 @@
 //
 
 #import "LoginViewController.h"
+#import "MasterViewController.h"
+#import "AFNetworking.h"
 
 @interface LoginViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *registerButton;
@@ -14,8 +16,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
 @property (weak, nonatomic) IBOutlet UITextField *usernameTextField;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
-
--(NSMutableString *) sanitizeNSString:(NSString *)string;
 
 @end
 
@@ -30,14 +30,6 @@
     return self;
 }
 
--(NSMutableString *) sanitizeNSString:(NSString *)string {
-    NSMutableString *sanitized = [[string stringByReplacingOccurrencesOfString:@"&" withString:@""] copy];
-    sanitized = [[sanitized stringByReplacingOccurrencesOfString:@"=" withString:@""] copy];
-    sanitized = [[sanitized stringByReplacingOccurrencesOfString:@"?" withString:@""] copy];
-    
-    return sanitized;
-}
-
 - (IBAction)login:(id)sender
 {
     //TODO: httppost login with the MeNext API
@@ -49,70 +41,40 @@
         _registerButton.enabled = NO;
         
         [_activityIndicator startAnimating];
-        [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
         
         //SANITIZE INPUTS
-        NSMutableString* username = [self sanitizeNSString:_usernameTextField.text];
-        NSMutableString* password = [self sanitizeNSString:_passwordTextField.text];
+        NSMutableString* username = [SharedData sanitizeNSString:_usernameTextField.text];
+        NSMutableString* password = [SharedData sanitizeNSString:_passwordTextField.text];
         
-        NSString* postString = [NSString stringWithFormat:@"action=login&username=%@&password=%@", username, password];
+//        NSString* postString = [NSString stringWithFormat:@"action=login&username=%@&password=%@", username, password];
+        NSDictionary* postDictionary = @{@"action":@"login", @"username":username, @"password":password};
         
         //send the actual request asyncronously
-        dispatch_queue_t queue = dispatch_get_global_queue(0,0);
-        dispatch_async(queue, ^{
-            NSURLSessionConfiguration* sessionConfig = [NSURLSessionConfiguration defaultSessionConfiguration];\
-            NSURLSession* session = [NSURLSession sessionWithConfiguration:sessionConfig];
-            NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"http://www.vmutti.com/handler.php"]];
-            request.HTTPMethod = @"POST";
-            request.HTTPBody = [postString dataUsingEncoding:NSUTF8StringEncoding];
-            NSURLSessionDataTask* dt = [session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-                NSHTTPURLResponse *httpResp = (NSHTTPURLResponse*) response;
-                if (httpResp.statusCode == 200)
-                {
-                    if(!error)
-                    {
-                        NSError* jsonError;
-                        NSDictionary* loginResponse = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers | NSJSONReadingMutableLeaves | NSJSONReadingAllowFragments error:&jsonError];
-                        //NSLog([loginResponse description]);
-                        if(!jsonError && loginResponse)
-                        {
-                            if(![loginResponse[@"token"] isEqual:@"-1"])
-                            {
-                                [[NSUserDefaults standardUserDefaults] setObject:loginResponse[@"token"] forKey:@"sessionId"];
-                                dispatch_async(dispatch_get_main_queue(), ^{
-                                    [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
-                                    [_activityIndicator stopAnimating];
-                                    [self performSegueWithIdentifier:@"LoginSuccess" sender:self];
-                                });
-                            }
-                            else
-                            {
-                                NSLog(@"-1 TOKEN!");
-                            }
-                        }
-                            else
-                            {
-                                //error!
-                                //NSLog([jsonError description]);
-                            }
-                    }
-                    else
-                    {
-                        //NSLog([error description]);
-                    }
-                }
-                else
-                {
-                    //NSLog([response description]);
-                }
-            }];
-            [dt resume];
-        });
+        AFHTTPSessionManager* manager = _sharedData.sessionManager;
+        [manager POST:@"handler.php" parameters:postDictionary success:^(NSURLSessionDataTask *task, id responseObject) {
+            [[NSUserDefaults standardUserDefaults] setObject:(NSDictionary*)responseObject[@"token"] forKey:@"sessionId"];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [_activityIndicator stopAnimating];
+                [self performSegueWithIdentifier:@"LoginSuccess" sender:self];
+            });
+        } failure:^(NSURLSessionDataTask *task, NSError *error) {
+            UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Error Logging In"
+                                                          message:[error localizedDescription]
+                                                         delegate:nil
+                                                cancelButtonTitle:@"OK"
+                                                otherButtonTitles:nil];
+            dispatch_async(dispatch_get_main_queue(), ^{[_activityIndicator stopAnimating];});
+            [alert show];
+        }];
     }
 }
 
 -(void)viewWillAppear:(BOOL)animated
 {
+    if(!_sharedData)
+    {
+        _sharedData = [[SharedData alloc] init];
+    }
     //use the sessionId NSUserDefault.  If it exists, user should be logged in.
     if([[NSUserDefaults standardUserDefaults] stringForKey:@"sessionId"])
     {
@@ -175,5 +137,7 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     // Get the new view controller using [segue destinationViewController].
+    MasterViewController* dst = (MasterViewController*)[segue destinationViewController];
+    dst.sharedData = self.sharedData;
 }
 @end

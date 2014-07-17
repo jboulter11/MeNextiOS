@@ -45,36 +45,25 @@
     
 	// Do any additional setup after loading the view, typically from a nib.
     //[self.detailViewController = (DetailViewController*)[[self.splitViewController.viewControllers lastObject] topViewController];
-    
-    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
     NSString* sessionId = [[NSUserDefaults standardUserDefaults] stringForKey: @"sessionId"];
-    //fetch parties from MeNext server
-    dispatch_async(dispatch_get_global_queue(0,0), ^{
-        NSURLSessionConfiguration* sessionConfig = [NSURLSessionConfiguration defaultSessionConfiguration];
-        NSURLSession* session = [NSURLSession sessionWithConfiguration:sessionConfig delegate:self delegateQueue:nil];
+    
+    AFHTTPSessionManager* manager = _sharedData.sessionManager;
+    [manager GET:[NSString stringWithFormat:@"handler.php?action=listJoinedParties&token=%@", sessionId] parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+        //parse parties into _objects
+        //Dictionary with one KeyValue, value is array of party Dictionaries
+        [_objects addObjectsFromArray:((NSDictionary*)responseObject)[@"parties"]];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.tableView reloadData];
+        });
         
-        NSString* _URL = [NSString stringWithFormat:@"http://www.vmutti.com/handler.php?action=listJoinedParties&token=%@", sessionId];
-        NSURLSessionDataTask* dt = [session dataTaskWithURL:[NSURL URLWithString:_URL] completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-            //completion handler
-            if(!error && ((NSHTTPURLResponse*)response).statusCode == 200)
-            {
-                NSError* jsonError = nil;
-                NSArray* results = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers | NSJSONReadingMutableLeaves error:&jsonError];
-                
-                if(!jsonError && results)
-                {
-                    //parse parties into _objects
-                    [_objects addObjectsFromArray:results];
-                    
-                    dispatch_async(dispatch_get_main_queue(), ^{
-                        [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
-                        [self.tableView reloadData];
-                    });
-                }
-            }
-        }];
-        [dt resume];
-    });
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Error Logging In"
+                                                        message:[error localizedDescription]
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+        [alert show];
+    }];
 }
 
 - (void)didReceiveMemoryWarning
@@ -151,7 +140,9 @@
     if ([[segue identifier] isEqualToString:@"showDetail"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         NSDate *object = _objects[indexPath.row];
-        [[segue destinationViewController] setDetailItem:object];
+        DetailViewController* dst = [segue destinationViewController];
+        [dst setDetailItem:object];
+        dst.sharedData = self.sharedData;
     }
     else if([[segue identifier] isEqualToString:@"showSettings"])
     {

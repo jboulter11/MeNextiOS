@@ -12,5 +12,4 @@
 
 @property (weak, nonatomic) IBOutlet UINavigationBar *bar;
 
-
 @end

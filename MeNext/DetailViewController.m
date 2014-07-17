@@ -58,38 +58,32 @@ static NSString* _KEY = @"AIzaSyAbh1CseUDq0NKangT-QRIeyOoZLz6jCII";//MeNext Yout
     _partyId = _detailItem[@"partyId"];
     _partyName = _detailItem[@"name"];
     
-    //get the track data from the server
-    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
-    dispatch_async(dispatch_get_global_queue(0,0), ^{
-        NSURLSessionConfiguration* sessionConfig = [NSURLSessionConfiguration defaultSessionConfiguration];
-        NSURLSession* session = [NSURLSession sessionWithConfiguration:sessionConfig delegate:self delegateQueue:nil];
+    AFHTTPSessionManager* manager = _sharedData.sessionManager;
+    [manager GET:[NSString stringWithFormat:@"handler.php?action=listVideos&partyId=%@&token=%@", _partyId, [[NSUserDefaults standardUserDefaults] stringForKey:@"sessionId"]] parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+        //parse tracks into _tracks
+        //Dictionary, 2kv pairs: status and videos
+        NSLog([responseObject description]);
+        if([responseObject[@"status"] isEqualToString:@"success"])
+        {
+            [_tracks addObjectsFromArray:responseObject[@"videos"]];
+            dispatch_async(dispatch_get_main_queue(), ^{[self.tableView reloadData];});
+        }
+        else
+        {
+            //check error, probably need to re-log in.
+        }
         
-        NSString* _URL = [NSString stringWithFormat:@"http://www.vmutti.com/handler.php?action=listVideos&partyId=%@&token=%@", _partyId, [[NSUserDefaults standardUserDefaults] stringForKey:@"sessionId"]];
-        NSURLSessionDataTask* dt = [session dataTaskWithURL:[NSURL URLWithString:_URL] completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-            //completion handler
-            if(!error && ((NSHTTPURLResponse*)response).statusCode == 200)
-            {
-                NSError* jsonError = nil;
-                NSArray* results = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers | NSJSONReadingMutableLeaves error:&jsonError];
-                
-                if(!jsonError && results)
-                {
-                    for(NSDictionary* track in results)
-                    {
-                        [_tracks addObject:track[@"title"]];
-                    }
-                    dispatch_async(dispatch_get_main_queue(), ^{
-                        [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
-                        [self.tableView reloadData];
-                    });
-                }
-            }
-        }];
-        [dt resume];
-    });
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Error Logging In"
+                                                        message:[error localizedDescription]
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+        [alert show];
+    }];
     
     
-    //TODO: httpget for track details from youtube
+    //TODO: httpget for track details from youtube (thumbnails)
     
     //[_activityIndicator startAnimating];
     
@@ -152,7 +146,7 @@ static NSString* _KEY = @"AIzaSyAbh1CseUDq0NKangT-QRIeyOoZLz6jCII";//MeNext Yout
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"QueueCell" forIndexPath:indexPath];
     
-    cell.textLabel.text = _tracks[indexPath.row];
+    cell.textLabel.text = _tracks[indexPath.row][@"title"];
     //[cell.imageView setImage:_thumbnails[indexPath.row]];
     return cell;
 }

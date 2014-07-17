@@ -1,0 +1,924 @@
+TPods-AFNetworking
+v6
+r1
+cCheck dependencies
+cProcessPCH /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/PrecompiledHeaders/Pods-AFNetworking-prefix-gazhcqpscpuojshigpndtnmryxdo/Pods-AFNetworking-prefix.pch.pch Pods-AFNetworking-prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cProcessPCH /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/PrecompiledHeaders/Pods-AFNetworking-prefix-gwmprgyriuwbmdcnayejyhwpuffp/Pods-AFNetworking-prefix.pch.pch Pods-AFNetworking-prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/AFHTTPRequestOperation.o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFHTTPRequestOperation.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/AFHTTPRequestOperationManager.o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFHTTPRequestOperationManager.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/AFHTTPSessionManager.o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFHTTPSessionManager.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/AFNetworkActivityIndicatorManager.o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/UIKit+AFNetworking/AFNetworkActivityIndicatorManager.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/AFNetworkReachabilityManager.o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFNetworkReachabilityManager.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/AFSecurityPolicy.o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFSecurityPolicy.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/AFURLConnectionOperation.o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFURLConnectionOperation.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/AFURLRequestSerialization.o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFURLRequestSerialization.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/AFURLResponseSerialization.o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFURLResponseSerialization.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/AFURLSessionManager.o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFURLSessionManager.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/Pods-AFNetworking-dummy.o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Pods-AFNetworking-dummy.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/UIActivityIndicatorView+AFNetworking.o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/UIKit+AFNetworking/UIActivityIndicatorView+AFNetworking.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/UIAlertView+AFNetworking.o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/UIKit+AFNetworking/UIAlertView+AFNetworking.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/UIButton+AFNetworking.o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/UIKit+AFNetworking/UIButton+AFNetworking.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/UIImageView+AFNetworking.o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/UIKit+AFNetworking/UIImageView+AFNetworking.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/UIProgressView+AFNetworking.o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/UIKit+AFNetworking/UIProgressView+AFNetworking.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/UIRefreshControl+AFNetworking.o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/UIKit+AFNetworking/UIRefreshControl+AFNetworking.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/UIWebView+AFNetworking.o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/UIKit+AFNetworking/UIWebView+AFNetworking.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cLibtool /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator/libPods-AFNetworking.a normal x86_64
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+c00000000534CCBEE00000000004D7BC0
+t1397541870
+s5077952
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c00000000531EE33A0000000000A90C10
+t1394533178
+s11078672
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/MobileCoreServices.framework/MobileCoreServices
+c00000000531EE3390000000000210E90
+t1394533177
+s2166416
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Security.framework/Security
+c00000000531EE33A0000000000186D60
+t1394533178
+s1600864
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/SystemConfiguration.framework/SystemConfiguration
+c00000000531EE33B00000000001A2B00
+t1394533179
+s1714944
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk
+c00000000534CCC0C0000000000000198
+t1397541900
+s408
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/SDKSettings.plist
+c00000000531EE35000000000000003B4
+t1394533200
+s948
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/CoreServices/SystemVersion.plist
+c00000000531EE359000000000000019E
+t1394533209
+s414
+
+N/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/5.1/include/module.map
+c00000000531EE3820000000000000ADC
+t1394533250
+s2780
+
+N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/AFHTTPRequestOperation.o
+t1405617474
+s48740
+
+N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/AFHTTPRequestOperationManager.o
+t1405617474
+s63220
+
+N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/AFHTTPSessionManager.o
+t1405617474
+s70088
+
+N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/AFNetworkActivityIndicatorManager.o
+t1405617474
+s36704
+
+N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/AFNetworkReachabilityManager.o
+t1405617474
+s48560
+
+N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/AFSecurityPolicy.o
+t1405617474
+s42620
+
+N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/AFURLConnectionOperation.o
+t1405617474
+s214624
+
+N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/AFURLRequestSerialization.o
+t1405617474
+s243968
+
+N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/AFURLResponseSerialization.o
+t1405617474
+s107016
+
+N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/AFURLSessionManager.o
+t1405617474
+s224844
+
+N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/Pods-AFNetworking-dummy.o
+t1405617474
+s3904
+
+N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/Pods-AFNetworking.LinkFileList
+c0000000053C5A8F20000000000000D48
+t1405462770
+s3400
+
+N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/UIActivityIndicatorView+AFNetworking.o
+t1405617474
+s51284
+
+N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/UIAlertView+AFNetworking.o
+t1405617474
+s29504
+
+N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/UIButton+AFNetworking.o
+t1405617474
+s78552
+
+N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/UIImageView+AFNetworking.o
+t1405617474
+s75804
+
+N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/UIProgressView+AFNetworking.o
+t1405617474
+s70716
+
+N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/UIRefreshControl+AFNetworking.o
+t1405617474
+s52660
+
+N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/UIWebView+AFNetworking.o
+t1405617475
+s70164
+
+N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/PrecompiledHeaders/Pods-AFNetworking-prefix-fuerkjqnpowcxfabuudenztaemnl/Pods-AFNetworking-prefix.pch.pch
+t1405462772
+s120412
+
+N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/PrecompiledHeaders/Pods-AFNetworking-prefix-gazhcqpscpuojshigpndtnmryxdo/Pods-AFNetworking-prefix.pch.pch
+t1405617474
+s127120
+
+N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/PrecompiledHeaders/Pods-AFNetworking-prefix-gkppeodrzuruafgdvahguqgmbfro/Pods-AFNetworking-prefix.pch.pch
+t1405462772
+s120800
+
+N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/PrecompiledHeaders/Pods-AFNetworking-prefix-gwmprgyriuwbmdcnayejyhwpuffp/Pods-AFNetworking-prefix.pch.pch
+t1405617474
+s126736
+
+N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator/libPods-AFNetworking.a
+t1405617475
+s1550264
+
+N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFHTTPRequestOperation.h
+c0000000053C56EEF0000000000001170
+t1405447919
+s4464
+
+N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFHTTPRequestOperation.m
+c0000000053C56EEF0000000000001D5E
+t1405447919
+s7518
+
+N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFHTTPRequestOperationManager.h
+c0000000053C56EEF0000000000004A9F
+t1405447919
+s19103
+
+N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFHTTPRequestOperationManager.m
+c0000000053C56EEF00000000000029D9
+t1405447919
+s10713
+
+N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFHTTPSessionManager.h
+c0000000053C56EEF000000000000389B
+t1405447919
+s14491
+
+N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFHTTPSessionManager.m
+c0000000053C56EEF000000000000322B
+t1405447919
+s12843
+
+N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFNetworkReachabilityManager.h
+c0000000053C56EEF0000000000001E75
+t1405447919
+s7797
+
+N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFNetworkReachabilityManager.m
+c0000000053C56EEF000000000000267B
+t1405447919
+s9851
+
+N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFSecurityPolicy.h
+c0000000053C56EEF0000000000001420
+t1405447919
+s5152
+
+N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFSecurityPolicy.m
+c0000000053C56EEF0000000000002B7A
+t1405447919
+s11130
+
+N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFURLConnectionOperation.h
+c0000000053C56EEF0000000000004273
+t1405447919
+s17011
+
+N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFURLConnectionOperation.m
+c0000000053C56EEF0000000000006C06
+t1405447919
+s27654
+
+N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFURLRequestSerialization.h
+c0000000053C56EEF0000000000005322
+t1405447919
+s21282
+
+N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFURLRequestSerialization.m
+c0000000053C56EEF000000000000BB98
+t1405447919
+s48024
+
+N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFURLResponseSerialization.h
+c0000000053C56EEF0000000000002C15
+t1405447919
+s11285
+
+N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFURLResponseSerialization.m
+c0000000053C56EEF0000000000006784
+t1405447919
+s26500
+
+N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFURLSessionManager.h
+c0000000053C56EEF00000000000074AE
+t1405447919
+s29870
+
+N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFURLSessionManager.m
+c0000000053C56EEF000000000000A96B
+t1405447919
+s43371
+
+N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/UIKit+AFNetworking/AFNetworkActivityIndicatorManager.h
+c0000000053C56EEF0000000000000EC6
+t1405447919
+s3782
+
+N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/UIKit+AFNetworking/AFNetworkActivityIndicatorManager.m
+c0000000053C56EEF0000000000001911
+t1405447919
+s6417
+
+N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/UIKit+AFNetworking/UIActivityIndicatorView+AFNetworking.h
+c0000000053C56EEF00000000000009CE
+t1405447919
+s2510
+
+N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/UIKit+AFNetworking/UIActivityIndicatorView+AFNetworking.m
+c0000000053C56EEF0000000000000F1E
+t1405447919
+s3870
+
+N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/UIKit+AFNetworking/UIAlertView+AFNetworking.h
+c0000000053C56EEF000000000000143F
+t1405447919
+s5183
+
+N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/UIKit+AFNetworking/UIAlertView+AFNetworking.m
+c0000000053C56EEF0000000000001641
+t1405447919
+s5697
+
+N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/UIKit+AFNetworking/UIButton+AFNetworking.h
+c0000000053C56EEF0000000000001F9A
+t1405447919
+s8090
+
+N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/UIKit+AFNetworking/UIButton+AFNetworking.m
+c0000000053C56EEF0000000000001D60
+t1405447919
+s7520
+
+N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/UIKit+AFNetworking/UIImageView+AFNetworking.h
+c0000000053C56EEF0000000000001C1C
+t1405447919
+s7196
+
+N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/UIKit+AFNetworking/UIImageView+AFNetworking.m
+c0000000053C56EEF0000000000001F28
+t1405447919
+s7976
+
+N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/UIKit+AFNetworking/UIProgressView+AFNetworking.h
+c0000000053C56EEF0000000000000D8E
+t1405447919
+s3470
+
+N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/UIKit+AFNetworking/UIProgressView+AFNetworking.m
+c0000000053C56EEF0000000000001EE1
+t1405447919
+s7905
+
+N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/UIKit+AFNetworking/UIRefreshControl+AFNetworking.h
+c0000000053C56EEF00000000000009BC
+t1405447919
+s2492
+
+N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/UIKit+AFNetworking/UIRefreshControl+AFNetworking.m
+c0000000053C56EEF0000000000000EFC
+t1405447919
+s3836
+
+N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/UIKit+AFNetworking/UIWebView+AFNetworking.h
+c0000000053C56EEF0000000000001739
+t1405447919
+s5945
+
+N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/UIKit+AFNetworking/UIWebView+AFNetworking.m
+c0000000053C56EEF000000000000192C
+t1405447919
+s6444
+
+N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Pods-AFNetworking-dummy.m
+c0000000053C56EEF000000000000008A
+t1405447919
+s138
+
+N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Pods-AFNetworking-prefix.pch
+c0000000053C56EEF000000000000004D
+t1405447919
+s77
+
+N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Pods-environment.h
+c0000000053C56EEF00000000000007D3
+t1405447919
+s2003
+
+CBuild AST from /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFHTTPRequestOperation.m
+r0
+
+CBuild AST from /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFHTTPRequestOperationManager.m
+r0
+
+CBuild AST from /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFHTTPSessionManager.m
+r0
+
+CBuild AST from /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFNetworkReachabilityManager.m
+r0
+
+CBuild AST from /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFSecurityPolicy.m
+r0
+
+CBuild AST from /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFURLConnectionOperation.m
+r0
+
+CBuild AST from /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFURLRequestSerialization.m
+r0
+
+CBuild AST from /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFURLResponseSerialization.m
+r0
+
+CBuild AST from /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFURLSessionManager.m
+r0
+
+CBuild AST from /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/UIKit+AFNetworking/AFNetworkActivityIndicatorManager.m
+r0
+
+CBuild AST from /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/UIKit+AFNetworking/UIActivityIndicatorView+AFNetworking.m
+r0
+
+CBuild AST from /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/UIKit+AFNetworking/UIAlertView+AFNetworking.m
+r0
+
+CBuild AST from /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/UIKit+AFNetworking/UIButton+AFNetworking.m
+r0
+
+CBuild AST from /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/UIKit+AFNetworking/UIImageView+AFNetworking.m
+r0
+
+CBuild AST from /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/UIKit+AFNetworking/UIProgressView+AFNetworking.m
+r0
+
+CBuild AST from /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/UIKit+AFNetworking/UIRefreshControl+AFNetworking.m
+r0
+
+CBuild AST from /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/UIKit+AFNetworking/UIWebView+AFNetworking.m
+r0
+
+CBuild AST from /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Pods-AFNetworking-dummy.m
+r0
+
+CCheck dependencies
+r0
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependenciesb43dc27d4b78b941^6189c37d4b78b941^---0#1#1#--18"Check dependencies36"E31DDD1F-E27B-4262-B379-65244F52621A-
+
+CCompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFHTTPRequestOperation.o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFHTTPRequestOperation.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFHTTPRequestOperationManager.o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFHTTPRequestOperationManager.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFHTTPSessionManager.o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFHTTPSessionManager.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFNetworkActivityIndicatorManager.o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/UIKit+AFNetworking/AFNetworkActivityIndicatorManager.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFNetworkReachabilityManager.o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFNetworkReachabilityManager.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFSecurityPolicy.o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFSecurityPolicy.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFURLConnectionOperation.o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFURLConnectionOperation.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFURLRequestSerialization.o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFURLRequestSerialization.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFURLResponseSerialization.o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFURLResponseSerialization.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFURLSessionManager.o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFURLSessionManager.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/Pods-AFNetworking-dummy.o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Pods-AFNetworking-dummy.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/UIActivityIndicatorView+AFNetworking.o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/UIKit+AFNetworking/UIActivityIndicatorView+AFNetworking.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/UIAlertView+AFNetworking.o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/UIKit+AFNetworking/UIAlertView+AFNetworking.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/UIButton+AFNetworking.o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/UIKit+AFNetworking/UIButton+AFNetworking.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/UIImageView+AFNetworking.o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/UIKit+AFNetworking/UIImageView+AFNetworking.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/UIProgressView+AFNetworking.o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/UIKit+AFNetworking/UIProgressView+AFNetworking.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/UIRefreshControl+AFNetworking.o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/UIKit+AFNetworking/UIRefreshControl+AFNetworking.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/UIWebView+AFNetworking.o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/UIKit+AFNetworking/UIWebView+AFNetworking.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/AFHTTPRequestOperation.o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFHTTPRequestOperation.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s427310274.174992
+e427310274.404308
+r1
+xCompileC
+x/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/AFHTTPRequestOperation.o
+x/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFHTTPRequestOperation.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFHTTPRequestOperation.m
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFHTTPRequestOperation.h
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFURLConnectionOperation.h
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFURLRequestSerialization.h
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFURLResponseSerialization.h
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFSecurityPolicy.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection106"Compile /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFHTTPRequestOperation.m315"CompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/AFHTTPRequestOperation.o AFNetworking/AFNetworking/AFHTTPRequestOperation.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compilerd7dd2cc23c78b941^bb8067c23c78b941^---0#0#1#-19%DVTDocumentLocation2@105"file:///Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFHTTPRequestOperation.m0000000000000000^4333"CompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/AFHTTPRequestOperation.o AFNetworking/AFNetworking/AFHTTPRequestOperation.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fmodules -fmodules-cache-path=/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -DCOCOAPODS=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-generated-files.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-own-target-headers.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-all-target-headers.hmap -iquote /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-project-headers.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator/include -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/BuildHeaders -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/BuildHeaders/AFNetworking -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Headers -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Headers/AFNetworking -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/DerivedSources/x86_64 -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/DerivedSources -F/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator -fobjc-arc -include /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/PrecompiledHeaders/Pods-AFNetworking-prefix-gazhcqpscpuojshigpndtnmryxdo/Pods-AFNetworking-prefix.pch -MMD -MT dependencies -MF /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/AFHTTPRequestOperation.d --serialize-diagnostics /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/AFHTTPRequestOperation.dia -c /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFHTTPRequestOperation.m -o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/AFHTTPRequestOperation.o36"C0A22FC4-39B6-4412-BE2D-D0FD307D000E-
+b8056D29C-320D-4461-8E9A-54BBBDC08A48
+
+CCompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/AFHTTPRequestOperationManager.o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFHTTPRequestOperationManager.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s427310274.175785
+e427310274.419477
+r1
+xCompileC
+x/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/AFHTTPRequestOperationManager.o
+x/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFHTTPRequestOperationManager.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFHTTPRequestOperationManager.m
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFHTTPRequestOperationManager.h
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFHTTPRequestOperation.h
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFURLConnectionOperation.h
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFURLRequestSerialization.h
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFURLResponseSerialization.h
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFSecurityPolicy.h
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFNetworkReachabilityManager.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection113"Compile /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFHTTPRequestOperationManager.m329"CompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/AFHTTPRequestOperationManager.o AFNetworking/AFNetworking/AFHTTPRequestOperationManager.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compilerf0192dc23c78b941^b2636bc23c78b941^---0#0#1#-19%DVTDocumentLocation2@112"file:///Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFHTTPRequestOperationManager.m0000000000000000^4375"CompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/AFHTTPRequestOperationManager.o AFNetworking/AFNetworking/AFHTTPRequestOperationManager.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fmodules -fmodules-cache-path=/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -DCOCOAPODS=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-generated-files.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-own-target-headers.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-all-target-headers.hmap -iquote /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-project-headers.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator/include -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/BuildHeaders -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/BuildHeaders/AFNetworking -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Headers -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Headers/AFNetworking -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/DerivedSources/x86_64 -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/DerivedSources -F/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator -fobjc-arc -include /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/PrecompiledHeaders/Pods-AFNetworking-prefix-gazhcqpscpuojshigpndtnmryxdo/Pods-AFNetworking-prefix.pch -MMD -MT dependencies -MF /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/AFHTTPRequestOperationManager.d --serialize-diagnostics /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/AFHTTPRequestOperationManager.dia -c /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFHTTPRequestOperationManager.m -o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/AFHTTPRequestOperationManager.o36"2D83CAA5-0C04-4BDC-A8C7-82207F007F6B-
+b8056D29C-320D-4461-8E9A-54BBBDC08A48
+
+CCompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/AFHTTPSessionManager.o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFHTTPSessionManager.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s427310274.176626
+e427310274.426786
+r1
+xCompileC
+x/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/AFHTTPSessionManager.o
+x/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFHTTPSessionManager.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFHTTPSessionManager.m
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFHTTPSessionManager.h
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFURLSessionManager.h
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFURLResponseSerialization.h
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFURLRequestSerialization.h
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFSecurityPolicy.h
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFNetworkReachabilityManager.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection104"Compile /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFHTTPSessionManager.m311"CompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/AFHTTPSessionManager.o AFNetworking/AFNetworking/AFHTTPSessionManager.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compileraf5a2dc23c78b941^5d4e6dc23c78b941^---0#0#1#-19%DVTDocumentLocation2@103"file:///Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFHTTPSessionManager.m0000000000000000^4321"CompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/AFHTTPSessionManager.o AFNetworking/AFNetworking/AFHTTPSessionManager.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fmodules -fmodules-cache-path=/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -DCOCOAPODS=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-generated-files.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-own-target-headers.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-all-target-headers.hmap -iquote /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-project-headers.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator/include -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/BuildHeaders -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/BuildHeaders/AFNetworking -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Headers -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Headers/AFNetworking -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/DerivedSources/x86_64 -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/DerivedSources -F/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator -fobjc-arc -include /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/PrecompiledHeaders/Pods-AFNetworking-prefix-gazhcqpscpuojshigpndtnmryxdo/Pods-AFNetworking-prefix.pch -MMD -MT dependencies -MF /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/AFHTTPSessionManager.d --serialize-diagnostics /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/AFHTTPSessionManager.dia -c /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFHTTPSessionManager.m -o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/AFHTTPSessionManager.o36"EACA3259-4D45-4C13-B7CB-0C2BF9261124-
+b8056D29C-320D-4461-8E9A-54BBBDC08A48
+
+CCompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/AFNetworkActivityIndicatorManager.o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/UIKit+AFNetworking/AFNetworkActivityIndicatorManager.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s427310274.177911
+e427310274.408472
+r1
+xCompileC
+x/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/AFNetworkActivityIndicatorManager.o
+x/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/UIKit+AFNetworking/AFNetworkActivityIndicatorManager.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/UIKit+AFNetworking/AFNetworkActivityIndicatorManager.m
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/UIKit+AFNetworking/AFNetworkActivityIndicatorManager.h
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFHTTPRequestOperation.h
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFURLConnectionOperation.h
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFURLRequestSerialization.h
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFURLResponseSerialization.h
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFSecurityPolicy.h
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFURLSessionManager.h
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFNetworkReachabilityManager.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection123"Compile /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/UIKit+AFNetworking/AFNetworkActivityIndicatorManager.m343"CompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/AFNetworkActivityIndicatorManager.o AFNetworking/UIKit+AFNetworking/AFNetworkActivityIndicatorManager.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compilere4a32dc23c78b941^65e068c23c78b941^---0#0#1#-19%DVTDocumentLocation2@122"file:///Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/UIKit+AFNetworking/AFNetworkActivityIndicatorManager.m0000000000000000^4411"CompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/AFNetworkActivityIndicatorManager.o AFNetworking/UIKit+AFNetworking/AFNetworkActivityIndicatorManager.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fmodules -fmodules-cache-path=/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -DCOCOAPODS=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-generated-files.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-own-target-headers.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-all-target-headers.hmap -iquote /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-project-headers.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator/include -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/BuildHeaders -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/BuildHeaders/AFNetworking -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Headers -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Headers/AFNetworking -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/DerivedSources/x86_64 -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/DerivedSources -F/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator -fobjc-arc -include /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/PrecompiledHeaders/Pods-AFNetworking-prefix-gazhcqpscpuojshigpndtnmryxdo/Pods-AFNetworking-prefix.pch -MMD -MT dependencies -MF /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/AFNetworkActivityIndicatorManager.d --serialize-diagnostics /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/AFNetworkActivityIndicatorManager.dia -c /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/UIKit+AFNetworking/AFNetworkActivityIndicatorManager.m -o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/AFNetworkActivityIndicatorManager.o36"184E0AB6-8AE9-4F3C-A02E-A86F6D864261-
+b8056D29C-320D-4461-8E9A-54BBBDC08A48
+
+CCompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/AFNetworkReachabilityManager.o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFNetworkReachabilityManager.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s427310274.404678
+e427310274.536213
+r1
+xCompileC
+x/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/AFNetworkReachabilityManager.o
+x/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFNetworkReachabilityManager.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFNetworkReachabilityManager.m
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFNetworkReachabilityManager.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection112"Compile /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFNetworkReachabilityManager.m327"CompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/AFNetworkReachabilityManager.o AFNetworking/AFNetworking/AFNetworkReachabilityManager.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler13b667c23c78b941^844589c23c78b941^---0#0#1#-19%DVTDocumentLocation2@111"file:///Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFNetworkReachabilityManager.m0000000000000000^4369"CompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/AFNetworkReachabilityManager.o AFNetworking/AFNetworking/AFNetworkReachabilityManager.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fmodules -fmodules-cache-path=/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -DCOCOAPODS=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-generated-files.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-own-target-headers.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-all-target-headers.hmap -iquote /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-project-headers.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator/include -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/BuildHeaders -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/BuildHeaders/AFNetworking -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Headers -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Headers/AFNetworking -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/DerivedSources/x86_64 -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/DerivedSources -F/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator -fobjc-arc -include /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/PrecompiledHeaders/Pods-AFNetworking-prefix-gazhcqpscpuojshigpndtnmryxdo/Pods-AFNetworking-prefix.pch -MMD -MT dependencies -MF /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/AFNetworkReachabilityManager.d --serialize-diagnostics /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/AFNetworkReachabilityManager.dia -c /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFNetworkReachabilityManager.m -o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/AFNetworkReachabilityManager.o36"2BE8913A-4643-4012-A782-C7670F4EAD5E-
+b8056D29C-320D-4461-8E9A-54BBBDC08A48
+
+CCompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/AFSecurityPolicy.o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFSecurityPolicy.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s427310274.408771
+e427310274.538683
+r1
+xCompileC
+x/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/AFSecurityPolicy.o
+x/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFSecurityPolicy.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFSecurityPolicy.m
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFSecurityPolicy.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection100"Compile /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFSecurityPolicy.m303"CompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/AFSecurityPolicy.o AFNetworking/AFNetworking/AFSecurityPolicy.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler56ef68c23c78b941^1de889c23c78b941^---0#0#1#-19%DVTDocumentLocation2@99"file:///Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFSecurityPolicy.m0000000000000000^4297"CompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/AFSecurityPolicy.o AFNetworking/AFNetworking/AFSecurityPolicy.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fmodules -fmodules-cache-path=/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -DCOCOAPODS=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-generated-files.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-own-target-headers.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-all-target-headers.hmap -iquote /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-project-headers.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator/include -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/BuildHeaders -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/BuildHeaders/AFNetworking -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Headers -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Headers/AFNetworking -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/DerivedSources/x86_64 -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/DerivedSources -F/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator -fobjc-arc -include /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/PrecompiledHeaders/Pods-AFNetworking-prefix-gazhcqpscpuojshigpndtnmryxdo/Pods-AFNetworking-prefix.pch -MMD -MT dependencies -MF /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/AFSecurityPolicy.d --serialize-diagnostics /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/AFSecurityPolicy.dia -c /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFSecurityPolicy.m -o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/AFSecurityPolicy.o36"97045F5A-C5BF-49DA-B5CD-4FCDBCA8828D-
+b8056D29C-320D-4461-8E9A-54BBBDC08A48
+
+CCompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/AFURLConnectionOperation.o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFURLConnectionOperation.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s427310274.419723
+e427310274.758845
+r1
+xCompileC
+x/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/AFURLConnectionOperation.o
+x/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFURLConnectionOperation.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFURLConnectionOperation.m
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFURLConnectionOperation.h
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFURLRequestSerialization.h
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFURLResponseSerialization.h
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFSecurityPolicy.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection108"Compile /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFURLConnectionOperation.m319"CompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/AFURLConnectionOperation.o AFNetworking/AFNetworking/AFURLConnectionOperation.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler8f8e6bc23c78b941^d844c2c23c78b941^---0#0#1#-19%DVTDocumentLocation2@107"file:///Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFURLConnectionOperation.m0000000000000000^4345"CompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/AFURLConnectionOperation.o AFNetworking/AFNetworking/AFURLConnectionOperation.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fmodules -fmodules-cache-path=/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -DCOCOAPODS=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-generated-files.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-own-target-headers.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-all-target-headers.hmap -iquote /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-project-headers.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator/include -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/BuildHeaders -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/BuildHeaders/AFNetworking -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Headers -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Headers/AFNetworking -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/DerivedSources/x86_64 -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/DerivedSources -F/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator -fobjc-arc -include /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/PrecompiledHeaders/Pods-AFNetworking-prefix-gazhcqpscpuojshigpndtnmryxdo/Pods-AFNetworking-prefix.pch -MMD -MT dependencies -MF /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/AFURLConnectionOperation.d --serialize-diagnostics /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/AFURLConnectionOperation.dia -c /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFURLConnectionOperation.m -o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/AFURLConnectionOperation.o36"71EE6CD2-1035-40EA-BFA6-09B7D6988603-
+b8056D29C-320D-4461-8E9A-54BBBDC08A48
+
+CCompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/AFURLRequestSerialization.o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFURLRequestSerialization.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s427310274.427124
+e427310274.839359
+r1
+xCompileC
+x/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/AFURLRequestSerialization.o
+x/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFURLRequestSerialization.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFURLRequestSerialization.m
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFURLRequestSerialization.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection109"Compile /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFURLRequestSerialization.m321"CompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/AFURLRequestSerialization.o AFNetworking/AFNetworking/AFURLRequestSerialization.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compileraab86dc23c78b941^8fe0d6c23c78b941^---0#0#1#-19%DVTDocumentLocation2@108"file:///Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFURLRequestSerialization.m0000000000000000^4351"CompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/AFURLRequestSerialization.o AFNetworking/AFNetworking/AFURLRequestSerialization.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fmodules -fmodules-cache-path=/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -DCOCOAPODS=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-generated-files.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-own-target-headers.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-all-target-headers.hmap -iquote /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-project-headers.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator/include -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/BuildHeaders -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/BuildHeaders/AFNetworking -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Headers -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Headers/AFNetworking -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/DerivedSources/x86_64 -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/DerivedSources -F/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator -fobjc-arc -include /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/PrecompiledHeaders/Pods-AFNetworking-prefix-gazhcqpscpuojshigpndtnmryxdo/Pods-AFNetworking-prefix.pch -MMD -MT dependencies -MF /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/AFURLRequestSerialization.d --serialize-diagnostics /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/AFURLRequestSerialization.dia -c /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFURLRequestSerialization.m -o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/AFURLRequestSerialization.o36"EADF478D-0F0C-4706-BCF7-71F8DFAD07F9-
+b8056D29C-320D-4461-8E9A-54BBBDC08A48
+
+CCompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/AFURLResponseSerialization.o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFURLResponseSerialization.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s427310274.537477
+e427310274.691764
+r1
+xCompileC
+x/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/AFURLResponseSerialization.o
+x/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFURLResponseSerialization.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFURLResponseSerialization.m
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFURLResponseSerialization.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection110"Compile /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFURLResponseSerialization.m323"CompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/AFURLResponseSerialization.o AFNetworking/AFNetworking/AFURLResponseSerialization.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler07b389c23c78b941^d717b1c23c78b941^---0#0#1#-19%DVTDocumentLocation2@109"file:///Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFURLResponseSerialization.m0000000000000000^4357"CompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/AFURLResponseSerialization.o AFNetworking/AFNetworking/AFURLResponseSerialization.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fmodules -fmodules-cache-path=/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -DCOCOAPODS=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-generated-files.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-own-target-headers.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-all-target-headers.hmap -iquote /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-project-headers.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator/include -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/BuildHeaders -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/BuildHeaders/AFNetworking -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Headers -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Headers/AFNetworking -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/DerivedSources/x86_64 -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/DerivedSources -F/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator -fobjc-arc -include /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/PrecompiledHeaders/Pods-AFNetworking-prefix-gazhcqpscpuojshigpndtnmryxdo/Pods-AFNetworking-prefix.pch -MMD -MT dependencies -MF /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/AFURLResponseSerialization.d --serialize-diagnostics /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/AFURLResponseSerialization.dia -c /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFURLResponseSerialization.m -o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/AFURLResponseSerialization.o36"FD994DE6-7917-48E5-A365-9A9D01C594EB-
+b8056D29C-320D-4461-8E9A-54BBBDC08A48
+
+CCompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/AFURLSessionManager.o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFURLSessionManager.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s427310274.539922
+e427310274.810359
+r1
+xCompileC
+x/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/AFURLSessionManager.o
+x/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFURLSessionManager.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFURLSessionManager.m
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFURLSessionManager.h
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFURLResponseSerialization.h
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFURLRequestSerialization.h
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFSecurityPolicy.h
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFNetworkReachabilityManager.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection103"Compile /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFURLSessionManager.m309"CompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/AFURLSessionManager.o AFNetworking/AFNetworking/AFURLSessionManager.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler0f638ac23c78b941^412ccfc23c78b941^---0#0#1#-19%DVTDocumentLocation2@102"file:///Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFURLSessionManager.m0000000000000000^4315"CompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/AFURLSessionManager.o AFNetworking/AFNetworking/AFURLSessionManager.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fmodules -fmodules-cache-path=/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -DCOCOAPODS=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-generated-files.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-own-target-headers.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-all-target-headers.hmap -iquote /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-project-headers.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator/include -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/BuildHeaders -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/BuildHeaders/AFNetworking -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Headers -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Headers/AFNetworking -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/DerivedSources/x86_64 -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/DerivedSources -F/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator -fobjc-arc -include /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/PrecompiledHeaders/Pods-AFNetworking-prefix-gazhcqpscpuojshigpndtnmryxdo/Pods-AFNetworking-prefix.pch -MMD -MT dependencies -MF /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/AFURLSessionManager.d --serialize-diagnostics /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/AFURLSessionManager.dia -c /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFURLSessionManager.m -o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/AFURLSessionManager.o36"183F7C3F-D9F4-4BD1-9FC5-3836568498FD-
+b8056D29C-320D-4461-8E9A-54BBBDC08A48
+
+CCompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/Pods-AFNetworking-dummy.o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Pods-AFNetworking-dummy.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s427310274.692078
+e427310274.753057
+r1
+xCompileC
+x/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/Pods-AFNetworking-dummy.o
+x/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Pods-AFNetworking-dummy.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Pods-AFNetworking-dummy.m
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection81"Compile /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Pods-AFNetworking-dummy.m291"CompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/Pods-AFNetworking-dummy.o Pods-AFNetworking-dummy.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compilerb48fb1c23c78b941^29cbc0c23c78b941^---0#0#1#-19%DVTDocumentLocation2@80"file:///Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Pods-AFNetworking-dummy.m0000000000000000^4276"CompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/Pods-AFNetworking-dummy.o Pods-AFNetworking-dummy.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fmodules -fmodules-cache-path=/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -DCOCOAPODS=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-generated-files.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-own-target-headers.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-all-target-headers.hmap -iquote /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-project-headers.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator/include -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/BuildHeaders -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/BuildHeaders/AFNetworking -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Headers -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Headers/AFNetworking -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/DerivedSources/x86_64 -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/DerivedSources -F/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator -include /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/PrecompiledHeaders/Pods-AFNetworking-prefix-gwmprgyriuwbmdcnayejyhwpuffp/Pods-AFNetworking-prefix.pch -MMD -MT dependencies -MF /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/Pods-AFNetworking-dummy.d --serialize-diagnostics /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/Pods-AFNetworking-dummy.dia -c /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Pods-AFNetworking-dummy.m -o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/Pods-AFNetworking-dummy.o36"84FBE879-2647-44FC-BE36-FBDA2D61F725-
+b8056D29C-320D-4461-8E9A-54BBBDC08A48
+
+CCompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/UIActivityIndicatorView+AFNetworking.o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/UIKit+AFNetworking/UIActivityIndicatorView+AFNetworking.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s427310274.753302
+e427310274.882455
+r1
+xCompileC
+x/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/UIActivityIndicatorView+AFNetworking.o
+x/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/UIKit+AFNetworking/UIActivityIndicatorView+AFNetworking.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/UIKit+AFNetworking/UIActivityIndicatorView+AFNetworking.m
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/UIKit+AFNetworking/UIActivityIndicatorView+AFNetworking.h
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFHTTPRequestOperation.h
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFURLConnectionOperation.h
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFURLRequestSerialization.h
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFURLResponseSerialization.h
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFSecurityPolicy.h
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFURLSessionManager.h
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFNetworkReachabilityManager.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection126"Compile /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/UIKit+AFNetworking/UIActivityIndicatorView+AFNetworking.m349"CompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/UIActivityIndicatorView+AFNetworking.o AFNetworking/UIKit+AFNetworking/UIActivityIndicatorView+AFNetworking.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler62f4c0c23c78b941^4be9e1c23c78b941^---0#0#1#-19%DVTDocumentLocation2@125"file:///Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/UIKit+AFNetworking/UIActivityIndicatorView+AFNetworking.m0000000000000000^4429"CompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/UIActivityIndicatorView+AFNetworking.o AFNetworking/UIKit+AFNetworking/UIActivityIndicatorView+AFNetworking.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fmodules -fmodules-cache-path=/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -DCOCOAPODS=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-generated-files.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-own-target-headers.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-all-target-headers.hmap -iquote /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-project-headers.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator/include -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/BuildHeaders -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/BuildHeaders/AFNetworking -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Headers -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Headers/AFNetworking -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/DerivedSources/x86_64 -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/DerivedSources -F/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator -fobjc-arc -include /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/PrecompiledHeaders/Pods-AFNetworking-prefix-gazhcqpscpuojshigpndtnmryxdo/Pods-AFNetworking-prefix.pch -MMD -MT dependencies -MF /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/UIActivityIndicatorView+AFNetworking.d --serialize-diagnostics /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/UIActivityIndicatorView+AFNetworking.dia -c /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/UIKit+AFNetworking/UIActivityIndicatorView+AFNetworking.m -o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/UIActivityIndicatorView+AFNetworking.o36"184E1F20-DB01-4784-98D5-7EAE47E1C10B-
+b8056D29C-320D-4461-8E9A-54BBBDC08A48
+
+CCompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/UIAlertView+AFNetworking.o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/UIKit+AFNetworking/UIAlertView+AFNetworking.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s427310274.759094
+e427310274.840279
+r1
+xCompileC
+x/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/UIAlertView+AFNetworking.o
+x/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/UIKit+AFNetworking/UIAlertView+AFNetworking.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/UIKit+AFNetworking/UIAlertView+AFNetworking.m
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/UIKit+AFNetworking/UIAlertView+AFNetworking.h
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFURLConnectionOperation.h
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFURLRequestSerialization.h
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFURLResponseSerialization.h
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFSecurityPolicy.h
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFURLSessionManager.h
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFNetworkReachabilityManager.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection114"Compile /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/UIKit+AFNetworking/UIAlertView+AFNetworking.m325"CompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/UIAlertView+AFNetworking.o AFNetworking/UIKit+AFNetworking/UIAlertView+AFNetworking.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler5d70c2c23c78b941^b91cd7c23c78b941^---0#0#1#-19%DVTDocumentLocation2@113"file:///Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/UIKit+AFNetworking/UIAlertView+AFNetworking.m0000000000000000^4357"CompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/UIAlertView+AFNetworking.o AFNetworking/UIKit+AFNetworking/UIAlertView+AFNetworking.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fmodules -fmodules-cache-path=/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -DCOCOAPODS=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-generated-files.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-own-target-headers.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-all-target-headers.hmap -iquote /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-project-headers.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator/include -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/BuildHeaders -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/BuildHeaders/AFNetworking -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Headers -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Headers/AFNetworking -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/DerivedSources/x86_64 -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/DerivedSources -F/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator -fobjc-arc -include /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/PrecompiledHeaders/Pods-AFNetworking-prefix-gazhcqpscpuojshigpndtnmryxdo/Pods-AFNetworking-prefix.pch -MMD -MT dependencies -MF /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/UIAlertView+AFNetworking.d --serialize-diagnostics /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/UIAlertView+AFNetworking.dia -c /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/UIKit+AFNetworking/UIAlertView+AFNetworking.m -o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/UIAlertView+AFNetworking.o36"229E2E7D-D42D-4915-9FCE-1A0305B1CCB2-
+b8056D29C-320D-4461-8E9A-54BBBDC08A48
+
+CCompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/UIButton+AFNetworking.o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/UIKit+AFNetworking/UIButton+AFNetworking.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s427310274.811725
+e427310274.967435
+r1
+xCompileC
+x/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/UIButton+AFNetworking.o
+x/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/UIKit+AFNetworking/UIButton+AFNetworking.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/UIKit+AFNetworking/UIButton+AFNetworking.m
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/UIKit+AFNetworking/UIButton+AFNetworking.h
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFHTTPRequestOperation.h
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFURLConnectionOperation.h
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFURLRequestSerialization.h
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFURLResponseSerialization.h
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFSecurityPolicy.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection111"Compile /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/UIKit+AFNetworking/UIButton+AFNetworking.m319"CompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/UIButton+AFNetworking.o AFNetworking/UIKit+AFNetworking/UIButton+AFNetworking.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compilera8fccfc23c78b941^64e5f7c23c78b941^---0#0#1#-19%DVTDocumentLocation2@110"file:///Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/UIKit+AFNetworking/UIButton+AFNetworking.m0000000000000000^4339"CompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/UIButton+AFNetworking.o AFNetworking/UIKit+AFNetworking/UIButton+AFNetworking.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fmodules -fmodules-cache-path=/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -DCOCOAPODS=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-generated-files.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-own-target-headers.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-all-target-headers.hmap -iquote /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-project-headers.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator/include -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/BuildHeaders -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/BuildHeaders/AFNetworking -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Headers -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Headers/AFNetworking -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/DerivedSources/x86_64 -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/DerivedSources -F/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator -fobjc-arc -include /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/PrecompiledHeaders/Pods-AFNetworking-prefix-gazhcqpscpuojshigpndtnmryxdo/Pods-AFNetworking-prefix.pch -MMD -MT dependencies -MF /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/UIButton+AFNetworking.d --serialize-diagnostics /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/UIButton+AFNetworking.dia -c /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/UIKit+AFNetworking/UIButton+AFNetworking.m -o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/UIButton+AFNetworking.o36"AE645CAD-BAAF-432A-9AD7-6C7990DAFCAC-
+b8056D29C-320D-4461-8E9A-54BBBDC08A48
+
+CCompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/UIImageView+AFNetworking.o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/UIKit+AFNetworking/UIImageView+AFNetworking.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s427310274.840590
+e427310274.972921
+r1
+xCompileC
+x/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/UIImageView+AFNetworking.o
+x/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/UIKit+AFNetworking/UIImageView+AFNetworking.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/UIKit+AFNetworking/UIImageView+AFNetworking.m
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/UIKit+AFNetworking/UIImageView+AFNetworking.h
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFHTTPRequestOperation.h
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFURLConnectionOperation.h
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFURLRequestSerialization.h
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFURLResponseSerialization.h
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFSecurityPolicy.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection114"Compile /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/UIKit+AFNetworking/UIImageView+AFNetworking.m325"CompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/UIImageView+AFNetworking.o AFNetworking/UIKit+AFNetworking/UIImageView+AFNetworking.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler42b3d7c23c78b941^9c30f9c23c78b941^---0#0#1#-19%DVTDocumentLocation2@113"file:///Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/UIKit+AFNetworking/UIImageView+AFNetworking.m0000000000000000^4357"CompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/UIImageView+AFNetworking.o AFNetworking/UIKit+AFNetworking/UIImageView+AFNetworking.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fmodules -fmodules-cache-path=/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -DCOCOAPODS=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-generated-files.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-own-target-headers.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-all-target-headers.hmap -iquote /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-project-headers.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator/include -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/BuildHeaders -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/BuildHeaders/AFNetworking -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Headers -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Headers/AFNetworking -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/DerivedSources/x86_64 -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/DerivedSources -F/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator -fobjc-arc -include /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/PrecompiledHeaders/Pods-AFNetworking-prefix-gazhcqpscpuojshigpndtnmryxdo/Pods-AFNetworking-prefix.pch -MMD -MT dependencies -MF /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/UIImageView+AFNetworking.d --serialize-diagnostics /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/UIImageView+AFNetworking.dia -c /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/UIKit+AFNetworking/UIImageView+AFNetworking.m -o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/UIImageView+AFNetworking.o36"26E51876-E63E-4928-A542-FE4C3FBB8241-
+b8056D29C-320D-4461-8E9A-54BBBDC08A48
+
+CCompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/UIProgressView+AFNetworking.o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/UIKit+AFNetworking/UIProgressView+AFNetworking.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s427310274.841563
+e427310274.971956
+r1
+xCompileC
+x/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/UIProgressView+AFNetworking.o
+x/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/UIKit+AFNetworking/UIProgressView+AFNetworking.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/UIKit+AFNetworking/UIProgressView+AFNetworking.m
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/UIKit+AFNetworking/UIProgressView+AFNetworking.h
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFURLConnectionOperation.h
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFURLRequestSerialization.h
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFURLResponseSerialization.h
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFSecurityPolicy.h
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFURLSessionManager.h
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFNetworkReachabilityManager.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection117"Compile /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/UIKit+AFNetworking/UIProgressView+AFNetworking.m331"CompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/UIProgressView+AFNetworking.o AFNetworking/UIKit+AFNetworking/UIProgressView+AFNetworking.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler488bd7c23c78b941^4ed2f8c23c78b941^---0#0#1#-19%DVTDocumentLocation2@116"file:///Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/UIKit+AFNetworking/UIProgressView+AFNetworking.m0000000000000000^4375"CompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/UIProgressView+AFNetworking.o AFNetworking/UIKit+AFNetworking/UIProgressView+AFNetworking.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fmodules -fmodules-cache-path=/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -DCOCOAPODS=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-generated-files.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-own-target-headers.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-all-target-headers.hmap -iquote /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-project-headers.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator/include -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/BuildHeaders -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/BuildHeaders/AFNetworking -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Headers -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Headers/AFNetworking -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/DerivedSources/x86_64 -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/DerivedSources -F/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator -fobjc-arc -include /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/PrecompiledHeaders/Pods-AFNetworking-prefix-gazhcqpscpuojshigpndtnmryxdo/Pods-AFNetworking-prefix.pch -MMD -MT dependencies -MF /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/UIProgressView+AFNetworking.d --serialize-diagnostics /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/UIProgressView+AFNetworking.dia -c /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/UIKit+AFNetworking/UIProgressView+AFNetworking.m -o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/UIProgressView+AFNetworking.o36"A82A10D5-E110-43BA-9447-FC0F24CB7981-
+b8056D29C-320D-4461-8E9A-54BBBDC08A48
+
+CCompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/UIRefreshControl+AFNetworking.o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/UIKit+AFNetworking/UIRefreshControl+AFNetworking.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s427310274.882719
+e427310274.984717
+r1
+xCompileC
+x/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/UIRefreshControl+AFNetworking.o
+x/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/UIKit+AFNetworking/UIRefreshControl+AFNetworking.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/UIKit+AFNetworking/UIRefreshControl+AFNetworking.m
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/UIKit+AFNetworking/UIRefreshControl+AFNetworking.h
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFHTTPRequestOperation.h
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFURLConnectionOperation.h
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFURLRequestSerialization.h
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFURLResponseSerialization.h
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFSecurityPolicy.h
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFURLSessionManager.h
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFNetworkReachabilityManager.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection119"Compile /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/UIKit+AFNetworking/UIRefreshControl+AFNetworking.m335"CompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/UIRefreshControl+AFNetworking.o AFNetworking/UIKit+AFNetworking/UIRefreshControl+AFNetworking.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compilerdb15e2c23c78b941^58fefcc23c78b941^---0#0#1#-19%DVTDocumentLocation2@118"file:///Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/UIKit+AFNetworking/UIRefreshControl+AFNetworking.m0000000000000000^4387"CompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/UIRefreshControl+AFNetworking.o AFNetworking/UIKit+AFNetworking/UIRefreshControl+AFNetworking.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fmodules -fmodules-cache-path=/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -DCOCOAPODS=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-generated-files.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-own-target-headers.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-all-target-headers.hmap -iquote /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-project-headers.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator/include -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/BuildHeaders -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/BuildHeaders/AFNetworking -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Headers -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Headers/AFNetworking -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/DerivedSources/x86_64 -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/DerivedSources -F/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator -fobjc-arc -include /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/PrecompiledHeaders/Pods-AFNetworking-prefix-gazhcqpscpuojshigpndtnmryxdo/Pods-AFNetworking-prefix.pch -MMD -MT dependencies -MF /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/UIRefreshControl+AFNetworking.d --serialize-diagnostics /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/UIRefreshControl+AFNetworking.dia -c /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/UIKit+AFNetworking/UIRefreshControl+AFNetworking.m -o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/UIRefreshControl+AFNetworking.o36"7BDC03CC-C150-496D-820F-98EFB52CE921-
+b8056D29C-320D-4461-8E9A-54BBBDC08A48
+
+CCompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/UIWebView+AFNetworking.o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/UIKit+AFNetworking/UIWebView+AFNetworking.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s427310274.967751
+e427310275.082650
+r1
+xCompileC
+x/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/UIWebView+AFNetworking.o
+x/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/UIKit+AFNetworking/UIWebView+AFNetworking.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/UIKit+AFNetworking/UIWebView+AFNetworking.m
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/UIKit+AFNetworking/UIWebView+AFNetworking.h
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFHTTPRequestOperation.h
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFURLConnectionOperation.h
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFURLRequestSerialization.h
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFURLResponseSerialization.h
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFSecurityPolicy.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection112"Compile /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/UIKit+AFNetworking/UIWebView+AFNetworking.m321"CompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/UIWebView+AFNetworking.o AFNetworking/UIKit+AFNetworking/UIWebView+AFNetworking.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compilerd7daf7c23c78b941^e12815c33c78b941^---0#0#1#-19%DVTDocumentLocation2@111"file:///Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/UIKit+AFNetworking/UIWebView+AFNetworking.m0000000000000000^4345"CompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/UIWebView+AFNetworking.o AFNetworking/UIKit+AFNetworking/UIWebView+AFNetworking.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fmodules -fmodules-cache-path=/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -DCOCOAPODS=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-generated-files.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-own-target-headers.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-all-target-headers.hmap -iquote /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-project-headers.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator/include -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/BuildHeaders -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/BuildHeaders/AFNetworking -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Headers -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Headers/AFNetworking -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/DerivedSources/x86_64 -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/DerivedSources -F/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator -fobjc-arc -include /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/PrecompiledHeaders/Pods-AFNetworking-prefix-gazhcqpscpuojshigpndtnmryxdo/Pods-AFNetworking-prefix.pch -MMD -MT dependencies -MF /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/UIWebView+AFNetworking.d --serialize-diagnostics /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/UIWebView+AFNetworking.dia -c /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/UIKit+AFNetworking/UIWebView+AFNetworking.m -o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/UIWebView+AFNetworking.o36"72C068C7-97E4-42D5-A207-253401B094DD-
+b8056D29C-320D-4461-8E9A-54BBBDC08A48
+
+CLibtool /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator/libPods-AFNetworking.a normal i386
+r0
+
+CLibtool /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator/libPods-AFNetworking.a normal x86_64
+s427310275.085527
+e427310275.102545
+r1
+xLibtool
+x/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator/libPods-AFNetworking.a
+xnormal
+xx86_64
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection143"Libtool /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator/libPods-AFNetworking.a normal x86_64143"Libtool /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator/libPods-AFNetworking.a normal x86_64bef915c33c78b941^1c411ac33c78b941^---0#0#1#--1244"Libtool /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator/libPods-AFNetworking.a normal x86_64    cd /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods    export IPHONEOS_DEPLOYMENT_TARGET=7.0    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool -static -arch_only x86_64 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -L/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator -filelist /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/Pods-AFNetworking.LinkFileList -framework CoreGraphics -framework Foundation -framework MobileCoreServices -framework Security -framework SystemConfiguration -o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator/libPods-AFNetworking.a36"31043ED5-F0BD-4C52-9BA7-FFAC813E176E-
+b8056D29C-320D-4461-8E9A-54BBBDC08A48
+
+CProcessPCH /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/PrecompiledHeaders/Pods-AFNetworking-prefix-afkwzqdcscmhisabfydnraqrukwf/Pods-AFNetworking-prefix.pch.pch Pods-AFNetworking-prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CProcessPCH /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/PrecompiledHeaders/Pods-AFNetworking-prefix-boueqcwjtukzikcurnzwghcwvkrf/Pods-AFNetworking-prefix.pch.pch Pods-AFNetworking-prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CProcessPCH /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/PrecompiledHeaders/Pods-AFNetworking-prefix-fuerkjqnpowcxfabuudenztaemnl/Pods-AFNetworking-prefix.pch.pch Pods-AFNetworking-prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s427155570.661161
+e427155572.293368
+r1
+xProcessPCH
+x/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/PrecompiledHeaders/Pods-AFNetworking-prefix-fuerkjqnpowcxfabuudenztaemnl/Pods-AFNetworking-prefix.pch.pch
+xPods-AFNetworking-prefix.pch
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Pods-AFNetworking-prefix.pch
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Pods-environment.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection39"Precompile Pods-AFNetworking-prefix.pch297"ProcessPCH /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/PrecompiledHeaders/Pods-AFNetworking-prefix-fuerkjqnpowcxfabuudenztaemnl/Pods-AFNetworking-prefix.pch.pch Pods-AFNetworking-prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compilerfe5fa972e075b941^72194b74e075b941^---0#0#1#-19%DVTDocumentLocation2@83"file:///Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Pods-AFNetworking-prefix.pch0000000000000000^4098"ProcessPCH /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/PrecompiledHeaders/Pods-AFNetworking-prefix-fuerkjqnpowcxfabuudenztaemnl/Pods-AFNetworking-prefix.pch.pch Pods-AFNetworking-prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c-header -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fmodules -fmodules-cache-path=/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -DCOCOAPODS=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-generated-files.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-own-target-headers.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-all-target-headers.hmap -iquote /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-project-headers.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator/include -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/BuildHeaders -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/BuildHeaders/AFNetworking -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Headers -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Headers/AFNetworking -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/DerivedSources/x86_64 -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/DerivedSources -F/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator --serialize-diagnostics /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/PrecompiledHeaders/Pods-AFNetworking-prefix-fuerkjqnpowcxfabuudenztaemnl/Pods-AFNetworking-prefix.pch.dia -MMD -MT dependencies -MF /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/PrecompiledHeaders/Pods-AFNetworking-prefix-fuerkjqnpowcxfabuudenztaemnl/Pods-AFNetworking-prefix.pch.d -c /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Pods-AFNetworking-prefix.pch -o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/PrecompiledHeaders/Pods-AFNetworking-prefix-fuerkjqnpowcxfabuudenztaemnl/Pods-AFNetworking-prefix.pch.pch36"0F4B8D7F-80DB-4AD0-95F1-97211F026977-
+b17DCC9E2-3811-460B-96B9-B226D246EC60
+
+CProcessPCH /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/PrecompiledHeaders/Pods-AFNetworking-prefix-gazhcqpscpuojshigpndtnmryxdo/Pods-AFNetworking-prefix.pch.pch Pods-AFNetworking-prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s427310273.944600
+e427310274.174352
+r1
+xProcessPCH
+x/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/PrecompiledHeaders/Pods-AFNetworking-prefix-gazhcqpscpuojshigpndtnmryxdo/Pods-AFNetworking-prefix.pch.pch
+xPods-AFNetworking-prefix.pch
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Pods-AFNetworking-prefix.pch
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Pods-environment.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection39"Precompile Pods-AFNetworking-prefix.pch297"ProcessPCH /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/PrecompiledHeaders/Pods-AFNetworking-prefix-gazhcqpscpuojshigpndtnmryxdo/Pods-AFNetworking-prefix.pch.pch Pods-AFNetworking-prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler382ff2c13c78b941^94a32cc23c78b941^---0#0#1#-19%DVTDocumentLocation2@83"file:///Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Pods-AFNetworking-prefix.pch0000000000000000^4109"ProcessPCH /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/PrecompiledHeaders/Pods-AFNetworking-prefix-gazhcqpscpuojshigpndtnmryxdo/Pods-AFNetworking-prefix.pch.pch Pods-AFNetworking-prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c-header -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fmodules -fmodules-cache-path=/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -DCOCOAPODS=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-generated-files.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-own-target-headers.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-all-target-headers.hmap -iquote /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-project-headers.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator/include -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/BuildHeaders -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/BuildHeaders/AFNetworking -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Headers -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Headers/AFNetworking -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/DerivedSources/x86_64 -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/DerivedSources -F/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator -fobjc-arc --serialize-diagnostics /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/PrecompiledHeaders/Pods-AFNetworking-prefix-gazhcqpscpuojshigpndtnmryxdo/Pods-AFNetworking-prefix.pch.dia -MMD -MT dependencies -MF /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/PrecompiledHeaders/Pods-AFNetworking-prefix-gazhcqpscpuojshigpndtnmryxdo/Pods-AFNetworking-prefix.pch.d -c /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Pods-AFNetworking-prefix.pch -o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/PrecompiledHeaders/Pods-AFNetworking-prefix-gazhcqpscpuojshigpndtnmryxdo/Pods-AFNetworking-prefix.pch.pch36"D80358BB-9341-48A1-BC52-7AE60A79AD9C-
+b8056D29C-320D-4461-8E9A-54BBBDC08A48
+
+CProcessPCH /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/PrecompiledHeaders/Pods-AFNetworking-prefix-gkppeodrzuruafgdvahguqgmbfro/Pods-AFNetworking-prefix.pch.pch Pods-AFNetworking-prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s427155570.660749
+e427155572.276672
+r1
+xProcessPCH
+x/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/PrecompiledHeaders/Pods-AFNetworking-prefix-gkppeodrzuruafgdvahguqgmbfro/Pods-AFNetworking-prefix.pch.pch
+xPods-AFNetworking-prefix.pch
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Pods-AFNetworking-prefix.pch
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Pods-environment.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection39"Precompile Pods-AFNetworking-prefix.pch297"ProcessPCH /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/PrecompiledHeaders/Pods-AFNetworking-prefix-gkppeodrzuruafgdvahguqgmbfro/Pods-AFNetworking-prefix.pch.pch Pods-AFNetworking-prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler2b4ea972e075b941^a6d34674e075b941^---0#0#1#-19%DVTDocumentLocation2@83"file:///Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Pods-AFNetworking-prefix.pch0000000000000000^4109"ProcessPCH /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/PrecompiledHeaders/Pods-AFNetworking-prefix-gkppeodrzuruafgdvahguqgmbfro/Pods-AFNetworking-prefix.pch.pch Pods-AFNetworking-prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c-header -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fmodules -fmodules-cache-path=/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -DCOCOAPODS=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-generated-files.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-own-target-headers.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-all-target-headers.hmap -iquote /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-project-headers.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator/include -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/BuildHeaders -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/BuildHeaders/AFNetworking -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Headers -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Headers/AFNetworking -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/DerivedSources/x86_64 -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/DerivedSources -F/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator -fobjc-arc --serialize-diagnostics /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/PrecompiledHeaders/Pods-AFNetworking-prefix-gkppeodrzuruafgdvahguqgmbfro/Pods-AFNetworking-prefix.pch.dia -MMD -MT dependencies -MF /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/PrecompiledHeaders/Pods-AFNetworking-prefix-gkppeodrzuruafgdvahguqgmbfro/Pods-AFNetworking-prefix.pch.d -c /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Pods-AFNetworking-prefix.pch -o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/PrecompiledHeaders/Pods-AFNetworking-prefix-gkppeodrzuruafgdvahguqgmbfro/Pods-AFNetworking-prefix.pch.pch36"3C731E3F-13C1-4FB6-80B8-DB54AD517643-
+b17DCC9E2-3811-460B-96B9-B226D246EC60
+
+CProcessPCH /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/PrecompiledHeaders/Pods-AFNetworking-prefix-gwmprgyriuwbmdcnayejyhwpuffp/Pods-AFNetworking-prefix.pch.pch Pods-AFNetworking-prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s427310273.944998
+e427310274.174034
+r1
+xProcessPCH
+x/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/PrecompiledHeaders/Pods-AFNetworking-prefix-gwmprgyriuwbmdcnayejyhwpuffp/Pods-AFNetworking-prefix.pch.pch
+xPods-AFNetworking-prefix.pch
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Pods-AFNetworking-prefix.pch
+d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Pods-environment.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection39"Precompile Pods-AFNetworking-prefix.pch297"ProcessPCH /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/PrecompiledHeaders/Pods-AFNetworking-prefix-gwmprgyriuwbmdcnayejyhwpuffp/Pods-AFNetworking-prefix.pch.pch Pods-AFNetworking-prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler492ff2c13c78b941^a48c2cc23c78b941^---0#0#1#-19%DVTDocumentLocation2@83"file:///Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Pods-AFNetworking-prefix.pch0000000000000000^4098"ProcessPCH /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/PrecompiledHeaders/Pods-AFNetworking-prefix-gwmprgyriuwbmdcnayejyhwpuffp/Pods-AFNetworking-prefix.pch.pch Pods-AFNetworking-prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c-header -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fmodules -fmodules-cache-path=/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -DCOCOAPODS=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-generated-files.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-own-target-headers.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-all-target-headers.hmap -iquote /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-project-headers.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator/include -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/BuildHeaders -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/BuildHeaders/AFNetworking -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Headers -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Headers/AFNetworking -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/DerivedSources/x86_64 -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/DerivedSources -F/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator --serialize-diagnostics /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/PrecompiledHeaders/Pods-AFNetworking-prefix-gwmprgyriuwbmdcnayejyhwpuffp/Pods-AFNetworking-prefix.pch.dia -MMD -MT dependencies -MF /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/PrecompiledHeaders/Pods-AFNetworking-prefix-gwmprgyriuwbmdcnayejyhwpuffp/Pods-AFNetworking-prefix.pch.d -c /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Pods-AFNetworking-prefix.pch -o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/PrecompiledHeaders/Pods-AFNetworking-prefix-gwmprgyriuwbmdcnayejyhwpuffp/Pods-AFNetworking-prefix.pch.pch36"04AA70D5-049B-4613-9F90-18AEF9BF5987-
+b8056D29C-320D-4461-8E9A-54BBBDC08A48
+
+CProcessPCH /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Index/PrecompiledHeaders/Pods-AFNetworking-prefix-agytsoqrmymtsrdzmipjaanapcld_ast/Pods-AFNetworking-prefix.pch.pch Pods-AFNetworking-prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.astbuilder
+r0
+
+CProcessPCH /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Index/PrecompiledHeaders/Pods-AFNetworking-prefix-dfrxjlkdyainxsgmbeefrruwlvsb_ast/Pods-AFNetworking-prefix.pch.pch Pods-AFNetworking-prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.astbuilder
+r0
+
+CProcessPCH /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Index/PrecompiledHeaders/Pods-AFNetworking-prefix-dteicrefrqwsjndfhpwthfyojwnt_ast/Pods-AFNetworking-prefix.pch.pch Pods-AFNetworking-prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.astbuilder
+r0
+
+CProcessPCH /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Index/PrecompiledHeaders/Pods-AFNetworking-prefix-dwakfvsxbdlwbwaturvpzknfaknp_ast/Pods-AFNetworking-prefix.pch.pch Pods-AFNetworking-prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.astbuilder
+r0
+
+CProcessPCH /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Index/PrecompiledHeaders/Pods-AFNetworking-prefix-epdxweshilnfucetljrzuzqxvxvl_ast/Pods-AFNetworking-prefix.pch.pch Pods-AFNetworking-prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.astbuilder
+r0
+
+CProcessPCH /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Index/PrecompiledHeaders/Pods-AFNetworking-prefix-hilinbgulfprcwbbttqyrftyoflx_ast/Pods-AFNetworking-prefix.pch.pch Pods-AFNetworking-prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.astbuilder
+r0
+

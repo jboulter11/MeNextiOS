@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SharedData.h"
 
 @interface LoginViewController : UIViewController
+
+@property (strong, nonatomic) SharedData* sharedData;
 
 @end
