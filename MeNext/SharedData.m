@@ -10,11 +10,16 @@
 
 @implementation SharedData
 @synthesize sessionManager;
+@synthesize youtubeSessionManager;
 
 -(SharedData*) init{
     sessionManager = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:@"http://www.vmutti.com/"]];
     sessionManager.responseSerializer = [AFJSONResponseSerializer serializer];
     sessionManager.responseSerializer.acceptableContentTypes = [sessionManager.responseSerializer.acceptableContentTypes setByAddingObject:@"text/html"];
+    
+    youtubeSessionManager = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:@"https://www.googleapis.com/youtube/v3/"]];
+    youtubeSessionManager.responseSerializer = [AFJSONResponseSerializer serializer];
+    youtubeSessionManager.responseSerializer.acceptableContentTypes = [youtubeSessionManager.responseSerializer.acceptableContentTypes setByAddingObject:@"text/html"];
     
     return self;
 }

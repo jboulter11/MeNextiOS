@@ -9,6 +9,8 @@
 #import "DetailTableViewCell.h"
 
 @implementation DetailTableViewCell
+@synthesize imageView;
+@synthesize textLabel;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {

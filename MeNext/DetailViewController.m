@@ -7,6 +7,7 @@
 //
 
 #import "DetailViewController.h"
+#import "UIImageView+WebCache.h"
 
 static NSString* _KEY = @"AIzaSyAbh1CseUDq0NKangT-QRIeyOoZLz6jCII";//MeNext Youtube iOS API Key
 
@@ -49,6 +50,32 @@ static NSString* _KEY = @"AIzaSyAbh1CseUDq0NKangT-QRIeyOoZLz6jCII";//MeNext Yout
     }
 }
 
+-(void)loadThumbnails
+{
+    //TODO: httpget for track details from youtube (thumbnails)
+    for(NSDictionary* track in _tracks)
+    {
+        NSString* trackId = track[@"youtubeId"];
+        AFHTTPSessionManager* manager = _sharedData.youtubeSessionManager;
+        [manager GET:[NSString stringWithFormat:@"videos?id=%@&key=%@&part=snippet&fields=items(id,snippet(title,thumbnails(default)))", trackId, _KEY] parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+            //add URLs for thumbnails to the _thumbnails array
+            [_thumbnails insertObject:responseObject[@"items"][0][@"snippet"][@"thumbnails"][@"default"][@"url"] atIndex:0];
+            //TODO: Fix this!
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self.tableView reloadData];
+            });
+            
+        } failure:^(NSURLSessionDataTask *task, NSError *error) {
+            UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Error with Youtube API"
+                                                            message:[error localizedDescription]
+                                                           delegate:nil
+                                                  cancelButtonTitle:@"OK"
+                                                  otherButtonTitles:nil];
+            [alert show];
+        }];
+    }
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -62,11 +89,13 @@ static NSString* _KEY = @"AIzaSyAbh1CseUDq0NKangT-QRIeyOoZLz6jCII";//MeNext Yout
     [manager GET:[NSString stringWithFormat:@"handler.php?action=listVideos&partyId=%@&token=%@", _partyId, [[NSUserDefaults standardUserDefaults] stringForKey:@"sessionId"]] parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
         //parse tracks into _tracks
         //Dictionary, 2kv pairs: status and videos
-        NSLog([responseObject description]);
         if([responseObject[@"status"] isEqualToString:@"success"])
         {
             [_tracks addObjectsFromArray:responseObject[@"videos"]];
-            dispatch_async(dispatch_get_main_queue(), ^{[self.tableView reloadData];});
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self loadThumbnails];
+                [self.tableView reloadData];
+            });
         }
         else
         {
@@ -81,47 +110,6 @@ static NSString* _KEY = @"AIzaSyAbh1CseUDq0NKangT-QRIeyOoZLz6jCII";//MeNext Yout
                                               otherButtonTitles:nil];
         [alert show];
     }];
-    
-    
-    //TODO: httpget for track details from youtube (thumbnails)
-    
-    //[_activityIndicator startAnimating];
-    
-//    dispatch_queue_t queue = dispatch_get_global_queue(0,0);
-//    
-//    //send the actual request asyncronously
-//    dispatch_async(queue, ^{
-//        NSURLSessionConfiguration* sessionConfig = [NSURLSessionConfiguration defaultSessionConfiguration];
-//        NSURLSession* session = [NSURLSession sessionWithConfiguration:sessionConfig delegate:self delegateQueue:nil];
-//        
-//        for(NSString* trackId in _tracks)
-//        {
-//            NSString* _URL = [NSString stringWithFormat:@"https://www.googleapis.com/youtube/v3/videos?id=%@&key=%@&part=snippet&fields=items(id,snippet(title,thumbnails(default)))", trackId, _KEY];
-//            
-//            NSURLSessionDataTask* dt = [session dataTaskWithURL:[NSURL URLWithString:_URL] completionHandler:^(NSData *data, NSURLResponse *response, NSError *error)
-//            {
-//                //completion handler
-//                if(!error && ((NSHTTPURLResponse*)response).statusCode == 200)
-//                {
-//                    NSError* jsonError = nil; //this is to catch an error if we get one back from our JSON Parser
-//                    
-//                    NSDictionary* results = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers | NSJSONReadingMutableLeaves error:&jsonError];
-//                    
-//                    if(!jsonError)
-//                    {
-//                        
-//                        //go get resources needed from Dictionary
-//                        NSData* thumbnailAsData = results[@"snippet"][@"thumbnails"][@"default"];
-//                        UIImage* thumbnail = [UIImage imageWithData:thumbnailAsData];
-//                        [_thumbnails addObject:thumbnail];
-//                    }
-//                }
-//            }];
-//            [dt resume];
-//            
-//        }
-//    });
-    //[_activityIndicator stopAnimating];
 }
 
 - (void)didReceiveMemoryWarning
@@ -144,10 +132,14 @@ static NSString* _KEY = @"AIzaSyAbh1CseUDq0NKangT-QRIeyOoZLz6jCII";//MeNext Yout
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"QueueCell" forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"QueueCell"];
     
     cell.textLabel.text = _tracks[indexPath.row][@"title"];
-    //[cell.imageView setImage:_thumbnails[indexPath.row]];
+    if(_thumbnails.count == _tracks.count)
+    {
+        [cell.imageView sd_setImageWithURL:[NSURL URLWithString:_thumbnails[indexPath.row]]];
+    }
+    
     return cell;
 }
 

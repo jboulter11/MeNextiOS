@@ -12,6 +12,7 @@
 @interface SharedData : NSObject
 
 @property AFHTTPSessionManager* sessionManager;
+@property AFHTTPSessionManager* youtubeSessionManager;
 
 +(NSMutableString *) sanitizeNSString:(NSString *)string;
 
