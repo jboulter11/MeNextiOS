@@ -7,6 +7,7 @@
 //
 
 #import "DetailViewController.h"
+#import "DetailTableViewCell.h"
 #import "UIImageView+WebCache.h"
 
 static NSString* _KEY = @"AIzaSyAbh1CseUDq0NKangT-QRIeyOoZLz6jCII";//MeNext Youtube iOS API Key
@@ -52,7 +53,8 @@ static NSString* _KEY = @"AIzaSyAbh1CseUDq0NKangT-QRIeyOoZLz6jCII";//MeNext Yout
 
 -(void)loadThumbnails
 {
-    //TODO: httpget for track details from youtube (thumbnails)
+    //TODO: Fix bug where pictures load in weird orders (caching problem?)
+    //httpget for track details from youtube (thumbnails)
     for(NSDictionary* track in _tracks)
     {
         NSString* trackId = track[@"youtubeId"];
@@ -60,7 +62,6 @@ static NSString* _KEY = @"AIzaSyAbh1CseUDq0NKangT-QRIeyOoZLz6jCII";//MeNext Yout
         [manager GET:[NSString stringWithFormat:@"videos?id=%@&key=%@&part=snippet&fields=items(id,snippet(title,thumbnails(default)))", trackId, _KEY] parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
             //add URLs for thumbnails to the _thumbnails array
             [_thumbnails insertObject:responseObject[@"items"][0][@"snippet"][@"thumbnails"][@"default"][@"url"] atIndex:0];
-            //TODO: Fix this!
             dispatch_async(dispatch_get_main_queue(), ^{
                 [self.tableView reloadData];
             });
@@ -76,15 +77,13 @@ static NSString* _KEY = @"AIzaSyAbh1CseUDq0NKangT-QRIeyOoZLz6jCII";//MeNext Yout
     }
 }
 
-- (void)viewDidLoad
+- (void)loadTracks
 {
-    [super viewDidLoad];
-    _tracks = [[NSMutableArray alloc] init];
-    _thumbnails = [[NSMutableArray alloc] init];
-    
-    _partyId = _detailItem[@"partyId"];
-    _partyName = _detailItem[@"name"];
-    
+    if(_tracks.count != 0)
+    {
+        [_tracks removeAllObjects];
+        [_thumbnails removeAllObjects];
+    }
     AFHTTPSessionManager* manager = _sharedData.sessionManager;
     [manager GET:[NSString stringWithFormat:@"handler.php?action=listVideos&partyId=%@&token=%@", _partyId, [[NSUserDefaults standardUserDefaults] stringForKey:@"sessionId"]] parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
         //parse tracks into _tracks
@@ -112,6 +111,57 @@ static NSString* _KEY = @"AIzaSyAbh1CseUDq0NKangT-QRIeyOoZLz6jCII";//MeNext Yout
     }];
 }
 
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    _tracks = [[NSMutableArray alloc] init];
+    _thumbnails = [[NSMutableArray alloc] init];
+    
+    _partyId = _detailItem[@"partyId"];
+    _partyName = _detailItem[@"name"];
+    
+    [self loadTracks];
+}
+
+- (void)vote:(UIButton*)button forDirection:(NSString*)direction
+{
+    NSInteger row = button.tag;
+    NSLog([_tracks[row] description]);
+    
+    if([direction isEqualToString:_tracks[row][@"userRating"]])
+    {
+        direction = @"0";//we're un-voting
+    }
+    
+    NSString* submissionId = _tracks[row][@"submissionId"];
+    NSDictionary* postDictionary = @{@"action": @"vote", @"direction": direction, @"submissionId":submissionId, @"sessionId":[[NSUserDefaults standardUserDefaults] stringForKey:@"sessionId"]};
+    
+    AFHTTPSessionManager* manager = _sharedData.sessionManager;
+    [manager POST:@"handler.php" parameters:postDictionary success:^(NSURLSessionDataTask *task, id responseObject) {
+        NSLog([responseObject description]);
+        //re-fetch data on tracks to reflect new order
+        [self loadTracks];
+        
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Error Voting"
+                                                        message:[error localizedDescription]
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+        [alert show];
+    }];
+}
+
+- (IBAction)upVote:(id)sender
+{
+    [self vote:(UIButton*)sender forDirection:@"1"];
+}
+
+- (IBAction)downVote:(id)sender
+{
+    [self vote:(UIButton*)sender forDirection:@"-1"];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -130,14 +180,25 @@ static NSString* _KEY = @"AIzaSyAbh1CseUDq0NKangT-QRIeyOoZLz6jCII";//MeNext Yout
     return _tracks.count;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+- (DetailTableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"QueueCell"];
+    DetailTableViewCell *cell = (DetailTableViewCell*)[tableView dequeueReusableCellWithIdentifier:@"QueueCell"];
     
     cell.textLabel.text = _tracks[indexPath.row][@"title"];
     if(_thumbnails.count == _tracks.count)
     {
         [cell.imageView sd_setImageWithURL:[NSURL URLWithString:_thumbnails[indexPath.row]]];
+    }
+    cell.upVoteButton.tag = indexPath.row;
+    cell.downVoteButton.tag = indexPath.row;
+    
+    if([_tracks[indexPath.row][@"userRating"] isEqualToString:@"1"])
+    {
+        cell.upVoteButton.imageView.image = [UIImage imageNamed:@"UpArrowColor"];
+    }
+    else if([_tracks[indexPath.row][@"userRating"] isEqualToString:@"-1"])
+    {
+        cell.downVoteButton.imageView.image = [UIImage imageNamed:@"DownArrowColor"];
     }
     
     return cell;

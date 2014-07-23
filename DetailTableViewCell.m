@@ -11,6 +11,8 @@
 @implementation DetailTableViewCell
 @synthesize imageView;
 @synthesize textLabel;
+@synthesize upVoteButton;
+@synthesize downVoteButton;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -20,6 +22,7 @@
     }
     return self;
 }
+
 
 - (void)awakeFromNib
 {

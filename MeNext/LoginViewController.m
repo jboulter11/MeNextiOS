@@ -30,7 +30,7 @@
     return self;
 }
 
-- (IBAction)login:(id)sender
+- (void)sendRequest:(NSString*)action
 {
     //TODO: httppost login with the MeNext API
     if(_usernameTextField.text != nil || _passwordTextField.text != nil)//if we have input, go, otherwise ignore
@@ -46,8 +46,7 @@
         NSMutableString* username = [SharedData sanitizeNSString:_usernameTextField.text];
         NSMutableString* password = [SharedData sanitizeNSString:_passwordTextField.text];
         
-//        NSString* postString = [NSString stringWithFormat:@"action=login&username=%@&password=%@", username, password];
-        NSDictionary* postDictionary = @{@"action":@"login", @"username":username, @"password":password};
+        NSDictionary* postDictionary = @{@"action":action, @"username":username, @"password":password};
         
         //send the actual request asyncronously
         AFHTTPSessionManager* manager = _sharedData.sessionManager;
@@ -59,14 +58,24 @@
             });
         } failure:^(NSURLSessionDataTask *task, NSError *error) {
             UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Error Logging In"
-                                                          message:[error localizedDescription]
-                                                         delegate:nil
-                                                cancelButtonTitle:@"OK"
-                                                otherButtonTitles:nil];
+                                                            message:[error localizedDescription]
+                                                           delegate:nil
+                                                  cancelButtonTitle:@"OK"
+                                                  otherButtonTitles:nil];
             dispatch_async(dispatch_get_main_queue(), ^{[_activityIndicator stopAnimating];});
             [alert show];
         }];
     }
+}
+
+- (IBAction)login:(id)sender
+{
+    [self sendRequest:@"login"];
+}
+
+-(IBAction)reg:(id)sender
+{
+    [self sendRequest:@"register"];
 }
 
 -(void)viewWillAppear:(BOOL)animated

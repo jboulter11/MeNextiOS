@@ -63,7 +63,7 @@ r0
 
 CCheck dependencies
 r0
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependenciese926a915e079b941^624da915e079b941^---0#1#1#--18"Check dependencies36"AAA64194-9656-45C4-A840-F0BE13C15DAD-
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependencies9e42d2545880b941^718ed2545880b941^---0#1#1#--18"Check dependencies36"16B43090-12CD-4D2A-A495-BE315E7623EF-
 
 CCompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods.build/Objects-normal/i386/Pods-dummy.o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Pods-dummy.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 r0

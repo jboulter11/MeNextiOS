@@ -12,5 +12,8 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UILabel *textLabel;
+@property (weak, nonatomic) IBOutlet UIButton* upVoteButton;
+@property (weak, nonatomic) IBOutlet UIButton* downVoteButton;
+
 
 @end
