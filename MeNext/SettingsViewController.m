@@ -7,6 +7,7 @@
 //
 
 #import "SettingsViewController.h"
+#import "LoginViewController.h"
 
 @interface SettingsViewController ()
 
@@ -32,13 +33,19 @@
     return self;
 }
 
+- (IBAction)logout:(id)sender
+{
+    [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"sessionId"];
+    
+    [self performSegueWithIdentifier:@"logout" sender:self];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
     //TODO: Add the ability to change the host address from vmutti.com to other servers (low priority)
-    
 }
 
 - (void)didReceiveMemoryWarning

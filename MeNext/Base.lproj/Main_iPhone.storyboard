@@ -7,7 +7,7 @@
         <!--Login View Controller - Log In-->
         <scene sceneID="N2X-qM-Amb">
             <objects>
-                <viewController id="oAH-gE-EPL" customClass="LoginViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="login" id="oAH-gE-EPL" customClass="LoginViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="K6t-TO-bLX"/>
                         <viewControllerLayoutGuide type="bottom" id="iB6-57-Dbu"/>
@@ -197,25 +197,30 @@
                                     <outlet property="delegate" destination="DYL-Nm-7SO" id="PNk-lq-YPp"/>
                                 </connections>
                             </navigationBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Ota-pT-4Aw">
-                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SettingsCell" id="vSO-vg-Fmb">
-                                        <rect key="frame" x="0.0" y="22" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vSO-vg-Fmb" id="NtY-Ih-5vE">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D93-oN-Lba">
+                                <rect key="frame" x="0.0" y="513" width="320" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.53333333329999999" green="0.17254901959999999" blue="0.84313725490000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="PnG-ef-twC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Log Out">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="logout:" destination="DYL-Nm-7SO" eventType="touchUpInside" id="bU4-ur-gQa"/>
+                                    <action selector="reg:" destination="oAH-gE-EPL" eventType="touchUpInside" id="JY4-7n-oY8"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="D93-oN-Lba" firstAttribute="trailing" secondItem="jlM-RX-BVn" secondAttribute="trailing" id="1cw-ZG-38C"/>
                             <constraint firstItem="jlM-RX-BVn" firstAttribute="leading" secondItem="NdA-Q6-MJU" secondAttribute="leading" id="NcQ-kD-azv"/>
+                            <constraint firstItem="D93-oN-Lba" firstAttribute="leading" secondItem="jlM-RX-BVn" secondAttribute="leading" id="WTR-Kk-3BZ"/>
+                            <constraint firstAttribute="bottom" secondItem="D93-oN-Lba" secondAttribute="bottom" id="cgk-0e-DS4"/>
                             <constraint firstAttribute="trailing" secondItem="jlM-RX-BVn" secondAttribute="trailing" id="i64-PN-9Mi"/>
                             <constraint firstItem="jlM-RX-BVn" firstAttribute="top" secondItem="NdA-Q6-MJU" secondAttribute="top" constant="20" id="rYs-nU-uev"/>
                         </constraints>
@@ -223,6 +228,7 @@
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <connections>
                         <outlet property="bar" destination="jlM-RX-BVn" id="Zo4-Ad-9PR"/>
+                        <segue destination="rS3-R9-Ivy" kind="modal" identifier="logout" modalTransitionStyle="flipHorizontal" id="lT3-Ec-Ue3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fez-dr-cck" userLabel="First Responder" sceneMemberID="firstResponder"/>
