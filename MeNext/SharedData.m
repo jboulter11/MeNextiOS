@@ -11,6 +11,7 @@
 @implementation SharedData
 @synthesize sessionManager;
 @synthesize youtubeSessionManager;
+@synthesize KEY;
 
 -(SharedData*) init{
     sessionManager = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:@"http://www.vmutti.com/"]];
@@ -20,6 +21,8 @@
     youtubeSessionManager = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:@"https://www.googleapis.com/youtube/v3/"]];
     youtubeSessionManager.responseSerializer = [AFJSONResponseSerializer serializer];
     youtubeSessionManager.responseSerializer.acceptableContentTypes = [youtubeSessionManager.responseSerializer.acceptableContentTypes setByAddingObject:@"text/html"];
+    
+     KEY = @"AIzaSyAbh1CseUDq0NKangT-QRIeyOoZLz6jCII";//MeNext Youtube iOS API Key
     
     return self;
 }

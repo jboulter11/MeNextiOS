@@ -371,16 +371,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <searchBar key="tableHeaderView" contentMode="redraw" id="kfE-gl-6Xa">
+                        <searchBar key="tableHeaderView" contentMode="redraw" text="" placeholder="Search" id="sl2-Sg-9ur">
                             <rect key="frame" x="0.0" y="64" width="320" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <textInputTraits key="textInputTraits"/>
                             <connections>
-                                <outlet property="delegate" destination="jcc-L1-THs" id="cal-ov-hCN"/>
+                                <outlet property="delegate" destination="jcc-L1-THs" id="9wy-Dr-JVq"/>
                             </connections>
                         </searchBar>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="QueueCell" id="43R-Do-jGN" customClass="AddTrackTableViewCell">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="AddTrackCell" id="43R-Do-jGN" customClass="AddTrackTableViewCell">
                                 <rect key="frame" x="0.0" y="130" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="43R-Do-jGN" id="wJ2-Jv-qFG">
@@ -408,6 +408,9 @@
                                             <state key="normal">
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
+                                            <connections>
+                                                <action selector="addTrack:" destination="jcc-L1-THs" eventType="touchUpInside" id="5bn-HX-pFy"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <constraints>
@@ -417,8 +420,9 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="imageView" destination="mhN-gI-meD" id="7ad-ou-4w2"/>
-                                    <outlet property="textLabel" destination="CqV-0j-N1u" id="UOp-Zz-DuX"/>
+                                    <outlet property="addTrackButton" destination="Mbb-kw-I93" id="4bW-Mx-Jnc"/>
+                                    <outlet property="imageView" destination="mhN-gI-meD" id="rps-Gg-NKZ"/>
+                                    <outlet property="textLabel" destination="CqV-0j-N1u" id="Sd2-Ie-VwJ"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -429,6 +433,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Add Track" id="4VX-87-VMF"/>
                     <connections>
+                        <outlet property="searchBar" destination="sl2-Sg-9ur" id="NjC-Jh-RsG"/>
                         <outlet property="searchDisplayController" destination="LBn-r4-JcM" id="VQR-Qw-ezm"/>
                     </connections>
                 </tableViewController>
@@ -436,7 +441,6 @@
                 <searchDisplayController id="LBn-r4-JcM">
                     <connections>
                         <outlet property="delegate" destination="jcc-L1-THs" id="mah-ML-kr9"/>
-                        <outlet property="searchBar" destination="kfE-gl-6Xa" id="bsR-cG-xXE"/>
                         <outlet property="searchContentsController" destination="jcc-L1-THs" id="B4d-wd-dOC"/>
                         <outlet property="searchResultsDataSource" destination="jcc-L1-THs" id="eTm-D1-KbA"/>
                         <outlet property="searchResultsDelegate" destination="jcc-L1-THs" id="C3x-i6-km5"/>

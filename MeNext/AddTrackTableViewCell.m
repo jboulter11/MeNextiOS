@@ -9,6 +9,8 @@
 #import "AddTrackTableViewCell.h"
 
 @implementation AddTrackTableViewCell
+@synthesize textLabel;
+@synthesize imageView;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {

@@ -8,9 +8,8 @@
 
 #import "DetailViewController.h"
 #import "DetailTableViewCell.h"
+#import "AddTrackSearchTableViewController.h"
 #import "UIImageView+WebCache.h"
-
-static NSString* _KEY = @"AIzaSyAbh1CseUDq0NKangT-QRIeyOoZLz6jCII";//MeNext Youtube iOS API Key
 
 @interface DetailViewController ()
 {
@@ -59,7 +58,7 @@ static NSString* _KEY = @"AIzaSyAbh1CseUDq0NKangT-QRIeyOoZLz6jCII";//MeNext Yout
     {
         NSString* trackId = track[@"youtubeId"];
         AFHTTPSessionManager* manager = _sharedData.youtubeSessionManager;
-        [manager GET:[NSString stringWithFormat:@"videos?id=%@&key=%@&part=snippet&fields=items(id,snippet(title,thumbnails(default)))", trackId, _KEY] parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+        [manager GET:[NSString stringWithFormat:@"videos?id=%@&key=%@&part=snippet&fields=items(id,snippet(title,thumbnails(default)))", trackId, _sharedData.KEY] parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
             //add URLs for thumbnails to the _thumbnails array
             [_thumbnails insertObject:responseObject[@"items"][0][@"snippet"][@"thumbnails"][@"default"][@"url"] atIndex:0];
             dispatch_async(dispatch_get_main_queue(), ^{
@@ -120,6 +119,12 @@ static NSString* _KEY = @"AIzaSyAbh1CseUDq0NKangT-QRIeyOoZLz6jCII";//MeNext Yout
     _partyId = _detailItem[@"partyId"];
     _partyName = _detailItem[@"name"];
     
+    [self loadTracks];
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
     [self loadTracks];
 }
 
@@ -192,13 +197,18 @@ static NSString* _KEY = @"AIzaSyAbh1CseUDq0NKangT-QRIeyOoZLz6jCII";//MeNext Yout
     cell.upVoteButton.tag = indexPath.row;
     cell.downVoteButton.tag = indexPath.row;
     
-    if([_tracks[indexPath.row][@"userRating"] isEqualToString:@"1"])
+    NSString* rating = _tracks[indexPath.row][@"userRating"];
+    if(!(rating == (id)[NSNull null] || rating.length == 0))
     {
-        cell.upVoteButton.imageView.image = [UIImage imageNamed:@"UpArrowColor"];
-    }
-    else if([_tracks[indexPath.row][@"userRating"] isEqualToString:@"-1"])
-    {
-        cell.downVoteButton.imageView.image = [UIImage imageNamed:@"DownArrowColor"];
+        NSLog([rating description]);
+        if([rating isEqualToString:@"1"])
+        {
+            cell.upVoteButton.imageView.image = [UIImage imageNamed:@"UpArrowColor"];
+        }
+        else if([rating isEqualToString:@"-1"])
+        {
+            cell.downVoteButton.imageView.image = [UIImage imageNamed:@"DownArrowColor"];
+        }   
     }
     
     return cell;
@@ -240,6 +250,15 @@ static NSString* _KEY = @"AIzaSyAbh1CseUDq0NKangT-QRIeyOoZLz6jCII";//MeNext Yout
     // Called when the view is shown again in the split view, invalidating the button and popover controller.
     [self.navigationItem setLeftBarButtonItem:nil animated:YES];
     self.masterPopoverController = nil;
+}
+
+#pragma mark - Segue
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    AddTrackSearchTableViewController* dst = [segue destinationViewController];
+    dst.sharedData = self.sharedData;
+    dst.partyId = _detailItem[@"partyId"];
 }
 
 @end

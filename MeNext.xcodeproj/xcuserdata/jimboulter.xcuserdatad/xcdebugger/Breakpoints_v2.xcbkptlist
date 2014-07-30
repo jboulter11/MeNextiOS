@@ -122,11 +122,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MeNext/DetailViewController.m"
-            timestampString = "427840484.071017"
+            timestampString = "428387416.908856"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "116"
-            endingLineNumber = "116"
+            startingLineNumber = "115"
+            endingLineNumber = "115"
             landmarkName = "-viewDidLoad"
             landmarkType = "5">
          </BreakpointContent>

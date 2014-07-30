@@ -154,8 +154,6 @@
 				0CBFB4F2197023B70001CED3 /* AddTrackTableViewCell.m */,
 				0CF520D319453E1C0043AC8F /* Main_iPhone.storyboard */,
 				0CF520D619453E1C0043AC8F /* Main_iPad.storyboard */,
-				0CBFB4FD19707AF90001CED3 /* AddTrackSearchTableViewController.h */,
-				0CBFB4FE19707AF90001CED3 /* AddTrackSearchTableViewController.m */,
 				0CBFB4F719707A4B0001CED3 /* AddTrackDetailViewController.h */,
 				0CBFB4F819707A4B0001CED3 /* AddTrackDetailViewController.m */,
 				0C999702195373B50067F0A3 /* LoginViewController.h */,
@@ -166,6 +164,8 @@
 				0CF520DA19453E1C0043AC8F /* MasterViewController.m */,
 				0CF520DC19453E1C0043AC8F /* DetailViewController.h */,
 				0CF520DD19453E1C0043AC8F /* DetailViewController.m */,
+				0CBFB4FD19707AF90001CED3 /* AddTrackSearchTableViewController.h */,
+				0CBFB4FE19707AF90001CED3 /* AddTrackSearchTableViewController.m */,
 				0CF520DF19453E1C0043AC8F /* Images.xcassets */,
 				0CF520C819453E1C0043AC8F /* Supporting Files */,
 			);

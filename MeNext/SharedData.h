@@ -13,6 +13,7 @@
 
 @property AFHTTPSessionManager* sessionManager;
 @property AFHTTPSessionManager* youtubeSessionManager;
+@property (readonly) NSString* KEY;
 
 +(NSMutableString *) sanitizeNSString:(NSString *)string;
 
