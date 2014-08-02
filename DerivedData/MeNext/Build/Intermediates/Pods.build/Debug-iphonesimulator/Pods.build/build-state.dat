@@ -45,12 +45,12 @@ t1405716929
 s1550264
 
 N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator/libPods-SDWebImage.a
-c0000000053C989C100000000000DFE68
-t1405716929
+c0000000053DAD7AC00000000000DFE68
+t1406850988
 s917096
 
 N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator/libPods.a
-t1405716929
+t1406850988
 s2470968
 
 N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Pods-dummy.m
@@ -63,7 +63,7 @@ r0
 
 CCheck dependencies
 r0
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependencies95818365ca88b941^edb68365ca88b941^---0#1#1#--18"Check dependencies36"9C17A48B-C384-479E-A5D8-22152380AEA8-
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependencies3f5240906d8db941^ed7f40906d8db941^---0#1#1#--18"Check dependencies36"18D3F724-D7A6-4184-A1C2-B6E01373E8AD-
 
 CCompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods.build/Objects-normal/i386/Pods-dummy.o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Pods-dummy.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 r0
@@ -87,13 +87,13 @@ CLibtool /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Pro
 r0
 
 CLibtool /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator/libPods.a normal x86_64
-s427409729.809493
-e427409729.853198
+s428543788.064860
+e428543788.093694
 r1
 xLibtool
 x/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator/libPods.a
 xnormal
 xx86_64
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection130"Libtool /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator/libPods.a normal x86_64130"Libtool /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator/libPods.a normal x86_64a148cf41c179b941^2b6cda41c179b941^---0#0#1#--1125"Libtool /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator/libPods.a normal x86_64    cd /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods    export IPHONEOS_DEPLOYMENT_TARGET=7.0    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool -static -arch_only x86_64 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -L/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator -filelist /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods.build/Objects-normal/x86_64/Pods.LinkFileList -framework Foundation -lPods-AFNetworking -lPods-SDWebImage -o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator/libPods.a36"9986DAC8-3413-4AB5-800B-2784206BD5C2-
-b50C36305-D237-485B-915B-98361839A023
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection130"Libtool /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator/libPods.a normal x86_64130"Libtool /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator/libPods.a normal x86_6453b2102c0f8bb941^0dfd172c0f8bb941^---0#0#1#--1125"Libtool /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator/libPods.a normal x86_64    cd /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods    export IPHONEOS_DEPLOYMENT_TARGET=7.0    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool -static -arch_only x86_64 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -L/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator -filelist /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods.build/Objects-normal/x86_64/Pods.LinkFileList -framework Foundation -lPods-AFNetworking -lPods-SDWebImage -o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator/libPods.a36"5AA68CA6-99D8-4538-84B6-B9F0C6DDF2AE-
+b9F9C03EB-D58F-4110-BDA0-1E348BECAC31
 

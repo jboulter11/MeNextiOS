@@ -51,18 +51,50 @@
         //send the actual request asyncronously
         AFHTTPSessionManager* manager = _sharedData.sessionManager;
         [manager POST:@"handler.php" parameters:postDictionary success:^(NSURLSessionDataTask *task, id responseObject) {
-            [[NSUserDefaults standardUserDefaults] setObject:(NSDictionary*)responseObject[@"token"] forKey:@"sessionId"];
-            dispatch_async(dispatch_get_main_queue(), ^{
-                [_activityIndicator stopAnimating];
-                [self performSegueWithIdentifier:@"LoginSuccess" sender:self];
-            });
+            if([responseObject[@"status"] isEqualToString:@"success"])
+            {
+                [[NSUserDefaults standardUserDefaults] setObject:(NSDictionary*)responseObject[@"token"] forKey:@"sessionId"];
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [_activityIndicator stopAnimating];
+                    [self performSegueWithIdentifier:@"LoginSuccess" sender:self];
+                });
+            }
+            else
+            {
+                NSLog([responseObject description]);
+                NSString* msg = @"Error logging in";
+                if([responseObject[@"errors"][0] isEqualToString:@"bad username/password combination"])
+                {
+                    msg = @"Wrong username or password";
+                }
+                UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Error Logging In"
+                                                                message:msg
+                                                               delegate:nil
+                                                      cancelButtonTitle:@"OK"
+                                                      otherButtonTitles:nil];
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [_activityIndicator stopAnimating];
+                    _usernameTextField.enabled = YES;
+                    _passwordTextField.enabled = YES;
+                    _loginButton.enabled = YES;
+                    _registerButton.enabled = YES;
+                });
+                [alert show];
+            }
+            
         } failure:^(NSURLSessionDataTask *task, NSError *error) {
             UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Error Logging In"
                                                             message:[error localizedDescription]
                                                            delegate:nil
                                                   cancelButtonTitle:@"OK"
                                                   otherButtonTitles:nil];
-            dispatch_async(dispatch_get_main_queue(), ^{[_activityIndicator stopAnimating];});
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [_activityIndicator stopAnimating];
+                _usernameTextField.enabled = YES;
+                _passwordTextField.enabled = YES;
+                _loginButton.enabled = YES;
+                _registerButton.enabled = YES;
+            });
             [alert show];
         }];
     }

@@ -14,7 +14,7 @@
 @interface DetailViewController ()
 {
     NSMutableArray* _tracks;
-    NSMutableArray* _thumbnails;
+    NSMutableDictionary* _thumbnails;
     NSString* _partyId;
     NSString* _partyName;
 }
@@ -30,9 +30,6 @@
 {
     if (_detailItem != newDetailItem) {
         _detailItem = newDetailItem;
-        
-        // Update the view.
-        [self configureView];
     }
 
     if (self.masterPopoverController != nil) {
@@ -40,19 +37,8 @@
     }        
 }
 
-- (void)configureView
-{
-    // Update the user interface for the detail item.
-
-    if (self.detailItem)//if group exists
-    {
-        //self.detailDescriptionLabel.text = [self.detailItem description];
-    }
-}
-
 -(void)loadThumbnails
 {
-    //TODO: Fix bug where pictures load in weird orders (caching problem?)
     //httpget for track details from youtube (thumbnails)
     for(NSDictionary* track in _tracks)
     {
@@ -60,7 +46,7 @@
         AFHTTPSessionManager* manager = _sharedData.youtubeSessionManager;
         [manager GET:[NSString stringWithFormat:@"videos?id=%@&key=%@&part=snippet&fields=items(id,snippet(title,thumbnails(default)))", trackId, _sharedData.KEY] parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
             //add URLs for thumbnails to the _thumbnails array
-            [_thumbnails insertObject:responseObject[@"items"][0][@"snippet"][@"thumbnails"][@"default"][@"url"] atIndex:0];
+            [_thumbnails setObject:responseObject[@"items"][0][@"snippet"][@"thumbnails"][@"default"][@"url"] forKey:trackId];
             dispatch_async(dispatch_get_main_queue(), ^{
                 [self.tableView reloadData];
             });
@@ -110,21 +96,18 @@
     }];
 }
 
-- (void)viewDidLoad
+-(void)viewWillAppear:(BOOL)animated
 {
-    [super viewDidLoad];
+    [super viewWillAppear:animated];
+    
     _tracks = [[NSMutableArray alloc] init];
-    _thumbnails = [[NSMutableArray alloc] init];
+    _thumbnails = [[NSMutableDictionary alloc] init];
     
     _partyId = _detailItem[@"partyId"];
     _partyName = _detailItem[@"name"];
     
-    [self loadTracks];
-}
-
--(void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
+    self.title = _partyName;
+    
     [self loadTracks];
 }
 
@@ -192,7 +175,7 @@
     cell.textLabel.text = _tracks[indexPath.row][@"title"];
     if(_thumbnails.count == _tracks.count)
     {
-        [cell.imageView sd_setImageWithURL:[NSURL URLWithString:_thumbnails[indexPath.row]]];
+        [cell.imageView sd_setImageWithURL:[NSURL URLWithString:_thumbnails[_tracks[indexPath.row][@"youtubeId"]]]];
     }
     cell.upVoteButton.tag = indexPath.row;
     cell.downVoteButton.tag = indexPath.row;
@@ -204,11 +187,18 @@
         if([rating isEqualToString:@"1"])
         {
             cell.upVoteButton.imageView.image = [UIImage imageNamed:@"UpArrowColor"];
+            cell.downVoteButton.imageView.image = [UIImage imageNamed:@"DownArrow"];
         }
         else if([rating isEqualToString:@"-1"])
         {
             cell.downVoteButton.imageView.image = [UIImage imageNamed:@"DownArrowColor"];
-        }   
+            cell.upVoteButton.imageView.image = [UIImage imageNamed:@"UpArrow"];
+        }
+        else
+        {
+            cell.downVoteButton.imageView.image = [UIImage imageNamed:@"DownArrow"];
+            cell.upVoteButton.imageView.image = [UIImage imageNamed:@"UpArrow"];
+        }
     }
     
     return cell;
