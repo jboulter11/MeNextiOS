@@ -14,7 +14,7 @@
 @synthesize KEY;
 
 -(SharedData*) init{
-    sessionManager = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:@"http://www.vmutti.com/"]];
+    sessionManager = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:@"http://www.menext.me/"]];
     sessionManager.responseSerializer = [AFJSONResponseSerializer serializer];
     sessionManager.responseSerializer.acceptableContentTypes = [sessionManager.responseSerializer.acceptableContentTypes setByAddingObject:@"text/html"];
     

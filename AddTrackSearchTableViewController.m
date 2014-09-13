@@ -70,6 +70,8 @@
     UIButton* button = (UIButton*) sender;
     //send request to add track to party
     
+    NSLog([[NSUserDefaults standardUserDefaults] stringForKey:@"sessionId"]);
+    
     NSDictionary* postDictionary = @{@"action":@"addVideo", @"partyId":_partyId, @"youtubeId":_tracks[button.tag][@"id"][@"videoId"], @"sessionId":[[NSUserDefaults standardUserDefaults] stringForKey:@"sessionId"]};
     NSLog([postDictionary description]);
     AFHTTPSessionManager* manager = _sharedData.sessionManager;

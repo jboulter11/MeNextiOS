@@ -33,7 +33,7 @@
 - (void)sendRequest:(NSString*)action
 {
     //TODO: httppost login with the MeNext API
-    if(_usernameTextField.text != nil || _passwordTextField.text != nil)//if we have input, go, otherwise ignore
+    if(_usernameTextField.text.length != 0 || _passwordTextField.text.length != 0)//if we have input, go, otherwise ignore
     {
         _usernameTextField.enabled = NO;
         _passwordTextField.enabled = NO;
@@ -53,6 +53,7 @@
         [manager POST:@"handler.php" parameters:postDictionary success:^(NSURLSessionDataTask *task, id responseObject) {
             if([responseObject[@"status"] isEqualToString:@"success"])
             {
+                NSLog([[[NSHTTPCookieStorage sharedHTTPCookieStorage] cookiesForURL:[NSURL URLWithString:@"http://www.menext.me"]] description]);
                 [[NSUserDefaults standardUserDefaults] setObject:(NSDictionary*)responseObject[@"token"] forKey:@"sessionId"];
                 dispatch_async(dispatch_get_main_queue(), ^{
                     [_activityIndicator stopAnimating];
@@ -117,11 +118,26 @@
         _sharedData = [[SharedData alloc] init];
     }
     //use the sessionId NSUserDefault.  If it exists, user should be logged in.
-    if([[NSUserDefaults standardUserDefaults] stringForKey:@"sessionId"])
+    NSArray* cookies = [[NSHTTPCookieStorage sharedHTTPCookieStorage] cookiesForURL:[NSURL URLWithString:@"www.vmutti.com"]];
+    if(cookies.count > 0)
     {
-        //we're logged in, send the sessionId as the sender
-        [self performSegueWithIdentifier:@"LoginSuccess" sender:self];
+        NSHTTPCookie* sessionCookie;
+        for(NSHTTPCookie* cookie in cookies)
+        {
+            if([[cookie name] isEqualToString:@"\"PHPSESSID\""])
+            {
+                sessionCookie = cookie;
+                break;
+            }
+        }
+        if([[NSUserDefaults standardUserDefaults] stringForKey:@"sessionId"])
+        //if([[sessionCookie expiresDate] compare:[NSDate date]] == NSOrderedDescending)//if the cookie expires after our current date
+        {
+            //we're logged in
+            [self performSegueWithIdentifier:@"LoginSuccess" sender:self];
+        }
     }
+    
 }
 
 - (void)viewDidLoad
@@ -130,39 +146,11 @@
     //Check the login status of the user
     
     NSString* username = [[NSUserDefaults standardUserDefaults] stringForKey:@"username"];
-    NSString* password = [[NSUserDefaults standardUserDefaults] stringForKey:@"password"];
-    
-    //Check if username and password login, else display login objects
-    if(!username || !password)
+    //user needs to login
+    //fill the usernameTextField with current data
+    if(username)
     {
-        //user needs to login
-        //display login objects
-        _usernameTextField.hidden = NO;
-        _passwordTextField.hidden = NO;
-        _loginButton.hidden = NO;
-        _registerButton.hidden = NO;
-        _usernameTextField.enabled = YES;
-        _passwordTextField.enabled = YES;
-        _loginButton.enabled = YES;
-        _registerButton.enabled = YES;
-        
-        //fill the usernameTextField with current data
-        if(username)
-        {
-            _usernameTextField.text = username;
-        }
-    }
-    else
-    {
-        //make sure login stuff is hidden
-        _usernameTextField.hidden = YES;
-        _passwordTextField.hidden = YES;
-        _loginButton.hidden = YES;
-        _registerButton.hidden = YES;
-        _usernameTextField.enabled = NO;
-        _passwordTextField.enabled = NO;
-        _loginButton.enabled = NO;
-        _registerButton.enabled = NO;
+        _usernameTextField.text = username;
     }
 }
 
