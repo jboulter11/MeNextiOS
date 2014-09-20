@@ -415,7 +415,7 @@ r0
 
 CCheck dependencies
 r0
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependencies8e3e1a54a6c4b941^36e81b54a6c4b941^---0#1#1#--18"Check dependencies36"50938CE6-FA02-4732-AF6E-865AFCB05AA3-
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependencies4a431d460dceb941^25ce1e460dceb941^---0#1#1#--18"Check dependencies36"862B5F87-EC3D-4229-B9A4-CB2561BDE5BE-
 
 CCompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFHTTPRequestOperation.o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/AFNetworking/AFNetworking/AFHTTPRequestOperation.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 r0

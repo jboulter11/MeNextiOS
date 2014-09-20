@@ -45,10 +45,10 @@
     
 	// Do any additional setup after loading the view, typically from a nib.
     //[self.detailViewController = (DetailViewController*)[[self.splitViewController.viewControllers lastObject] topViewController];
-    NSString* sessionId = [[NSUserDefaults standardUserDefaults] stringForKey: @"sessionId"];
+    //NSString* sessionId = [[NSUserDefaults standardUserDefaults] stringForKey: @"sessionId"];
     
     AFHTTPSessionManager* manager = _sharedData.sessionManager;
-    [manager GET:[NSString stringWithFormat:@"handler.php?action=listJoinedParties&token=%@", sessionId] parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+    [manager GET:[NSString stringWithFormat:@"handler.php?action=listJoinedParties"] parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
         //parse parties into _objects
         //Dictionary with one KeyValue, value is array of party Dictionaries
         [_objects addObjectsFromArray:((NSDictionary*)responseObject)[@"parties"]];

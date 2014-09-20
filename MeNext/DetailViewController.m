@@ -69,7 +69,7 @@
         [_thumbnails removeAllObjects];
     }
     AFHTTPSessionManager* manager = _sharedData.sessionManager;
-    [manager GET:[NSString stringWithFormat:@"handler.php?action=listVideos&partyId=%@&token=%@", _partyId, [[NSUserDefaults standardUserDefaults] stringForKey:@"sessionId"]] parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+    [manager GET:[NSString stringWithFormat:@"handler.php?action=listVideos&partyId=%@", _partyId] parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
         //parse tracks into _tracks
         //Dictionary, 2kv pairs: status and videos
         if([responseObject[@"status"] isEqualToString:@"success"])
@@ -113,7 +113,6 @@
 - (void)vote:(UIButton*)button forDirection:(NSString*)direction
 {
     NSInteger row = button.tag;
-    NSLog([_tracks[row] description]);
     
     if([direction isEqualToString:_tracks[row][@"userRating"]])
     {
@@ -125,7 +124,6 @@
     
     AFHTTPSessionManager* manager = _sharedData.sessionManager;
     [manager POST:@"handler.php" parameters:postDictionary success:^(NSURLSessionDataTask *task, id responseObject) {
-        NSLog([responseObject description]);
         //re-fetch data on tracks to reflect new order
         [self loadTracks];
         
@@ -182,7 +180,6 @@
     NSString* rating = _tracks[indexPath.row][@"userRating"];
     if(!(rating == (id)[NSNull null] || rating.length == 0))
     {
-        NSLog([rating description]);
         if([rating isEqualToString:@"1"])
         {
             cell.upVoteButton.imageView.image = [UIImage imageNamed:@"UpArrowColor"];

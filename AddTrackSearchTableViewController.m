@@ -42,17 +42,21 @@
         
         AFHTTPSessionManager* manager = _sharedData.youtubeSessionManager;
         [manager GET:[NSString stringWithFormat:@"search?&key=%@&part=id,snippet&maxResults=25&q=%@&fields=items(id,snippet(title,thumbnails(default)))", _sharedData.KEY, query] parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
-            NSLog([responseObject description]);
             //add URLs for thumbnails to the _thumbnails array
-            for(NSInteger trackNum = 0; trackNum<25;++trackNum)
-            {
-                [_tracks addObject:responseObject[@"items"][trackNum]];
-                [_thumbnails insertObject:responseObject[@"items"][trackNum][@"snippet"][@"thumbnails"][@"default"][@"url"] atIndex:trackNum];
+            @try {
+                for(NSInteger trackNum = 0; trackNum<25;++trackNum)
+                {
+                    [_tracks addObject:responseObject[@"items"][trackNum]];
+                    [_thumbnails insertObject:responseObject[@"items"][trackNum][@"snippet"][@"thumbnails"][@"default"][@"url"] atIndex:trackNum];
+                }
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [searchBar resignFirstResponder];
+                    [self.tableView reloadData];
+                });
             }
-            dispatch_async(dispatch_get_main_queue(), ^{
-                [searchBar resignFirstResponder];
-                [self.tableView reloadData];
-            });
+            @catch (NSException *exception) {
+                //empty items
+            }
             
         } failure:^(NSURLSessionDataTask *task, NSError *error) {
             UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Error with Youtube API"
@@ -70,13 +74,9 @@
     UIButton* button = (UIButton*) sender;
     //send request to add track to party
     
-    NSLog([[NSUserDefaults standardUserDefaults] stringForKey:@"sessionId"]);
-    
-    NSDictionary* postDictionary = @{@"action":@"addVideo", @"partyId":_partyId, @"youtubeId":_tracks[button.tag][@"id"][@"videoId"], @"sessionId":[[NSUserDefaults standardUserDefaults] stringForKey:@"sessionId"]};
-    NSLog([postDictionary description]);
+    NSDictionary* postDictionary = @{@"action":@"addVideo", @"partyId":_partyId, @"youtubeId":_tracks[button.tag][@"id"][@"videoId"]};
     AFHTTPSessionManager* manager = _sharedData.sessionManager;
     [manager POST:@"handler.php" parameters:postDictionary success:^(NSURLSessionDataTask *task, id responseObject) {
-        NSLog([responseObject description]);
         if([responseObject[@"status"] isEqualToString:@"success"])
         {
             dispatch_async(dispatch_get_main_queue(), ^{

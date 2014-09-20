@@ -53,8 +53,8 @@
         [manager POST:@"handler.php" parameters:postDictionary success:^(NSURLSessionDataTask *task, id responseObject) {
             if([responseObject[@"status"] isEqualToString:@"success"])
             {
-                NSLog([[[NSHTTPCookieStorage sharedHTTPCookieStorage] cookiesForURL:[NSURL URLWithString:@"http://www.menext.me"]] description]);
-                [[NSUserDefaults standardUserDefaults] setObject:(NSDictionary*)responseObject[@"token"] forKey:@"sessionId"];
+               // NSLog([[[NSHTTPCookieStorage sharedHTTPCookieStorage] cookiesForURL:[NSURL URLWithString:@"http://www.menext.me"]] description]);
+                //[[NSUserDefaults standardUserDefaults] setObject:(NSDictionary*)responseObject[@"token"] forKey:@"sessionId"];
                 dispatch_async(dispatch_get_main_queue(), ^{
                     [_activityIndicator stopAnimating];
                     [self performSegueWithIdentifier:@"LoginSuccess" sender:self];
@@ -62,7 +62,7 @@
             }
             else
             {
-                NSLog([responseObject description]);
+                //NSLog([responseObject description]);
                 NSString* msg = @"Error logging in";
                 if([responseObject[@"errors"][0] isEqualToString:@"bad username/password combination"])
                 {
@@ -118,26 +118,26 @@
         _sharedData = [[SharedData alloc] init];
     }
     //use the sessionId NSUserDefault.  If it exists, user should be logged in.
-    NSArray* cookies = [[NSHTTPCookieStorage sharedHTTPCookieStorage] cookiesForURL:[NSURL URLWithString:@"www.vmutti.com"]];
-    if(cookies.count > 0)
-    {
-        NSHTTPCookie* sessionCookie;
-        for(NSHTTPCookie* cookie in cookies)
-        {
-            if([[cookie name] isEqualToString:@"\"PHPSESSID\""])
-            {
-                sessionCookie = cookie;
-                break;
-            }
-        }
-        if([[NSUserDefaults standardUserDefaults] stringForKey:@"sessionId"])
-        //if([[sessionCookie expiresDate] compare:[NSDate date]] == NSOrderedDescending)//if the cookie expires after our current date
-        {
-            //we're logged in
-            [self performSegueWithIdentifier:@"LoginSuccess" sender:self];
-        }
-    }
-    
+//    NSArray* cookies = [[NSHTTPCookieStorage sharedHTTPCookieStorage] cookiesForURL:[NSURL URLWithString:@"www.menext.me"]];
+//    if(cookies.count > 0)
+//    {
+//        NSHTTPCookie* sessionCookie;
+//        for(NSHTTPCookie* cookie in cookies)
+//        {
+//            if([[cookie name] isEqualToString:@"\"PHPSESSID\""])
+//            {
+//                sessionCookie = cookie;
+//                break;
+//            }
+//        }
+//        if([[NSUserDefaults standardUserDefaults] stringForKey:@"sessionId"])
+//        //if([[sessionCookie expiresDate] compare:[NSDate date]] == NSOrderedDescending)//if the cookie expires after our current date
+//        {
+//            //we're logged in
+//            [self performSegueWithIdentifier:@"LoginSuccess" sender:self];
+//        }
+//    }
+//    
 }
 
 - (void)viewDidLoad
