@@ -1,0 +1,32 @@
+dependencies: \
+  /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Facebook-iOS-SDK/src/DeviceAPI/FBNativeDialogs.m \
+  /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Facebook-iOS-SDK/src/FBNativeDialogs.h \
+  /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Facebook-iOS-SDK/src/FBAppCall.h \
+  /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Facebook-iOS-SDK/src/FBAccessTokenData.h \
+  /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Facebook-iOS-SDK/src/FBSession.h \
+  /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Facebook-iOS-SDK/src/FBSDKMacros.h \
+  /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Facebook-iOS-SDK/src/FBAppLinkData.h \
+  /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Facebook-iOS-SDK/src/FBDialogsData.h \
+  /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Facebook-iOS-SDK/src/FBOpenGraphActionShareDialogParams.h \
+  /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Facebook-iOS-SDK/src/FBOpenGraphActionParams.h \
+  /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Facebook-iOS-SDK/src/FBDialogsParams.h \
+  /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Facebook-iOS-SDK/src/FBOpenGraphAction.h \
+  /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Facebook-iOS-SDK/src/FBGraphObject.h \
+  /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Facebook-iOS-SDK/src/FBShareDialogParams.h \
+  /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Facebook-iOS-SDK/src/FBLinkShareParams.h \
+  /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Facebook-iOS-SDK/src/Login/FBAccessTokenData+Internal.h \
+  /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Facebook-iOS-SDK/src/DeviceAPI/FBAppBridge.h \
+  /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Facebook-iOS-SDK/src/DeviceAPI/FBAppCall+Internal.h \
+  /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Facebook-iOS-SDK/src/Insights/FBAppEvents+Internal.h \
+  /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Facebook-iOS-SDK/src/FBAppEvents.h \
+  /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Facebook-iOS-SDK/src/Core/FBAppLinkData+Internal.h \
+  /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Facebook-iOS-SDK/src/DeviceAPI/FBDialogs+Internal.h \
+  /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Facebook-iOS-SDK/src/FBDialogs.h \
+  /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Facebook-iOS-SDK/src/FBPhotoParams.h \
+  /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Facebook-iOS-SDK/src/DeviceAPI/FBLikeDialogParams.h \
+  /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Facebook-iOS-SDK/src/DeviceAPI/FBDialogsData+Internal.h \
+  /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Facebook-iOS-SDK/src/DeviceAPI/FBDialogsParams+Internal.h \
+  /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Facebook-iOS-SDK/src/FBError.h \
+  /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Facebook-iOS-SDK/src/Core/FBUtility.h \
+  /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Facebook-iOS-SDK/src/Core/FBFetchedAppSettings.h \
+  /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Facebook-iOS-SDK/src/Core/FBLogger.h

@@ -20,16 +20,22 @@ PODS:
   - AFNetworking/UIKit (2.3.1):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
+  - Bolts (1.1.2)
+  - Facebook-iOS-SDK (3.19.0):
+    - Bolts (~> 1.0)
   - SDWebImage (3.7.0):
     - SDWebImage/Core
   - SDWebImage/Core (3.7.0)
 
 DEPENDENCIES:
   - AFNetworking
+  - Facebook-iOS-SDK
   - SDWebImage
 
 SPEC CHECKSUMS:
   AFNetworking: 6d7b76aa5d04c8c37daad3eef4b7e3f2a7620da3
+  Bolts: 2635e8698a630774689441047f3465d78c48d485
+  Facebook-iOS-SDK: cb7d74759d0b1ba546e6e6f1dde407b0d4e448d6
   SDWebImage: 791cb0f588046cb0bb7802ae8ae8f5462947b773
 
 COCOAPODS: 0.33.1
