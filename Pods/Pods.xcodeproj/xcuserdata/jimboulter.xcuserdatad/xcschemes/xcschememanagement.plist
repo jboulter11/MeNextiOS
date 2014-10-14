@@ -24,6 +24,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-ZBarSDK.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -32,27 +37,32 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>176B30F859E84F13BE770A2D</key>
+		<key>5F991DDC02424651A9CB6257</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>34CEC8DD20644FD2BE0C9CCB</key>
+		<key>68EA8112DB844E3DA4312F2D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>469A525E1D76457783EB0EF0</key>
+		<key>AF346517C6064909882E9EBC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4B7D34A242C4497A8258AF1E</key>
+		<key>B61A499F73714A21B987E769</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9B0D0510E4794BE5B510A093</key>
+		<key>C75DB362A72849A6A878A290</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D7871414AAF6477E8C57329B</key>
 		<dict>
 			<key>primary</key>
 			<true/>

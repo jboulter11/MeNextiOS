@@ -13,6 +13,7 @@
 @interface LoginViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *registerButton;
 @property (weak, nonatomic) IBOutlet UIButton *loginButton;
+@property (weak, nonatomic) IBOutlet FBLoginView *fbLoginView;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
 @property (weak, nonatomic) IBOutlet UITextField *usernameTextField;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
@@ -111,6 +112,17 @@
     [self sendRequest:@"register"];
 }
 
+//FB DELAGATE METHODS
+- (void)loginViewShowingLoggedInUser:(FBLoginView *)loginView
+{
+    [self performSegueWithIdentifier:@"LoginSuccess" sender:self];
+}
+
+- (void)loginView:(FBLoginView *)loginView handleError:(NSError *)error
+{
+    //NSLog([error description]);
+}
+
 -(void)viewWillAppear:(BOOL)animated
 {
     if(!_sharedData)
@@ -152,6 +164,8 @@
     {
         _usernameTextField.text = username;
     }
+    
+    self.fbLoginView.readPermissions = @[@"Email"];
 }
 
 - (void)didReceiveMemoryWarning

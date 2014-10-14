@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0C09E271195CB609001A714B /* DetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C09E270195CB609001A714B /* DetailTableViewCell.m */; };
+		0C16C76F19ECA2A5009B62D6 /* AddPartyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C16C76E19ECA2A5009B62D6 /* AddPartyTableViewController.m */; };
+		0C16C77219ECA6A8009B62D6 /* AddPartyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C16C77119ECA6A8009B62D6 /* AddPartyTableViewCell.m */; };
 		0C38E62919496A220035FA82 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C38E62819496A220035FA82 /* SettingsViewController.m */; };
 		0C999704195373B50067F0A3 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C999703195373B50067F0A3 /* LoginViewController.m */; };
 		0CB355051975FDA5005FD24C /* SharedData.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CB355041975FDA5005FD24C /* SharedData.m */; };
@@ -47,6 +49,10 @@
 		00B88C4348BD4EAA9B803F68 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C09E26F195CB609001A714B /* DetailTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailTableViewCell.h; path = ../DetailTableViewCell.h; sourceTree = "<group>"; };
 		0C09E270195CB609001A714B /* DetailTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailTableViewCell.m; path = ../DetailTableViewCell.m; sourceTree = "<group>"; };
+		0C16C76D19ECA2A5009B62D6 /* AddPartyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddPartyTableViewController.h; sourceTree = "<group>"; };
+		0C16C76E19ECA2A5009B62D6 /* AddPartyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddPartyTableViewController.m; sourceTree = "<group>"; };
+		0C16C77019ECA6A8009B62D6 /* AddPartyTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddPartyTableViewCell.h; sourceTree = "<group>"; };
+		0C16C77119ECA6A8009B62D6 /* AddPartyTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddPartyTableViewCell.m; sourceTree = "<group>"; };
 		0C38E62719496A220035FA82 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		0C38E62819496A220035FA82 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		0C999702195373B50067F0A3 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
@@ -152,8 +158,12 @@
 				0C09E270195CB609001A714B /* DetailTableViewCell.m */,
 				0CBFB4F1197023B70001CED3 /* AddTrackTableViewCell.h */,
 				0CBFB4F2197023B70001CED3 /* AddTrackTableViewCell.m */,
+				0C16C77019ECA6A8009B62D6 /* AddPartyTableViewCell.h */,
+				0C16C77119ECA6A8009B62D6 /* AddPartyTableViewCell.m */,
 				0CF520D319453E1C0043AC8F /* Main_iPhone.storyboard */,
 				0CF520D619453E1C0043AC8F /* Main_iPad.storyboard */,
+				0C16C76D19ECA2A5009B62D6 /* AddPartyTableViewController.h */,
+				0C16C76E19ECA2A5009B62D6 /* AddPartyTableViewController.m */,
 				0CBFB4F719707A4B0001CED3 /* AddTrackDetailViewController.h */,
 				0CBFB4F819707A4B0001CED3 /* AddTrackDetailViewController.m */,
 				0C999702195373B50067F0A3 /* LoginViewController.h */,
@@ -250,6 +260,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Jim Boulter";
 				TargetAttributes = {
+					0CF520BD19453E1C0043AC8F = {
+						DevelopmentTeam = 226W9978N7;
+					};
 					0CF520E419453E1C0043AC8F = {
 						TestTargetID = 0CF520BD19453E1C0043AC8F;
 					};
@@ -335,9 +348,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				0CF520D219453E1C0043AC8F /* AppDelegate.m in Sources */,
+				0C16C77219ECA6A8009B62D6 /* AddPartyTableViewCell.m in Sources */,
 				0CF520DB19453E1C0043AC8F /* MasterViewController.m in Sources */,
 				0C999704195373B50067F0A3 /* LoginViewController.m in Sources */,
 				0CBFB4F3197023B70001CED3 /* AddTrackTableViewCell.m in Sources */,
+				0C16C76F19ECA2A5009B62D6 /* AddPartyTableViewController.m in Sources */,
 				0CB355051975FDA5005FD24C /* SharedData.m in Sources */,
 				0C38E62919496A220035FA82 /* SettingsViewController.m in Sources */,
 				0CF520CE19453E1C0043AC8F /* main.m in Sources */,
@@ -480,11 +495,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MeNext/MeNext-Prefix.pch";
 				INFOPLIST_FILE = "MeNext/MeNext-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -495,11 +514,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MeNext/MeNext-Prefix.pch";
 				INFOPLIST_FILE = "MeNext/MeNext-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

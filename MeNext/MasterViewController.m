@@ -9,6 +9,7 @@
 #import "MasterViewController.h"
 
 #import "DetailViewController.h"
+#import "AddPartyTableViewController.h"
 
 @interface MasterViewController () {
     NSMutableArray* _objects;
@@ -20,13 +21,20 @@
 - (IBAction)addGroup:(id)sender
 {
     //add placeholder group to table
-    if (!_objects) {
-        _objects = [[NSMutableArray alloc] init];
-    }
-    [_objects insertObject:[[NSDictionary alloc] initWithObjectsAndKeys:@"Placeholder Party", @"name", @"1", @"partyId", @"none", @"username", nil] atIndex:0];
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
-    //NSLog([_objects description]);
-    [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+//    if (!_objects) {
+//        _objects = [[NSMutableArray alloc] init];
+//    }
+//    [_objects insertObject:[[NSDictionary alloc] initWithObjectsAndKeys:@"Placeholder Party", @"name", @"1", @"partyId", @"none", @"username", nil] atIndex:0];
+//    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+//    [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+    
+    //ACTUAL CODE FOR ADDING GROUP
+    //Bring up actionsheet alert and ask what they want to do
+    AddPartyTableViewController* vc = [[AddPartyTableViewController alloc] init];
+    vc.sharedData = self.sharedData;
+    vc.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
+    [self presentViewController:vc animated:YES completion:nil];
+    
 }
 
 - (void)awakeFromNib
@@ -57,7 +65,7 @@
         });
         
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
-        UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Error Logging In"
+        UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Error Loading Joined Parties"
                                                         message:[error localizedDescription]
                                                        delegate:nil
                                               cancelButtonTitle:@"OK"
@@ -96,7 +104,7 @@
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Return NO if you do not want the specified item to be editable.
-    return YES;
+    return NO;
 }
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath

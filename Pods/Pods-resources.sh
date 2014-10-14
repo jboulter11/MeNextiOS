@@ -42,6 +42,10 @@ install_resource()
   esac
 }
 install_resource "Facebook-iOS-SDK/src/FBUserSettingsViewResources.bundle"
+install_resource "ZBarSDK/iphone/res/zbar-back.png"
+install_resource "ZBarSDK/iphone/res/zbar-help.html"
+install_resource "ZBarSDK/iphone/res/zbar-helpicons.png"
+install_resource "ZBarSDK/iphone/res/zbar-samples.png"
 
 rsync -avr --copy-links --no-relative --exclude '*/.svn/*' --files-from="$RESOURCES_TO_COPY" / "${CONFIGURATION_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"
 if [[ "${ACTION}" == "install" ]]; then
