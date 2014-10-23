@@ -9,9 +9,15 @@
 #import "AddPartyTableViewController.h"
 #import "AddPartyTableViewCell.h"
 
-@interface AddPartyTableViewController ()
+@interface AddPartyTableViewController () <AVCaptureMetadataOutputObjectsDelegate>
 {
-    ZBarReaderViewController *reader;
+    AVCaptureSession *_session;
+    AVCaptureDevice *_device;
+    AVCaptureDeviceInput *_input;
+    AVCaptureMetadataOutput *_output;
+    AVCaptureVideoPreviewLayer *_prevLayer;
+    
+    UIView *_highlightView;
 }
 
 @end
@@ -42,11 +48,19 @@
     NSDictionary* postDictionary = @{@"action": @"joinParty", @"partyId": partyId};
     AFHTTPSessionManager* manager = _sharedData.sessionManager;
     [manager POST:@"handler.php" parameters:postDictionary success:^(NSURLSessionDataTask *task, id responseObject) {
-        
-        
+        if(!([responseObject[@"status"] isEqualToString:@"success"]))
+        {
+            //bad
+            UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Error Joining Party"
+                                                            message:nil
+                                                           delegate:nil
+                                                  cancelButtonTitle:@"OK"
+                                                  otherButtonTitles:nil];
+            [alert show];
+        }
         
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
-        UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Error Voting"
+        UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Error Joining Party"
                                                         message:[error localizedDescription]
                                                        delegate:nil
                                               cancelButtonTitle:@"OK"
@@ -55,21 +69,32 @@
     }];
 }
 
-#pragma mark - Protocol Methods for ZBarReaderDelegate
-
-- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+-(void)captureOutput:(AVCaptureOutput *)captureOutput didOutputMetadataObjects:(NSArray *)metadataObjects fromConnection:(AVCaptureConnection *)connection
 {
-    //parse and call other method to send request
-    NSString* qrCode = [info objectForKey: ZBarReaderControllerResults];
+    //Getting string from code reader output
+    CGRect highlightViewRect = CGRectZero;
+    AVMetadataMachineReadableCodeObject *barCodeObject;
+    NSString *detectionString = nil;
     
-    NSRange range = [qrCode rangeOfString:@"partyId="];
-    if (!(range.location == NSNotFound))
-    {
-        [self sendRequestWithId: [qrCode substringFromIndex:(range.location + range.length)]];
+    for (AVMetadataObject *metadata in metadataObjects) {
+            if ([metadata.type isEqualToString:AVMetadataObjectTypeQRCode])
+            {
+                barCodeObject = (AVMetadataMachineReadableCodeObject *)[_prevLayer transformedMetadataObjectForMetadataObject:(AVMetadataMachineReadableCodeObject *)metadata];
+                highlightViewRect = barCodeObject.bounds;
+                detectionString = [(AVMetadataMachineReadableCodeObject *)metadata stringValue];
+            }
+        
+        if (detectionString != nil)
+        {
+            NSRange str = [detectionString rangeOfString:@"partyId="];
+            [self sendRequestWithId:[detectionString substringFromIndex:(str.location+str.length)]];
+            [_session stopRunning];
+            [self dismissViewControllerAnimated:YES completion:nil];
+            break;
+        }
+    
+    _highlightView.frame = highlightViewRect;
     }
-    
-    //Dismiss reader
-    [reader dismissViewControllerAnimated:YES completion: nil];
 }
 
 #pragma mark - Table view data source
@@ -119,15 +144,38 @@
 {
     if(indexPath.section == 1 && indexPath.row == 0)
     {
-        reader = [ZBarReaderViewController new];
-        reader.readerDelegate = self;
-        [reader.scanner setSymbology: ZBAR_QRCODE
-                              config: ZBAR_CFG_ENABLE
-                                  to: 0];
-        reader.readerView.zoom = 1.0;
-        reader.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
+        //SOME CRAZY VIEW CODE TO SHOW CAMERA AND HIGHLIGHT BARCODE, AS WELL AS RUN THE SCANNER
+        _highlightView = [[UIView alloc] init];
+        _highlightView.autoresizingMask = UIViewAutoresizingFlexibleTopMargin|UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleRightMargin|UIViewAutoresizingFlexibleBottomMargin;
+        _highlightView.layer.borderColor = [UIColor greenColor].CGColor;
+        _highlightView.layer.borderWidth = 3;
+        [self.view addSubview:_highlightView];
         
-        [self presentViewController:reader animated:YES completion:nil];
+        _session = [[AVCaptureSession alloc] init];
+        _device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
+        NSError *error = nil;
+        
+        _input = [AVCaptureDeviceInput deviceInputWithDevice:_device error:&error];
+        if (_input) {
+            [_session addInput:_input];
+        } else {
+            NSLog(@"Error: %@", error);
+        }
+        
+        _output = [[AVCaptureMetadataOutput alloc] init];
+        [_output setMetadataObjectsDelegate:self queue:dispatch_get_main_queue()];
+        [_session addOutput:_output];
+        
+        _output.metadataObjectTypes = [_output availableMetadataObjectTypes];
+        
+        _prevLayer = [AVCaptureVideoPreviewLayer layerWithSession:_session];
+        _prevLayer.frame = self.view.bounds;
+        _prevLayer.videoGravity = AVLayerVideoGravityResizeAspectFill;
+        [self.view.layer addSublayer:_prevLayer];
+        
+        [_session startRunning];
+        
+        [self.view bringSubviewToFront:_highlightView];
     }
     else if(indexPath.row == 1)
     {

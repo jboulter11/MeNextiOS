@@ -42,88 +42,188 @@
 		</data>
 		<key>Assets.car</key>
 		<data>
-		VE/YxJ3iTgAccg5lrtXLRGfZ0IA=
+		SwkP8h6epFMOyWf0PuZgKJEKKM8=
 		</data>
 		<key>Base.lproj/Main_iPad.storyboardc/7bK-jq-Zjz-view-r7i-6Z-zg0.nib</key>
-		<data>
-		fNzmOpIQb9h2wEabPjQEjlMjQEk=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			fNzmOpIQb9h2wEabPjQEjlMjQEk=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>Base.lproj/Main_iPad.storyboardc/Info.plist</key>
-		<data>
-		OGhvRr2CTDA5KmYUk1ujMyJ4Wms=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			OGhvRr2CTDA5KmYUk1ujMyJ4Wms=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>Base.lproj/Main_iPad.storyboardc/JEX-9P-axG-view-svH-Pt-448.nib</key>
-		<data>
-		Y9IYdAABY7rdbMkmKhH4v2zmnR4=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			Y9IYdAABY7rdbMkmKhH4v2zmnR4=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>Base.lproj/Main_iPad.storyboardc/UIViewController-H1p-Uh-vWS.nib</key>
-		<data>
-		FNIGMXtuv6htTtZexvMaaCU9ycc=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			FNIGMXtuv6htTtZexvMaaCU9ycc=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>Base.lproj/Main_iPhone.storyboardc/Ah7-4n-0Wa-view-MMQ-IT-qOo.nib</key>
-		<data>
-		D1K1nl5falPRy5caAsDWk1sAyt8=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			dLz6WUkgA7vT/t+YrCxef34qlpo=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>Base.lproj/Main_iPhone.storyboardc/DYL-Nm-7SO-view-NdA-Q6-MJU.nib</key>
-		<data>
-		QMxDQx9ch7/qkkpfWElX1iUHFtI=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			0o8xr+T6FbtNbV28HgwfX8vLWQU=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>Base.lproj/Main_iPhone.storyboardc/HAj-K6-idl-view-4ag-ho-zhp.nib</key>
-		<data>
-		KO5qEgF81hk1uyKzEdEFLSMIh+0=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			u0CP56eCnd2mpU4pIuTKxgz/3qs=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>Base.lproj/Main_iPhone.storyboardc/Info.plist</key>
-		<data>
-		IKXpdPsyAWYW265qKl+XnuJ56r4=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			IKXpdPsyAWYW265qKl+XnuJ56r4=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>Base.lproj/Main_iPhone.storyboardc/UIViewController-Ah7-4n-0Wa.nib</key>
-		<data>
-		vwEv8ZehcLnnbPtfbngDanmZgy8=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			eLco5zvPhE9GiDRDcVivwdEoDo8=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>Base.lproj/Main_iPhone.storyboardc/UIViewController-DYL-Nm-7SO.nib</key>
-		<data>
-		GQ92QkdB3UUdYc+AOWU94CoGiq8=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			BLSnn67PndBPHtNtysi2P5hMXv8=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>Base.lproj/Main_iPhone.storyboardc/UIViewController-HAj-K6-idl.nib</key>
-		<data>
-		mSIsrO1Ozv4k6qi6ot1ivVzyZRA=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			e9bTVrghf4mkNjcqBzvnnyI60+M=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>Base.lproj/Main_iPhone.storyboardc/UIViewController-jcc-L1-THs.nib</key>
-		<data>
-		AVqRVUq3c/sNspf1ilCzGyewCGk=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			bEmHN24NIh7oFGgt1P4/5/iZeeg=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>Base.lproj/Main_iPhone.storyboardc/UIViewController-pGg-6v-bdr.nib</key>
-		<data>
-		ISIIO8gS8BEILvUUFxhY4YJ0TeA=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			6uXtjXRrV3k2+QtXK/5OTOOGeEk=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>Base.lproj/Main_iPhone.storyboardc/UIViewController-rS3-R9-Ivy.nib</key>
-		<data>
-		WtY2StTq+swraRM/XoGy51Tn0P0=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			bfdzU2vHfkk3qcxmoLMaiHHDYQg=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>Base.lproj/Main_iPhone.storyboardc/jcc-L1-THs-view-m8s-5o-I7Z.nib</key>
-		<data>
-		6WYtbaiRygbzEmbJlnUsPqxq8HU=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			FnKGn4cVYE6gkl5/zG43VdKOWWM=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>Base.lproj/Main_iPhone.storyboardc/login.nib</key>
-		<data>
-		V+nG19sIGk1BbItsOYIxUVyOjSs=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			zhrSS0FpbNkNCVJDyYUIYkGIsLs=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>Base.lproj/Main_iPhone.storyboardc/oAH-gE-EPL-view-eTZ-M4-Upd.nib</key>
-		<data>
-		2Wwb7sBsWC8rJO73c8uV8eG4buw=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			4OpkeVYOR2Ml+qMRWAh2FKWIC7Y=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>Base.lproj/Main_iPhone.storyboardc/pGg-6v-bdr-view-mLL-gJ-YKr.nib</key>
-		<data>
-		VGe6k0xWtORQAr55/h3DHOeSJLw=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			kktqAHw88QzWP/Gkd2xxrRURSVI=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>FBUserSettingsViewResources.bundle/Contents/Resources/en.lproj/Localizable.strings</key>
-		<data>
-		dZ8OsmHVEurpZWiAwcl3afS0wyE=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			dZ8OsmHVEurpZWiAwcl3afS0wyE=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>FBUserSettingsViewResources.bundle/Contents/Resources/he.lproj/Localizable.strings</key>
-		<data>
-		HBm/VY9e2DGSgqsKoB0Q2KQsYyY=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			HBm/VY9e2DGSgqsKoB0Q2KQsYyY=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>FBUserSettingsViewResources.bundle/images/facebook-logo.png</key>
 		<data>
 		Cbg5F43zPuTR8tDB08FPzu6eAGc=
@@ -172,22 +272,35 @@
 		<data>
 		wW9Bjo8WHv4Q9mf+6vQn/+HnIKc=
 		</data>
+		<key>Info.plist</key>
+		<data>
+		8B8948uYRlLOT8GjNW2/vIW8ZBE=
+		</data>
 		<key>LaunchImage-700-568h@2x.png</key>
 		<data>
-		V1VdV48TyrImURVWCaose9yz87E=
+		jUzAVDZErJq8r4xRQMYF5Kc4BgE=
 		</data>
 		<key>PkgInfo</key>
 		<data>
 		n57qDP4tZfLD1rCS43W0B4LQjzE=
+		</data>
+		<key>ResourceRules.plist</key>
+		<data>
+		lwspKkpks/znbeAxH6w3tE+gCNg=
 		</data>
 		<key>embedded.mobileprovision</key>
 		<data>
 		BcxAKakIfFetCyU33dJBMWRWcY4=
 		</data>
 		<key>en.lproj/InfoPlist.strings</key>
-		<data>
-		zmV6UqBSo6r1NOz798vd5O4zTBA=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			zmV6UqBSo6r1NOz798vd5O4zTBA=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>zbar-back.png</key>
 		<data>
 		68VNkUmSdawVWAE7jYzFdeY1T8U=
@@ -245,88 +358,188 @@
 		</data>
 		<key>Assets.car</key>
 		<data>
-		VE/YxJ3iTgAccg5lrtXLRGfZ0IA=
+		SwkP8h6epFMOyWf0PuZgKJEKKM8=
 		</data>
 		<key>Base.lproj/Main_iPad.storyboardc/7bK-jq-Zjz-view-r7i-6Z-zg0.nib</key>
-		<data>
-		fNzmOpIQb9h2wEabPjQEjlMjQEk=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			fNzmOpIQb9h2wEabPjQEjlMjQEk=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>Base.lproj/Main_iPad.storyboardc/Info.plist</key>
-		<data>
-		OGhvRr2CTDA5KmYUk1ujMyJ4Wms=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			OGhvRr2CTDA5KmYUk1ujMyJ4Wms=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>Base.lproj/Main_iPad.storyboardc/JEX-9P-axG-view-svH-Pt-448.nib</key>
-		<data>
-		Y9IYdAABY7rdbMkmKhH4v2zmnR4=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			Y9IYdAABY7rdbMkmKhH4v2zmnR4=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>Base.lproj/Main_iPad.storyboardc/UIViewController-H1p-Uh-vWS.nib</key>
-		<data>
-		FNIGMXtuv6htTtZexvMaaCU9ycc=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			FNIGMXtuv6htTtZexvMaaCU9ycc=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>Base.lproj/Main_iPhone.storyboardc/Ah7-4n-0Wa-view-MMQ-IT-qOo.nib</key>
-		<data>
-		D1K1nl5falPRy5caAsDWk1sAyt8=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			dLz6WUkgA7vT/t+YrCxef34qlpo=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>Base.lproj/Main_iPhone.storyboardc/DYL-Nm-7SO-view-NdA-Q6-MJU.nib</key>
-		<data>
-		QMxDQx9ch7/qkkpfWElX1iUHFtI=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			0o8xr+T6FbtNbV28HgwfX8vLWQU=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>Base.lproj/Main_iPhone.storyboardc/HAj-K6-idl-view-4ag-ho-zhp.nib</key>
-		<data>
-		KO5qEgF81hk1uyKzEdEFLSMIh+0=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			u0CP56eCnd2mpU4pIuTKxgz/3qs=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>Base.lproj/Main_iPhone.storyboardc/Info.plist</key>
-		<data>
-		IKXpdPsyAWYW265qKl+XnuJ56r4=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			IKXpdPsyAWYW265qKl+XnuJ56r4=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>Base.lproj/Main_iPhone.storyboardc/UIViewController-Ah7-4n-0Wa.nib</key>
-		<data>
-		vwEv8ZehcLnnbPtfbngDanmZgy8=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			eLco5zvPhE9GiDRDcVivwdEoDo8=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>Base.lproj/Main_iPhone.storyboardc/UIViewController-DYL-Nm-7SO.nib</key>
-		<data>
-		GQ92QkdB3UUdYc+AOWU94CoGiq8=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			BLSnn67PndBPHtNtysi2P5hMXv8=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>Base.lproj/Main_iPhone.storyboardc/UIViewController-HAj-K6-idl.nib</key>
-		<data>
-		mSIsrO1Ozv4k6qi6ot1ivVzyZRA=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			e9bTVrghf4mkNjcqBzvnnyI60+M=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>Base.lproj/Main_iPhone.storyboardc/UIViewController-jcc-L1-THs.nib</key>
-		<data>
-		AVqRVUq3c/sNspf1ilCzGyewCGk=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			bEmHN24NIh7oFGgt1P4/5/iZeeg=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>Base.lproj/Main_iPhone.storyboardc/UIViewController-pGg-6v-bdr.nib</key>
-		<data>
-		ISIIO8gS8BEILvUUFxhY4YJ0TeA=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			6uXtjXRrV3k2+QtXK/5OTOOGeEk=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>Base.lproj/Main_iPhone.storyboardc/UIViewController-rS3-R9-Ivy.nib</key>
-		<data>
-		WtY2StTq+swraRM/XoGy51Tn0P0=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			bfdzU2vHfkk3qcxmoLMaiHHDYQg=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>Base.lproj/Main_iPhone.storyboardc/jcc-L1-THs-view-m8s-5o-I7Z.nib</key>
-		<data>
-		6WYtbaiRygbzEmbJlnUsPqxq8HU=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			FnKGn4cVYE6gkl5/zG43VdKOWWM=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>Base.lproj/Main_iPhone.storyboardc/login.nib</key>
-		<data>
-		V+nG19sIGk1BbItsOYIxUVyOjSs=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			zhrSS0FpbNkNCVJDyYUIYkGIsLs=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>Base.lproj/Main_iPhone.storyboardc/oAH-gE-EPL-view-eTZ-M4-Upd.nib</key>
-		<data>
-		2Wwb7sBsWC8rJO73c8uV8eG4buw=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			4OpkeVYOR2Ml+qMRWAh2FKWIC7Y=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>Base.lproj/Main_iPhone.storyboardc/pGg-6v-bdr-view-mLL-gJ-YKr.nib</key>
-		<data>
-		VGe6k0xWtORQAr55/h3DHOeSJLw=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			kktqAHw88QzWP/Gkd2xxrRURSVI=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>FBUserSettingsViewResources.bundle/Contents/Resources/en.lproj/Localizable.strings</key>
-		<data>
-		dZ8OsmHVEurpZWiAwcl3afS0wyE=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			dZ8OsmHVEurpZWiAwcl3afS0wyE=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>FBUserSettingsViewResources.bundle/Contents/Resources/he.lproj/Localizable.strings</key>
-		<data>
-		HBm/VY9e2DGSgqsKoB0Q2KQsYyY=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			HBm/VY9e2DGSgqsKoB0Q2KQsYyY=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>FBUserSettingsViewResources.bundle/images/facebook-logo.png</key>
 		<data>
 		Cbg5F43zPuTR8tDB08FPzu6eAGc=
@@ -377,20 +590,25 @@
 		</data>
 		<key>LaunchImage-700-568h@2x.png</key>
 		<data>
-		V1VdV48TyrImURVWCaose9yz87E=
+		jUzAVDZErJq8r4xRQMYF5Kc4BgE=
 		</data>
-		<key>PkgInfo</key>
+		<key>ResourceRules.plist</key>
 		<data>
-		n57qDP4tZfLD1rCS43W0B4LQjzE=
+		lwspKkpks/znbeAxH6w3tE+gCNg=
 		</data>
 		<key>embedded.mobileprovision</key>
 		<data>
 		BcxAKakIfFetCyU33dJBMWRWcY4=
 		</data>
 		<key>en.lproj/InfoPlist.strings</key>
-		<data>
-		zmV6UqBSo6r1NOz798vd5O4zTBA=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			zmV6UqBSo6r1NOz798vd5O4zTBA=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>zbar-back.png</key>
 		<data>
 		68VNkUmSdawVWAE7jYzFdeY1T8U=
@@ -410,54 +628,97 @@
 	</dict>
 	<key>rules</key>
 	<dict>
-		<key>.*</key>
+		<key>^</key>
 		<true/>
-		<key>^Info.plist$</key>
+		<key>^.*\.lproj/</key>
+		<dict>
+			<key>optional</key>
+			<true/>
+			<key>weight</key>
+			<real>1000</real>
+		</dict>
+		<key>^.*\.lproj/locversion.plist$</key>
 		<dict>
 			<key>omit</key>
 			<true/>
 			<key>weight</key>
-			<real>10</real>
+			<real>1100</real>
 		</dict>
-		<key>^ResourceRules.plist$</key>
-		<dict>
-			<key>omit</key>
-			<true/>
-			<key>weight</key>
-			<real>100</real>
-		</dict>
+		<key>^version.plist$</key>
+		<true/>
 	</dict>
 	<key>rules2</key>
 	<dict>
-		<key>.*</key>
-		<true/>
-		<key>^(Frameworks|SharedFrameworks|Plugins|Plug-ins|XPCServices|Helpers|MacOS)/</key>
+		<key>.*\.dSYM($|/)</key>
+		<dict>
+			<key>weight</key>
+			<real>11</real>
+		</dict>
+		<key>^</key>
+		<dict>
+			<key>weight</key>
+			<real>20</real>
+		</dict>
+		<key>^(.*/)?\.DS_Store$</key>
+		<dict>
+			<key>omit</key>
+			<true/>
+			<key>weight</key>
+			<real>2000</real>
+		</dict>
+		<key>^(Frameworks|SharedFrameworks|PlugIns|Plug-ins|XPCServices|Helpers|MacOS|Library/(Automator|Spotlight|LoginItems))/</key>
 		<dict>
 			<key>nested</key>
 			<true/>
 			<key>weight</key>
-			<real>0.0</real>
+			<real>10</real>
 		</dict>
-		<key>^Info.plist$</key>
+		<key>^.*</key>
+		<true/>
+		<key>^.*\.lproj/</key>
+		<dict>
+			<key>optional</key>
+			<true/>
+			<key>weight</key>
+			<real>1000</real>
+		</dict>
+		<key>^.*\.lproj/locversion.plist$</key>
 		<dict>
 			<key>omit</key>
+			<true/>
+			<key>weight</key>
+			<real>1100</real>
+		</dict>
+		<key>^Info\.plist$</key>
+		<dict>
+			<key>omit</key>
+			<true/>
+			<key>weight</key>
+			<real>20</real>
+		</dict>
+		<key>^PkgInfo$</key>
+		<dict>
+			<key>omit</key>
+			<true/>
+			<key>weight</key>
+			<real>20</real>
+		</dict>
+		<key>^[^/]+$</key>
+		<dict>
+			<key>nested</key>
 			<true/>
 			<key>weight</key>
 			<real>10</real>
 		</dict>
-		<key>^ResourceRules.plist$</key>
+		<key>^embedded\.provisionprofile$</key>
 		<dict>
-			<key>omit</key>
-			<true/>
 			<key>weight</key>
-			<real>100</real>
+			<real>20</real>
 		</dict>
-		<key>^[^/]+$</key>
+		<key>^version\.plist$</key>
 		<dict>
-			<key>top</key>
-			<true/>
 			<key>weight</key>
-			<real>0.0</real>
+			<real>20</real>
 		</dict>
 	</dict>
 </dict>

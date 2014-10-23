@@ -1,2 +1,2 @@
 dependencies: \
-  /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Pods-SDWebImage-dummy.m
+  /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Target\ Support\ Files/Pods-SDWebImage/Pods-SDWebImage-dummy.m

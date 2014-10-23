@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <ZBarSDK.h>
+#import <AVFoundation/AVFoundation.h>
 #import "SharedData.h"
 
-@interface AddPartyTableViewController : UITableViewController <ZBarReaderDelegate>
+@interface AddPartyTableViewController : UITableViewController <AVCaptureMetadataOutputObjectsDelegate>
 
 @property (strong, nonatomic) SharedData* sharedData;
 

@@ -1,2 +1,2 @@
 dependencies: \
-  /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Pods-Bolts-dummy.m
+  /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Target\ Support\ Files/Pods-Bolts/Pods-Bolts-dummy.m

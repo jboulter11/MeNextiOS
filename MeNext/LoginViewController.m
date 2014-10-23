@@ -31,31 +31,61 @@
     return self;
 }
 
+- (void)toggleControl:(BOOL) action
+{
+    _usernameTextField.enabled = action;
+    _passwordTextField.enabled = action;
+    _loginButton.enabled = action;
+    _registerButton.enabled = action;
+}
+
 - (void)sendRequest:(NSString*)action
 {
-    //TODO: httppost login with the MeNext API
-    if(_usernameTextField.text.length != 0 || _passwordTextField.text.length != 0)//if we have input, go, otherwise ignore
+    NSString* accessToken;
+    NSString* userId;
+    if(![action isEqual:@"login"] && ![action isEqual:@"register"])
     {
-        _usernameTextField.enabled = NO;
-        _passwordTextField.enabled = NO;
-        _loginButton.enabled = NO;
-        _registerButton.enabled = NO;
+        //We're logging in with facebook, action string is our access token
+        accessToken = action;
+        action = @"fbLogin";//TODO: match Josh's expected string
+        [FBRequestConnection startForMeWithCompletionHandler:
+         ^(FBRequestConnection *connection, id result, NSError *error)
+         {
+             if(!error)
+             {
+                 //userId = (NSString*) result[@"id"];
+                 
+                 //Looks like you have to write your facebook login network call seperately here unless Rocco says you're an idiot.
+             }
+         }];
+    }
+    
+    //only proceed if we have credentials for login
+    if(_usernameTextField.text.length != 0 || _passwordTextField.text.length != 0 || [action isEqual:@"fbLogin"])
+    {
+        [self toggleControl:NO];
         
         [_activityIndicator startAnimating];
         
         //SANITIZE INPUTS
         NSMutableString* username = [SharedData sanitizeNSString:_usernameTextField.text];
         NSMutableString* password = [SharedData sanitizeNSString:_passwordTextField.text];
+        NSDictionary* postDictionary;
         
-        NSDictionary* postDictionary = @{@"action":action, @"username":username, @"password":password};
+        if([action isEqual:@"fbLogin"])
+        {
+            postDictionary = @{@"action":action, @"accessToken":accessToken};
+        }
+        else
+        {
+            postDictionary = @{@"action":action, @"username":username, @"password":password};
+        }
         
         //send the actual request asyncronously
         AFHTTPSessionManager* manager = _sharedData.sessionManager;
         [manager POST:@"handler.php" parameters:postDictionary success:^(NSURLSessionDataTask *task, id responseObject) {
             if([responseObject[@"status"] isEqualToString:@"success"])
             {
-               // NSLog([[[NSHTTPCookieStorage sharedHTTPCookieStorage] cookiesForURL:[NSURL URLWithString:@"http://www.menext.me"]] description]);
-                //[[NSUserDefaults standardUserDefaults] setObject:(NSDictionary*)responseObject[@"token"] forKey:@"sessionId"];
                 dispatch_async(dispatch_get_main_queue(), ^{
                     [_activityIndicator stopAnimating];
                     [self performSegueWithIdentifier:@"LoginSuccess" sender:self];
@@ -63,7 +93,6 @@
             }
             else
             {
-                //NSLog([responseObject description]);
                 NSString* msg = @"Error logging in";
                 if([responseObject[@"errors"][0] isEqualToString:@"bad username/password combination"])
                 {
@@ -76,10 +105,7 @@
                                                       otherButtonTitles:nil];
                 dispatch_async(dispatch_get_main_queue(), ^{
                     [_activityIndicator stopAnimating];
-                    _usernameTextField.enabled = YES;
-                    _passwordTextField.enabled = YES;
-                    _loginButton.enabled = YES;
-                    _registerButton.enabled = YES;
+                    [self toggleControl:YES];
                 });
                 [alert show];
             }
@@ -92,10 +118,7 @@
                                                   otherButtonTitles:nil];
             dispatch_async(dispatch_get_main_queue(), ^{
                 [_activityIndicator stopAnimating];
-                _usernameTextField.enabled = YES;
-                _passwordTextField.enabled = YES;
-                _loginButton.enabled = YES;
-                _registerButton.enabled = YES;
+                [self toggleControl:YES];
             });
             [alert show];
         }];
@@ -115,7 +138,7 @@
 //FB DELAGATE METHODS
 - (void)loginViewShowingLoggedInUser:(FBLoginView *)loginView
 {
-    [self performSegueWithIdentifier:@"LoginSuccess" sender:self];
+    [self sendRequest:[[[FBSession activeSession] accessTokenData] accessToken]];
 }
 
 - (void)loginView:(FBLoginView *)loginView handleError:(NSError *)error
@@ -129,27 +152,6 @@
     {
         _sharedData = [[SharedData alloc] init];
     }
-    //use the sessionId NSUserDefault.  If it exists, user should be logged in.
-//    NSArray* cookies = [[NSHTTPCookieStorage sharedHTTPCookieStorage] cookiesForURL:[NSURL URLWithString:@"www.menext.me"]];
-//    if(cookies.count > 0)
-//    {
-//        NSHTTPCookie* sessionCookie;
-//        for(NSHTTPCookie* cookie in cookies)
-//        {
-//            if([[cookie name] isEqualToString:@"\"PHPSESSID\""])
-//            {
-//                sessionCookie = cookie;
-//                break;
-//            }
-//        }
-//        if([[NSUserDefaults standardUserDefaults] stringForKey:@"sessionId"])
-//        //if([[sessionCookie expiresDate] compare:[NSDate date]] == NSOrderedDescending)//if the cookie expires after our current date
-//        {
-//            //we're logged in
-//            [self performSegueWithIdentifier:@"LoginSuccess" sender:self];
-//        }
-//    }
-//    
 }
 
 - (void)viewDidLoad
@@ -165,7 +167,7 @@
         _usernameTextField.text = username;
     }
     
-    self.fbLoginView.readPermissions = @[@"Email"];
+    self.fbLoginView.readPermissions = @[@"email"];
 }
 
 - (void)didReceiveMemoryWarning

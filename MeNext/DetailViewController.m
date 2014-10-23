@@ -120,7 +120,7 @@
     }
     
     NSString* submissionId = _tracks[row][@"submissionId"];
-    NSDictionary* postDictionary = @{@"action": @"vote", @"direction": direction, @"submissionId":submissionId, @"sessionId":[[NSUserDefaults standardUserDefaults] stringForKey:@"sessionId"]};
+    NSDictionary* postDictionary = @{@"action": @"vote", @"direction": direction, @"submissionId":submissionId};
     
     AFHTTPSessionManager* manager = _sharedData.sessionManager;
     [manager POST:@"handler.php" parameters:postDictionary success:^(NSURLSessionDataTask *task, id responseObject) {

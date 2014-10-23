@@ -20,13 +20,6 @@
 
 - (IBAction)addGroup:(id)sender
 {
-    //add placeholder group to table
-//    if (!_objects) {
-//        _objects = [[NSMutableArray alloc] init];
-//    }
-//    [_objects insertObject:[[NSDictionary alloc] initWithObjectsAndKeys:@"Placeholder Party", @"name", @"1", @"partyId", @"none", @"username", nil] atIndex:0];
-//    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
-//    [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
     
     //ACTUAL CODE FOR ADDING GROUP
     //Bring up actionsheet alert and ask what they want to do
@@ -34,7 +27,6 @@
     vc.sharedData = self.sharedData;
     vc.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
     [self presentViewController:vc animated:YES completion:nil];
-    
 }
 
 - (void)awakeFromNib
