@@ -18,34 +18,9 @@
 
 @implementation MasterViewController
 
-- (IBAction)addGroup:(id)sender
+- (void)viewWillAppear:(BOOL)animated
 {
-    
-    //ACTUAL CODE FOR ADDING GROUP
-    //Bring up actionsheet alert and ask what they want to do
-    AddPartyTableViewController* vc = [[AddPartyTableViewController alloc] init];
-    vc.sharedData = self.sharedData;
-    vc.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
-    [self presentViewController:vc animated:YES completion:nil];
-}
-
-- (void)awakeFromNib
-{
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
-        self.clearsSelectionOnViewWillAppear = NO;
-        self.preferredContentSize = CGSizeMake(320.0, 600.0);
-    }
-    [super awakeFromNib];
-}
-
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
     _objects = [[NSMutableArray alloc] init];
-    
-	// Do any additional setup after loading the view, typically from a nib.
-    //[self.detailViewController = (DetailViewController*)[[self.splitViewController.viewControllers lastObject] topViewController];
-    //NSString* sessionId = [[NSUserDefaults standardUserDefaults] stringForKey: @"sessionId"];
     
     AFHTTPSessionManager* manager = _sharedData.sessionManager;
     [manager GET:[NSString stringWithFormat:@"handler.php?action=listJoinedParties"] parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
@@ -64,6 +39,19 @@
                                               otherButtonTitles:nil];
         [alert show];
     }];
+}
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:235/255.0 green:39/255.0 blue:53/255.0 alpha:1];
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+    self.navigationController.navigationBar.translucent = NO;
+    UIImage *logoImage = [UIImage imageNamed:@"MeNextLogo"];
+    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:logoImage];
+    [self.navigationController.navigationBar
+     setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
+    self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
 }
 
 - (void)didReceiveMemoryWarning
@@ -99,17 +87,6 @@
     return NO;
 }
 
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        [_objects removeObjectAtIndex:indexPath.row];
-        [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
-        [self addGroup:self];
-    }
-}
-
 /*
 // Override to support rearranging the table view.
 - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
@@ -134,19 +111,25 @@
     }
 }
 
+#pragma mark - Segue
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     //tell detail controller
     if ([[segue identifier] isEqualToString:@"showDetail"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        NSDate *object = _objects[indexPath.row];
         DetailViewController* dst = [segue destinationViewController];
-        [dst setDetailItem:object];
+        [dst setDetailItem:_objects[indexPath.row]];
         dst.sharedData = self.sharedData;
     }
     else if([[segue identifier] isEqualToString:@"showSettings"])
     {
         //do nothing, just segue
+    }
+    else if([[segue identifier] isEqualToString:@"joinParty"])
+    {
+        AddPartyTableViewController* vc = [segue destinationViewController];
+        vc.sharedData = self.sharedData;
     }
 }
 

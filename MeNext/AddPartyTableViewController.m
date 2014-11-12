@@ -18,6 +18,8 @@
     AVCaptureVideoPreviewLayer *_prevLayer;
     
     UIView *_highlightView;
+    
+    UIButton *backButton;
 }
 
 @end
@@ -26,9 +28,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:235/255.0 green:39/255.0 blue:53/255.0 alpha:1];
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+    self.navigationController.navigationBar.translucent = NO;
+    [self.navigationController.navigationBar
+     setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
+    self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
+    self.navigationController.navigationBar.topItem.title = @"";
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -39,7 +46,19 @@
 - (IBAction)editingDone:(id)sender
 {
     UITextField* tf = (UITextField*) sender;
-    [self sendRequestWithId:tf.text];
+    if(tf.text.length != 0)
+    {
+        [self sendRequestWithId:tf.text];
+    }
+}
+
+- (IBAction)backQRButtonHit:(id)sender
+{
+    [_session stopRunning];
+    [self.tableView deselectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:1] animated:NO];
+    _highlightView.hidden = YES;
+    [_prevLayer removeFromSuperlayer];
+    backButton.hidden = YES;
 }
 
 //Send request
@@ -71,6 +90,7 @@
 
 -(void)captureOutput:(AVCaptureOutput *)captureOutput didOutputMetadataObjects:(NSArray *)metadataObjects fromConnection:(AVCaptureConnection *)connection
 {
+    [_session stopRunning];
     //Getting string from code reader output
     CGRect highlightViewRect = CGRectZero;
     AVMetadataMachineReadableCodeObject *barCodeObject;
@@ -106,11 +126,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    if(section == 0)
-    {
-        return 1;
-    }
-    return 2;
+    return 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -118,32 +134,23 @@
     if(indexPath.section == 0)
     {
         AddPartyTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"AddPartyCell" forIndexPath:indexPath];
-        
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
         return cell;
     }
     else
     {
-        if(indexPath.row == 0)
-        {
-            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PlainCell" forIndexPath:indexPath];
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PlainCell" forIndexPath:indexPath];
         cell.textLabel.text = @"Join using QR";
         
         return cell;
-        }
-        else
-        {
-            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PlainCell" forIndexPath:indexPath];
-            cell.textLabel.text = @"Back";
-            
-            return cell;
-        }
     }
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if(indexPath.section == 1 && indexPath.row == 0)
+    if(indexPath.section == 1)
     {
+        [self.view endEditing:YES];
         //SOME CRAZY VIEW CODE TO SHOW CAMERA AND HIGHLIGHT BARCODE, AS WELL AS RUN THE SCANNER
         _highlightView = [[UIView alloc] init];
         _highlightView.autoresizingMask = UIViewAutoresizingFlexibleTopMargin|UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleRightMargin|UIViewAutoresizingFlexibleBottomMargin;
@@ -175,11 +182,25 @@
         
         [_session startRunning];
         
+        
+        backButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+        [backButton addTarget:self
+                   action:@selector(backQRButtonHit:)
+         forControlEvents:UIControlEventTouchUpInside];
+        [backButton setTitle:@"Back" forState:UIControlStateNormal];
+        backButton.layer.borderWidth = 1;
+        backButton.layer.cornerRadius = 4;
+        backButton.tintColor = [UIColor whiteColor];
+        [backButton.layer setBorderColor:backButton.tintColor.CGColor];
+        backButton.layer.hidden = NO;
+        //button.frame = CGRectMake(80.0, 210.0, 160.0, 40.0);
+        float X_Co = self.view.frame.size.width - 50.0 - 10.0;
+        float Y_Co = self.view.frame.size.height - 30.0 - 10.0;
+        [backButton setFrame:CGRectMake(X_Co, Y_Co, 50.0, 30.0)];
+        [self.view addSubview:backButton];
+        
         [self.view bringSubviewToFront:_highlightView];
-    }
-    else if(indexPath.row == 1)
-    {
-        [self dismissViewControllerAnimated:YES completion:nil];
+        [self.view bringSubviewToFront:backButton];
     }
 }
 
@@ -195,17 +216,17 @@
     }
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if(indexPath.section == 0)
-    {
-        return 60;
-    }
-    else
-    {
-        return [super tableView:tableView heightForRowAtIndexPath:indexPath];
-    }
-}
+//- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    if(indexPath.section == 0)
+//    {
+//        return 60;
+//    }
+//    else
+//    {
+//        return [super tableView:tableView heightForRowAtIndexPath:indexPath];
+//    }
+//}
 
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {

@@ -11,6 +11,11 @@
 #import "AFNetworking.h"
 
 @interface LoginViewController ()
+{
+    NSString* userId;
+    NSString* accessToken;
+    NSDictionary* postDictionary;
+}
 @property (weak, nonatomic) IBOutlet UIButton *registerButton;
 @property (weak, nonatomic) IBOutlet UIButton *loginButton;
 @property (weak, nonatomic) IBOutlet FBLoginView *fbLoginView;
@@ -41,78 +46,25 @@
 
 - (void)sendRequest:(NSString*)action
 {
-    NSString* accessToken;
-    NSString* userId;
-    if(![action isEqual:@"login"] && ![action isEqual:@"register"])
-    {
-        //We're logging in with facebook, action string is our access token
-        accessToken = action;
-        action = @"fbLogin";//TODO: match Josh's expected string
-        [FBRequestConnection startForMeWithCompletionHandler:
-         ^(FBRequestConnection *connection, id result, NSError *error)
-         {
-             if(!error)
-             {
-                 //userId = (NSString*) result[@"id"];
-                 
-                 //Looks like you have to write your facebook login network call seperately here unless Rocco says you're an idiot.
-             }
-         }];
-    }
-    
-    //only proceed if we have credentials for login
-    if(_usernameTextField.text.length != 0 || _passwordTextField.text.length != 0 || [action isEqual:@"fbLogin"])
-    {
-        [self toggleControl:NO];
-        
-        [_activityIndicator startAnimating];
-        
-        //SANITIZE INPUTS
-        NSMutableString* username = [SharedData sanitizeNSString:_usernameTextField.text];
-        NSMutableString* password = [SharedData sanitizeNSString:_passwordTextField.text];
-        NSDictionary* postDictionary;
-        
-        if([action isEqual:@"fbLogin"])
+    //send the actual request asyncronously
+    AFHTTPSessionManager* manager = _sharedData.sessionManager;
+    [manager POST:@"handler.php" parameters:postDictionary success:^(NSURLSessionDataTask *task, id responseObject) {
+        if([responseObject[@"status"] isEqualToString:@"success"])
         {
-            postDictionary = @{@"action":action, @"accessToken":accessToken};
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [_activityIndicator stopAnimating];
+                [self performSegueWithIdentifier:@"LoginSuccess" sender:self];
+            });
         }
         else
         {
-            postDictionary = @{@"action":action, @"username":username, @"password":password};
-        }
-        
-        //send the actual request asyncronously
-        AFHTTPSessionManager* manager = _sharedData.sessionManager;
-        [manager POST:@"handler.php" parameters:postDictionary success:^(NSURLSessionDataTask *task, id responseObject) {
-            if([responseObject[@"status"] isEqualToString:@"success"])
+            NSString* msg = @"Error logging in";
+            if([responseObject[@"errors"][0] isEqualToString:@"bad username/password combination"])
             {
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    [_activityIndicator stopAnimating];
-                    [self performSegueWithIdentifier:@"LoginSuccess" sender:self];
-                });
+                msg = @"Wrong username or password";
             }
-            else
-            {
-                NSString* msg = @"Error logging in";
-                if([responseObject[@"errors"][0] isEqualToString:@"bad username/password combination"])
-                {
-                    msg = @"Wrong username or password";
-                }
-                UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Error Logging In"
-                                                                message:msg
-                                                               delegate:nil
-                                                      cancelButtonTitle:@"OK"
-                                                      otherButtonTitles:nil];
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    [_activityIndicator stopAnimating];
-                    [self toggleControl:YES];
-                });
-                [alert show];
-            }
-            
-        } failure:^(NSURLSessionDataTask *task, NSError *error) {
             UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Error Logging In"
-                                                            message:[error localizedDescription]
+                                                            message:msg
                                                            delegate:nil
                                                   cancelButtonTitle:@"OK"
                                                   otherButtonTitles:nil];
@@ -121,24 +73,72 @@
                 [self toggleControl:YES];
             });
             [alert show];
-        }];
+        }
+        
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Error Logging In"
+                                                        message:[error localizedDescription]
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [_activityIndicator stopAnimating];
+            [self toggleControl:YES];
+        });
+        [alert show];
+    }];
+}
+
+- (void)handleRequest:(NSString*)action
+{
+    if(![action isEqual:@"login"] && ![action isEqual:@"register"])
+    {
+        //We're logging in with facebook, action string is our access token
+        accessToken = action;
+        action = @"fbLogin";
+        [FBRequestConnection startForMeWithCompletionHandler:
+         ^(FBRequestConnection *connection, id result, NSError *error)
+         {
+             if(!error)
+             {
+                 userId = (NSString*) result[@"id"];
+                 postDictionary = @{@"action":action, @"accessToken":accessToken, @"userId":userId};
+                 [self sendRequest:action];
+             }
+         }];
+        return;
+    }
+    
+    //only proceed if we have credentials for login
+    if(_usernameTextField.text.length != 0 || _passwordTextField.text.length != 0)
+    {
+        [self toggleControl:NO];
+        
+        [_activityIndicator startAnimating];
+        
+        //SANITIZE INPUTS
+        NSMutableString* username = [SharedData sanitizeNSString:_usernameTextField.text];
+        NSMutableString* password = [SharedData sanitizeNSString:_passwordTextField.text];
+        
+        postDictionary = @{@"action":action, @"username":username, @"password":password};
+        [self sendRequest:action];
     }
 }
 
 - (IBAction)login:(id)sender
 {
-    [self sendRequest:@"login"];
+    [self handleRequest:@"login"];
 }
 
 -(IBAction)reg:(id)sender
 {
-    [self sendRequest:@"register"];
+    [self handleRequest:@"register"];
 }
 
 //FB DELAGATE METHODS
 - (void)loginViewShowingLoggedInUser:(FBLoginView *)loginView
 {
-    [self sendRequest:[[[FBSession activeSession] accessTokenData] accessToken]];
+    [self handleRequest:[[[FBSession activeSession] accessTokenData] accessToken]];
 }
 
 - (void)loginView:(FBLoginView *)loginView handleError:(NSError *)error
@@ -157,6 +157,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:235/255.0 green:39/255.0 blue:53/255.0 alpha:1];
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+    self.navigationController.navigationBar.translucent = NO;
+    [self.navigationController.navigationBar
+     setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
+    self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
     //Check the login status of the user
     
     NSString* username = [[NSUserDefaults standardUserDefaults] stringForKey:@"username"];

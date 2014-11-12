@@ -41,7 +41,7 @@
         NSString* query = (NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(NULL, (CFStringRef)searchBar.text, NULL, (CFStringRef)@"!*'();:@&=+$,/?%#[]", kCFStringEncodingUTF8));
         
         AFHTTPSessionManager* manager = _sharedData.youtubeSessionManager;
-        [manager GET:[NSString stringWithFormat:@"search?&key=%@&part=id,snippet&maxResults=25&q=%@&fields=items(id,snippet(title,thumbnails(default)))", _sharedData.KEY, query] parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+        [manager GET:[NSString stringWithFormat:@"search?&key=%@&type=video&part=id,snippet&maxResults=25&q=%@&fields=items(id,snippet(title,thumbnails(default)))", _sharedData.KEY, query] parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
             //add URLs for thumbnails to the _thumbnails array
             @try {
                 for(NSInteger trackNum = 0; trackNum<25;++trackNum)
@@ -99,13 +99,19 @@
     
     _thumbnails = [[NSMutableArray alloc] init];
     _tracks = [[NSMutableArray alloc] init];
- 
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:235/255.0 green:39/255.0 blue:53/255.0 alpha:1];
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+    self.navigationController.navigationBar.translucent = NO;
+    [self.navigationController.navigationBar
+     setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
+    self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
+    self.navigationController.navigationBar.topItem.title = @"";
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [self.searchBar becomeFirstResponder];
 }
 
 - (void)didReceiveMemoryWarning

@@ -1,675 +1,0 @@
-TPods-SDWebImage
-v6
-r1
-cCheck dependencies
-cProcessPCH /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/PrecompiledHeaders/Pods-SDWebImage-prefix-ghuuzagrykdhsefhkkruvwvafaco/Pods-SDWebImage-prefix.pch.pch Pods-SDWebImage-prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cProcessPCH /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/PrecompiledHeaders/Pods-SDWebImage-prefix-eqnsnhaenkwkqxbrouhejicaypqo/Pods-SDWebImage-prefix.pch.pch Pods-SDWebImage-prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/NSData+ImageContentType.o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/NSData+ImageContentType.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/Pods-SDWebImage-dummy.o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Pods-SDWebImage-dummy.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/SDImageCache.o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDImageCache.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/SDWebImageCompat.o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDWebImageCompat.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/SDWebImageDecoder.o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDWebImageDecoder.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/SDWebImageDownloader.o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDWebImageDownloader.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/SDWebImageDownloaderOperation.o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDWebImageDownloaderOperation.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/SDWebImageManager.o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDWebImageManager.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/SDWebImagePrefetcher.o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDWebImagePrefetcher.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/UIButton+WebCache.o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/UIButton+WebCache.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/UIImage+GIF.o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/UIImage+GIF.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/UIImage+MultiFormat.o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/UIImage+MultiFormat.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/UIImageView+HighlightedWebCache.o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/UIImageView+HighlightedWebCache.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/UIImageView+WebCache.o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/UIImageView+WebCache.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/UIView+WebCacheOperation.o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/UIView+WebCacheOperation.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cLibtool /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator/libPods-SDWebImage.a normal x86_64
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework/Foundation
-c00000000531EE33A0000000000A90C10
-t1394533178
-s11078672
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/ImageIO.framework/ImageIO
-c00000000531EE3390000000000836810
-t1394533177
-s8611856
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk
-c00000000534CCC0C0000000000000198
-t1397541900
-s408
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/SDKSettings.plist
-c00000000531EE35000000000000003B4
-t1394533200
-s948
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/CoreServices/SystemVersion.plist
-c00000000531EE359000000000000019E
-t1394533209
-s414
-
-N/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/5.1/include/module.map
-c00000000531EE3820000000000000ADC
-t1394533250
-s2780
-
-N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/NSData+ImageContentType.o
-t1405716929
-s10632
-
-N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/Pods-SDWebImage-dummy.o
-t1405716929
-s3888
-
-N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/Pods-SDWebImage.LinkFileList
-c0000000053C989BF0000000000000AA7
-t1405716927
-s2727
-
-N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/SDImageCache.o
-t1405716929
-s155028
-
-N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/SDWebImageCompat.o
-t1405716929
-s12232
-
-N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/SDWebImageDecoder.o
-t1405716929
-s12748
-
-N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/SDWebImageDownloader.o
-t1406850988
-s76064
-
-N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/SDWebImageDownloaderOperation.o
-t1405716929
-s92812
-
-N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/SDWebImageManager.o
-t1405716929
-s118292
-
-N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/SDWebImagePrefetcher.o
-t1405716929
-s48968
-
-N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/UIButton+WebCache.o
-t1405716929
-s123508
-
-N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/UIImage+GIF.o
-t1405716929
-s22064
-
-N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/UIImage+MultiFormat.o
-t1405716929
-s13784
-
-N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/UIImageView+HighlightedWebCache.o
-t1405716929
-s74036
-
-N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/UIImageView+WebCache.o
-t1405716929
-s98100
-
-N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/UIView+WebCacheOperation.o
-t1405716929
-s48776
-
-N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/PrecompiledHeaders/Pods-SDWebImage-prefix-eqnsnhaenkwkqxbrouhejicaypqo/Pods-SDWebImage-prefix.pch.pch
-t1405716927
-s127624
-
-N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/PrecompiledHeaders/Pods-SDWebImage-prefix-ghuuzagrykdhsefhkkruvwvafaco/Pods-SDWebImage-prefix.pch.pch
-t1405716929
-s122200
-
-N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator/libPods-SDWebImage.a
-t1406850988
-s917096
-
-N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Pods-SDWebImage-dummy.m
-c0000000053C989120000000000000086
-t1405716754
-s134
-
-N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Pods-SDWebImage-prefix.pch
-c0000000053C98912000000000000004D
-t1405716754
-s77
-
-N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Pods-environment.h
-c0000000053C98912000000000000096E
-t1405716754
-s2414
-
-N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/NSData+ImageContentType.h
-c0000000053C988FA0000000000000235
-t1405716730
-s565
-
-N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/NSData+ImageContentType.m
-c0000000053C988FA0000000000000496
-t1405716730
-s1174
-
-N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDImageCache.h
-c0000000053C988FA0000000000001CE5
-t1405716730
-s7397
-
-N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDImageCache.m
-c0000000053C988FA0000000000004B38
-t1405716730
-s19256
-
-N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDWebImageCompat.h
-c0000000053C988FA0000000000000698
-t1405716730
-s1688
-
-N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDWebImageCompat.m
-c0000000053C988FA00000000000005C2
-t1405716730
-s1474
-
-N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDWebImageDecoder.h
-c0000000053C988FA00000000000001C5
-t1405716730
-s453
-
-N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDWebImageDecoder.m
-c0000000053C988FA0000000000000A24
-t1405716730
-s2596
-
-N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDWebImageDownloader.h
-c0000000053C988FA000000000000173D
-t1405716730
-s5949
-
-N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDWebImageDownloader.m
-c0000000053DAD7AB0000000000002B22
-t1406850987
-s11042
-
-N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDWebImageDownloaderOperation.h
-c0000000053C988FA000000000000091E
-t1405716730
-s2334
-
-N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDWebImageDownloaderOperation.m
-c0000000053C988FA0000000000003D9F
-t1405716730
-s15775
-
-N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDWebImageManager.h
-c0000000053C988FA00000000000028CB
-t1405716730
-s10443
-
-N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDWebImageManager.m
-c0000000053C988FA00000000000036C3
-t1405716730
-s14019
-
-N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDWebImageOperation.h
-c0000000053C988FA0000000000000149
-t1405716730
-s329
-
-N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDWebImagePrefetcher.h
-c0000000053C988FA0000000000000C7D
-t1405716730
-s3197
-
-N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDWebImagePrefetcher.m
-c0000000053C988FA0000000000001369
-t1405716730
-s4969
-
-N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/UIButton+WebCache.h
-c0000000053C988FA0000000000003496
-t1405716730
-s13462
-
-N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/UIButton+WebCache.m
-c0000000053C988FA0000000000002E21
-t1405716730
-s11809
-
-N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/UIImage+GIF.h
-c0000000053C988FA000000000000017E
-t1405716730
-s382
-
-N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/UIImage+GIF.m
-c0000000053C988FA00000000000012F5
-t1405716730
-s4853
-
-N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/UIImage+MultiFormat.h
-c0000000053C988FA0000000000000107
-t1405716730
-s263
-
-N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/UIImage+MultiFormat.m
-c0000000053C988FA0000000000000C61
-t1405716730
-s3169
-
-N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/UIImageView+HighlightedWebCache.h
-c0000000053C988FA0000000000001404
-t1405716730
-s5124
-
-N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/UIImageView+HighlightedWebCache.m
-c0000000053C988FA0000000000001281
-t1405716730
-s4737
-
-N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/UIImageView+WebCache.h
-c0000000053C988FA00000000000026D1
-t1405716730
-s9937
-
-N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/UIImageView+WebCache.m
-c0000000053C988FA00000000000020EC
-t1405716730
-s8428
-
-N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/UIView+WebCacheOperation.h
-c0000000053C988FA00000000000003CA
-t1405716730
-s970
-
-N/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/UIView+WebCacheOperation.m
-c0000000053C988FA0000000000000771
-t1405716730
-s1905
-
-CBuild AST from /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Pods-SDWebImage-dummy.m
-r0
-
-CBuild AST from /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/NSData+ImageContentType.m
-r0
-
-CBuild AST from /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDImageCache.m
-r0
-
-CBuild AST from /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDWebImageCompat.m
-r0
-
-CBuild AST from /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDWebImageDecoder.m
-r0
-
-CBuild AST from /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDWebImageDownloader.m
-r0
-
-CBuild AST from /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDWebImageDownloaderOperation.m
-r0
-
-CBuild AST from /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDWebImageManager.m
-r0
-
-CBuild AST from /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDWebImagePrefetcher.m
-r0
-
-CBuild AST from /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/UIButton+WebCache.m
-r0
-
-CBuild AST from /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/UIImage+GIF.m
-r0
-
-CBuild AST from /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/UIImage+MultiFormat.m
-r0
-
-CBuild AST from /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/UIImageView+HighlightedWebCache.m
-r0
-
-CBuild AST from /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/UIImageView+WebCache.m
-r0
-
-CBuild AST from /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/UIView+WebCacheOperation.m
-r0
-
-CCheck dependencies
-r0
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependenciescd021d460dceb941^e7c81e460dceb941^---0#1#1#--18"Check dependencies36"FF2EC9FF-448C-45DA-BA50-25C379A18AD3-
-
-CCompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/NSData+ImageContentType.o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/NSData+ImageContentType.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s427409729.154390
-e427409729.205634
-r1
-xCompileC
-x/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/NSData+ImageContentType.o
-x/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/NSData+ImageContentType.m
-xnormal
-xx86_64
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/NSData+ImageContentType.m
-d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/NSData+ImageContentType.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection103"Compile /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/NSData+ImageContentType.m311"CompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/NSData+ImageContentType.o SDWebImage/SDWebImage/NSData+ImageContentType.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compilereaaf2741c179b941^ffe73441c179b941^---0#0#1#-19%DVTDocumentLocation2@102"file:///Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/NSData+ImageContentType.m0000000000000000^4389"CompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/NSData+ImageContentType.o SDWebImage/SDWebImage/NSData+ImageContentType.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fmodules -fmodules-cache-path=/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -DCOCOAPODS=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Pods-SDWebImage-generated-files.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Pods-SDWebImage-own-target-headers.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Pods-SDWebImage-all-target-headers.hmap -iquote /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Pods-SDWebImage-project-headers.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator/include -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/BuildHeaders -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/BuildHeaders/SDWebImage -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Headers -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Headers/AFNetworking -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Headers/SDWebImage -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/DerivedSources/x86_64 -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/DerivedSources -F/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator -fobjc-arc -DOS_OBJECT_USE_OBJC=0 -include /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/PrecompiledHeaders/Pods-SDWebImage-prefix-ghuuzagrykdhsefhkkruvwvafaco/Pods-SDWebImage-prefix.pch -MMD -MT dependencies -MF /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/NSData+ImageContentType.d --serialize-diagnostics /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/NSData+ImageContentType.dia -c /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/NSData+ImageContentType.m -o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/NSData+ImageContentType.o36"43F2AD3E-B8B9-4F2F-A868-3DC05E72BA9E-
-bD57B2F22-738A-433A-924A-E4BF1FC5A895
-
-CCompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/Pods-SDWebImage-dummy.o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Pods-SDWebImage-dummy.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s427409729.154844
-e427409729.203097
-r1
-xCompileC
-x/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/Pods-SDWebImage-dummy.o
-x/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Pods-SDWebImage-dummy.m
-xnormal
-xx86_64
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Pods-SDWebImage-dummy.m
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection79"Compile /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Pods-SDWebImage-dummy.m285"CompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/Pods-SDWebImage-dummy.o Pods-SDWebImage-dummy.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler59c12741c179b941^95bb3341c179b941^---0#0#1#-19%DVTDocumentLocation2@78"file:///Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Pods-SDWebImage-dummy.m0000000000000000^4299"CompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/Pods-SDWebImage-dummy.o Pods-SDWebImage-dummy.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fmodules -fmodules-cache-path=/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -DCOCOAPODS=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Pods-SDWebImage-generated-files.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Pods-SDWebImage-own-target-headers.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Pods-SDWebImage-all-target-headers.hmap -iquote /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Pods-SDWebImage-project-headers.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator/include -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/BuildHeaders -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/BuildHeaders/SDWebImage -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Headers -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Headers/AFNetworking -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Headers/SDWebImage -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/DerivedSources/x86_64 -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/DerivedSources -F/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator -include /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/PrecompiledHeaders/Pods-SDWebImage-prefix-eqnsnhaenkwkqxbrouhejicaypqo/Pods-SDWebImage-prefix.pch -MMD -MT dependencies -MF /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/Pods-SDWebImage-dummy.d --serialize-diagnostics /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/Pods-SDWebImage-dummy.dia -c /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Pods-SDWebImage-dummy.m -o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/Pods-SDWebImage-dummy.o36"18F5964A-1E89-4AD2-96A9-5382FE219E71-
-bD57B2F22-738A-433A-924A-E4BF1FC5A895
-
-CCompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/SDImageCache.o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDImageCache.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s427409729.155341
-e427409729.535832
-r1
-xCompileC
-x/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/SDImageCache.o
-x/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDImageCache.m
-xnormal
-xx86_64
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDImageCache.m
-d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDImageCache.h
-d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDWebImageCompat.h
-d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDWebImageDecoder.h
-d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/UIImage+MultiFormat.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection92"Compile /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDImageCache.m289"CompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/SDImageCache.o SDWebImage/SDWebImage/SDImageCache.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compilerf5302841c179b941^8e598e41c179b941^---0#0#1#-19%DVTDocumentLocation2@91"file:///Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDImageCache.m0000000000000000^4323"CompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/SDImageCache.o SDWebImage/SDWebImage/SDImageCache.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fmodules -fmodules-cache-path=/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -DCOCOAPODS=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Pods-SDWebImage-generated-files.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Pods-SDWebImage-own-target-headers.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Pods-SDWebImage-all-target-headers.hmap -iquote /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Pods-SDWebImage-project-headers.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator/include -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/BuildHeaders -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/BuildHeaders/SDWebImage -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Headers -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Headers/AFNetworking -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Headers/SDWebImage -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/DerivedSources/x86_64 -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/DerivedSources -F/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator -fobjc-arc -DOS_OBJECT_USE_OBJC=0 -include /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/PrecompiledHeaders/Pods-SDWebImage-prefix-ghuuzagrykdhsefhkkruvwvafaco/Pods-SDWebImage-prefix.pch -MMD -MT dependencies -MF /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/SDImageCache.d --serialize-diagnostics /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/SDImageCache.dia -c /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDImageCache.m -o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/SDImageCache.o36"E46E03BD-FAF5-484A-9262-9C8AAB610C6F-
-bD57B2F22-738A-433A-924A-E4BF1FC5A895
-
-CCompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/SDWebImageCompat.o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDWebImageCompat.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s427409729.157808
-e427409729.217015
-r1
-xCompileC
-x/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/SDWebImageCompat.o
-x/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDWebImageCompat.m
-xnormal
-xx86_64
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDWebImageCompat.m
-d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDWebImageCompat.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection96"Compile /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDWebImageCompat.m297"CompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/SDWebImageCompat.o SDWebImage/SDWebImage/SDWebImageCompat.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compilerfe7f2841c179b941^a99f3741c179b941^---0#0#1#-19%DVTDocumentLocation2@95"file:///Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDWebImageCompat.m0000000000000000^4347"CompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/SDWebImageCompat.o SDWebImage/SDWebImage/SDWebImageCompat.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fmodules -fmodules-cache-path=/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -DCOCOAPODS=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Pods-SDWebImage-generated-files.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Pods-SDWebImage-own-target-headers.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Pods-SDWebImage-all-target-headers.hmap -iquote /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Pods-SDWebImage-project-headers.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator/include -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/BuildHeaders -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/BuildHeaders/SDWebImage -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Headers -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Headers/AFNetworking -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Headers/SDWebImage -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/DerivedSources/x86_64 -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/DerivedSources -F/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator -fobjc-arc -DOS_OBJECT_USE_OBJC=0 -include /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/PrecompiledHeaders/Pods-SDWebImage-prefix-ghuuzagrykdhsefhkkruvwvafaco/Pods-SDWebImage-prefix.pch -MMD -MT dependencies -MF /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/SDWebImageCompat.d --serialize-diagnostics /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/SDWebImageCompat.dia -c /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDWebImageCompat.m -o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/SDWebImageCompat.o36"21C4089A-2DB0-4F6F-B31C-90C135A3085F-
-bD57B2F22-738A-433A-924A-E4BF1FC5A895
-
-CCompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/SDWebImageDecoder.o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDWebImageDecoder.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s427409729.203927
-e427409729.262095
-r1
-xCompileC
-x/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/SDWebImageDecoder.o
-x/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDWebImageDecoder.m
-xnormal
-xx86_64
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDWebImageDecoder.m
-d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDWebImageDecoder.h
-d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDWebImageCompat.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection97"Compile /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDWebImageDecoder.m299"CompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/SDWebImageDecoder.o SDWebImage/SDWebImage/SDWebImageDecoder.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compilerb9513441c179b941^7a1b4341c179b941^---0#0#1#-19%DVTDocumentLocation2@96"file:///Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDWebImageDecoder.m0000000000000000^4353"CompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/SDWebImageDecoder.o SDWebImage/SDWebImage/SDWebImageDecoder.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fmodules -fmodules-cache-path=/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -DCOCOAPODS=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Pods-SDWebImage-generated-files.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Pods-SDWebImage-own-target-headers.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Pods-SDWebImage-all-target-headers.hmap -iquote /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Pods-SDWebImage-project-headers.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator/include -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/BuildHeaders -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/BuildHeaders/SDWebImage -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Headers -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Headers/AFNetworking -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Headers/SDWebImage -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/DerivedSources/x86_64 -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/DerivedSources -F/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator -fobjc-arc -DOS_OBJECT_USE_OBJC=0 -include /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/PrecompiledHeaders/Pods-SDWebImage-prefix-ghuuzagrykdhsefhkkruvwvafaco/Pods-SDWebImage-prefix.pch -MMD -MT dependencies -MF /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/SDWebImageDecoder.d --serialize-diagnostics /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/SDWebImageDecoder.dia -c /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDWebImageDecoder.m -o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/SDWebImageDecoder.o36"2D1DDEDD-8053-4199-8D50-F357F61A618A-
-bD57B2F22-738A-433A-924A-E4BF1FC5A895
-
-CCompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/SDWebImageDownloader.o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDWebImageDownloader.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s428543787.922005
-e428543788.048890
-r1
-xCompileC
-x/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/SDWebImageDownloader.o
-x/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDWebImageDownloader.m
-xnormal
-xx86_64
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDWebImageDownloader.m
-d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDWebImageDownloader.h
-d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDWebImageCompat.h
-d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDWebImageOperation.h
-d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDWebImageDownloaderOperation.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection100"Compile /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDWebImageDownloader.m305"CompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/SDWebImageDownloader.o SDWebImage/SDWebImage/SDWebImageDownloader.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compilerd76dec2b0f8bb941^18990c2c0f8bb941^---0#0#1#-19%DVTDocumentLocation2@99"file:///Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDWebImageDownloader.m0000000000000000^4371"CompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/SDWebImageDownloader.o SDWebImage/SDWebImage/SDWebImageDownloader.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fmodules -fmodules-cache-path=/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -DCOCOAPODS=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Pods-SDWebImage-generated-files.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Pods-SDWebImage-own-target-headers.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Pods-SDWebImage-all-target-headers.hmap -iquote /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Pods-SDWebImage-project-headers.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator/include -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/BuildHeaders -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/BuildHeaders/SDWebImage -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Headers -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Headers/AFNetworking -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Headers/SDWebImage -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/DerivedSources/x86_64 -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/DerivedSources -F/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator -fobjc-arc -DOS_OBJECT_USE_OBJC=0 -include /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/PrecompiledHeaders/Pods-SDWebImage-prefix-ghuuzagrykdhsefhkkruvwvafaco/Pods-SDWebImage-prefix.pch -MMD -MT dependencies -MF /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/SDWebImageDownloader.d --serialize-diagnostics /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/SDWebImageDownloader.dia -c /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDWebImageDownloader.m -o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/SDWebImageDownloader.o36"54D0E19E-BC25-4EA4-A3A0-FD12AE73F384-
-b67CC4BA4-8D75-465E-B89A-4F3DED60D82B
-
-CCompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/SDWebImageDownloaderOperation.o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDWebImageDownloaderOperation.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s427409729.218495
-e427409729.417241
-r1
-xCompileC
-x/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/SDWebImageDownloaderOperation.o
-x/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDWebImageDownloaderOperation.m
-xnormal
-xx86_64
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDWebImageDownloaderOperation.m
-d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDWebImageDownloaderOperation.h
-d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDWebImageDownloader.h
-d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDWebImageCompat.h
-d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDWebImageOperation.h
-d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDWebImageDecoder.h
-d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/UIImage+MultiFormat.h
-d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDWebImageManager.h
-d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDImageCache.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection109"Compile /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDWebImageDownloaderOperation.m323"CompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/SDWebImageDownloaderOperation.o SDWebImage/SDWebImage/SDWebImageDownloaderOperation.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler740c3841c179b941^9f3e8e41c179b941^---0#0#1#-19%DVTDocumentLocation2@108"file:///Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDWebImageDownloaderOperation.m0000000000000000^4425"CompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/SDWebImageDownloaderOperation.o SDWebImage/SDWebImage/SDWebImageDownloaderOperation.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fmodules -fmodules-cache-path=/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -DCOCOAPODS=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Pods-SDWebImage-generated-files.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Pods-SDWebImage-own-target-headers.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Pods-SDWebImage-all-target-headers.hmap -iquote /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Pods-SDWebImage-project-headers.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator/include -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/BuildHeaders -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/BuildHeaders/SDWebImage -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Headers -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Headers/AFNetworking -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Headers/SDWebImage -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/DerivedSources/x86_64 -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/DerivedSources -F/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator -fobjc-arc -DOS_OBJECT_USE_OBJC=0 -include /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/PrecompiledHeaders/Pods-SDWebImage-prefix-ghuuzagrykdhsefhkkruvwvafaco/Pods-SDWebImage-prefix.pch -MMD -MT dependencies -MF /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/SDWebImageDownloaderOperation.d --serialize-diagnostics /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/SDWebImageDownloaderOperation.dia -c /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDWebImageDownloaderOperation.m -o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/SDWebImageDownloaderOperation.o36"F088F8B9-F62D-428C-BD35-0FFC00C6FE94-
-bD57B2F22-738A-433A-924A-E4BF1FC5A895
-
-CCompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/SDWebImageManager.o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDWebImageManager.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s427409729.263817
-e427409729.466142
-r1
-xCompileC
-x/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/SDWebImageManager.o
-x/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDWebImageManager.m
-xnormal
-xx86_64
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDWebImageManager.m
-d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDWebImageManager.h
-d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDWebImageCompat.h
-d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDWebImageOperation.h
-d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDWebImageDownloader.h
-d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDImageCache.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection97"Compile /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDWebImageManager.m299"CompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/SDWebImageManager.o SDWebImage/SDWebImage/SDWebImageManager.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler7fa54341c179b941^5e498e41c179b941^---0#0#1#-19%DVTDocumentLocation2@96"file:///Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDWebImageManager.m0000000000000000^4353"CompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/SDWebImageManager.o SDWebImage/SDWebImage/SDWebImageManager.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fmodules -fmodules-cache-path=/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -DCOCOAPODS=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Pods-SDWebImage-generated-files.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Pods-SDWebImage-own-target-headers.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Pods-SDWebImage-all-target-headers.hmap -iquote /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Pods-SDWebImage-project-headers.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator/include -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/BuildHeaders -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/BuildHeaders/SDWebImage -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Headers -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Headers/AFNetworking -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Headers/SDWebImage -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/DerivedSources/x86_64 -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/DerivedSources -F/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator -fobjc-arc -DOS_OBJECT_USE_OBJC=0 -include /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/PrecompiledHeaders/Pods-SDWebImage-prefix-ghuuzagrykdhsefhkkruvwvafaco/Pods-SDWebImage-prefix.pch -MMD -MT dependencies -MF /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/SDWebImageManager.d --serialize-diagnostics /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/SDWebImageManager.dia -c /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDWebImageManager.m -o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/SDWebImageManager.o36"748CD966-7207-4695-9853-4916C184D895-
-bD57B2F22-738A-433A-924A-E4BF1FC5A895
-
-CCompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/SDWebImagePrefetcher.o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDWebImagePrefetcher.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s427409729.418610
-e427409729.506914
-r1
-xCompileC
-x/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/SDWebImagePrefetcher.o
-x/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDWebImagePrefetcher.m
-xnormal
-xx86_64
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDWebImagePrefetcher.m
-d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDWebImagePrefetcher.h
-d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDWebImageManager.h
-d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDWebImageCompat.h
-d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDWebImageOperation.h
-d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDWebImageDownloader.h
-d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDImageCache.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection100"Compile /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDWebImagePrefetcher.m305"CompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/SDWebImagePrefetcher.o SDWebImage/SDWebImage/SDWebImagePrefetcher.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler1f476b41c179b941^a4548e41c179b941^---0#0#1#-19%DVTDocumentLocation2@99"file:///Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDWebImagePrefetcher.m0000000000000000^4371"CompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/SDWebImagePrefetcher.o SDWebImage/SDWebImage/SDWebImagePrefetcher.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fmodules -fmodules-cache-path=/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -DCOCOAPODS=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Pods-SDWebImage-generated-files.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Pods-SDWebImage-own-target-headers.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Pods-SDWebImage-all-target-headers.hmap -iquote /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Pods-SDWebImage-project-headers.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator/include -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/BuildHeaders -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/BuildHeaders/SDWebImage -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Headers -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Headers/AFNetworking -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Headers/SDWebImage -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/DerivedSources/x86_64 -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/DerivedSources -F/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator -fobjc-arc -DOS_OBJECT_USE_OBJC=0 -include /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/PrecompiledHeaders/Pods-SDWebImage-prefix-ghuuzagrykdhsefhkkruvwvafaco/Pods-SDWebImage-prefix.pch -MMD -MT dependencies -MF /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/SDWebImagePrefetcher.d --serialize-diagnostics /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/SDWebImagePrefetcher.dia -c /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDWebImagePrefetcher.m -o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/SDWebImagePrefetcher.o36"CFA8A58C-8FAB-48A8-ADDB-CD4039F91A60-
-bD57B2F22-738A-433A-924A-E4BF1FC5A895
-
-CCompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/UIButton+WebCache.o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/UIButton+WebCache.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s427409729.467726
-e427409729.703879
-r1
-xCompileC
-x/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/UIButton+WebCache.o
-x/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/UIButton+WebCache.m
-xnormal
-xx86_64
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/UIButton+WebCache.m
-d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/UIButton+WebCache.h
-d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDWebImageCompat.h
-d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDWebImageManager.h
-d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDWebImageOperation.h
-d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDWebImageDownloader.h
-d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDImageCache.h
-d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/UIView+WebCacheOperation.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection97"Compile /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/UIButton+WebCache.m299"CompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/UIButton+WebCache.o SDWebImage/SDWebImage/UIButton+WebCache.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler77d97741c179b941^d044b441c179b941^---0#0#1#-19%DVTDocumentLocation2@96"file:///Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/UIButton+WebCache.m0000000000000000^4353"CompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/UIButton+WebCache.o SDWebImage/SDWebImage/UIButton+WebCache.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fmodules -fmodules-cache-path=/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -DCOCOAPODS=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Pods-SDWebImage-generated-files.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Pods-SDWebImage-own-target-headers.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Pods-SDWebImage-all-target-headers.hmap -iquote /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Pods-SDWebImage-project-headers.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator/include -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/BuildHeaders -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/BuildHeaders/SDWebImage -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Headers -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Headers/AFNetworking -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Headers/SDWebImage -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/DerivedSources/x86_64 -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/DerivedSources -F/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator -fobjc-arc -DOS_OBJECT_USE_OBJC=0 -include /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/PrecompiledHeaders/Pods-SDWebImage-prefix-ghuuzagrykdhsefhkkruvwvafaco/Pods-SDWebImage-prefix.pch -MMD -MT dependencies -MF /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/UIButton+WebCache.d --serialize-diagnostics /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/UIButton+WebCache.dia -c /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/UIButton+WebCache.m -o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/UIButton+WebCache.o36"3E7F805E-9DBC-470F-AC2F-6F45F0AF00A4-
-bD57B2F22-738A-433A-924A-E4BF1FC5A895
-
-CCompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/UIImage+GIF.o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/UIImage+GIF.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s427409729.510624
-e427409729.576894
-r1
-xCompileC
-x/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/UIImage+GIF.o
-x/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/UIImage+GIF.m
-xnormal
-xx86_64
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/UIImage+GIF.m
-d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/UIImage+GIF.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection91"Compile /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/UIImage+GIF.m287"CompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/UIImage+GIF.o SDWebImage/SDWebImage/UIImage+GIF.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler0ad88241c179b941^6d549f41c179b941^---0#0#1#-19%DVTDocumentLocation2@90"file:///Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/UIImage+GIF.m0000000000000000^4317"CompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/UIImage+GIF.o SDWebImage/SDWebImage/UIImage+GIF.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fmodules -fmodules-cache-path=/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -DCOCOAPODS=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Pods-SDWebImage-generated-files.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Pods-SDWebImage-own-target-headers.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Pods-SDWebImage-all-target-headers.hmap -iquote /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Pods-SDWebImage-project-headers.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator/include -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/BuildHeaders -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/BuildHeaders/SDWebImage -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Headers -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Headers/AFNetworking -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Headers/SDWebImage -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/DerivedSources/x86_64 -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/DerivedSources -F/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator -fobjc-arc -DOS_OBJECT_USE_OBJC=0 -include /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/PrecompiledHeaders/Pods-SDWebImage-prefix-ghuuzagrykdhsefhkkruvwvafaco/Pods-SDWebImage-prefix.pch -MMD -MT dependencies -MF /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/UIImage+GIF.d --serialize-diagnostics /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/UIImage+GIF.dia -c /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/UIImage+GIF.m -o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/UIImage+GIF.o36"EDBA9F24-5890-4A70-A026-12BE8A650132-
-bD57B2F22-738A-433A-924A-E4BF1FC5A895
-
-CCompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/UIImage+MultiFormat.o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/UIImage+MultiFormat.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s427409729.538299
-e427409729.592608
-r1
-xCompileC
-x/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/UIImage+MultiFormat.o
-x/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/UIImage+MultiFormat.m
-xnormal
-xx86_64
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/UIImage+MultiFormat.m
-d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/UIImage+MultiFormat.h
-d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/UIImage+GIF.h
-d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/NSData+ImageContentType.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection99"Compile /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/UIImage+MultiFormat.m303"CompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/UIImage+MultiFormat.o SDWebImage/SDWebImage/UIImage+MultiFormat.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler14ea8941c179b941^8e589f41c179b941^---0#0#1#-19%DVTDocumentLocation2@98"file:///Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/UIImage+MultiFormat.m0000000000000000^4365"CompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/UIImage+MultiFormat.o SDWebImage/SDWebImage/UIImage+MultiFormat.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fmodules -fmodules-cache-path=/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -DCOCOAPODS=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Pods-SDWebImage-generated-files.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Pods-SDWebImage-own-target-headers.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Pods-SDWebImage-all-target-headers.hmap -iquote /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Pods-SDWebImage-project-headers.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator/include -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/BuildHeaders -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/BuildHeaders/SDWebImage -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Headers -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Headers/AFNetworking -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Headers/SDWebImage -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/DerivedSources/x86_64 -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/DerivedSources -F/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator -fobjc-arc -DOS_OBJECT_USE_OBJC=0 -include /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/PrecompiledHeaders/Pods-SDWebImage-prefix-ghuuzagrykdhsefhkkruvwvafaco/Pods-SDWebImage-prefix.pch -MMD -MT dependencies -MF /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/UIImage+MultiFormat.d --serialize-diagnostics /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/UIImage+MultiFormat.dia -c /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/UIImage+MultiFormat.m -o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/UIImage+MultiFormat.o36"DB945FAE-62C7-4A94-8518-9329836448C1-
-bD57B2F22-738A-433A-924A-E4BF1FC5A895
-
-CCompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/UIImageView+HighlightedWebCache.o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/UIImageView+HighlightedWebCache.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s427409729.568151
-e427409729.693137
-r1
-xCompileC
-x/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/UIImageView+HighlightedWebCache.o
-x/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/UIImageView+HighlightedWebCache.m
-xnormal
-xx86_64
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/UIImageView+HighlightedWebCache.m
-d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/UIImageView+HighlightedWebCache.h
-d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDWebImageCompat.h
-d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDWebImageManager.h
-d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDWebImageOperation.h
-d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDWebImageDownloader.h
-d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDImageCache.h
-d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/UIView+WebCacheOperation.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection111"Compile /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/UIImageView+HighlightedWebCache.m327"CompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/UIImageView+HighlightedWebCache.o SDWebImage/SDWebImage/UIImageView+HighlightedWebCache.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler15919141c179b941^e371b141c179b941^---0#0#1#-19%DVTDocumentLocation2@110"file:///Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/UIImageView+HighlightedWebCache.m0000000000000000^4437"CompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/UIImageView+HighlightedWebCache.o SDWebImage/SDWebImage/UIImageView+HighlightedWebCache.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fmodules -fmodules-cache-path=/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -DCOCOAPODS=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Pods-SDWebImage-generated-files.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Pods-SDWebImage-own-target-headers.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Pods-SDWebImage-all-target-headers.hmap -iquote /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Pods-SDWebImage-project-headers.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator/include -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/BuildHeaders -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/BuildHeaders/SDWebImage -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Headers -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Headers/AFNetworking -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Headers/SDWebImage -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/DerivedSources/x86_64 -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/DerivedSources -F/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator -fobjc-arc -DOS_OBJECT_USE_OBJC=0 -include /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/PrecompiledHeaders/Pods-SDWebImage-prefix-ghuuzagrykdhsefhkkruvwvafaco/Pods-SDWebImage-prefix.pch -MMD -MT dependencies -MF /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/UIImageView+HighlightedWebCache.d --serialize-diagnostics /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/UIImageView+HighlightedWebCache.dia -c /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/UIImageView+HighlightedWebCache.m -o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/UIImageView+HighlightedWebCache.o36"6DB5B928-92EC-4D47-BF84-FC1391623F4E-
-bD57B2F22-738A-433A-924A-E4BF1FC5A895
-
-CCompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/UIImageView+WebCache.o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/UIImageView+WebCache.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s427409729.578397
-e427409729.709254
-r1
-xCompileC
-x/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/UIImageView+WebCache.o
-x/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/UIImageView+WebCache.m
-xnormal
-xx86_64
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/UIImageView+WebCache.m
-d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/UIImageView+WebCache.h
-d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDWebImageCompat.h
-d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDWebImageManager.h
-d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDWebImageOperation.h
-d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDWebImageDownloader.h
-d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDImageCache.h
-d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/UIView+WebCacheOperation.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection100"Compile /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/UIImageView+WebCache.m305"CompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/UIImageView+WebCache.o SDWebImage/SDWebImage/UIImageView+WebCache.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler7f309441c179b941^5392b541c179b941^---0#0#1#-19%DVTDocumentLocation2@99"file:///Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/UIImageView+WebCache.m0000000000000000^4371"CompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/UIImageView+WebCache.o SDWebImage/SDWebImage/UIImageView+WebCache.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fmodules -fmodules-cache-path=/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -DCOCOAPODS=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Pods-SDWebImage-generated-files.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Pods-SDWebImage-own-target-headers.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Pods-SDWebImage-all-target-headers.hmap -iquote /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Pods-SDWebImage-project-headers.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator/include -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/BuildHeaders -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/BuildHeaders/SDWebImage -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Headers -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Headers/AFNetworking -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Headers/SDWebImage -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/DerivedSources/x86_64 -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/DerivedSources -F/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator -fobjc-arc -DOS_OBJECT_USE_OBJC=0 -include /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/PrecompiledHeaders/Pods-SDWebImage-prefix-ghuuzagrykdhsefhkkruvwvafaco/Pods-SDWebImage-prefix.pch -MMD -MT dependencies -MF /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/UIImageView+WebCache.d --serialize-diagnostics /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/UIImageView+WebCache.dia -c /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/UIImageView+WebCache.m -o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/UIImageView+WebCache.o36"895B5EFD-942A-45AD-9D7A-2CA2C246AAD7-
-bD57B2F22-738A-433A-924A-E4BF1FC5A895
-
-CCompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/UIView+WebCacheOperation.o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/UIView+WebCacheOperation.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s427409729.594143
-e427409729.680537
-r1
-xCompileC
-x/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/UIView+WebCacheOperation.o
-x/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/UIView+WebCacheOperation.m
-xnormal
-xx86_64
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/UIView+WebCacheOperation.m
-d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/UIView+WebCacheOperation.h
-d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDWebImageManager.h
-d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDWebImageCompat.h
-d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDWebImageOperation.h
-d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDWebImageDownloader.h
-d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/SDImageCache.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection104"Compile /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/UIView+WebCacheOperation.m313"CompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/UIView+WebCacheOperation.o SDWebImage/SDWebImage/UIView+WebCacheOperation.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compilerf8379841c179b941^2b4dae41c179b941^---0#0#1#-19%DVTDocumentLocation2@103"file:///Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/UIView+WebCacheOperation.m0000000000000000^4395"CompileC /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/UIView+WebCacheOperation.o SDWebImage/SDWebImage/UIView+WebCacheOperation.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fmodules -fmodules-cache-path=/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -DCOCOAPODS=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Pods-SDWebImage-generated-files.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Pods-SDWebImage-own-target-headers.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Pods-SDWebImage-all-target-headers.hmap -iquote /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Pods-SDWebImage-project-headers.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator/include -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/BuildHeaders -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/BuildHeaders/SDWebImage -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Headers -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Headers/AFNetworking -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Headers/SDWebImage -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/DerivedSources/x86_64 -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/DerivedSources -F/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator -fobjc-arc -DOS_OBJECT_USE_OBJC=0 -include /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/PrecompiledHeaders/Pods-SDWebImage-prefix-ghuuzagrykdhsefhkkruvwvafaco/Pods-SDWebImage-prefix.pch -MMD -MT dependencies -MF /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/UIView+WebCacheOperation.d --serialize-diagnostics /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/UIView+WebCacheOperation.dia -c /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/SDWebImage/SDWebImage/UIView+WebCacheOperation.m -o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/UIView+WebCacheOperation.o36"1854779A-BB59-4854-9E0E-657632F3687A-
-bD57B2F22-738A-433A-924A-E4BF1FC5A895
-
-CLibtool /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator/libPods-SDWebImage.a normal x86_64
-s428543788.050101
-e428543788.060924
-r1
-xLibtool
-x/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator/libPods-SDWebImage.a
-xnormal
-xx86_64
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection141"Libtool /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator/libPods-SDWebImage.a normal x86_64141"Libtool /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator/libPods-SDWebImage.a normal x86_6426e30c2c0f8bb941^e9980f2c0f8bb941^---0#0#1#--1150"Libtool /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator/libPods-SDWebImage.a normal x86_64    cd /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods    export IPHONEOS_DEPLOYMENT_TARGET=7.0    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool -static -arch_only x86_64 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -L/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator -filelist /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Objects-normal/x86_64/Pods-SDWebImage.LinkFileList -framework Foundation -framework ImageIO -o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator/libPods-SDWebImage.a36"88AD279E-D3C5-4957-938C-42E7D18219E8-
-b67CC4BA4-8D75-465E-B89A-4F3DED60D82B
-
-CProcessPCH /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/PrecompiledHeaders/Pods-SDWebImage-prefix-eqnsnhaenkwkqxbrouhejicaypqo/Pods-SDWebImage-prefix.pch.pch Pods-SDWebImage-prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s427409727.451538
-e427409727.744583
-r1
-xProcessPCH
-x/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/PrecompiledHeaders/Pods-SDWebImage-prefix-eqnsnhaenkwkqxbrouhejicaypqo/Pods-SDWebImage-prefix.pch.pch
-xPods-SDWebImage-prefix.pch
-xnormal
-xx86_64
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Pods-SDWebImage-prefix.pch
-d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Pods-environment.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection37"Precompile Pods-SDWebImage-prefix.pch291"ProcessPCH /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/PrecompiledHeaders/Pods-SDWebImage-prefix-eqnsnhaenkwkqxbrouhejicaypqo/Pods-SDWebImage-prefix.pch.pch Pods-SDWebImage-prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compilerf7b0733fc179b941^6fb9be3fc179b941^---0#0#1#-19%DVTDocumentLocation2@81"file:///Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Pods-SDWebImage-prefix.pch0000000000000000^4125"ProcessPCH /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/PrecompiledHeaders/Pods-SDWebImage-prefix-eqnsnhaenkwkqxbrouhejicaypqo/Pods-SDWebImage-prefix.pch.pch Pods-SDWebImage-prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c-header -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fmodules -fmodules-cache-path=/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -DCOCOAPODS=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Pods-SDWebImage-generated-files.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Pods-SDWebImage-own-target-headers.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Pods-SDWebImage-all-target-headers.hmap -iquote /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Pods-SDWebImage-project-headers.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator/include -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/BuildHeaders -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/BuildHeaders/SDWebImage -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Headers -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Headers/AFNetworking -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Headers/SDWebImage -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/DerivedSources/x86_64 -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/DerivedSources -F/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator --serialize-diagnostics /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/PrecompiledHeaders/Pods-SDWebImage-prefix-eqnsnhaenkwkqxbrouhejicaypqo/Pods-SDWebImage-prefix.pch.dia -MMD -MT dependencies -MF /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/PrecompiledHeaders/Pods-SDWebImage-prefix-eqnsnhaenkwkqxbrouhejicaypqo/Pods-SDWebImage-prefix.pch.d -c /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Pods-SDWebImage-prefix.pch -o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/PrecompiledHeaders/Pods-SDWebImage-prefix-eqnsnhaenkwkqxbrouhejicaypqo/Pods-SDWebImage-prefix.pch.pch36"1E79083A-2CE0-4952-9043-4BC1EAC91FB3-
-bD57B2F22-738A-433A-924A-E4BF1FC5A895
-
-CProcessPCH /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/PrecompiledHeaders/Pods-SDWebImage-prefix-ghuuzagrykdhsefhkkruvwvafaco/Pods-SDWebImage-prefix.pch.pch Pods-SDWebImage-prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s427409727.451184
-e427409729.153662
-r1
-xProcessPCH
-x/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/PrecompiledHeaders/Pods-SDWebImage-prefix-ghuuzagrykdhsefhkkruvwvafaco/Pods-SDWebImage-prefix.pch.pch
-xPods-SDWebImage-prefix.pch
-xnormal
-xx86_64
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Pods-SDWebImage-prefix.pch
-d/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Pods-environment.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection37"Precompile Pods-SDWebImage-prefix.pch291"ProcessPCH /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/PrecompiledHeaders/Pods-SDWebImage-prefix-ghuuzagrykdhsefhkkruvwvafaco/Pods-SDWebImage-prefix.pch.pch Pods-SDWebImage-prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler4fb0733fc179b941^2e572741c179b941^---0#0#1#-19%DVTDocumentLocation2@81"file:///Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Pods-SDWebImage-prefix.pch0000000000000000^4159"ProcessPCH /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/PrecompiledHeaders/Pods-SDWebImage-prefix-ghuuzagrykdhsefhkkruvwvafaco/Pods-SDWebImage-prefix.pch.pch Pods-SDWebImage-prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c-header -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fmodules -fmodules-cache-path=/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -DCOCOAPODS=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Pods-SDWebImage-generated-files.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Pods-SDWebImage-own-target-headers.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Pods-SDWebImage-all-target-headers.hmap -iquote /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/Pods-SDWebImage-project-headers.hmap -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator/include -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/BuildHeaders -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/BuildHeaders/SDWebImage -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Headers -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Headers/AFNetworking -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Headers/SDWebImage -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/DerivedSources/x86_64 -I/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SDWebImage.build/DerivedSources -F/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Products/Debug-iphonesimulator -fobjc-arc -DOS_OBJECT_USE_OBJC=0 --serialize-diagnostics /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/PrecompiledHeaders/Pods-SDWebImage-prefix-ghuuzagrykdhsefhkkruvwvafaco/Pods-SDWebImage-prefix.pch.dia -MMD -MT dependencies -MF /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/PrecompiledHeaders/Pods-SDWebImage-prefix-ghuuzagrykdhsefhkkruvwvafaco/Pods-SDWebImage-prefix.pch.d -c /Users/jimboulter/Dropbox/MeNextiOS/MeNext/Pods/Pods-SDWebImage-prefix.pch -o /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/PrecompiledHeaders/Pods-SDWebImage-prefix-ghuuzagrykdhsefhkkruvwvafaco/Pods-SDWebImage-prefix.pch.pch36"032B1FA4-631F-431B-BC39-90D83E24B6F4-
-bD57B2F22-738A-433A-924A-E4BF1FC5A895
-
-CProcessPCH /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Index/PrecompiledHeaders/Pods-SDWebImage-prefix-fbimukowmcnzifgpknylqvenbmag_ast/Pods-SDWebImage-prefix.pch.pch Pods-SDWebImage-prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.astbuilder
-r0
-
-CProcessPCH /Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Index/PrecompiledHeaders/Pods-SDWebImage-prefix-hbjregxwzjsnydgymyssxsfbmwyi_ast/Pods-SDWebImage-prefix.pch.pch Pods-SDWebImage-prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.astbuilder
-r0
-

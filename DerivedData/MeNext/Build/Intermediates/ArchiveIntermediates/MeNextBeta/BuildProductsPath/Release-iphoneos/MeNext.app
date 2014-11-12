@@ -1,0 +1,1 @@
+/Users/jimboulter/Dropbox/MeNextiOS/MeNext/DerivedData/MeNext/Build/Intermediates/ArchiveIntermediates/MeNextBeta/InstallationBuildProductsLocation/Applications/MeNext.app

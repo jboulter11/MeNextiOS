@@ -10,7 +10,6 @@
 
 @implementation AddPartyTableViewCell
 @synthesize textField;
-@synthesize textLabel;
 
 - (void)awakeFromNib {
     // Initialization code
