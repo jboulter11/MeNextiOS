@@ -12,9 +12,11 @@
 @synthesize sessionManager;
 @synthesize youtubeSessionManager;
 @synthesize KEY;
+@synthesize splashView;
 
 -(SharedData*) init{
-    sessionManager = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:@"https://www.menext.me/"]];
+    self = [super init];
+    sessionManager = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:@"http://www.menext.me/"]];
     sessionManager.responseSerializer = [AFJSONResponseSerializer serializer];
     sessionManager.responseSerializer.acceptableContentTypes = [sessionManager.responseSerializer.acceptableContentTypes setByAddingObject:@"text/html"];
     
@@ -22,7 +24,8 @@
     youtubeSessionManager.responseSerializer = [AFJSONResponseSerializer serializer];
     youtubeSessionManager.responseSerializer.acceptableContentTypes = [youtubeSessionManager.responseSerializer.acceptableContentTypes setByAddingObject:@"text/html"];
     
-     KEY = @"AIzaSyAbh1CseUDq0NKangT-QRIeyOoZLz6jCII";//MeNext Youtube iOS API Key
+    KEY = @"AIzaSyAbh1CseUDq0NKangT-QRIeyOoZLz6jCII";//MeNext Youtube iOS API Key
+    splashView = nil;
     
     return self;
 }

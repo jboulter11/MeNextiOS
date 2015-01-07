@@ -14,6 +14,7 @@
 @property AFHTTPSessionManager* sessionManager;
 @property AFHTTPSessionManager* youtubeSessionManager;
 @property (readonly) NSString* KEY;
+@property UIImageView* splashView;
 
 +(NSMutableString *) sanitizeNSString:(NSString *)string;
 

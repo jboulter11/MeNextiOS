@@ -10,11 +10,11 @@
 #import "MasterViewController.h"
 #import "AFNetworking.h"
 
-@interface LoginViewController ()
-{
-    NSString* userId;
+@interface LoginViewController (){
     NSString* accessToken;
+    NSString* userId;
     NSDictionary* postDictionary;
+    UIImageView* splashView;
 }
 @property (weak, nonatomic) IBOutlet UIButton *registerButton;
 @property (weak, nonatomic) IBOutlet UIButton *loginButton;
@@ -36,15 +36,37 @@
     return self;
 }
 
+#pragma mark - Misc
+
+-(NSString*)getLaunchImageName
+{
+    NSString* launchImageName;
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+    {
+        if ([UIScreen mainScreen].bounds.size.height == 480) launchImageName = @"LaunchImage-700@2x.png"; // iPhone 4/4s, 3.5 inch screen
+        if ([UIScreen mainScreen].bounds.size.height == 568) launchImageName = @"LaunchImage-700-568h@2x.png"; // iPhone 5/5s, 4.0 inch screen
+        if ([UIScreen mainScreen].bounds.size.height == 667) launchImageName = @"LaunchImage-800-667h@2x.png"; // iPhone 6, 4.7 inch screen
+        if ([UIScreen mainScreen].bounds.size.height == 736) launchImageName = @"LaunchImage-800-Portrait-736h@3x.png"; // iPhone 6+, 5.5 inch screen
+    }
+    else if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+    {
+        if ([UIScreen mainScreen].scale == 1) launchImageName = @"LaunchImage-700-Portrait~ipad.png"; // iPad 2
+        if ([UIScreen mainScreen].scale == 2) launchImageName = @"LaunchImage-700-Portrait@2x~ipad.png"; // Retina iPads
+    }
+    return launchImageName;
+}
+
 - (void)toggleControl:(BOOL) action
 {
     _usernameTextField.enabled = action;
     _passwordTextField.enabled = action;
     _loginButton.enabled = action;
-    _registerButton.enabled = action;
+    //_registerButton.enabled = action;
 }
 
-- (void)sendRequest:(NSString*)action
+#pragma mark - Requests
+
+- (void)sendRequest
 {
     //send the actual request asyncronously
     AFHTTPSessionManager* manager = _sharedData.sessionManager;
@@ -103,10 +125,10 @@
              {
                  userId = (NSString*) result[@"id"];
                  postDictionary = @{@"action":action, @"accessToken":accessToken, @"userId":userId};
-                 [self sendRequest:action];
+                 [self sendRequest];
+                 return;
              }
          }];
-        return;
     }
     
     //only proceed if we have credentials for login
@@ -121,7 +143,7 @@
         NSMutableString* password = [SharedData sanitizeNSString:_passwordTextField.text];
         
         postDictionary = @{@"action":action, @"username":username, @"password":password};
-        [self sendRequest:action];
+        [self sendRequest];
     }
 }
 
@@ -135,10 +157,20 @@
     [self handleRequest:@"register"];
 }
 
+#pragma mark - FB Delagate
 //FB DELAGATE METHODS
 - (void)loginViewShowingLoggedInUser:(FBLoginView *)loginView
 {
     [self handleRequest:[[[FBSession activeSession] accessTokenData] accessToken]];
+}
+
+- (void)loginViewShowingLoggedOutUser:(FBLoginView *)loginView
+{
+    [splashView removeFromSuperview];
+    if(_usernameTextField.text != nil)
+    {
+        [_passwordTextField becomeFirstResponder];
+    }
 }
 
 - (void)loginView:(FBLoginView *)loginView handleError:(NSError *)error
@@ -146,23 +178,34 @@
     //NSLog([error description]);
 }
 
+#pragma mark - View
+
 -(void)viewWillAppear:(BOOL)animated
 {
+    [super viewWillAppear:animated];
+    
+    splashView = [[UIImageView alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    splashView.image = [UIImage imageNamed:[self getLaunchImageName]];
+    
+    [self.navigationController.view addSubview:splashView];
+    [self.navigationController.view bringSubviewToFront:splashView];
+    
     if(!_sharedData)
     {
         _sharedData = [[SharedData alloc] init];
     }
+    _sharedData.splashView = splashView;
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:235/255.0 green:39/255.0 blue:53/255.0 alpha:1];
-    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:239/255.0 green:35/255.0 blue:53/255.0 alpha:1];
     self.navigationController.navigationBar.translucent = NO;
-    [self.navigationController.navigationBar
-     setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+    [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
     self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
+    
     //Check the login status of the user
     
     NSString* username = [[NSUserDefaults standardUserDefaults] stringForKey:@"username"];

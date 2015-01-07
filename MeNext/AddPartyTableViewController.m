@@ -9,7 +9,7 @@
 #import "AddPartyTableViewController.h"
 #import "AddPartyTableViewCell.h"
 
-@interface AddPartyTableViewController () <AVCaptureMetadataOutputObjectsDelegate>
+@interface AddPartyTableViewController () <AVCaptureMetadataOutputObjectsDelegate, UITextFieldDelegate>
 {
     AVCaptureSession *_session;
     AVCaptureDevice *_device;
@@ -18,8 +18,6 @@
     AVCaptureVideoPreviewLayer *_prevLayer;
     
     UIView *_highlightView;
-    
-    UIButton *backButton;
 }
 
 @end
@@ -28,14 +26,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:235/255.0 green:39/255.0 blue:53/255.0 alpha:1];
-    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:239/255.0 green:35/255.0 blue:53/255.0 alpha:1];
     self.navigationController.navigationBar.translucent = NO;
-    [self.navigationController.navigationBar
-     setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
-    self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
     self.navigationController.navigationBar.topItem.title = @"";
-    
+    [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
+    self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -43,22 +39,14 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)editingDone:(id)sender
+-(BOOL) textFieldShouldReturn:(UITextField *)textField
 {
-    UITextField* tf = (UITextField*) sender;
-    if(tf.text.length != 0)
+    if(textField.text.length != 0)
     {
-        [self sendRequestWithId:tf.text];
+        [textField resignFirstResponder];
+        [self sendRequestWithId:textField.text];
     }
-}
-
-- (IBAction)backQRButtonHit:(id)sender
-{
-    [_session stopRunning];
-    [self.tableView deselectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:1] animated:NO];
-    _highlightView.hidden = YES;
-    [_prevLayer removeFromSuperlayer];
-    backButton.hidden = YES;
+    return YES;
 }
 
 //Send request
@@ -77,6 +65,9 @@
                                                   otherButtonTitles:nil];
             [alert show];
         }
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.navigationController popViewControllerAnimated:YES];
+        });
         
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
         UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Error Joining Party"
@@ -102,18 +93,15 @@
                 barCodeObject = (AVMetadataMachineReadableCodeObject *)[_prevLayer transformedMetadataObjectForMetadataObject:(AVMetadataMachineReadableCodeObject *)metadata];
                 highlightViewRect = barCodeObject.bounds;
                 detectionString = [(AVMetadataMachineReadableCodeObject *)metadata stringValue];
+                _highlightView.frame = highlightViewRect;
             }
         
         if (detectionString != nil)
         {
             NSRange str = [detectionString rangeOfString:@"partyId="];
             [self sendRequestWithId:[detectionString substringFromIndex:(str.location+str.length)]];
-            [_session stopRunning];
-            [self dismissViewControllerAnimated:YES completion:nil];
             break;
         }
-    
-    _highlightView.frame = highlightViewRect;
     }
 }
 
@@ -134,7 +122,7 @@
     if(indexPath.section == 0)
     {
         AddPartyTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"AddPartyCell" forIndexPath:indexPath];
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        
         return cell;
     }
     else
@@ -148,9 +136,8 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if(indexPath.section == 1)
+    if(indexPath.section == 1 && indexPath.row == 0)
     {
-        [self.view endEditing:YES];
         //SOME CRAZY VIEW CODE TO SHOW CAMERA AND HIGHLIGHT BARCODE, AS WELL AS RUN THE SCANNER
         _highlightView = [[UIView alloc] init];
         _highlightView.autoresizingMask = UIViewAutoresizingFlexibleTopMargin|UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleRightMargin|UIViewAutoresizingFlexibleBottomMargin;
@@ -182,25 +169,7 @@
         
         [_session startRunning];
         
-        
-        backButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-        [backButton addTarget:self
-                   action:@selector(backQRButtonHit:)
-         forControlEvents:UIControlEventTouchUpInside];
-        [backButton setTitle:@"Back" forState:UIControlStateNormal];
-        backButton.layer.borderWidth = 1;
-        backButton.layer.cornerRadius = 4;
-        backButton.tintColor = [UIColor whiteColor];
-        [backButton.layer setBorderColor:backButton.tintColor.CGColor];
-        backButton.layer.hidden = NO;
-        //button.frame = CGRectMake(80.0, 210.0, 160.0, 40.0);
-        float X_Co = self.view.frame.size.width - 50.0 - 10.0;
-        float Y_Co = self.view.frame.size.height - 30.0 - 10.0;
-        [backButton setFrame:CGRectMake(X_Co, Y_Co, 50.0, 30.0)];
-        [self.view addSubview:backButton];
-        
         [self.view bringSubviewToFront:_highlightView];
-        [self.view bringSubviewToFront:backButton];
     }
 }
 
@@ -215,18 +184,6 @@
         return nil;
     }
 }
-
-//- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    if(indexPath.section == 0)
-//    {
-//        return 60;
-//    }
-//    else
-//    {
-//        return [super tableView:tableView heightForRowAtIndexPath:indexPath];
-//    }
-//}
 
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {

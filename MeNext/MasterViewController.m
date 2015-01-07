@@ -18,9 +18,42 @@
 
 @implementation MasterViewController
 
-- (void)viewWillAppear:(BOOL)animated
+- (void)awakeFromNib
 {
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
+        self.clearsSelectionOnViewWillAppear = NO;
+        self.preferredContentSize = CGSizeMake(320.0, 600.0);
+    }
+    [super awakeFromNib];
+}
+
+-(void)viewDidAppear:(BOOL)animated
+{
+    if(_sharedData.splashView != nil)
+    {
+        [_sharedData.splashView removeFromSuperview];
+    }
+}
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:239/255.0 green:35/255.0 blue:53/255.0 alpha:1];
+    self.navigationController.navigationBar.translucent = NO;
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+    [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
+    self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
+    UIImage* logoImage = [UIImage imageNamed:@"MeNextLogo.png"];
+    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:logoImage];
+    self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
     _objects = [[NSMutableArray alloc] init];
+    
+    // Do any additional setup after loading the view, typically from a nib.
     
     AFHTTPSessionManager* manager = _sharedData.sessionManager;
     [manager GET:[NSString stringWithFormat:@"handler.php?action=listJoinedParties"] parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
@@ -39,19 +72,6 @@
                                               otherButtonTitles:nil];
         [alert show];
     }];
-}
-
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:235/255.0 green:39/255.0 blue:53/255.0 alpha:1];
-    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
-    self.navigationController.navigationBar.translucent = NO;
-    UIImage *logoImage = [UIImage imageNamed:@"MeNextLogo"];
-    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:logoImage];
-    [self.navigationController.navigationBar
-     setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
-    self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
 }
 
 - (void)didReceiveMemoryWarning
@@ -111,15 +131,14 @@
     }
 }
 
-#pragma mark - Segue
-
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     //tell detail controller
     if ([[segue identifier] isEqualToString:@"showDetail"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        NSDate *object = _objects[indexPath.row];
         DetailViewController* dst = [segue destinationViewController];
-        [dst setDetailItem:_objects[indexPath.row]];
+        [dst setDetailItem:object];
         dst.sharedData = self.sharedData;
     }
     else if([[segue identifier] isEqualToString:@"showSettings"])

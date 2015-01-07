@@ -37,7 +37,6 @@
     
     if(![searchBar.text isEqualToString:@""])
     {
-        //TODO: transform query string to Google Standard!
         NSString* query = (NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(NULL, (CFStringRef)searchBar.text, NULL, (CFStringRef)@"!*'();:@&=+$,/?%#[]", kCFStringEncodingUTF8));
         
         AFHTTPSessionManager* manager = _sharedData.youtubeSessionManager;
@@ -67,6 +66,10 @@
             [alert show];
         }];
     }
+    else
+    {
+        [self.tableView reloadData];
+    }
 }
 
 - (IBAction)addTrack:(id)sender
@@ -80,7 +83,7 @@
         if([responseObject[@"status"] isEqualToString:@"success"])
         {
             dispatch_async(dispatch_get_main_queue(), ^{
-                [self.navigationController popViewControllerAnimated:YES];            });
+                [self.navigationController popViewControllerAnimated:YES];});
         }
         
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
@@ -96,22 +99,21 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:239/255.0 green:35/255.0 blue:53/255.0 alpha:1];
+    self.navigationController.navigationBar.translucent = NO;
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+    self.navigationController.navigationBar.topItem.title = @"";
+    [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
     
     _thumbnails = [[NSMutableArray alloc] init];
     _tracks = [[NSMutableArray alloc] init];
+ 
     
-    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:235/255.0 green:39/255.0 blue:53/255.0 alpha:1];
-    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
-    self.navigationController.navigationBar.translucent = NO;
-    [self.navigationController.navigationBar
-     setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
-    self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
-    self.navigationController.navigationBar.topItem.title = @"";
-}
-
-- (void)viewDidAppear:(BOOL)animated
-{
-    [self.searchBar becomeFirstResponder];
+    // Uncomment the following line to preserve selection between presentations.
+    // self.clearsSelectionOnViewWillAppear = NO;
+    
+    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)didReceiveMemoryWarning

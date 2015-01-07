@@ -25,18 +25,6 @@
 
 #pragma mark - Managing the detail item
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:235/255.0 green:39/255.0 blue:53/255.0 alpha:1];
-    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
-    self.navigationController.navigationBar.translucent = NO;
-    [self.navigationController.navigationBar
-     setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
-    self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
-    self.navigationController.navigationBar.topItem.title = @"";
-}
-
 - (void)setDetailItem:(id)newDetailItem
 {
     if (_detailItem != newDetailItem) {
@@ -75,18 +63,15 @@
 
 - (void)loadTracks
 {
-    if(_tracks.count != 0)
-    {
-        [_tracks removeAllObjects];
-        [_thumbnails removeAllObjects];
-    }
     AFHTTPSessionManager* manager = _sharedData.sessionManager;
     [manager GET:[NSString stringWithFormat:@"handler.php?action=listVideos&partyId=%@", _partyId] parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
         //parse tracks into _tracks
         //Dictionary, 2kv pairs: status and videos
         if([responseObject[@"status"] isEqualToString:@"success"])
         {
-            [_tracks addObjectsFromArray:responseObject[@"videos"]];
+            NSMutableArray* _tempTracks = [[NSMutableArray alloc] init];
+            [_tempTracks addObjectsFromArray:responseObject[@"videos"]];
+            _tracks = _tempTracks;
             dispatch_async(dispatch_get_main_queue(), ^{
                 [self loadThumbnails];
                 [self.tableView reloadData];
@@ -122,31 +107,47 @@
     [self loadTracks];
 }
 
+-(void)viewDidLoad
+{
+    [super viewDidLoad];
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:239/255.0 green:35/255.0 blue:53/255.0 alpha:1];
+    self.navigationController.navigationBar.translucent = NO;
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+    self.navigationController.navigationBar.topItem.title = @"";
+    [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
+    self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
+}
+
 - (void)vote:(UIButton*)button forDirection:(NSString*)direction
 {
     NSInteger row = button.tag;
     
-    if([direction isEqualToString:_tracks[row][@"userRating"]])
+    if(_tracks.count >= row)
     {
-        direction = @"0";//we're un-voting
+        if([direction isEqualToString:_tracks[row][@"userRating"]])
+        {
+            direction = @"0";//we're un-voting
+        }
+        
+        NSString* submissionId = _tracks[row][@"submissionId"];
+        NSDictionary* postDictionary = @{@"action": @"vote", @"direction": direction, @"submissionId":submissionId};
+        
+        AFHTTPSessionManager* manager = _sharedData.sessionManager;
+        [manager POST:@"handler.php" parameters:postDictionary success:^(NSURLSessionDataTask *task, id responseObject) {
+            //re-fetch data on tracks to reflect new order
+            [self loadTracks];
+            
+        } failure:^(NSURLSessionDataTask *task, NSError *error) {
+            UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Error Voting"
+                                                            message:[error localizedDescription]
+                                                           delegate:nil
+                                                  cancelButtonTitle:@"OK"
+                                                  otherButtonTitles:nil];
+            [alert show];
+        }];
     }
     
-    NSString* submissionId = _tracks[row][@"submissionId"];
-    NSDictionary* postDictionary = @{@"action": @"vote", @"direction": direction, @"submissionId":submissionId};
     
-    AFHTTPSessionManager* manager = _sharedData.sessionManager;
-    [manager POST:@"handler.php" parameters:postDictionary success:^(NSURLSessionDataTask *task, id responseObject) {
-        //re-fetch data on tracks to reflect new order
-        [self loadTracks];
-        
-    } failure:^(NSURLSessionDataTask *task, NSError *error) {
-        UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Error Voting"
-                                                        message:[error localizedDescription]
-                                                       delegate:nil
-                                              cancelButtonTitle:@"OK"
-                                              otherButtonTitles:nil];
-        [alert show];
-    }];
 }
 
 - (IBAction)upVote:(id)sender
@@ -182,7 +183,7 @@
     DetailTableViewCell *cell = (DetailTableViewCell*)[tableView dequeueReusableCellWithIdentifier:@"QueueCell"];
     
     cell.textLabel.text = _tracks[indexPath.row][@"title"];
-    if(_thumbnails.count == _tracks.count)
+    if((indexPath.row <= _thumbnails.count) && (_thumbnails[_tracks[indexPath.row][@"youtubeId"]] != nil))
     {
         [cell.imageView sd_setImageWithURL:[NSURL URLWithString:_thumbnails[_tracks[indexPath.row][@"youtubeId"]]]];
     }
