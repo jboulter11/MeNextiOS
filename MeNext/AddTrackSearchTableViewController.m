@@ -134,7 +134,6 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     AddTrackDetailViewController* newVC = [self.storyboard instantiateViewControllerWithIdentifier:@"AddTrackDetail"];
-    NSLog([_tracks[indexPath.row] description]);
     NSArray* objArr = [NSArray arrayWithObjects:_tracks[indexPath.row][@"snippet"][@"title"], _tracks[indexPath.row][@"snippet"][@"description"], [self tableView:tableView cellForRowAtIndexPath:indexPath].imageView.image, nil];
     NSArray* keyArr = [NSArray arrayWithObjects:@"title", @"description", @"image", nil];
     
