@@ -406,7 +406,7 @@
                             </connections>
                         </searchBar>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="AddTrackCell" rowHeight="60" id="43R-Do-jGN" customClass="AddTrackTableViewCell">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="AddTrackCell" rowHeight="60" id="43R-Do-jGN" customClass="AddTrackTableViewCell">
                                 <rect key="frame" x="0.0" y="130" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="43R-Do-jGN" id="wJ2-Jv-qFG">
@@ -419,12 +419,6 @@
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mhN-gI-meD">
-                                            <rect key="frame" x="222" y="0.0" width="98" height="59"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="98" id="hOX-WT-zML"/>
-                                            </constraints>
-                                        </imageView>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mbb-kw-I93">
                                             <rect key="frame" x="14" y="18" width="22" height="22"/>
                                             <constraints>
@@ -438,9 +432,15 @@
                                                 <action selector="addTrack:" destination="jcc-L1-THs" eventType="touchUpInside" id="5bn-HX-pFy"/>
                                             </connections>
                                         </button>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mhN-gI-meD">
+                                            <rect key="frame" x="189" y="0.0" width="98" height="59"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="98" id="hOX-WT-zML"/>
+                                            </constraints>
+                                        </imageView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="mhN-gI-meD" firstAttribute="leading" secondItem="CqV-0j-N1u" secondAttribute="trailing" constant="32" id="3LO-My-6iz"/>
+                                        <constraint firstItem="mhN-gI-meD" firstAttribute="leading" secondItem="CqV-0j-N1u" secondAttribute="trailing" constant="-1" id="3LO-My-6iz"/>
                                         <constraint firstItem="mhN-gI-meD" firstAttribute="top" secondItem="wJ2-Jv-qFG" secondAttribute="topMargin" constant="-8" id="77B-uG-bdP"/>
                                         <constraint firstAttribute="trailing" secondItem="mhN-gI-meD" secondAttribute="trailing" id="COR-R8-w9n"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="mhN-gI-meD" secondAttribute="bottom" constant="-8" id="Cg2-RA-dXv"/>
@@ -484,7 +484,7 @@
         <!--Details-->
         <scene sceneID="iNF-6F-8a0">
             <objects>
-                <viewController id="A09-Q7-sfK" customClass="AddTrackDetailViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddTrackDetail" id="A09-Q7-sfK" customClass="AddTrackDetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gPZ-vV-ViG"/>
                         <viewControllerLayoutGuide type="bottom" id="bmT-sg-7t0"/>
@@ -518,11 +518,10 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="add:" destination="A09-Q7-sfK" eventType="touchUpInside" id="b0B-PO-ilP"/>
-                                    <action selector="login:" destination="oAH-gE-EPL" eventType="touchUpInside" id="n2z-K4-c90"/>
+                                    <action selector="addButtonTapped:" destination="A09-Q7-sfK" eventType="touchUpInside" id="gwm-re-AS7"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Title Goes Here And Stuff" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="240" translatesAutoresizingMaskIntoConstraints="NO" id="0tC-Dx-1Cz">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title of Song" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="240" translatesAutoresizingMaskIntoConstraints="NO" id="0tC-Dx-1Cz">
                                 <rect key="frame" x="40" y="182" width="240" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="F35-yI-hvn"/>
@@ -552,9 +551,9 @@
                     </view>
                     <navigationItem key="navigationItem" title="Details" id="VzQ-qc-SOs"/>
                     <connections>
-                        <outlet property="addButton" destination="bHS-34-3WR" id="o4e-be-XCd"/>
-                        <outlet property="imageView" destination="ike-Rb-iwE" id="LA0-LG-ip7"/>
-                        <outlet property="textView" destination="3eU-xk-dqk" id="uco-g5-sd0"/>
+                        <outlet property="descTextView" destination="3eU-xk-dqk" id="XCn-SJ-j5H"/>
+                        <outlet property="previewImageView" destination="ike-Rb-iwE" id="eMo-2b-B3e"/>
+                        <outlet property="titleLabel" destination="0tC-Dx-1Cz" id="ZlT-oM-ieH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gKs-eg-7ri" userLabel="First Responder" sceneMemberID="firstResponder"/>

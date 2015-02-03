@@ -8,6 +8,7 @@
 
 #import "AddTrackSearchTableViewController.h"
 #import "AddTrackTableViewCell.h"
+#import "AddTrackDetailViewController.h"
 #import "UIImageView+WebCache.h"
 
 @interface AddTrackSearchTableViewController ()
@@ -20,14 +21,7 @@
 
 @implementation AddTrackSearchTableViewController
 
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
+#pragma mark - Action Methods
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
 {
@@ -40,7 +34,7 @@
         NSString* query = (NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(NULL, (CFStringRef)searchBar.text, NULL, (CFStringRef)@"!*'();:@&=+$,/?%#[]", kCFStringEncodingUTF8));
         
         AFHTTPSessionManager* manager = _sharedData.youtubeSessionManager;
-        [manager GET:[NSString stringWithFormat:@"search?&key=%@&type=video&part=id,snippet&maxResults=25&q=%@&fields=items(id,snippet(title,thumbnails(default)))", _sharedData.KEY, query] parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+        [manager GET:[NSString stringWithFormat:@"search?&key=%@&type=video&part=id,snippet&maxResults=25&q=%@&fields=items(id,snippet(title,thumbnails(default),description))", _sharedData.KEY, query] parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
             //add URLs for thumbnails to the _thumbnails array
             @try {
                 for(NSInteger trackNum = 0; trackNum<25;++trackNum)
@@ -96,6 +90,17 @@
     }];
 }
 
+#pragma mark - View Methods
+
+- (id)initWithStyle:(UITableViewStyle)style
+{
+    self = [super initWithStyle:style];
+    if (self) {
+        // Custom initialization
+    }
+    return self;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -107,6 +112,8 @@
     
     _thumbnails = [[NSMutableArray alloc] init];
     _tracks = [[NSMutableArray alloc] init];
+    
+    [self.searchBar becomeFirstResponder];
  
     
     // Uncomment the following line to preserve selection between presentations.
@@ -120,6 +127,23 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - Table view action methods
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    AddTrackDetailViewController* newVC = [self.storyboard instantiateViewControllerWithIdentifier:@"AddTrackDetail"];
+    NSLog([_tracks[indexPath.row] description]);
+    NSArray* objArr = [NSArray arrayWithObjects:_tracks[indexPath.row][@"snippet"][@"title"], _tracks[indexPath.row][@"snippet"][@"description"], [self tableView:tableView cellForRowAtIndexPath:indexPath].imageView.image, nil];
+    NSArray* keyArr = [NSArray arrayWithObjects:@"title", @"description", @"image", nil];
+    
+    newVC.sharedData = self.sharedData;
+    newVC.track = [NSDictionary dictionaryWithObjects:objArr forKeys:keyArr];
+    newVC.partyId = self.partyId;
+    newVC.youtubeId = _tracks[indexPath.row][@"id"][@"videoId"];
+    [self.navigationController pushViewController:newVC animated:YES];
+    
 }
 
 #pragma mark - Table view data source
@@ -196,7 +220,10 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    // Set view's objects with song's details
+
+    
+    
 }
 */
 
