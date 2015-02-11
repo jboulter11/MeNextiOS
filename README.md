@@ -1,7 +1,7 @@
 MeNextiOS
 =========
 
-iOS Mobile App for MeNext
+iOS Mobile App for MeNext - https:\\menext.me
 
 Master is main development branch, for now since I'm the only one on this project.  Please excuse some of the messy code.  This is still a work in progress.
 
