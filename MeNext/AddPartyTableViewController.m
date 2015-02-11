@@ -24,6 +24,8 @@
 
 @implementation AddPartyTableViewController
 
+#pragma mark - View and Misc
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:239/255.0 green:35/255.0 blue:53/255.0 alpha:1];
@@ -48,6 +50,8 @@
     }
     return YES;
 }
+
+#pragma mark - Joining Parties
 
 //Send request
 - (void)sendRequestWithId:(NSString*)partyId
@@ -78,6 +82,8 @@
         [alert show];
     }];
 }
+
+#pragma mark - QR
 
 -(void)captureOutput:(AVCaptureOutput *)captureOutput didOutputMetadataObjects:(NSArray *)metadataObjects fromConnection:(AVCaptureConnection *)connection
 {

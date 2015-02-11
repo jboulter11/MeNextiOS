@@ -14,6 +14,8 @@
 @synthesize KEY;
 @synthesize splashView;
 
+#pragma mark - init
+
 -(SharedData*) init{
     self = [super init];
     sessionManager = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:@"http://www.menext.me/"]];
@@ -29,6 +31,8 @@
     
     return self;
 }
+
+#pragma mark - Sanatize
 
 +(NSMutableString *) sanitizeNSString:(NSString *)string {
     NSMutableString *sanitized = [[string stringByReplacingOccurrencesOfString:@"&" withString:@""] copy];

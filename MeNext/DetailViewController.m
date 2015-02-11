@@ -36,6 +36,18 @@
     }        
 }
 
+#pragma mark - Misc
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+    _tracks = nil;
+    _thumbnails = nil;
+}
+
+#pragma mark - Loading content
+
 -(void)loadThumbnails
 {
     //httpget for track details from youtube (thumbnails)
@@ -92,6 +104,8 @@
     }];
 }
 
+#pragma mark - View
+
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
@@ -117,6 +131,8 @@
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
     self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
 }
+
+#pragma mark - Voting
 
 - (void)vote:(UIButton*)button forDirection:(NSString*)direction
 {
@@ -160,13 +176,7 @@
     [self vote:(UIButton*)sender forDirection:@"-1"];
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-    _tracks = nil;
-    _thumbnails = nil;
-}
+#pragma mark - Table
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {

@@ -16,6 +16,7 @@
 @synthesize titleLabel;
 @synthesize descTextView;
 @synthesize previewImageView;
+
 #pragma mark - Add Track
 
 - (IBAction)addButtonTapped:(id)sender

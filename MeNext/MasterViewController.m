@@ -18,6 +18,8 @@
 
 @implementation MasterViewController
 
+#pragma mark - Misc
+
 - (void)awakeFromNib
 {
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
@@ -26,6 +28,15 @@
     }
     [super awakeFromNib];
 }
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+    _objects = nil;
+}
+
+#pragma mark - View
 
 -(void)viewDidAppear:(BOOL)animated
 {
@@ -72,13 +83,6 @@
                                               otherButtonTitles:nil];
         [alert show];
     }];
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-    _objects = nil;
 }
 
 #pragma mark - Table View

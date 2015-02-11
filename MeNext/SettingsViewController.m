@@ -15,6 +15,8 @@
 
 @implementation SettingsViewController
 
+#pragma mark - Actions
+
 - (IBAction)done:(id)sender
 {
     [self dismissViewControllerAnimated:YES completion:nil];
@@ -24,6 +26,15 @@
     return UIBarPositionTopAttached;
 }
 
+- (IBAction)logout:(id)sender
+{
+    [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"sessionId"];
+    
+    [self performSegueWithIdentifier:@"logout" sender:self];
+}
+
+#pragma mark - View and misc
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -31,13 +42,6 @@
         // Custom initialization
     }
     return self;
-}
-
-- (IBAction)logout:(id)sender
-{
-    [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"sessionId"];
-    
-    [self performSegueWithIdentifier:@"logout" sender:self];
 }
 
 - (void)viewDidLoad
