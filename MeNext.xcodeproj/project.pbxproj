@@ -85,6 +85,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C5C71211A9948F900CE9B75 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0C16C76D19ECA2A5009B62D6 /* AddPartyTableViewController.h */,
+				0C16C76E19ECA2A5009B62D6 /* AddPartyTableViewController.m */,
+				0C999702195373B50067F0A3 /* LoginViewController.h */,
+				0C999703195373B50067F0A3 /* LoginViewController.m */,
+				0C38E62719496A220035FA82 /* SettingsViewController.h */,
+				0C38E62819496A220035FA82 /* SettingsViewController.m */,
+				0CF520D919453E1C0043AC8F /* MasterViewController.h */,
+				0CF520DA19453E1C0043AC8F /* MasterViewController.m */,
+				0CF520DC19453E1C0043AC8F /* DetailViewController.h */,
+				0CF520DD19453E1C0043AC8F /* DetailViewController.m */,
+				0CBFB4FD19707AF90001CED3 /* AddTrackSearchTableViewController.h */,
+				0CBFB4FE19707AF90001CED3 /* AddTrackSearchTableViewController.m */,
+				0CBFB4F719707A4B0001CED3 /* AddTrackDetailViewController.h */,
+				0CBFB4F819707A4B0001CED3 /* AddTrackDetailViewController.m */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
 		0CF520B519453E1C0043AC8F = {
 			isa = PBXGroup;
 			children = (
@@ -118,6 +139,7 @@
 		0CF520C719453E1C0043AC8F /* MeNext */ = {
 			isa = PBXGroup;
 			children = (
+				0C5C71211A9948F900CE9B75 /* View Controllers */,
 				0CF520D019453E1C0043AC8F /* AppDelegate.h */,
 				0CF520D119453E1C0043AC8F /* AppDelegate.m */,
 				0CB355031975FDA5005FD24C /* SharedData.h */,
@@ -129,20 +151,6 @@
 				0C16C77019ECA6A8009B62D6 /* AddPartyTableViewCell.h */,
 				0C16C77119ECA6A8009B62D6 /* AddPartyTableViewCell.m */,
 				0CF520D319453E1C0043AC8F /* Main_iPhone.storyboard */,
-				0C16C76D19ECA2A5009B62D6 /* AddPartyTableViewController.h */,
-				0C16C76E19ECA2A5009B62D6 /* AddPartyTableViewController.m */,
-				0C999702195373B50067F0A3 /* LoginViewController.h */,
-				0C999703195373B50067F0A3 /* LoginViewController.m */,
-				0C38E62719496A220035FA82 /* SettingsViewController.h */,
-				0C38E62819496A220035FA82 /* SettingsViewController.m */,
-				0CF520D919453E1C0043AC8F /* MasterViewController.h */,
-				0CF520DA19453E1C0043AC8F /* MasterViewController.m */,
-				0CF520DC19453E1C0043AC8F /* DetailViewController.h */,
-				0CF520DD19453E1C0043AC8F /* DetailViewController.m */,
-				0CBFB4FD19707AF90001CED3 /* AddTrackSearchTableViewController.h */,
-				0CBFB4FE19707AF90001CED3 /* AddTrackSearchTableViewController.m */,
-				0CBFB4F719707A4B0001CED3 /* AddTrackDetailViewController.h */,
-				0CBFB4F819707A4B0001CED3 /* AddTrackDetailViewController.m */,
 				0CF520DF19453E1C0043AC8F /* Images.xcassets */,
 				0CF520C819453E1C0043AC8F /* Supporting Files */,
 			);
