@@ -9,20 +9,115 @@
 #import "AppDelegate.h"
 #import "AFNetworkActivityIndicatorManager.h"
 #import <FacebookSDK/FacebookSDK.h>
+#import "MasterViewController.h"
+#import "LoginViewController.h"
+#import "SharedData.h"
 
 @implementation AppDelegate
+{
+    BOOL didRelog;
+}
+
+#pragma mark - Login
+
+-(void)setLogin
+{
+    //take us to the app
+    [(UINavigationController*)self.window.rootViewController setViewControllers:@[[[UIStoryboard storyboardWithName:@"Main_iPhone" bundle:nil] instantiateViewControllerWithIdentifier:@"Master"]]];
+}
+
+-(void)setLogout
+{
+    //if FB knows we're logged in we can just tell MeNext our FB token again to re-login
+    //MAYBE PUT THIS IN THE LOGIN CONTROLLER???
+    
+    //take us to login
+    [(UINavigationController*)self.window.rootViewController setViewControllers:@[[[UIStoryboard storyboardWithName:@"Main_iPhone" bundle:nil] instantiateViewControllerWithIdentifier:@"Login"]]];
+    
+}
+
+-(BOOL)relogWithFB
+{
+    didRelog = false;
+    if([[[FBSession activeSession] accessTokenData] accessToken] != nil)
+    {
+        [[[SharedData sharedData] sessionManager] POST:@"handler.php" parameters:@{@"action":@"fbLogin", @"accessToken":[[[FBSession activeSession] accessTokenData] accessToken], @"userId":[[[FBSession activeSession] accessTokenData] userID]} success:^(NSURLSessionDataTask *task, id responseObject) {
+            if([responseObject[@"status"] isEqualToString:@"success"])
+            {
+                //if success
+                didRelog = true;
+            }
+            else
+            {
+                NSString* msg = @"Error logging in";
+                if([responseObject[@"errors"][0] isEqualToString:@"bad username/password combination"])
+                {
+                    msg = @"Wrong username or password";
+                }
+                UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Error Logging In"
+                                                                message:msg
+                                                               delegate:nil
+                                                      cancelButtonTitle:@"OK"
+                                                      otherButtonTitles:nil];
+                [alert show];
+            }
+            
+        } failure:^(NSURLSessionDataTask *task, NSError *error) {
+            UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Error Logging In"
+                                                            message:[error localizedDescription]
+                                                           delegate:nil
+                                                  cancelButtonTitle:@"OK"
+                                                  otherButtonTitles:nil];
+            [alert show];
+        }];
+    }
+    return didRelog;
+}
+
+#pragma mark - AppDelegate Methods
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
-        UISplitViewController *splitViewController = (UISplitViewController *)self.window.rootViewController;
-        UINavigationController *navigationController = [splitViewController.viewControllers lastObject];
-        splitViewController.delegate = (id)navigationController.topViewController;
-    }
+//    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
+//        UISplitViewController *splitViewController = (UISplitViewController *)self.window.rootViewController;
+//        UINavigationController *navigationController = [splitViewController.viewControllers lastObject];
+//        splitViewController.delegate = (id)navigationController.topViewController;
+//    }
     
+    //let the app know about these things / enable these things
     [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
     [FBLoginView class];
+    
+    //make our navigation controller
+    UINavigationController* nav = [[UINavigationController alloc] init];
+    nav.navigationBar.barTintColor = [UIColor colorWithRed:239/255.0 green:35/255.0 blue:53/255.0 alpha:1];
+    nav.navigationBar.translucent = NO;
+    nav.navigationBar.tintColor = [UIColor whiteColor];
+    [nav.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
+    nav.navigationBar.barStyle = UIBarStyleBlack;
+    
+    //chreate our splashview
+    [SharedData sharedData].splashView = [[UIImageView alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    [SharedData sharedData].splashView.image = [UIImage imageNamed:[SharedData getLaunchImageName]];
+    
+    //make it visible
+    [nav.view addSubview:[SharedData sharedData].splashView];
+    [nav.view bringSubviewToFront:[SharedData sharedData].splashView];
+    //tell the window that nav is our rootviewcontroller
+    self.window.rootViewController = nav;
+    
+    //if FB says we're logged in
+    if([[[FBSession activeSession] accessTokenData] accessToken] != nil)
+    {
+        //take us to the app
+        [self setLogin];
+    }
+    else
+    {
+        //take us to the login vc
+        [self setLogout];
+    }
     
     return YES;
 }

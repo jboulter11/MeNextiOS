@@ -14,32 +14,83 @@
 @synthesize KEY;
 @synthesize splashView;
 
-#pragma mark - init
+#pragma mark - Singleton
 
--(SharedData*) init{
-    self = [super init];
-    sessionManager = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:@"http://www.menext.me/"]];
-    sessionManager.responseSerializer = [AFJSONResponseSerializer serializer];
-    sessionManager.responseSerializer.acceptableContentTypes = [sessionManager.responseSerializer.acceptableContentTypes setByAddingObject:@"text/html"];
-    
-    youtubeSessionManager = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:@"https://www.googleapis.com/youtube/v3/"]];
-    youtubeSessionManager.responseSerializer = [AFJSONResponseSerializer serializer];
-    youtubeSessionManager.responseSerializer.acceptableContentTypes = [youtubeSessionManager.responseSerializer.acceptableContentTypes setByAddingObject:@"text/html"];
-    
-    KEY = @"AIzaSyAbh1CseUDq0NKangT-QRIeyOoZLz6jCII";//MeNext Youtube iOS API Key
-    splashView = nil;
++(SharedData*) sharedData {
+    static SharedData *sharedManager = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        sharedManager = [[self alloc] init];
+    });
+    return sharedManager;
+}
+
+#pragma mark - AppDelagate
+
++(AppDelegate*)appDel
+{
+    return (AppDelegate*)[[UIApplication sharedApplication] delegate];
+}
+
+#pragma mark - Init
+
+-(SharedData*) init
+{
+    if(self = [super init])
+    {
+        sessionManager = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:@"https://www.menext.me/"]];
+        sessionManager.responseSerializer = [AFJSONResponseSerializer serializer];
+        sessionManager.responseSerializer.acceptableContentTypes = [sessionManager.responseSerializer.acceptableContentTypes setByAddingObject:@"text/html"];
+        
+        youtubeSessionManager = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:@"https://www.googleapis.com/youtube/v3/"]];
+        youtubeSessionManager.responseSerializer = [AFJSONResponseSerializer serializer];
+        youtubeSessionManager.responseSerializer.acceptableContentTypes = [youtubeSessionManager.responseSerializer.acceptableContentTypes setByAddingObject:@"text/html"];
+        
+        KEY = @"AIzaSyAbh1CseUDq0NKangT-QRIeyOoZLz6jCII";//MeNext Youtube iOS API Key
+        splashView = nil;
+    }
     
     return self;
 }
 
-#pragma mark - Sanatize
+#pragma mark - shared functions
 
-+(NSMutableString *) sanitizeNSString:(NSString *)string {
++(NSMutableString *) sanitizeNSString:(NSString *)string
+{
     NSMutableString *sanitized = [[string stringByReplacingOccurrencesOfString:@"&" withString:@""] copy];
     sanitized = [[sanitized stringByReplacingOccurrencesOfString:@"=" withString:@""] copy];
     sanitized = [[sanitized stringByReplacingOccurrencesOfString:@"?" withString:@""] copy];
     
     return sanitized;
+}
+
++(void)loginCheck:(id)responseObject
+{
+    if([((NSArray*)[responseObject objectForKey:@"errors"])[0] isEqual: @"must be logged in"])
+    {
+        if(![[SharedData appDel] relogWithFB])
+        {
+            [[self appDel] setLogout];
+        }
+    }
+}
+
++(NSString*)getLaunchImageName
+{
+    NSString* launchImageName;
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+    {
+        if ([UIScreen mainScreen].bounds.size.height == 480) launchImageName = @"LaunchImage-700@2x.png"; // iPhone 4/4s, 3.5 inch screen
+        if ([UIScreen mainScreen].bounds.size.height == 568) launchImageName = @"LaunchImage-700-568h@2x.png"; // iPhone 5/5s, 4.0 inch screen
+        if ([UIScreen mainScreen].bounds.size.height == 667) launchImageName = @"LaunchImage-800-667h@2x.png"; // iPhone 6, 4.7 inch screen
+        if ([UIScreen mainScreen].bounds.size.height == 736) launchImageName = @"LaunchImage-800-Portrait-736h@3x.png"; // iPhone 6+, 5.5 inch screen
+    }
+    else if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+    {
+        if ([UIScreen mainScreen].scale == 1) launchImageName = @"LaunchImage-700-Portrait~ipad.png"; // iPad 2
+        if ([UIScreen mainScreen].scale == 2) launchImageName = @"LaunchImage-700-Portrait@2x~ipad.png"; // Retina iPads
+    }
+    return launchImageName;
 }
 
 @end

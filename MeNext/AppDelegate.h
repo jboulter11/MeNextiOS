@@ -12,4 +12,8 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
+-(void)setLogin;
+-(void)setLogout;
+-(BOOL)relogWithFB;
+
 @end

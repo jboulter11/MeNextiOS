@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "AFHTTPSessionManager.h"
+#import "AppDelegate.h"
 
 @interface SharedData : NSObject
 
@@ -18,6 +19,10 @@
 
 +(NSMutableString *) sanitizeNSString:(NSString *)string;
 
++(SharedData*) sharedData;
 -(SharedData*) init;
++(AppDelegate*) appDel;
++(void) loginCheck:(id)responseObject;
++(NSString*)getLaunchImageName;
 
 @end

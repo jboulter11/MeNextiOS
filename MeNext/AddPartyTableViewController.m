@@ -59,15 +59,20 @@
     NSDictionary* postDictionary = @{@"action": @"joinParty", @"partyId": partyId};
     AFHTTPSessionManager* manager = _sharedData.sessionManager;
     [manager POST:@"handler.php" parameters:postDictionary success:^(NSURLSessionDataTask *task, id responseObject) {
-        if(!([responseObject[@"status"] isEqualToString:@"success"]))
+        
+        if(![((NSString*)[responseObject objectForKey:@"status"])  isEqual: @"failed"])
         {
-            //bad
+            //success
+        }
+        else
+        {
             UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Error Joining Party"
                                                             message:nil
                                                            delegate:nil
                                                   cancelButtonTitle:@"OK"
                                                   otherButtonTitles:nil];
             [alert show];
+            [SharedData loginCheck:responseObject];
         }
         dispatch_async(dispatch_get_main_queue(), ^{
             [self.navigationController popViewControllerAnimated:YES];

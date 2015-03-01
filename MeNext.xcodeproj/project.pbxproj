@@ -106,6 +106,19 @@
 			name = "View Controllers";
 			sourceTree = "<group>";
 		};
+		0C5C71221A99515C00CE9B75 /* Table View Cells */ = {
+			isa = PBXGroup;
+			children = (
+				0C09E26F195CB609001A714B /* DetailTableViewCell.h */,
+				0C09E270195CB609001A714B /* DetailTableViewCell.m */,
+				0CBFB4F1197023B70001CED3 /* AddTrackTableViewCell.h */,
+				0CBFB4F2197023B70001CED3 /* AddTrackTableViewCell.m */,
+				0C16C77019ECA6A8009B62D6 /* AddPartyTableViewCell.h */,
+				0C16C77119ECA6A8009B62D6 /* AddPartyTableViewCell.m */,
+			);
+			name = "Table View Cells";
+			sourceTree = "<group>";
+		};
 		0CF520B519453E1C0043AC8F = {
 			isa = PBXGroup;
 			children = (
@@ -139,17 +152,12 @@
 		0CF520C719453E1C0043AC8F /* MeNext */ = {
 			isa = PBXGroup;
 			children = (
+				0C5C71221A99515C00CE9B75 /* Table View Cells */,
 				0C5C71211A9948F900CE9B75 /* View Controllers */,
 				0CF520D019453E1C0043AC8F /* AppDelegate.h */,
 				0CF520D119453E1C0043AC8F /* AppDelegate.m */,
 				0CB355031975FDA5005FD24C /* SharedData.h */,
 				0CB355041975FDA5005FD24C /* SharedData.m */,
-				0C09E26F195CB609001A714B /* DetailTableViewCell.h */,
-				0C09E270195CB609001A714B /* DetailTableViewCell.m */,
-				0CBFB4F1197023B70001CED3 /* AddTrackTableViewCell.h */,
-				0CBFB4F2197023B70001CED3 /* AddTrackTableViewCell.m */,
-				0C16C77019ECA6A8009B62D6 /* AddPartyTableViewCell.h */,
-				0C16C77119ECA6A8009B62D6 /* AddPartyTableViewCell.m */,
 				0CF520D319453E1C0043AC8F /* Main_iPhone.storyboard */,
 				0CF520DF19453E1C0043AC8F /* Images.xcassets */,
 				0CF520C819453E1C0043AC8F /* Supporting Files */,
@@ -205,6 +213,7 @@
 		0CF520B619453E1C0043AC8F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = "";
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Jim Boulter";
 				TargetAttributes = {

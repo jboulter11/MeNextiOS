@@ -8,6 +8,7 @@
 
 #import "AddTrackDetailViewController.h"
 #import "DetailViewController.h"
+#import "SharedData.h"
 
 @interface AddTrackDetailViewController ()
 
@@ -22,9 +23,8 @@
 - (IBAction)addButtonTapped:(id)sender
 {
     NSDictionary* postDictionary = @{@"action":@"addVideo", @"partyId":_partyId, @"youtubeId":_youtubeId};
-    AFHTTPSessionManager* manager = _sharedData.sessionManager;
-    [manager POST:@"handler.php" parameters:postDictionary success:^(NSURLSessionDataTask *task, id responseObject) {
-        if([responseObject[@"status"] isEqualToString:@"success"])
+    [[[SharedData sharedData] sessionManager] POST:@"handler.php" parameters:postDictionary success:^(NSURLSessionDataTask *task, id responseObject) {
+        if(![((NSString*)[responseObject objectForKey:@"status"])  isEqual: @"failed"])
         {
             DetailViewController* detVC = nil;
             NSMutableArray *allViewControllers = [NSMutableArray arrayWithArray:[self.navigationController viewControllers]];
@@ -44,6 +44,10 @@
                 dispatch_async(dispatch_get_main_queue(), ^{
                     [self.navigationController popViewControllerAnimated:YES];});
             }
+        }
+        else
+        {
+            [SharedData loginCheck:responseObject];
         }
         
     } failure:^(NSURLSessionDataTask *task, NSError *error) {

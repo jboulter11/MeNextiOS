@@ -7,7 +7,7 @@
 //
 
 #import "SettingsViewController.h"
-#import "LoginViewController.h"
+#import "AppDelegate.h"
 
 @interface SettingsViewController ()
 
@@ -29,8 +29,7 @@
 - (IBAction)logout:(id)sender
 {
     [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"sessionId"];
-    
-    [self performSegueWithIdentifier:@"logout" sender:self];
+    [(AppDelegate*)[[UIApplication sharedApplication] delegate] setLogout];
 }
 
 #pragma mark - View and misc

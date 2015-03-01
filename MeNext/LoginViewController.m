@@ -9,12 +9,13 @@
 #import "LoginViewController.h"
 #import "MasterViewController.h"
 #import "AFNetworking.h"
+#import "AppDelegate.h"
+#import "SharedData.h"
 
 @interface LoginViewController (){
     NSString* accessToken;
     NSString* userId;
     NSDictionary* postDictionary;
-    UIImageView* splashView;
 }
 @property (weak, nonatomic) IBOutlet UIButton *registerButton;
 @property (weak, nonatomic) IBOutlet UIButton *loginButton;
@@ -27,43 +28,40 @@
 
 @implementation LoginViewController
 
-#pragma mark - Init
+#pragma mark - View
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+-(void)viewWillAppear:(BOOL)animated
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
+    [super viewWillAppear:animated];
 }
 
-#pragma mark - Misc
-
--(NSString*)getLaunchImageName
+- (void)viewDidLoad
 {
-    NSString* launchImageName;
-    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+    [super viewDidLoad];
+    UINavigationBar* navbar = [[UINavigationBar alloc] init];
+    navbar.barTintColor = [UIColor colorWithRed:239/255.0 green:35/255.0 blue:53/255.0 alpha:1];
+    navbar.translucent = NO;
+    navbar.tintColor = [UIColor whiteColor];
+    [navbar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
+    navbar.barStyle = UIBarStyleBlack;
+    [self.view addSubview:navbar];
+    
+    //Check the login status of the user
+    
+    NSString* username = [[NSUserDefaults standardUserDefaults] stringForKey:@"username"];
+    //user needs to login
+    //fill the usernameTextField with current data
+    if(username)
     {
-        if ([UIScreen mainScreen].bounds.size.height == 480) launchImageName = @"LaunchImage-700@2x.png"; // iPhone 4/4s, 3.5 inch screen
-        if ([UIScreen mainScreen].bounds.size.height == 568) launchImageName = @"LaunchImage-700-568h@2x.png"; // iPhone 5/5s, 4.0 inch screen
-        if ([UIScreen mainScreen].bounds.size.height == 667) launchImageName = @"LaunchImage-800-667h@2x.png"; // iPhone 6, 4.7 inch screen
-        if ([UIScreen mainScreen].bounds.size.height == 736) launchImageName = @"LaunchImage-800-Portrait-736h@3x.png"; // iPhone 6+, 5.5 inch screen
+        _usernameTextField.text = username;
     }
-    else if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
-    {
-        if ([UIScreen mainScreen].scale == 1) launchImageName = @"LaunchImage-700-Portrait~ipad.png"; // iPad 2
-        if ([UIScreen mainScreen].scale == 2) launchImageName = @"LaunchImage-700-Portrait@2x~ipad.png"; // Retina iPads
-    }
-    return launchImageName;
-}
-
-- (void)toggleControl:(BOOL) action
-{
-    _usernameTextField.enabled = action;
-    _passwordTextField.enabled = action;
-    _loginButton.enabled = action;
-    //_registerButton.enabled = action;
+    
+    self.fbLoginView.readPermissions = @[@"email"];
+    
+//    if([[SharedData sharedData].splashView isDescendantOfView:self.view])
+//    {
+//        [[SharedData sharedData].splashView removeFromSuperview];
+//    }
 }
 
 #pragma mark - Requests
@@ -71,13 +69,12 @@
 - (void)sendRequest
 {
     //send the actual request asyncronously
-    AFHTTPSessionManager* manager = _sharedData.sessionManager;
-    [manager POST:@"handler.php" parameters:postDictionary success:^(NSURLSessionDataTask *task, id responseObject) {
+    [[[SharedData sharedData] sessionManager] POST:@"handler.php" parameters:postDictionary success:^(NSURLSessionDataTask *task, id responseObject) {
         if([responseObject[@"status"] isEqualToString:@"success"])
         {
             dispatch_async(dispatch_get_main_queue(), ^{
                 [_activityIndicator stopAnimating];
-                [self performSegueWithIdentifier:@"LoginSuccess" sender:self];
+                ;
             });
         }
         else
@@ -149,6 +146,8 @@
     }
 }
 
+
+
 - (IBAction)login:(id)sender
 {
     [self handleRequest:@"login"];
@@ -168,7 +167,7 @@
 
 - (void)loginViewShowingLoggedOutUser:(FBLoginView *)loginView
 {
-    [splashView removeFromSuperview];
+    [[[SharedData sharedData] splashView] removeFromSuperview];
     if(_usernameTextField.text != nil)
     {
         [_passwordTextField becomeFirstResponder];
@@ -180,60 +179,14 @@
     //NSLog([error description]);
 }
 
-#pragma mark - View
+#pragma mark - Misc
 
--(void)viewWillAppear:(BOOL)animated
+- (void)toggleControl:(BOOL) action
 {
-    [super viewWillAppear:animated];
-    
-    splashView = [[UIImageView alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    splashView.image = [UIImage imageNamed:[self getLaunchImageName]];
-    
-    [self.navigationController.view addSubview:splashView];
-    [self.navigationController.view bringSubviewToFront:splashView];
-    
-    if(!_sharedData)
-    {
-        _sharedData = [[SharedData alloc] init];
-    }
-    _sharedData.splashView = splashView;
+    _usernameTextField.enabled = action;
+    _passwordTextField.enabled = action;
+    _loginButton.enabled = action;
+    //_registerButton.enabled = action;
 }
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:239/255.0 green:35/255.0 blue:53/255.0 alpha:1];
-    self.navigationController.navigationBar.translucent = NO;
-    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
-    [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
-    self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
-    
-    //Check the login status of the user
-    
-    NSString* username = [[NSUserDefaults standardUserDefaults] stringForKey:@"username"];
-    //user needs to login
-    //fill the usernameTextField with current data
-    if(username)
-    {
-        _usernameTextField.text = username;
-    }
-    
-    self.fbLoginView.readPermissions = @[@"email"];
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    MasterViewController* dst = (MasterViewController*)[segue destinationViewController];
-    dst.sharedData = self.sharedData;
-}
 @end

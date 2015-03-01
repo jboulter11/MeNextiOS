@@ -10,6 +10,7 @@
 #import "DetailTableViewCell.h"
 #import "AddTrackSearchTableViewController.h"
 #import "UIImageView+WebCache.h"
+#import "SharedData.h"
 
 @interface DetailViewController ()
 {
@@ -54,8 +55,9 @@
     for(NSDictionary* track in _tracks)
     {
         NSString* trackId = track[@"youtubeId"];
-        AFHTTPSessionManager* manager = _sharedData.youtubeSessionManager;
-        [manager GET:[NSString stringWithFormat:@"videos?id=%@&key=%@&part=snippet&fields=items(id,snippet(title,thumbnails(default)))", trackId, _sharedData.KEY] parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+        AFHTTPSessionManager* manager = [[SharedData sharedData] youtubeSessionManager];
+        [manager GET:[NSString stringWithFormat:@"videos?id=%@&key=%@&part=snippet&fields=items(id,snippet(title,thumbnails(default)))", trackId,
+                      [[SharedData sharedData]KEY]] parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
             //add URLs for thumbnails to the _thumbnails array
             [_thumbnails setObject:responseObject[@"items"][0][@"snippet"][@"thumbnails"][@"default"][@"url"] forKey:trackId];
             dispatch_async(dispatch_get_main_queue(), ^{
@@ -75,8 +77,7 @@
 
 - (void)loadTracks
 {
-    AFHTTPSessionManager* manager = _sharedData.sessionManager;
-    [manager GET:[NSString stringWithFormat:@"handler.php?action=listVideos&partyId=%@", _partyId] parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+    [[[SharedData sharedData] sessionManager] GET:[NSString stringWithFormat:@"handler.php?action=listVideos&partyId=%@", _partyId] parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
         //parse tracks into _tracks
         //Dictionary, 2kv pairs: status and videos
         if([responseObject[@"status"] isEqualToString:@"success"])
@@ -124,7 +125,6 @@
 -(void)viewDidLoad
 {
     [super viewDidLoad];
-    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:239/255.0 green:35/255.0 blue:53/255.0 alpha:1];
     self.navigationController.navigationBar.translucent = NO;
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
     self.navigationController.navigationBar.topItem.title = @"";
@@ -148,10 +148,18 @@
         NSString* submissionId = _tracks[row][@"submissionId"];
         NSDictionary* postDictionary = @{@"action": @"vote", @"direction": direction, @"submissionId":submissionId};
         
-        AFHTTPSessionManager* manager = _sharedData.sessionManager;
-        [manager POST:@"handler.php" parameters:postDictionary success:^(NSURLSessionDataTask *task, id responseObject) {
+        [[[SharedData sharedData] sessionManager] POST:@"handler.php" parameters:postDictionary success:^(NSURLSessionDataTask *task, id responseObject) {
             //re-fetch data on tracks to reflect new order
-            [self loadTracks];
+            
+            
+            if(![((NSString*)[responseObject objectForKey:@"status"])  isEqual: @"failed"])
+            {
+                [self loadTracks];
+            }
+            else
+            {
+                [SharedData loginCheck:responseObject];
+            }
             
         } failure:^(NSURLSessionDataTask *task, NSError *error) {
             UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Error Voting"
@@ -266,7 +274,6 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     AddTrackSearchTableViewController* dst = [segue destinationViewController];
-    dst.sharedData = self.sharedData;
     dst.partyId = _detailItem[@"partyId"];
 }
 

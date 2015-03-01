@@ -10,6 +10,7 @@
 #import "AddTrackTableViewCell.h"
 #import "AddTrackDetailViewController.h"
 #import "UIImageView+WebCache.h"
+#import "SharedData.h"
 
 @interface AddTrackSearchTableViewController ()
 {
@@ -33,8 +34,7 @@
     {
         NSString* query = (NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(NULL, (CFStringRef)searchBar.text, NULL, (CFStringRef)@"!*'();:@&=+$,/?%#[]", kCFStringEncodingUTF8));
         
-        AFHTTPSessionManager* manager = _sharedData.youtubeSessionManager;
-        [manager GET:[NSString stringWithFormat:@"search?&key=%@&type=video&part=id,snippet&maxResults=25&q=%@&fields=items(id,snippet(title,thumbnails(default),description))", _sharedData.KEY, query] parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+        [[[SharedData sharedData] sessionManager] GET:[NSString stringWithFormat:@"search?&key=%@&type=video&part=id,snippet&maxResults=25&q=%@&fields=items(id,snippet(title,thumbnails(default),description))", [[SharedData sharedData] KEY], query] parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
             //add URLs for thumbnails to the _thumbnails array
             @try {
                 for(NSInteger trackNum = 0; trackNum<25;++trackNum)
@@ -72,12 +72,14 @@
     //send request to add track to party
     
     NSDictionary* postDictionary = @{@"action":@"addVideo", @"partyId":_partyId, @"youtubeId":_tracks[button.tag][@"id"][@"videoId"]};
-    AFHTTPSessionManager* manager = _sharedData.sessionManager;
-    [manager POST:@"handler.php" parameters:postDictionary success:^(NSURLSessionDataTask *task, id responseObject) {
-        if([responseObject[@"status"] isEqualToString:@"success"])
-        {
-            dispatch_async(dispatch_get_main_queue(), ^{
+    [[[SharedData sharedData] sessionManager] POST:@"handler.php" parameters:postDictionary success:^(NSURLSessionDataTask *task, id responseObject) {
+        if(![((NSString*)[responseObject objectForKey:@"status"])  isEqual: @"failed"])
+        {dispatch_async(dispatch_get_main_queue(), ^{
                 [self.navigationController popViewControllerAnimated:YES];});
+        }
+        else
+        {
+            [SharedData loginCheck:responseObject];
         }
         
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
@@ -137,7 +139,6 @@
     NSArray* objArr = [NSArray arrayWithObjects:_tracks[indexPath.row][@"snippet"][@"title"], _tracks[indexPath.row][@"snippet"][@"description"], [self tableView:tableView cellForRowAtIndexPath:indexPath].imageView.image, nil];
     NSArray* keyArr = [NSArray arrayWithObjects:@"title", @"description", @"image", nil];
     
-    newVC.sharedData = self.sharedData;
     newVC.track = [NSDictionary dictionaryWithObjects:objArr forKeys:keyArr];
     newVC.partyId = self.partyId;
     newVC.youtubeId = _tracks[indexPath.row][@"id"][@"videoId"];

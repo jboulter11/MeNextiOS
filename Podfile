@@ -5,7 +5,4 @@ source 'https://github.com/CocoaPods/Specs.git'
 pod "AFNetworking"
 pod "SDWebImage"
 pod "Facebook-iOS-SDK"
-
-target :MeNextTests, :exclusive => true do
-  # pod 'Kiwi'
-end
+pod "Realm"

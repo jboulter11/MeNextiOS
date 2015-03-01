@@ -7,11 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "SharedData.h"
 
 @interface AddTrackDetailViewController : UIViewController
 
-@property (strong, nonatomic) SharedData* sharedData;
 @property (strong, nonatomic) IBOutlet UILabel* titleLabel;
 @property (strong, nonatomic) IBOutlet UITextView* descTextView;
 @property (strong, nonatomic) IBOutlet UIImageView* previewImageView;

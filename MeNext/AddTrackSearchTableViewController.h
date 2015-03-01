@@ -7,11 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "SharedData.h"
 
 @interface AddTrackSearchTableViewController : UITableViewController <UISearchBarDelegate>
 
-@property (strong, nonatomic) SharedData* sharedData;
 @property (strong, nonatomic) NSString* partyId;
 
 @end

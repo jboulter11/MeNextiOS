@@ -10,6 +10,7 @@
 
 #import "DetailViewController.h"
 #import "AddPartyTableViewController.h"
+#import "SharedData.h"
 
 @interface MasterViewController () {
     NSMutableArray* _objects;
@@ -38,42 +39,50 @@
 
 #pragma mark - View
 
--(void)viewDidAppear:(BOOL)animated
-{
-    if(_sharedData.splashView != nil)
-    {
-        [_sharedData.splashView removeFromSuperview];
-    }
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:239/255.0 green:35/255.0 blue:53/255.0 alpha:1];
-    self.navigationController.navigationBar.translucent = NO;
-    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
-    [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
-    self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
-    UIImage* logoImage = [UIImage imageNamed:@"MeNextLogo.png"];
-    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:logoImage];
-    self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
+    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"MeNextLogo.png"]];
+    [[self tableView] registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Cell"];
 }
 
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    
+    [self refreshTable];
+    
+}
+
+-(void)viewDidAppear:(BOOL)animated
+{
+    if([[SharedData sharedData] splashView] != nil)
+    {
+        [[[SharedData sharedData] splashView] removeFromSuperview];
+    }
+}
+
+#pragma mark - Table View
+
+-(void) refreshTable
+{
     _objects = [[NSMutableArray alloc] init];
     
-    // Do any additional setup after loading the view, typically from a nib.
-    
-    AFHTTPSessionManager* manager = _sharedData.sessionManager;
-    [manager GET:[NSString stringWithFormat:@"handler.php?action=listJoinedParties"] parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+    [[[SharedData sharedData] sessionManager] GET:[NSString stringWithFormat:@"handler.php?action=listJoinedParties"] parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
         //parse parties into _objects
         //Dictionary with one KeyValue, value is array of party Dictionaries
-        [_objects addObjectsFromArray:((NSDictionary*)responseObject)[@"parties"]];
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [self.tableView reloadData];
-        });
+        if(![((NSString*)[responseObject objectForKey:@"status"])  isEqual: @"failed"])
+        {
+            [_objects addObjectsFromArray:((NSDictionary*)responseObject)[@"parties"]];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [refreshControl endRefreshing];
+                [self.tableView reloadData];
+            });
+        }
+        else
+        {
+            [SharedData loginCheck:responseObject];
+        }
         
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
         UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Error Loading Joined Parties"
@@ -84,8 +93,6 @@
         [alert show];
     }];
 }
-
-#pragma mark - Table View
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -100,6 +107,10 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    if(!cell)
+    {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
+    }
 
     cell.textLabel.text = _objects[indexPath.row][@"name"];
     return cell;
@@ -143,16 +154,6 @@
         NSDate *object = _objects[indexPath.row];
         DetailViewController* dst = [segue destinationViewController];
         [dst setDetailItem:object];
-        dst.sharedData = self.sharedData;
-    }
-    else if([[segue identifier] isEqualToString:@"showSettings"])
-    {
-        //do nothing, just segue
-    }
-    else if([[segue identifier] isEqualToString:@"joinParty"])
-    {
-        AddPartyTableViewController* vc = [segue destinationViewController];
-        vc.sharedData = self.sharedData;
     }
 }
 

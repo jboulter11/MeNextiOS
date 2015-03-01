@@ -7,14 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "SharedData.h"
 
 @interface DetailViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UISplitViewControllerDelegate, NSURLSessionDelegate>
 
 @property (strong, nonatomic) id detailItem;
 
 @property (weak, nonatomic) IBOutlet UITableView* tableView;
-
-@property (strong, nonatomic) SharedData* sharedData;
 
 @end

@@ -7,11 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "SharedData.h"
 #import <FacebookSDK/FacebookSDK.h>
 
 @interface LoginViewController : UIViewController <FBLoginViewDelegate>
-
-@property (strong, nonatomic) SharedData* sharedData;
 
 @end
