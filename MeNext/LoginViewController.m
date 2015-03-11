@@ -9,6 +9,7 @@
 #import "LoginViewController.h"
 #import "MasterViewController.h"
 #import "AFNetworking.h"
+#import "Masonry.h"
 #import "AppDelegate.h"
 #import "SharedData.h"
 
@@ -27,6 +28,31 @@
 @end
 
 @implementation LoginViewController
+
+#pragma mark - Init
+
+-(instancetype)init
+{
+    self = [super init];
+    
+    UIEdgeInsets padding = UIEdgeInsetsMake(10, 10, 10, 10);
+    
+    [_usernameTextField mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo([self view].mas_top).with.offset(padding.top);
+        make.left.equalTo([self view].mas_left).with.offset(padding.left);
+        make.right.equalTo([self view].mas_right).with.offset(-padding.right);
+        make.height.equalTo(@30);
+    }];
+    
+    [_passwordTextField mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(_usernameTextField.mas_bottom).with.offset(padding.top);
+        make.left.equalTo([self view].mas_left).with.offset(padding.left);
+        make.right.equalTo([self view].mas_right).with.offset(-padding.right);
+        make.height.equalTo(@30);
+    }];
+    
+    return self;
+}
 
 #pragma mark - View
 

@@ -23,7 +23,13 @@
 -(void)setLogin
 {
     //take us to the app
-    [(UINavigationController*)self.window.rootViewController setViewControllers:@[[[UIStoryboard storyboardWithName:@"Main_iPhone" bundle:nil] instantiateViewControllerWithIdentifier:@"Master"]]];
+    [(UINavigationController*)self.window.rootViewController setViewControllers:@[[[MasterViewController alloc] init]]];
+    
+//    [UIView transitionWithView:self.window.rootViewController.view
+//                      duration:0.5
+//                       options:UIViewAnimationOptionTransitionCrossDissolve
+//                    animations:^{[self ]}
+//                    completion:^{}
 }
 
 -(void)setLogout

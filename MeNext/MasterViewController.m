@@ -75,7 +75,6 @@
         {
             [_objects addObjectsFromArray:((NSDictionary*)responseObject)[@"parties"]];
             dispatch_async(dispatch_get_main_queue(), ^{
-                [refreshControl endRefreshing];
                 [self.tableView reloadData];
             });
         }
