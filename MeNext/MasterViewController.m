@@ -7,7 +7,6 @@
 //
 
 #import "MasterViewController.h"
-
 #import "DetailViewController.h"
 #import "AddPartyTableViewController.h"
 #import "SharedData.h"

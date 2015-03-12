@@ -64,13 +64,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    UINavigationBar* navbar = [[UINavigationBar alloc] init];
-    navbar.barTintColor = [UIColor colorWithRed:239/255.0 green:35/255.0 blue:53/255.0 alpha:1];
-    navbar.translucent = NO;
-    navbar.tintColor = [UIColor whiteColor];
-    [navbar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
-    navbar.barStyle = UIBarStyleBlack;
-    [self.view addSubview:navbar];
     
     //Check the login status of the user
     
@@ -84,10 +77,10 @@
     
     self.fbLoginView.readPermissions = @[@"email"];
     
-//    if([[SharedData sharedData].splashView isDescendantOfView:self.view])
-//    {
-//        [[SharedData sharedData].splashView removeFromSuperview];
-//    }
+    if([[SharedData sharedData].splashView isDescendantOfView:self.navigationController.view])
+    {
+        [[SharedData sharedData].splashView removeFromSuperview];
+    }
 }
 
 #pragma mark - Requests

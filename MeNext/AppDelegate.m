@@ -23,13 +23,14 @@
 -(void)setLogin
 {
     //take us to the app
-    [(UINavigationController*)self.window.rootViewController setViewControllers:@[[[MasterViewController alloc] init]]];
+    //[(UINavigationController*)self.window.rootViewController setViewControllers:@[[[MasterViewController alloc] init]]];
     
-//    [UIView transitionWithView:self.window.rootViewController.view
-//                      duration:0.5
-//                       options:UIViewAnimationOptionTransitionCrossDissolve
-//                    animations:^{[self ]}
-//                    completion:^{}
+    [UIView transitionWithView:self.window.rootViewController.view
+                      duration:0.5
+                       options:UIViewAnimationOptionTransitionCrossDissolve
+                    animations:^{
+                        [(UINavigationController*)self.window.rootViewController setViewControllers:@[[[MasterViewController alloc] init]]];}
+                    completion:nil];
 }
 
 -(void)setLogout
@@ -38,12 +39,20 @@
     //MAYBE PUT THIS IN THE LOGIN CONTROLLER???
     
     //take us to login
-    [(UINavigationController*)self.window.rootViewController setViewControllers:@[[[UIStoryboard storyboardWithName:@"Main_iPhone" bundle:nil] instantiateViewControllerWithIdentifier:@"Login"]]];
+    //[(UINavigationController*)self.window.rootViewController setViewControllers:@[[[UIStoryboard storyboardWithName:@"Main_iPhone" bundle:nil] instantiateViewControllerWithIdentifier:@"Login"]]];
+    
+    [UIView transitionWithView:self.window.rootViewController.view
+                      duration:0.5
+                       options:UIViewAnimationOptionTransitionCrossDissolve
+                    animations:^{
+                        [(UINavigationController*)self.window.rootViewController setViewControllers:@[[[LoginViewController alloc] init]]];}
+                    completion:nil];
     
 }
 
 -(BOOL)relogWithFB
 {
+    //Private Class Variable because we have to set it in the block
     didRelog = false;
     if([[[FBSession activeSession] accessTokenData] accessToken] != nil)
     {
@@ -95,7 +104,7 @@
     [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
     [FBLoginView class];
     
-    //make our navigation controller
+    //Make Navigation Controller
     UINavigationController* nav = [[UINavigationController alloc] init];
     nav.navigationBar.barTintColor = [UIColor colorWithRed:239/255.0 green:35/255.0 blue:53/255.0 alpha:1];
     nav.navigationBar.translucent = NO;
@@ -103,15 +112,19 @@
     [nav.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
     nav.navigationBar.barStyle = UIBarStyleBlack;
     
-    //chreate our splashview
+    //Create Splashview
     [SharedData sharedData].splashView = [[UIImageView alloc] initWithFrame:[UIScreen mainScreen].bounds];
     [SharedData sharedData].splashView.image = [UIImage imageNamed:[SharedData getLaunchImageName]];
     
-    //make it visible
+    //Make Splash visible
     [nav.view addSubview:[SharedData sharedData].splashView];
     [nav.view bringSubviewToFront:[SharedData sharedData].splashView];
-    //tell the window that nav is our rootviewcontroller
+    
+    
+    //Set up window
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.rootViewController = nav;
+    
     
     //if FB says we're logged in
     if([[[FBSession activeSession] accessTokenData] accessToken] != nil)
@@ -124,6 +137,8 @@
         //take us to the login vc
         [self setLogout];
     }
+    
+    [self.window makeKeyAndVisible];
     
     return YES;
 }
