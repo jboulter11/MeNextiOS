@@ -16,6 +16,9 @@
 @property AFHTTPSessionManager* youtubeSessionManager;
 @property (readonly) NSString* KEY;
 @property UIImageView* splashView;
+@property UIColor* meNextRed;
+@property UIColor* meNextPurple;
+@property UIColor* fbBlue;
 
 +(NSMutableString *) sanitizeNSString:(NSString *)string;
 

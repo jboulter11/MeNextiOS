@@ -17,13 +17,17 @@
     NSString* accessToken;
     NSString* userId;
     NSDictionary* postDictionary;
+    
+    //UI
+    UIButton *registerButton;
+    UIButton *loginButton;
+    UIButton* fbLoginButton;
+    FBLoginView *fbLoginView;
+    UITextField *passwordTextField;
+    UITextField *usernameTextField;
+    UIActivityIndicatorView *activityIndicator;
 }
-@property (weak, nonatomic) IBOutlet UIButton *registerButton;
-@property (weak, nonatomic) IBOutlet UIButton *loginButton;
-@property (weak, nonatomic) IBOutlet FBLoginView *fbLoginView;
-@property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
-@property (weak, nonatomic) IBOutlet UITextField *usernameTextField;
-@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
+
 
 @end
 
@@ -35,20 +39,89 @@
 {
     self = [super init];
     
+    //add obeserver for
+    
+    //Navigation Bar
+    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"MeNextLogo.png"]];
+    
+    //White Background
+    [[self view] setBackgroundColor:[UIColor whiteColor]];
+    
+    //Username
+    usernameTextField = [[UITextField alloc] init];
+    usernameTextField.placeholder = @"username";
+    [[self view] addSubview:usernameTextField];
+    
+    //Password
+    passwordTextField = [[UITextField alloc] init];
+    passwordTextField.placeholder = @"password";
+    [[self view] addSubview:passwordTextField];
+    
+    //LoginButton
+    loginButton = [[UIButton alloc] init];
+    [loginButton setTitle:@"Log In" forState:UIControlStateNormal];
+    [[loginButton titleLabel] setFont:[UIFont boldSystemFontOfSize:24]];
+    [loginButton setBackgroundColor:[[SharedData sharedData] meNextRed]];
+    [loginButton addTarget:self action:@selector(login:) forControlEvents:UIControlEventTouchUpInside];
+    [[self view] addSubview:loginButton];
+    
+    //FB Login View
+    fbLoginView = [[FBLoginView alloc] initWithReadPermissions:@[@"email"]];
+    [fbLoginView setDelegate:self];
+    [[self view] addSubview:fbLoginView];
+    
+    //Custom Login With Facebook Button
+    fbLoginButton = [[UIButton alloc] init];
+    [fbLoginButton setTitle:@"Log in with Facebook" forState:UIControlStateNormal];
+    [[fbLoginButton titleLabel] setFont:[UIFont boldSystemFontOfSize:24]];
+    [fbLoginButton setBackgroundColor:[[SharedData sharedData] fbBlue]];
+    [fbLoginButton addTarget:self action:@selector(login:) forControlEvents:UIControlEventTouchUpInside];
+    [[self view] addSubview:fbLoginButton];
+    
+    //Register Button
+    registerButton = [[UIButton alloc] init];
+    [registerButton setTitle:@"Register" forState:UIControlStateNormal];
+    [[registerButton titleLabel] setFont:[UIFont boldSystemFontOfSize:24]];
+    [registerButton setBackgroundColor:[[SharedData sharedData] meNextPurple]];
+    [loginButton addTarget:self action:@selector(reg:) forControlEvents:UIControlEventTouchUpInside];
+    [[self view] addSubview:registerButton];
+    
+    //Constraints
     UIEdgeInsets padding = UIEdgeInsetsMake(10, 10, 10, 10);
     
-    [_usernameTextField mas_makeConstraints:^(MASConstraintMaker *make) {
+    [usernameTextField mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo([self view].mas_top).with.offset(padding.top);
         make.left.equalTo([self view].mas_left).with.offset(padding.left);
         make.right.equalTo([self view].mas_right).with.offset(-padding.right);
         make.height.equalTo(@30);
     }];
     
-    [_passwordTextField mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(_usernameTextField.mas_bottom).with.offset(padding.top);
+    [passwordTextField mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(usernameTextField.mas_bottom).with.offset(padding.top);
         make.left.equalTo([self view].mas_left).with.offset(padding.left);
         make.right.equalTo([self view].mas_right).with.offset(-padding.right);
         make.height.equalTo(@30);
+    }];
+    
+    [loginButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo([self view].mas_left);
+        make.right.equalTo([self view].mas_right);
+        make.bottom.equalTo(fbLoginButton.mas_top);
+        make.height.equalTo(@55);
+    }];
+    
+    [fbLoginButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo([self view].mas_left);
+        make.right.equalTo([self view].mas_right);
+        make.bottom.equalTo(registerButton.mas_top);
+        make.height.equalTo(@55);
+    }];
+    
+    [registerButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo([self view].mas_left);
+        make.right.equalTo([self view].mas_right);
+        make.bottom.equalTo([self view].mas_bottom);
+        make.height.equalTo(@55);
     }];
     
     return self;
@@ -66,21 +139,21 @@
     [super viewDidLoad];
     
     //Check the login status of the user
-    
     NSString* username = [[NSUserDefaults standardUserDefaults] stringForKey:@"username"];
     //user needs to login
     //fill the usernameTextField with current data
     if(username)
     {
-        _usernameTextField.text = username;
+        usernameTextField.text = username;
     }
     
-    self.fbLoginView.readPermissions = @[@"email"];
-    
+    //Remove splash
     if([[SharedData sharedData].splashView isDescendantOfView:self.navigationController.view])
     {
         [[SharedData sharedData].splashView removeFromSuperview];
     }
+    
+    [self toggleControl:YES];
 }
 
 #pragma mark - Requests
@@ -92,7 +165,7 @@
         if([responseObject[@"status"] isEqualToString:@"success"])
         {
             dispatch_async(dispatch_get_main_queue(), ^{
-                [_activityIndicator stopAnimating];
+                [activityIndicator stopAnimating];
                 ;
             });
         }
@@ -109,7 +182,7 @@
                                                   cancelButtonTitle:@"OK"
                                                   otherButtonTitles:nil];
             dispatch_async(dispatch_get_main_queue(), ^{
-                [_activityIndicator stopAnimating];
+                [activityIndicator stopAnimating];
                 [self toggleControl:YES];
             });
             [alert show];
@@ -122,7 +195,7 @@
                                               cancelButtonTitle:@"OK"
                                               otherButtonTitles:nil];
         dispatch_async(dispatch_get_main_queue(), ^{
-            [_activityIndicator stopAnimating];
+            [activityIndicator stopAnimating];
             [self toggleControl:YES];
         });
         [alert show];
@@ -150,29 +223,27 @@
     }
     
     //only proceed if we have credentials for login
-    if(_usernameTextField.text.length != 0 || _passwordTextField.text.length != 0)
+    if(usernameTextField.text.length != 0 || passwordTextField.text.length != 0)
     {
         [self toggleControl:NO];
         
-        [_activityIndicator startAnimating];
+        [activityIndicator startAnimating];
         
         //SANITIZE INPUTS
-        NSMutableString* username = [SharedData sanitizeNSString:_usernameTextField.text];
-        NSMutableString* password = [SharedData sanitizeNSString:_passwordTextField.text];
+        NSMutableString* username = [SharedData sanitizeNSString:usernameTextField.text];
+        NSMutableString* password = [SharedData sanitizeNSString:passwordTextField.text];
         
         postDictionary = @{@"action":action, @"username":username, @"password":password};
         [self sendRequest];
     }
 }
 
-
-
-- (IBAction)login:(id)sender
+- (void)login:(id)sender
 {
     [self handleRequest:@"login"];
 }
 
--(IBAction)reg:(id)sender
+-(void)reg:(id)sender
 {
     [self handleRequest:@"register"];
 }
@@ -187,9 +258,13 @@
 - (void)loginViewShowingLoggedOutUser:(FBLoginView *)loginView
 {
     [[[SharedData sharedData] splashView] removeFromSuperview];
-    if(_usernameTextField.text != nil)
+    if(usernameTextField.text != nil)
     {
-        [_passwordTextField becomeFirstResponder];
+        [passwordTextField becomeFirstResponder];
+    }
+    else
+    {
+        [usernameTextField becomeFirstResponder];
     }
 }
 
@@ -202,10 +277,10 @@
 
 - (void)toggleControl:(BOOL) action
 {
-    _usernameTextField.enabled = action;
-    _passwordTextField.enabled = action;
-    _loginButton.enabled = action;
-    //_registerButton.enabled = action;
+    usernameTextField.enabled = action;
+    passwordTextField.enabled = action;
+    loginButton.enabled = action;
+    registerButton.enabled = action;
 }
 
 @end
