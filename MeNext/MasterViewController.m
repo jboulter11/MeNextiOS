@@ -49,6 +49,8 @@
     UIButton* gear = [UIButton buttonWithType:UIButtonTypeCustom];
     gear.bounds = CGRectMake(0, 0, 22, 22);
     [gear setImage:[UIImage imageNamed:@"Gear"] forState:UIControlStateNormal];
+    [gear addTarget:self action:@selector(showSettings) forControlEvents:UIControlEventTouchUpInside];
+    
     [[self navigationItem] setRightBarButtonItem:[[UIBarButtonItem alloc] initWithCustomView:gear]];
     
     [[self navigationItem] setLeftBarButtonItem:[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(showJoinParty)]];
@@ -164,7 +166,7 @@
 
 - (void)showJoinParty
 {
-    [[self navigationController] pushViewController:[[SettingsViewController alloc] init] animated:YES];
+    [[self navigationController] pushViewController:[[AddPartyTableViewController alloc] init] animated:YES];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
