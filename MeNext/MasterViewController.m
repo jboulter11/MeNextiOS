@@ -9,6 +9,7 @@
 #import "MasterViewController.h"
 #import "DetailViewController.h"
 #import "AddPartyTableViewController.h"
+#import "SettingsViewController.h"
 #import "SharedData.h"
 
 @interface MasterViewController () {
@@ -41,7 +42,17 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"MeNextLogo.png"]];
+    //Nav Bar Logo
+    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"MeNextLogo"]];
+    
+    //Nav Bar Buttons
+    UIButton* gear = [UIButton buttonWithType:UIButtonTypeCustom];
+    gear.bounds = CGRectMake(0, 0, 22, 22);
+    [gear setImage:[UIImage imageNamed:@"Gear"] forState:UIControlStateNormal];
+    [[self navigationItem] setRightBarButtonItem:[[UIBarButtonItem alloc] initWithCustomView:gear]];
+    
+    [[self navigationItem] setLeftBarButtonItem:[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(showJoinParty)]];
+
     [[self tableView] registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Cell"];
 }
 
@@ -142,6 +153,18 @@
         NSDate *object = _objects[indexPath.row];
         self.detailViewController.detailItem = object;
     }
+}
+
+#pragma mark - Segue
+
+- (void)showSettings
+{
+    [[self navigationController] pushViewController:[[SettingsViewController alloc] init] animated:YES];
+}
+
+- (void)showJoinParty
+{
+    [[self navigationController] pushViewController:[[SettingsViewController alloc] init] animated:YES];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender

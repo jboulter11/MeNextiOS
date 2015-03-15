@@ -43,9 +43,10 @@
     
     //Navigation Bar
     self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"MeNextLogo.png"]];
-    
+        
     //White Background
     [[self view] setBackgroundColor:[UIColor whiteColor]];
+    
     
     //Username
     usernameTextField = [[UITextField alloc] init];
@@ -64,11 +65,6 @@
     [loginButton setBackgroundColor:[[SharedData sharedData] meNextRed]];
     [loginButton addTarget:self action:@selector(login:) forControlEvents:UIControlEventTouchUpInside];
     [[self view] addSubview:loginButton];
-    
-    //FB Login View
-    fbLoginView = [[FBLoginView alloc] initWithReadPermissions:@[@"email"]];
-    [fbLoginView setDelegate:self];
-    [[self view] addSubview:fbLoginView];
     
     //Custom Login With Facebook Button
     fbLoginButton = [[UIButton alloc] init];
@@ -263,31 +259,6 @@
 -(void)reg:(id)sender
 {
     [self handleRequest:@"register"];
-}
-
-#pragma mark - FB Delagate
-//FB DELAGATE METHODS
-- (void)loginViewShowingLoggedInUser:(FBLoginView *)loginView
-{
-    [self handleRequest:@"fbLogin"];
-}
-
-- (void)loginViewShowingLoggedOutUser:(FBLoginView *)loginView
-{
-    [[[SharedData sharedData] splashView] removeFromSuperview];
-    if(usernameTextField.text != nil)
-    {
-        [passwordTextField becomeFirstResponder];
-    }
-    else
-    {
-        [usernameTextField becomeFirstResponder];
-    }
-}
-
-- (void)loginView:(FBLoginView *)loginView handleError:(NSError *)error
-{
-    //NSLog([error description]);
 }
 
 #pragma mark - Misc
