@@ -39,7 +39,7 @@
 {
     self = [super init];
     
-    //add obeserver for
+    //add obeserver for animating button up with keyboard
     
     //Navigation Bar
     self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"MeNextLogo.png"]];
@@ -75,7 +75,7 @@
     [fbLoginButton setTitle:@"Log in with Facebook" forState:UIControlStateNormal];
     [[fbLoginButton titleLabel] setFont:[UIFont boldSystemFontOfSize:24]];
     [fbLoginButton setBackgroundColor:[[SharedData sharedData] fbBlue]];
-    [fbLoginButton addTarget:self action:@selector(login:) forControlEvents:UIControlEventTouchUpInside];
+    [fbLoginButton addTarget:self action:@selector(fbLogin:) forControlEvents:UIControlEventTouchUpInside];
     [[self view] addSubview:fbLoginButton];
     
     //Register Button
@@ -132,13 +132,7 @@
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-}
-
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
     
-    //Check the login status of the user
     NSString* username = [[NSUserDefaults standardUserDefaults] stringForKey:@"username"];
     //user needs to login
     //fill the usernameTextField with current data
@@ -146,6 +140,20 @@
     {
         usernameTextField.text = username;
     }
+    
+    if(usernameTextField.text != nil)
+    {
+        [passwordTextField becomeFirstResponder];
+    }
+    else
+    {
+        [usernameTextField becomeFirstResponder];
+    }
+}
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
     
     //Remove splash
     if([[SharedData sharedData].splashView isDescendantOfView:self.navigationController.view])
@@ -204,18 +212,16 @@
 
 - (void)handleRequest:(NSString*)action
 {
-    if(![action isEqual:@"login"] && ![action isEqual:@"register"])
+    if([action isEqualToString:@"fbLogin"])
     {
         //We're logging in with facebook, action string is our access token
-        accessToken = action;
-        action = @"fbLogin";
         [FBRequestConnection startForMeWithCompletionHandler:
          ^(FBRequestConnection *connection, id result, NSError *error)
          {
              if(!error)
              {
                  userId = (NSString*) result[@"id"];
-                 postDictionary = @{@"action":action, @"accessToken":accessToken, @"userId":userId};
+                 postDictionary = @{@"action":action, @"accessToken":[[[FBSession activeSession] accessTokenData] accessToken], @"userId":userId};
                  [self sendRequest];
                  return;
              }
@@ -238,6 +244,17 @@
     }
 }
 
+#pragma mark - Actions
+
+- (void)fbLogin:(id)sender
+{
+    [FBSession openActiveSessionWithReadPermissions:@[@"email"]
+                                       allowLoginUI:YES
+                                  completionHandler:^(FBSession *session, FBSessionState status, NSError *error) {
+                                      [self handleRequest:@"fbLogin"];
+                                  }];
+}
+
 - (void)login:(id)sender
 {
     [self handleRequest:@"login"];
@@ -252,7 +269,7 @@
 //FB DELAGATE METHODS
 - (void)loginViewShowingLoggedInUser:(FBLoginView *)loginView
 {
-    [self handleRequest:[[[FBSession activeSession] accessTokenData] accessToken]];
+    [self handleRequest:@"fbLogin"];
 }
 
 - (void)loginViewShowingLoggedOutUser:(FBLoginView *)loginView

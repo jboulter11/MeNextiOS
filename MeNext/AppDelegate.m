@@ -23,8 +23,6 @@
 -(void)setLogin
 {
     //take us to the app
-    //[(UINavigationController*)self.window.rootViewController setViewControllers:@[[[MasterViewController alloc] init]]];
-    
     [UIView transitionWithView:self.window.rootViewController.view
                       duration:0.5
                        options:UIViewAnimationOptionTransitionCrossDissolve
@@ -34,13 +32,7 @@
 }
 
 -(void)setLogout
-{
-    //if FB knows we're logged in we can just tell MeNext our FB token again to re-login
-    //MAYBE PUT THIS IN THE LOGIN CONTROLLER???
-    
-    //take us to login
-    //[(UINavigationController*)self.window.rootViewController setViewControllers:@[[[UIStoryboard storyboardWithName:@"Main_iPhone" bundle:nil] instantiateViewControllerWithIdentifier:@"Login"]]];
-    
+{    
     [UIView transitionWithView:self.window.rootViewController.view
                       duration:0.5
                        options:UIViewAnimationOptionTransitionCrossDissolve

@@ -8,6 +8,8 @@
 
 #import "SettingsViewController.h"
 #import "AppDelegate.h"
+#import <FacebookSDK/FacebookSDK.h>
+#import "SharedData.h"
 
 @interface SettingsViewController ()
 
@@ -29,7 +31,8 @@
 - (IBAction)logout:(id)sender
 {
     [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"sessionId"];
-    [(AppDelegate*)[[UIApplication sharedApplication] delegate] setLogout];
+    [[FBSession activeSession] closeAndClearTokenInformation];
+    [[SharedData appDel] setLogout];
 }
 
 #pragma mark - View and misc
