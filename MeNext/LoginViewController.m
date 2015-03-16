@@ -137,14 +137,14 @@
         usernameTextField.text = username;
     }
     
-    if(usernameTextField.text != nil)
-    {
-        [passwordTextField becomeFirstResponder];
-    }
-    else
-    {
-        [usernameTextField becomeFirstResponder];
-    }
+//    if(usernameTextField.text != nil)
+//    {
+//        [passwordTextField becomeFirstResponder];
+//    }
+//    else
+//    {
+//        [usernameTextField becomeFirstResponder];
+//    }
 }
 
 - (void)viewDidLoad
@@ -152,10 +152,7 @@
     [super viewDidLoad];
     
     //Remove splash
-    if([[SharedData sharedData].splashView isDescendantOfView:self.navigationController.view])
-    {
-        [[SharedData sharedData].splashView removeFromSuperview];
-    }
+    [[SharedData sharedData].splashView removeFromSuperview];
     
     [self toggleControl:YES];
 }
