@@ -16,6 +16,7 @@
 @implementation AppDelegate
 {
     BOOL didRelog;
+    UINavigationController* nav;
 }
 
 #pragma mark - Login
@@ -32,7 +33,10 @@
 }
 
 -(void)setLogout
-{    
+{
+    //TODO: get rid of navigation controller
+    nav.navigationBarHidden = YES;
+    
     [UIView transitionWithView:self.window.rootViewController.view
                       duration:0.5
                        options:UIViewAnimationOptionTransitionCrossDissolve
@@ -96,8 +100,11 @@
     [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
     [FBLoginView class];
     
+    //Status Bar Config
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    
     //Make Navigation Controller
-    UINavigationController* nav = [[UINavigationController alloc] init];
+    nav = [[UINavigationController alloc] init];
     nav.navigationBar.barTintColor = [UIColor colorWithRed:239/255.0 green:35/255.0 blue:53/255.0 alpha:1];
     nav.navigationBar.translucent = NO;
     nav.navigationBar.tintColor = [UIColor whiteColor];

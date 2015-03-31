@@ -45,18 +45,18 @@
     self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"MeNextLogo.png"]];
         
     //White Background
-    [[self view] setBackgroundColor:[UIColor whiteColor]];
+    [[self view] setBackgroundColor:[[SharedData sharedData] meNextRed]];
     
     
     //Username
     usernameTextField = [[UITextField alloc] init];
     usernameTextField.placeholder = @"username";
-    [[self view] addSubview:usernameTextField];
+    //[[self view] addSubview:usernameTextField];
     
     //Password
     passwordTextField = [[UITextField alloc] init];
     passwordTextField.placeholder = @"password";
-    [[self view] addSubview:passwordTextField];
+    //[[self view] addSubview:passwordTextField];
     
     //LoginButton
     loginButton = [[UIButton alloc] init];
@@ -82,31 +82,36 @@
     [loginButton addTarget:self action:@selector(reg:) forControlEvents:UIControlEventTouchUpInside];
     [[self view] addSubview:registerButton];
     
+    //Splash
+    UIImageView* splash = [[SharedData sharedData] splashView];
+    [self.view addSubview:splash];
+    [self.view bringSubviewToFront:splash];
+    
     //Constraints
-    UIEdgeInsets padding = UIEdgeInsetsMake(10, 10, 10, 10);
+    //UIEdgeInsets padding = UIEdgeInsetsMake(10, 10, 10, 10);
     
-    [usernameTextField mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo([self view].mas_top).with.offset(padding.top);
-        make.left.equalTo([self view].mas_left).with.offset(padding.left);
-        make.right.equalTo([self view].mas_right).with.offset(-padding.right);
-        make.height.equalTo(@30);
-    }];
+//    [usernameTextField mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.top.equalTo([self view].mas_top).with.offset(padding.top);
+//        make.left.equalTo([self view].mas_left).with.offset(padding.left);
+//        make.right.equalTo([self view].mas_right).with.offset(-padding.right);
+//        make.height.equalTo(@30);
+//    }];
+//    
+//    [passwordTextField mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.top.equalTo(usernameTextField.mas_bottom).with.offset(padding.top);
+//        make.left.equalTo([self view].mas_left).with.offset(padding.left);
+//        make.right.equalTo([self view].mas_right).with.offset(-padding.right);
+//        make.height.equalTo(@30);
+//    }];
     
-    [passwordTextField mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(usernameTextField.mas_bottom).with.offset(padding.top);
-        make.left.equalTo([self view].mas_left).with.offset(padding.left);
-        make.right.equalTo([self view].mas_right).with.offset(-padding.right);
-        make.height.equalTo(@30);
-    }];
-    
-    [loginButton mas_makeConstraints:^(MASConstraintMaker *make) {
+    [fbLoginButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo([self view].mas_left);
         make.right.equalTo([self view].mas_right);
-        make.bottom.equalTo(fbLoginButton.mas_top);
+        make.bottom.equalTo(loginButton.mas_top);
         make.height.equalTo(@55);
     }];
     
-    [fbLoginButton mas_makeConstraints:^(MASConstraintMaker *make) {
+    [loginButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo([self view].mas_left);
         make.right.equalTo([self view].mas_right);
         make.bottom.equalTo(registerButton.mas_top);
@@ -119,6 +124,14 @@
         make.bottom.equalTo([self view].mas_bottom);
         make.height.equalTo(@55);
     }];
+    
+    [splash mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.bottom.equalTo(loginButton.mas_top);
+    }];
+    
+    [self.view bringSubviewToFront:loginButton];
+    [self.view bringSubviewToFront:fbLoginButton];
+    [self.view bringSubviewToFront:registerButton];
     
     return self;
 }
@@ -152,7 +165,7 @@
     [super viewDidLoad];
     
     //Remove splash
-    [[SharedData sharedData].splashView removeFromSuperview];
+    //[[SharedData sharedData].splashView removeFromSuperview];
     
     [self toggleControl:YES];
 }
@@ -259,6 +272,11 @@
 }
 
 #pragma mark - Misc
+
+- (UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleLightContent;
+}
 
 - (void)toggleControl:(BOOL) action
 {

@@ -7,3 +7,5 @@ pod "SDWebImage"
 pod "Facebook-iOS-SDK"
 pod "Masonry"
 pod "Realm"
+
+pod 'Jibber-Framework', '~> 1.1', :configurations => ['Debug']
