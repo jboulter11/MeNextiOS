@@ -20,12 +20,21 @@
 #pragma mark - Singleton
 
 +(SharedData*) sharedData {
-    static SharedData *sharedManager = nil;
+    static SharedData* sharedManager = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         sharedManager = [[self alloc] init];
     });
     return sharedManager;
+}
+
++(FBSDKLoginManager*) fbLoginManager {
+    static FBSDKLoginManager* fbLoginManager = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        fbLoginManager = [[FBSDKLoginManager alloc] init];
+    });
+    return fbLoginManager;
 }
 
 #pragma mark - AppDelagate

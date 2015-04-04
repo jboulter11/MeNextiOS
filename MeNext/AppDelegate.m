@@ -8,7 +8,8 @@
 
 #import "AppDelegate.h"
 #import "AFNetworkActivityIndicatorManager.h"
-#import <FacebookSDK/FacebookSDK.h>
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import <FBSDKLoginKit/FBSDKLoginKit.h>
 #import "MasterViewController.h"
 #import "LoginViewController.h"
 #import "SharedData.h"
@@ -50,9 +51,9 @@
 {
     //Private Class Variable because we have to set it in the block
     didRelog = false;
-    if([[[FBSession activeSession] accessTokenData] accessToken] != nil)
+    if([FBSDKAccessToken currentAccessToken] != nil)
     {
-        [[[SharedData sharedData] sessionManager] POST:@"handler.php" parameters:@{@"action":@"fbLogin", @"accessToken":[[[FBSession activeSession] accessTokenData] accessToken], @"userId":[[[FBSession activeSession] accessTokenData] userID]} success:^(NSURLSessionDataTask *task, id responseObject) {
+        [[[SharedData sharedData] sessionManager] POST:@"handler.php" parameters:@{@"action":@"fbLogin", @"accessToken":[FBSDKAccessToken currentAccessToken], @"userId":[[FBSDKAccessToken currentAccessToken] userID]} success:^(NSURLSessionDataTask *task, id responseObject) {
             if([responseObject[@"status"] isEqualToString:@"success"])
             {
                 //if success
@@ -98,7 +99,6 @@
     
     //let the app know about these things / enable these things
     [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
-    [FBLoginView class];
     
     //Status Bar Config
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
@@ -126,7 +126,7 @@
     
     
     //if FB says we're logged in
-    if([[[FBSession activeSession] accessTokenData] accessToken] != nil)
+    if([FBSDKAccessToken currentAccessToken] != nil)
     {
         //take us to the app
         [self setLogin];
@@ -139,7 +139,8 @@
     
     [self.window makeKeyAndVisible];
     
-    return YES;
+    return [[FBSDKApplicationDelegate sharedInstance] application:application
+                                    didFinishLaunchingWithOptions:launchOptions];
 }
 							
 - (void)applicationWillResignActive:(UIApplication *)application
@@ -162,6 +163,7 @@
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    [FBSDKAppEvents activateApp];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application
@@ -171,12 +173,11 @@
 
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
 {
-    // Call FBAppCall's handleOpenURL:sourceApplication to handle Facebook app responses
-    BOOL wasHandled = [FBAppCall handleOpenURL:url sourceApplication:sourceApplication];
     
-    // You can add your app-specific url handling code here if needed
-    
-    return wasHandled;
+    return [[FBSDKApplicationDelegate sharedInstance] application:application
+                                                          openURL:url
+                                                sourceApplication:sourceApplication
+                                                       annotation:annotation];;
 }
 
 @end

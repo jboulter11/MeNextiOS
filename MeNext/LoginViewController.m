@@ -12,17 +12,15 @@
 #import "Masonry.h"
 #import "AppDelegate.h"
 #import "SharedData.h"
+#import <FBSDKLoginKit.h>
 
 @interface LoginViewController (){
-    NSString* accessToken;
-    NSString* userId;
     NSDictionary* postDictionary;
     
     //UI
     UIButton *registerButton;
     UIButton *loginButton;
     UIButton* fbLoginButton;
-    FBLoginView *fbLoginView;
     UITextField *passwordTextField;
     UITextField *usernameTextField;
     UIActivityIndicatorView *activityIndicator;
@@ -39,7 +37,7 @@
 {
     self = [super init];
     
-    //add obeserver for animating button up with keyboard
+    //TODO:add obeserver for animating button up with keyboard
     
     //Navigation Bar
     self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"MeNextLogo.png"]];
@@ -218,22 +216,6 @@
 
 - (void)handleRequest:(NSString*)action
 {
-    if([action isEqualToString:@"fbLogin"])
-    {
-        //We're logging in with facebook, action string is our access token
-        [FBRequestConnection startForMeWithCompletionHandler:
-         ^(FBRequestConnection *connection, id result, NSError *error)
-         {
-             if(!error)
-             {
-                 userId = (NSString*) result[@"id"];
-                 postDictionary = @{@"action":action, @"accessToken":[[[FBSession activeSession] accessTokenData] accessToken], @"userId":userId};
-                 [self sendRequest];
-                 return;
-             }
-         }];
-    }
-    
     //only proceed if we have credentials for login
     if(usernameTextField.text.length != 0 || passwordTextField.text.length != 0)
     {
@@ -254,11 +236,11 @@
 
 - (void)fbLogin:(id)sender
 {
-    [FBSession openActiveSessionWithReadPermissions:@[@"email"]
-                                       allowLoginUI:YES
-                                  completionHandler:^(FBSession *session, FBSessionState status, NSError *error) {
-                                      [self handleRequest:@"fbLogin"];
-                                  }];
+    [[SharedData fbLoginManager] logInWithReadPermissions:@[@"email"]
+                                     handler:^(FBSDKLoginManagerLoginResult *result, NSError *error) {
+                                         postDictionary = @{@"action":@"fbLogin", @"accessToken":[FBSDKAccessToken currentAccessToken], @"userId":[[FBSDKAccessToken currentAccessToken] userID]};
+                                         [self sendRequest];
+                                     }];
 }
 
 - (void)login:(id)sender

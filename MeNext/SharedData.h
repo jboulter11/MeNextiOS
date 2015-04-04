@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <FBSDKLoginKit.h>
 #import "AFHTTPSessionManager.h"
 #import "AppDelegate.h"
 
@@ -23,6 +24,7 @@
 +(NSMutableString *) sanitizeNSString:(NSString *)string;
 
 +(SharedData*) sharedData;
++(FBSDKLoginManager*) fbLoginManager;
 -(SharedData*) init;
 +(AppDelegate*) appDel;
 +(void) loginCheck:(id)responseObject;
