@@ -238,8 +238,11 @@
 {
     [[SharedData fbLoginManager] logInWithReadPermissions:@[@"email"]
                                      handler:^(FBSDKLoginManagerLoginResult *result, NSError *error) {
-                                         postDictionary = @{@"action":@"fbLogin", @"accessToken":[FBSDKAccessToken currentAccessToken], @"userId":[[FBSDKAccessToken currentAccessToken] userID]};
-                                         [self sendRequest];
+                                         if(![result isCancelled])
+                                         {
+                                             postDictionary = @{@"action":@"fbLogin", @"accessToken":[FBSDKAccessToken currentAccessToken], @"userId":[[FBSDKAccessToken currentAccessToken] userID]};
+                                             [self sendRequest];
+                                         }
                                      }];
 }
 
