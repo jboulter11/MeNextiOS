@@ -19,6 +19,15 @@
 
 @implementation MasterViewController
 
+-(instancetype)init
+{
+    if(self = [super init])
+    {
+        //init
+    }
+    return self;
+}
+
 #pragma mark - Misc
 
 - (void)awakeFromNib

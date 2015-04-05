@@ -39,9 +39,10 @@
     
     //TODO:add obeserver for animating button up with keyboard
     
+    
     //Navigation Bar
     self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"MeNextLogo.png"]];
-        
+    
     //White Background
     [[self view] setBackgroundColor:[[SharedData sharedData] meNextRed]];
     
@@ -178,8 +179,8 @@
         {
             dispatch_async(dispatch_get_main_queue(), ^{
                 [activityIndicator stopAnimating];
-                ;
             });
+            [[SharedData appDel] setLogin];
         }
         else
         {

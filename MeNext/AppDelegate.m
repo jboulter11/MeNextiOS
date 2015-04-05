@@ -25,6 +25,8 @@
 -(void)setLogin
 {
     //take us to the app
+    nav.navigationBarHidden = NO;
+    
     [UIView transitionWithView:self.window.rootViewController.view
                       duration:0.5
                        options:UIViewAnimationOptionTransitionCrossDissolve
@@ -124,9 +126,8 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.rootViewController = nav;
     
-    
     //if FB says we're logged in
-    if([FBSDKAccessToken currentAccessToken] != nil)
+    if([FBSDKAccessToken currentAccessToken])
     {
         //take us to the app
         [self setLogin];
