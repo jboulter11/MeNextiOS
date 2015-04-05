@@ -239,10 +239,20 @@
 {
     [[SharedData fbLoginManager] logInWithReadPermissions:@[@"email"]
                                      handler:^(FBSDKLoginManagerLoginResult *result, NSError *error) {
-                                         if(![result isCancelled])
+                                         NSLog(@"FACEBOOK RESULT:%@", [result description]);
+                                         if(!error && ![result isCancelled])
                                          {
-                                             postDictionary = @{@"action":@"fbLogin", @"accessToken":[FBSDKAccessToken currentAccessToken], @"userId":[[FBSDKAccessToken currentAccessToken] userID]};
+                                             postDictionary = @{@"action":@"fbLogin", @"accessToken":[result token], @"userId":[[FBSDKAccessToken currentAccessToken] userID]};
                                              [self sendRequest];
+                                         }
+                                         else
+                                         {
+                                             UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Could not login with Facebook"
+                                                                                             message:@"Try again"
+                                                                                            delegate:self
+                                                                                   cancelButtonTitle:@"OK"
+                                                                                   otherButtonTitles: nil];
+                                             [alert show];
                                          }
                                      }];
 }

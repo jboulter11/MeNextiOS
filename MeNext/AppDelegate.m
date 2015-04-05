@@ -126,7 +126,11 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.rootViewController = nav;
     
+    BOOL didFBFinishLaunching = [[FBSDKApplicationDelegate sharedInstance] application:application
+                                                         didFinishLaunchingWithOptions:launchOptions];
+    
     //if FB says we're logged in
+    NSLog(@"FB ACCESS TOKEN: %@", [FBSDKAccessToken currentAccessToken]);
     if([FBSDKAccessToken currentAccessToken])
     {
         //take us to the app
@@ -134,14 +138,13 @@
     }
     else
     {
-        //take us to the login vc
+        //take us to the login vc 
         [self setLogout];
     }
     
     [self.window makeKeyAndVisible];
     
-    return [[FBSDKApplicationDelegate sharedInstance] application:application
-                                    didFinishLaunchingWithOptions:launchOptions];
+    return didFBFinishLaunching;
 }
 							
 - (void)applicationWillResignActive:(UIApplication *)application
