@@ -99,7 +99,7 @@
 //        splitViewController.delegate = (id)navigationController.topViewController;
 //    }
     
-    //let the app know about these things / enable these things
+    //Let AFNetworking deal with our networking activity indicator
     [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
     
     //Status Bar Config

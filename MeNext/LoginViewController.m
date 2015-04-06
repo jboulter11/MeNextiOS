@@ -18,12 +18,16 @@
     NSDictionary* postDictionary;
     
     //UI
-    UIButton *registerButton;
-    UIButton *loginButton;
+    UIButton* registerButton;
+    UIButton* loginButton;
     UIButton* fbLoginButton;
-    UITextField *passwordTextField;
-    UITextField *usernameTextField;
-    UIActivityIndicatorView *activityIndicator;
+    UITextField* passwordTextField;
+    UITextField* usernameTextField;
+    UITextField* confirmTextField;
+    UIImageView* splash;
+    UIActivityIndicatorView* activityIndicator;
+    
+    UIButton* buttonToAnimate;
 }
 
 
@@ -38,31 +42,42 @@
     self = [super init];
     
     //TODO:add obeserver for animating button up with keyboard
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWillShow:)
+                                                 name:UIKeyboardWillShowNotification
+                                               object:nil];
     
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWillBeHidden:)
+                                                 name:UIKeyboardWillHideNotification
+                                               object:nil];
     
     //Navigation Bar
     self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"MeNextLogo.png"]];
     
     //White Background
-    [[self view] setBackgroundColor:[[SharedData sharedData] meNextRed]];
+    [[self view] setBackgroundColor:[UIColor whiteColor]];
     
     
     //Username
     usernameTextField = [[UITextField alloc] init];
     usernameTextField.placeholder = @"username";
-    //[[self view] addSubview:usernameTextField];
+
     
     //Password
     passwordTextField = [[UITextField alloc] init];
     passwordTextField.placeholder = @"password";
-    //[[self view] addSubview:passwordTextField];
+    
+    //Confirm
+    confirmTextField = [[UITextField alloc] init];
+    confirmTextField.placeholder = @"confirm";
     
     //LoginButton
     loginButton = [[UIButton alloc] init];
     [loginButton setTitle:@"Log In" forState:UIControlStateNormal];
     [[loginButton titleLabel] setFont:[UIFont boldSystemFontOfSize:24]];
     [loginButton setBackgroundColor:[[SharedData sharedData] meNextRed]];
-    [loginButton addTarget:self action:@selector(login:) forControlEvents:UIControlEventTouchUpInside];
+    [loginButton addTarget:self action:@selector(loginButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
     [[self view] addSubview:loginButton];
     
     //Custom Login With Facebook Button
@@ -78,30 +93,14 @@
     [registerButton setTitle:@"Register" forState:UIControlStateNormal];
     [[registerButton titleLabel] setFont:[UIFont boldSystemFontOfSize:24]];
     [registerButton setBackgroundColor:[[SharedData sharedData] meNextPurple]];
-    [loginButton addTarget:self action:@selector(reg:) forControlEvents:UIControlEventTouchUpInside];
+    [registerButton addTarget:self action:@selector(registerButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
     [[self view] addSubview:registerButton];
     
     //Splash
-    UIImageView* splash = [[SharedData sharedData] splashView];
+    splash = [[SharedData sharedData] splashView];
     [self.view addSubview:splash];
-    [self.view bringSubviewToFront:splash];
     
     //Constraints
-    //UIEdgeInsets padding = UIEdgeInsetsMake(10, 10, 10, 10);
-    
-//    [usernameTextField mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.top.equalTo([self view].mas_top).with.offset(padding.top);
-//        make.left.equalTo([self view].mas_left).with.offset(padding.left);
-//        make.right.equalTo([self view].mas_right).with.offset(-padding.right);
-//        make.height.equalTo(@30);
-//    }];
-//    
-//    [passwordTextField mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.top.equalTo(usernameTextField.mas_bottom).with.offset(padding.top);
-//        make.left.equalTo([self view].mas_left).with.offset(padding.left);
-//        make.right.equalTo([self view].mas_right).with.offset(-padding.right);
-//        make.height.equalTo(@30);
-//    }];
     
     [fbLoginButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo([self view].mas_left);
@@ -128,8 +127,9 @@
         make.bottom.equalTo(loginButton.mas_top);
     }];
     
-    [self.view bringSubviewToFront:loginButton];
+    [self.view bringSubviewToFront:splash];
     [self.view bringSubviewToFront:fbLoginButton];
+    [self.view bringSubviewToFront:loginButton];
     [self.view bringSubviewToFront:registerButton];
     
     return self;
@@ -167,6 +167,87 @@
     //[[SharedData sharedData].splashView removeFromSuperview];
     
     [self toggleControl:YES];
+}
+
+#pragma mark - User Input Views
+
+-(void) showUserInputControls
+{
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
+    
+    [splash removeFromSuperview];
+    
+    [[self view] addSubview:usernameTextField];
+    [[self view] addSubview:passwordTextField];
+    
+    UIEdgeInsets padding = UIEdgeInsetsMake(10, 10, -10, -10);
+    
+    [usernameTextField mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo([self view].mas_top).with.offset(padding.top);
+        make.left.equalTo([self view].mas_left).with.offset(padding.left);
+        make.right.equalTo([self view].mas_right).with.offset(padding.right);
+        make.height.equalTo(@30);
+    }];
+
+    [passwordTextField mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(usernameTextField.mas_bottom).with.offset(padding.top);
+        make.left.equalTo([self view].mas_left).with.offset(padding.left);
+        make.right.equalTo([self view].mas_right).with.offset(padding.right);
+        make.height.equalTo(@30);
+    }];
+
+    if(buttonToAnimate == registerButton)
+    {
+        [[self view] addSubview:confirmTextField];
+        [confirmTextField mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(passwordTextField.mas_bottom).with.offset(padding.top);
+            make.left.equalTo([self view].mas_left).with.offset(padding.left);
+            make.right.equalTo([self view].mas_right).with.offset(padding.right);
+            make.height.equalTo(@30);
+        }];
+    }
+    
+    [usernameTextField becomeFirstResponder];
+}
+
+-(void) hideUserInputControl
+{
+    [usernameTextField removeFromSuperview];
+    [passwordTextField removeFromSuperview];
+    [confirmTextField removeFromSuperview];
+    
+    [self.view addSubview:splash];
+}
+
+#pragma mark - Keyboard Animations
+
+- (void)keyboardWillShow:(NSNotification*)notification
+{
+    [self moveControls:notification keyboardComingIn:YES];
+}
+
+- (void)keyboardWillBeHidden:(NSNotification*)notification
+{
+    [self moveControls:notification keyboardComingIn:NO];
+}
+
+-(void) moveControls:(NSNotification*)notification keyboardComingIn:(BOOL)keyboardComingIn
+{
+    NSDictionary* notificationInfo = [notification userInfo];
+    CGRect keyboardFrame = [[notificationInfo objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue];
+    keyboardFrame = [self.view convertRect:keyboardFrame fromView:nil];
+    
+    CGRect newButtonFrame = buttonToAnimate.frame;
+    NSLog(@"%f", keyboardFrame.origin.y);
+    newButtonFrame.origin.y = keyboardFrame.origin.y - buttonToAnimate.frame.size.height * ((!keyboardComingIn && buttonToAnimate==loginButton) ? 2 : 1);
+    
+    UIViewAnimationOptions options = [[notificationInfo objectForKey:UIKeyboardAnimationCurveUserInfoKey] integerValue] << 16;
+    
+    [UIView animateWithDuration:[[notificationInfo objectForKey:UIKeyboardAnimationDurationUserInfoKey] doubleValue]
+                          delay:0
+                        options:options
+                     animations:^{buttonToAnimate.frame = newButtonFrame;}
+                     completion:nil];
 }
 
 #pragma mark - Requests
@@ -257,13 +338,17 @@
                                      }];
 }
 
-- (void)login:(id)sender
+- (void)loginButtonPressed:(id)sender
 {
+    buttonToAnimate = loginButton;
+    [self showUserInputControls];
     [self handleRequest:@"login"];
 }
 
--(void)reg:(id)sender
+-(void)registerButtonPressed:(id)sender
 {
+    buttonToAnimate = registerButton;
+    [self showUserInputControls];
     [self handleRequest:@"register"];
 }
 
