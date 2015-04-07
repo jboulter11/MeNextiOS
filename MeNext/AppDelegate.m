@@ -129,8 +129,8 @@
     BOOL didFBFinishLaunching = [[FBSDKApplicationDelegate sharedInstance] application:application
                                                          didFinishLaunchingWithOptions:launchOptions];
     
+    //TODO: Check if logged in with MeNext, not FB, use Realm?
     //if FB says we're logged in
-    NSLog(@"FB ACCESS TOKEN: %@", [FBSDKAccessToken currentAccessToken]);
     if([FBSDKAccessToken currentAccessToken])
     {
         //take us to the app
