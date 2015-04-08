@@ -41,7 +41,7 @@
 {
     self = [super init];
     
-    //TODO:add obeserver for animating button up with keyboard
+    //Add obeserver for animating button up with keyboard
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(keyboardWillShow:)
                                                  name:UIKeyboardWillShowNotification
@@ -243,11 +243,17 @@
     
     UIViewAnimationOptions options = [[notificationInfo objectForKey:UIKeyboardAnimationCurveUserInfoKey] integerValue] << 16;
     
+    NSLog(@"%f", newButtonFrame.origin.y);
     [UIView animateWithDuration:[[notificationInfo objectForKey:UIKeyboardAnimationDurationUserInfoKey] doubleValue]
                           delay:0
                         options:options
-                     animations:^{buttonToAnimate.frame = newButtonFrame;}
-                     completion:nil];
+                     animations:^{[buttonToAnimate setFrame:newButtonFrame];}
+                     completion:^(BOOL finished) {
+                         if((buttonToAnimate.frame.origin.y + buttonToAnimate.frame.size.height) != keyboardFrame.origin.y)
+                         {
+                             NSLog(@"SHIT DID NOT WORK: %f != %f", (buttonToAnimate.frame.origin.y + buttonToAnimate.frame.origin.y), keyboardFrame.origin.y);
+                         }
+                     }];
 }
 
 #pragma mark - Requests
