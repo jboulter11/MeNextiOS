@@ -103,7 +103,7 @@
     [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
     
     //Status Bar Config
-    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    [application setStatusBarStyle:UIStatusBarStyleLightContent];
     
     //Make Navigation Controller
     nav = [[UINavigationController alloc] init];
