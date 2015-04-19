@@ -16,7 +16,6 @@
 
 @implementation AppDelegate
 {
-    BOOL didRelog;
     UINavigationController* nav;
 }
 
@@ -40,6 +39,9 @@
     //TODO: get rid of navigation controller
     nav.navigationBarHidden = YES;
     
+    //Kill the current Access Token
+    [FBSDKAccessToken setCurrentAccessToken:nil];
+    
     [UIView transitionWithView:self.window.rootViewController.view
                       duration:0.5
                        options:UIViewAnimationOptionTransitionCrossDissolve
@@ -47,45 +49,6 @@
                         [(UINavigationController*)self.window.rootViewController setViewControllers:@[[[LoginViewController alloc] init]]];}
                     completion:nil];
     
-}
-
--(BOOL)relogWithFB
-{
-    //Private Class Variable because we have to set it in the block
-    didRelog = false;
-    if([FBSDKAccessToken currentAccessToken] != nil)
-    {
-        [[[SharedData sharedData] sessionManager] POST:@"handler.php" parameters:@{@"action":@"fbLogin", @"accessToken":[FBSDKAccessToken currentAccessToken], @"userId":[[FBSDKAccessToken currentAccessToken] userID]} success:^(NSURLSessionDataTask *task, id responseObject) {
-            if([responseObject[@"status"] isEqualToString:@"success"])
-            {
-                //if success
-                didRelog = true;
-            }
-            else
-            {
-                NSString* msg = @"Error logging in";
-                if([responseObject[@"errors"][0] isEqualToString:@"bad username/password combination"])
-                {
-                    msg = @"Wrong username or password";
-                }
-                UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Error Logging In"
-                                                                message:msg
-                                                               delegate:nil
-                                                      cancelButtonTitle:@"OK"
-                                                      otherButtonTitles:nil];
-                [alert show];
-            }
-            
-        } failure:^(NSURLSessionDataTask *task, NSError *error) {
-            UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Error Logging In"
-                                                            message:[error localizedDescription]
-                                                           delegate:nil
-                                                  cancelButtonTitle:@"OK"
-                                                  otherButtonTitles:nil];
-            [alert show];
-        }];
-    }
-    return didRelog;
 }
 
 #pragma mark - AppDelegate Methods

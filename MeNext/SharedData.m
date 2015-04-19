@@ -69,7 +69,7 @@
     return self;
 }
 
-#pragma mark - shared functions
+#pragma mark - Shared Functions
 
 +(NSMutableString *) sanitizeNSString:(NSString *)string
 {
@@ -80,13 +80,34 @@
     return sanitized;
 }
 
-+(void)loginCheck:(id)responseObject
++(void)loginCheck:(id)responseObject withCompletion:(void(^)(void))block;
 {
-    if([((NSArray*)[responseObject objectForKey:@"errors"])[0] isEqual: @"must be logged in"])
+    if([((NSArray*)[responseObject objectForKey:@"errors"])[0] isEqual: @"user must be logged in to perform this action"])
     {
-        if(![[SharedData appDel] relogWithFB])
+        if([FBSDKAccessToken currentAccessToken] != nil)
         {
-            [[self appDel] setLogout];
+            [[[SharedData sharedData] sessionManager] POST:@"handler.php" parameters:@{@"action":@"fbLogin", @"accessToken":[FBSDKAccessToken currentAccessToken], @"userId":[[FBSDKAccessToken currentAccessToken] userID]} success:^(NSURLSessionDataTask *task, id responseObject) {
+                if(![responseObject[@"status"] isEqualToString:@"success"])
+                {
+                    [[SharedData appDel] setLogout];
+                }
+                else
+                {
+                    if(block)
+                    {
+                        block();
+                    }
+                }
+                
+            } failure:^(NSURLSessionDataTask *task, NSError *error) {
+                UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Error Logging In"
+                                                                message:[error localizedDescription]
+                                                               delegate:nil
+                                                      cancelButtonTitle:@"OK"
+                                                      otherButtonTitles:nil];
+                [alert show];
+                [[SharedData appDel] setLogout];
+            }];
         }
     }
 }

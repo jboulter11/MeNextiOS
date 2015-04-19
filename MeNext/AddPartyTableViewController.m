@@ -72,7 +72,9 @@
                                                   cancelButtonTitle:@"OK"
                                                   otherButtonTitles:nil];
             [alert show];
-            [SharedData loginCheck:responseObject];
+            [SharedData loginCheck:responseObject withCompletion:^{
+                [self sendRequestWithId:partyId];
+            }];
         }
         dispatch_async(dispatch_get_main_queue(), ^{
             [self.navigationController popViewControllerAnimated:YES];
@@ -133,7 +135,7 @@
     if(indexPath.section == 0)
     {
         AddPartyTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"AddPartyCell" forIndexPath:indexPath];
-        
+        [cell.textField becomeFirstResponder];
         return cell;
     }
     else

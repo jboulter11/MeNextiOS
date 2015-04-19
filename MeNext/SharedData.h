@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <FBSDKCoreKit.h>
 #import <FBSDKLoginKit.h>
 #import "AFHTTPSessionManager.h"
 #import "AppDelegate.h"
@@ -27,7 +28,7 @@
 +(FBSDKLoginManager*) fbLoginManager;
 -(SharedData*) init;
 +(AppDelegate*) appDel;
-+(void) loginCheck:(id)responseObject;
++(void) loginCheck:(id)responseObject withCompletion:(void(^)(void))block;
 +(NSString*)getLaunchImageName;
 
 @end

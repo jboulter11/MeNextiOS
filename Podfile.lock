@@ -37,11 +37,10 @@ PODS:
   - Facebook-iOS-SDK/ShareKit (4.0.1):
     - Bolts (~> 1.0)
     - Facebook-iOS-SDK/CoreKit
-  - Jibber-Framework (1.3.2)
   - Masonry (0.6.1)
-  - Realm (0.91.1):
-    - Realm/Headers (= 0.91.1)
-  - Realm/Headers (0.91.1)
+  - Realm (0.91.3):
+    - Realm/Headers (= 0.91.3)
+  - Realm/Headers (0.91.3)
   - SDWebImage (3.7.2):
     - SDWebImage/Core (= 3.7.2)
   - SDWebImage/Core (3.7.2)
@@ -49,7 +48,6 @@ PODS:
 DEPENDENCIES:
   - AFNetworking
   - Facebook-iOS-SDK
-  - Jibber-Framework (~> 1.1)
   - Masonry
   - Realm
   - SDWebImage
@@ -58,9 +56,8 @@ SPEC CHECKSUMS:
   AFNetworking: fefbce9660acb17f48ae0011292d4da0f457bf36
   Bolts: f8e2f94edbf9fec7bb8de5ecaaa3aa6b7de6f64e
   Facebook-iOS-SDK: 6d05532c97e9c542f8d87f94b7f6ee217493d00b
-  Jibber-Framework: b5c4e48dfed2f36708a98eb8c5aa525ca62a08ec
   Masonry: 4972309f2f134de9dd312f4dc4a21359b50e6caa
-  Realm: b9c1fd9defa26aa7276ce938a8df52ec81f24528
+  Realm: 4bfdac6f0f3170a3947c7196e2e9a2e49c943719
   SDWebImage: 71b7cdc1d1721d6a82ed62889030225f2c249e29
 
 COCOAPODS: 0.36.0

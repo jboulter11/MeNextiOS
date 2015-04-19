@@ -158,7 +158,9 @@
             }
             else
             {
-                [SharedData loginCheck:responseObject];
+                [SharedData loginCheck:responseObject withCompletion:^{
+                    [self vote:button forDirection:direction];
+                }];
             }
             
         } failure:^(NSURLSessionDataTask *task, NSError *error) {

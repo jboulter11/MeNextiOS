@@ -79,7 +79,9 @@
         }
         else
         {
-            [SharedData loginCheck:responseObject];
+            [SharedData loginCheck:responseObject withCompletion:^{
+                [self addTrack:sender];
+            }];
         }
         
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
