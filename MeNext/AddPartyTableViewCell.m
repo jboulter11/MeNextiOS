@@ -7,13 +7,28 @@
 //
 
 #import "AddPartyTableViewCell.h"
+#import "SharedData.h"
 
 @implementation AddPartyTableViewCell
 @synthesize textField;
-@synthesize textLabel;
 
-- (void)awakeFromNib {
-    // Initialization code
+- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
+{
+    if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier])
+    {
+        [self setSelectionStyle:UITableViewCellSelectionStyleNone];
+        
+        textField = [[UITextField alloc] init];
+        [textField setPlaceholder:@"ID"];
+        [self.contentView addSubview:textField];
+        
+        [textField setReturnKeyType:UIReturnKeyJoin];
+        
+        [textField mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.edges.equalTo(self.contentView).with.insets(UIEdgeInsetsMake(0, 10, 0, 10));
+        }];
+    }
+    return self;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

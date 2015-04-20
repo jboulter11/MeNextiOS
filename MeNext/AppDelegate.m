@@ -68,13 +68,17 @@
     //Status Bar Config
     [application setStatusBarStyle:UIStatusBarStyleLightContent];
     
+    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:239/255.0 green:35/255.0 blue:53/255.0 alpha:1]];
+    [[UINavigationBar appearance] setTranslucent:NO];
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+    [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
+    [[UINavigationBar appearance] setBarStyle:UIBarStyleBlack];
+    
+    [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(0, -60)
+                                                         forBarMetrics:UIBarMetricsDefault];
+    
     //Make Navigation Controller
     nav = [[UINavigationController alloc] init];
-    nav.navigationBar.barTintColor = [UIColor colorWithRed:239/255.0 green:35/255.0 blue:53/255.0 alpha:1];
-    nav.navigationBar.translucent = NO;
-    nav.navigationBar.tintColor = [UIColor whiteColor];
-    [nav.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
-    nav.navigationBar.barStyle = UIBarStyleBlack;
     
     //Create Splashview
     [SharedData sharedData].splashView = [[UIImageView alloc] initWithFrame:[UIScreen mainScreen].bounds];

@@ -12,6 +12,4 @@
 
 @interface AddPartyTableViewController : UITableViewController <AVCaptureMetadataOutputObjectsDelegate>
 
-@property (strong, nonatomic) SharedData* sharedData;
-
 @end

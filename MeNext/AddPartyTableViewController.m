@@ -24,22 +24,27 @@
 
 @implementation AddPartyTableViewController
 
-#pragma mark - View and Misc
+#pragma mark - Init
+
+- (instancetype)init
+{
+    if(self = [super initWithStyle:UITableViewStyleGrouped])
+    {
+        //Register Cells
+        [self.tableView registerClass:[AddPartyTableViewCell class] forCellReuseIdentifier:NSStringFromClass([AddPartyTableViewCell class])];
+        [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:NSStringFromClass([UITableViewCell class])];
+    }
+    return self;
+}
+
+#pragma mark - View
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:239/255.0 green:35/255.0 blue:53/255.0 alpha:1];
-    self.navigationController.navigationBar.translucent = NO;
-    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
     self.navigationController.navigationBar.topItem.title = @"";
-    [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
-    self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+#pragma mark - Actions
 
 -(BOOL) textFieldShouldReturn:(UITextField *)textField
 {
@@ -57,8 +62,7 @@
 - (void)sendRequestWithId:(NSString*)partyId
 {
     NSDictionary* postDictionary = @{@"action": @"joinParty", @"partyId": partyId};
-    AFHTTPSessionManager* manager = _sharedData.sessionManager;
-    [manager POST:@"handler.php" parameters:postDictionary success:^(NSURLSessionDataTask *task, id responseObject) {
+    [[SharedData sessionManager] POST:@"handler.php" parameters:postDictionary success:^(NSURLSessionDataTask *task, id responseObject) {
         
         if(![((NSString*)[responseObject objectForKey:@"status"])  isEqual: @"failed"])
         {
@@ -91,6 +95,42 @@
 }
 
 #pragma mark - QR
+
+-(void)startScanner
+{
+    //SOME CRAZY VIEW CODE TO SHOW CAMERA AND HIGHLIGHT BARCODE, AS WELL AS RUN THE SCANNER
+    _highlightView = [[UIView alloc] init];
+    _highlightView.autoresizingMask = UIViewAutoresizingFlexibleTopMargin|UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleRightMargin|UIViewAutoresizingFlexibleBottomMargin;
+    _highlightView.layer.borderColor = [UIColor greenColor].CGColor;
+    _highlightView.layer.borderWidth = 3;
+    [self.view addSubview:_highlightView];
+    
+    _session = [[AVCaptureSession alloc] init];
+    _device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
+    NSError *error = nil;
+    
+    _input = [AVCaptureDeviceInput deviceInputWithDevice:_device error:&error];
+    if (_input) {
+        [_session addInput:_input];
+    } else {
+        NSLog(@"Error: %@", error);
+    }
+    
+    _output = [[AVCaptureMetadataOutput alloc] init];
+    [_output setMetadataObjectsDelegate:self queue:dispatch_get_main_queue()];
+    [_session addOutput:_output];
+    
+    _output.metadataObjectTypes = [_output availableMetadataObjectTypes];
+    
+    _prevLayer = [AVCaptureVideoPreviewLayer layerWithSession:_session];
+    _prevLayer.frame = self.view.bounds;
+    _prevLayer.videoGravity = AVLayerVideoGravityResizeAspectFill;
+    [self.view.layer addSublayer:_prevLayer];
+    
+    [_session startRunning];
+    
+    [self.view bringSubviewToFront:_highlightView];
+}
 
 -(void)captureOutput:(AVCaptureOutput *)captureOutput didOutputMetadataObjects:(NSArray *)metadataObjects fromConnection:(AVCaptureConnection *)connection
 {
@@ -134,14 +174,27 @@
     
     if(indexPath.section == 0)
     {
-        AddPartyTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"AddPartyCell" forIndexPath:indexPath];
+        AddPartyTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([AddPartyTableViewCell class])];
+        if(!cell)
+        {
+            cell = [[AddPartyTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:NSStringFromClass([AddPartyTableViewCell class])];
+        }
         [cell.textField becomeFirstResponder];
         return cell;
     }
     else
     {
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PlainCell" forIndexPath:indexPath];
-        cell.textLabel.text = @"Join using QR";
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([UITableViewCell class])];
+        if(!cell)
+        {
+            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:NSStringFromClass([UITableViewCell class])];
+        }
+        [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
+        [cell.textLabel setText:@"Join using QR"];
+        [cell.textLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.centerX.equalTo(cell.contentView.mas_centerX);
+            make.centerY.equalTo(cell.contentView.mas_centerY);
+        }];
         
         return cell;
     }
@@ -151,38 +204,7 @@
 {
     if(indexPath.section == 1 && indexPath.row == 0)
     {
-        //SOME CRAZY VIEW CODE TO SHOW CAMERA AND HIGHLIGHT BARCODE, AS WELL AS RUN THE SCANNER
-        _highlightView = [[UIView alloc] init];
-        _highlightView.autoresizingMask = UIViewAutoresizingFlexibleTopMargin|UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleRightMargin|UIViewAutoresizingFlexibleBottomMargin;
-        _highlightView.layer.borderColor = [UIColor greenColor].CGColor;
-        _highlightView.layer.borderWidth = 3;
-        [self.view addSubview:_highlightView];
-        
-        _session = [[AVCaptureSession alloc] init];
-        _device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
-        NSError *error = nil;
-        
-        _input = [AVCaptureDeviceInput deviceInputWithDevice:_device error:&error];
-        if (_input) {
-            [_session addInput:_input];
-        } else {
-            NSLog(@"Error: %@", error);
-        }
-        
-        _output = [[AVCaptureMetadataOutput alloc] init];
-        [_output setMetadataObjectsDelegate:self queue:dispatch_get_main_queue()];
-        [_session addOutput:_output];
-        
-        _output.metadataObjectTypes = [_output availableMetadataObjectTypes];
-        
-        _prevLayer = [AVCaptureVideoPreviewLayer layerWithSession:_session];
-        _prevLayer.frame = self.view.bounds;
-        _prevLayer.videoGravity = AVLayerVideoGravityResizeAspectFill;
-        [self.view.layer addSublayer:_prevLayer];
-        
-        [_session startRunning];
-        
-        [self.view bringSubviewToFront:_highlightView];
+        [self startScanner];
     }
 }
 

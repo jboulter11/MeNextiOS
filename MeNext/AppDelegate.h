@@ -14,6 +14,5 @@
 
 -(void)setLogin;
 -(void)setLogout;
--(void)relogWithFB;
 
 @end

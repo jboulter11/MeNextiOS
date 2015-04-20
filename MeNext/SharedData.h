@@ -11,11 +11,9 @@
 #import <FBSDKLoginKit.h>
 #import "AFHTTPSessionManager.h"
 #import "AppDelegate.h"
+#import <Masonry.h>
 
 @interface SharedData : NSObject
-
-@property AFHTTPSessionManager* sessionManager;
-@property AFHTTPSessionManager* youtubeSessionManager;
 @property (readonly) NSString* KEY;
 @property UIImageView* splashView;
 @property UIColor* meNextRed;
@@ -25,6 +23,8 @@
 +(NSMutableString *) sanitizeNSString:(NSString *)string;
 
 +(SharedData*) sharedData;
++(AFHTTPSessionManager*) sessionManager;
++(AFHTTPSessionManager*) youtubeSessionManager;
 +(FBSDKLoginManager*) fbLoginManager;
 -(SharedData*) init;
 +(AppDelegate*) appDel;

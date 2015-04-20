@@ -22,8 +22,7 @@
 
 - (void)addButtonTapped:(id)sender
 {
-    NSDictionary* postDictionary = @{@"action":@"addVideo", @"partyId":_partyId, @"youtubeId":_youtubeId};
-    [[[SharedData sharedData] sessionManager] POST:@"handler.php" parameters:postDictionary success:^(NSURLSessionDataTask *task, id responseObject) {
+    [[SharedData sessionManager] POST:@"handler.php"parameters:@{@"action":@"addVideo", @"partyId":_partyId, @"youtubeId":_youtubeId} success:^(NSURLSessionDataTask *task, id responseObject) {
         if(![((NSString*)[responseObject objectForKey:@"status"])  isEqual: @"failed"])
         {
             DetailViewController* detVC = nil;

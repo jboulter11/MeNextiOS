@@ -11,69 +11,59 @@
 #import "SharedData.h"
 
 @interface SettingsViewController ()
+{
+    UIButton* logoutButton;
+}
 
 @end
 
 @implementation SettingsViewController
 
+#pragma mark - Init
+
+-(instancetype)init
+{
+    if(self = [super init])
+    {
+        [self.view setBackgroundColor:[UIColor whiteColor]];
+        
+        [self setTitle:@"Settings"];
+        
+        //Logout Button
+        logoutButton = [[UIButton alloc] init];
+        [logoutButton setTitle:@"Log out" forState:UIControlStateNormal];
+        [[logoutButton titleLabel] setFont:[UIFont boldSystemFontOfSize:24]];
+        [logoutButton setBackgroundColor:[[SharedData sharedData] meNextPurple]];
+        [logoutButton addTarget:self action:@selector(logoutButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
+        [[self view] addSubview:logoutButton];
+        
+        [logoutButton mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo([self view].mas_left);
+            make.right.equalTo([self view].mas_right);
+            make.bottom.equalTo([self view].mas_bottom);
+            make.height.equalTo(@55);
+        }];
+    }
+    return self;
+}
+
 #pragma mark - Actions
 
-- (IBAction)done:(id)sender
-{
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
-
--(UIBarPosition)positionForBar:(id<UIBarPositioning>)bar {
-    return UIBarPositionTopAttached;
-}
-
-- (IBAction)logout:(id)sender
+- (void)logoutButtonPressed:(id)sender
 {
     [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"sessionId"];
     //[FBSDKLoginManager closeAndClearTokenInformation];
     [[SharedData appDel] setLogout];
 }
 
-#pragma mark - View and misc
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
+#pragma mark - View
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:239/255.0 green:35/255.0 blue:53/255.0 alpha:1];
-    self.navigationController.navigationBar.translucent = NO;
-    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
-    self.navigationController.navigationBar.topItem.title = @"";
-    [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
-    self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
     // Do any additional setup after loading the view.
     
     //TODO: Add the ability to change the host address from vmutti.com to other servers (low priority)
 }
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

@@ -14,37 +14,40 @@
 
 @interface DetailViewController ()
 {
-    NSMutableArray* _tracks;
-    NSMutableDictionary* _thumbnails;
-    NSString* _partyId;
-    NSString* _partyName;
+    NSMutableArray* tracks;
+    NSMutableDictionary* thumbnails;
+    NSString* partyId;
+    NSString* partyName;
 }
-@property (strong, nonatomic) UIPopoverController *masterPopoverController;
 @end
 
 @implementation DetailViewController
+@synthesize detailItem;
 
-#pragma mark - Managing the detail item
+#pragma mark - Init
 
-- (void)setDetailItem:(id)newDetailItem
+- (instancetype)init
 {
-    if (_detailItem != newDetailItem) {
-        _detailItem = newDetailItem;
+    if(self = [super init])
+    {
+        tracks = nil;
+        thumbnails = nil;
+        partyId = nil;
+        partyName = nil;
+        
+        [self.tableView setAllowsSelection:NO];
     }
-
-    if (self.masterPopoverController != nil) {
-        [self.masterPopoverController dismissPopoverAnimated:YES];
-    }        
+    return self;
 }
 
-#pragma mark - Misc
+#pragma mark - Memory
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-    _tracks = nil;
-    _thumbnails = nil;
+    tracks = nil;
+    thumbnails = nil;
 }
 
 #pragma mark - Loading content
@@ -52,14 +55,12 @@
 -(void)loadThumbnails
 {
     //httpget for track details from youtube (thumbnails)
-    for(NSDictionary* track in _tracks)
+    for(NSDictionary* track in tracks)
     {
-        NSString* trackId = track[@"youtubeId"];
-        AFHTTPSessionManager* manager = [[SharedData sharedData] youtubeSessionManager];
-        [manager GET:[NSString stringWithFormat:@"videos?id=%@&key=%@&part=snippet&fields=items(id,snippet(title,thumbnails(default)))", trackId,
+        [[SharedData youtubeSessionManager] GET:[NSString stringWithFormat:@"videos?id=%@&key=%@&part=snippet&fields=items(id,snippet(title,thumbnails(default)))", track[@"youtubeId"],
                       [[SharedData sharedData]KEY]] parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
             //add URLs for thumbnails to the _thumbnails array
-            [_thumbnails setObject:responseObject[@"items"][0][@"snippet"][@"thumbnails"][@"default"][@"url"] forKey:trackId];
+            [thumbnails setObject:responseObject[@"items"][0][@"snippet"][@"thumbnails"][@"default"][@"url"] forKey:track[@"youtubeId"]];
             dispatch_async(dispatch_get_main_queue(), ^{
                 [self.tableView reloadData];
             });
@@ -77,14 +78,14 @@
 
 - (void)loadTracks
 {
-    [[[SharedData sharedData] sessionManager] GET:[NSString stringWithFormat:@"handler.php?action=listVideos&partyId=%@", _partyId] parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+    [[SharedData sessionManager] GET:[NSString stringWithFormat:@"handler.php?action=listVideos&partyId=%@", partyId] parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
         //parse tracks into _tracks
         //Dictionary, 2kv pairs: status and videos
         if([responseObject[@"status"] isEqualToString:@"success"])
         {
             NSMutableArray* _tempTracks = [[NSMutableArray alloc] init];
             [_tempTracks addObjectsFromArray:responseObject[@"videos"]];
-            _tracks = _tempTracks;
+            tracks = _tempTracks;
             dispatch_async(dispatch_get_main_queue(), ^{
                 [self loadThumbnails];
                 [self.tableView reloadData];
@@ -111,13 +112,13 @@
 {
     [super viewWillAppear:animated];
     
-    _tracks = [[NSMutableArray alloc] init];
-    _thumbnails = [[NSMutableDictionary alloc] init];
+    tracks = [[NSMutableArray alloc] init];
+    thumbnails = [[NSMutableDictionary alloc] init];
     
-    _partyId = _detailItem[@"partyId"];
-    _partyName = _detailItem[@"name"];
+    partyId = detailItem[@"partyId"];
+    partyName = detailItem[@"name"];
     
-    self.title = _partyName;
+    self.title = partyName;
     
     [self loadTracks];
 }
@@ -125,11 +126,6 @@
 -(void)viewDidLoad
 {
     [super viewDidLoad];
-    self.navigationController.navigationBar.translucent = NO;
-    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
-    self.navigationController.navigationBar.topItem.title = @"";
-    [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
-    self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
 }
 
 #pragma mark - Voting
@@ -138,20 +134,18 @@
 {
     NSInteger row = button.tag;
     
-    if(_tracks.count >= row)
+    if(tracks.count >= row)
     {
-        if([direction isEqualToString:_tracks[row][@"userRating"]])
+        if([direction isEqualToString:tracks[row][@"userRating"]])
         {
             direction = @"0";//we're un-voting
         }
         
-        NSString* submissionId = _tracks[row][@"submissionId"];
+        NSString* submissionId = tracks[row][@"submissionId"];
         NSDictionary* postDictionary = @{@"action": @"vote", @"direction": direction, @"submissionId":submissionId};
         
-        [[[SharedData sharedData] sessionManager] POST:@"handler.php" parameters:postDictionary success:^(NSURLSessionDataTask *task, id responseObject) {
+        [[SharedData sessionManager] POST:@"handler.php" parameters:postDictionary success:^(NSURLSessionDataTask *task, id responseObject) {
             //re-fetch data on tracks to reflect new order
-            
-            
             if(![((NSString*)[responseObject objectForKey:@"status"])  isEqual: @"failed"])
             {
                 [self loadTracks];
@@ -176,12 +170,12 @@
     
 }
 
-- (IBAction)upVote:(id)sender
+- (void)upVote:(id)sender
 {
     [self vote:(UIButton*)sender forDirection:@"1"];
 }
 
-- (IBAction)downVote:(id)sender
+- (void)downVote:(id)sender
 {
     [self vote:(UIButton*)sender forDirection:@"-1"];
 }
@@ -195,40 +189,44 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return _tracks.count;
+    return tracks.count;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 90;
 }
 
 - (DetailTableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    DetailTableViewCell *cell = (DetailTableViewCell*)[tableView dequeueReusableCellWithIdentifier:@"QueueCell"];
-    
-    cell.textLabel.text = _tracks[indexPath.row][@"title"];
-    if((indexPath.row <= _thumbnails.count) && (_thumbnails[_tracks[indexPath.row][@"youtubeId"]] != nil))
+    DetailTableViewCell *cell = (DetailTableViewCell*)[tableView dequeueReusableCellWithIdentifier:NSStringFromClass([DetailTableViewCell class])];
+    if(!cell)
     {
-        [cell.imageView sd_setImageWithURL:[NSURL URLWithString:_thumbnails[_tracks[indexPath.row][@"youtubeId"]]]];
+        cell = [[DetailTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:NSStringFromClass([DetailTableViewCell class])];
+    }
+    
+    cell.titleTextView.text = tracks[indexPath.row][@"title"];
+    if((indexPath.row <= thumbnails.count) && (thumbnails[tracks[indexPath.row][@"youtubeId"]] != nil))
+    {
+        [cell.imageView sd_setImageWithURL:[NSURL URLWithString:thumbnails[tracks[indexPath.row][@"youtubeId"]]]];
     }
     cell.upVoteButton.tag = indexPath.row;
     cell.downVoteButton.tag = indexPath.row;
     
-    NSString* rating = _tracks[indexPath.row][@"userRating"];
+    NSString* rating = tracks[indexPath.row][@"userRating"];
     if(!(rating == (id)[NSNull null] || rating.length == 0))
     {
         if([rating isEqualToString:@"1"])
         {
             cell.upVoteButton.imageView.image = [UIImage imageNamed:@"UpArrowColor"];
-            cell.downVoteButton.imageView.image = [UIImage imageNamed:@"DownArrow"];
         }
         else if([rating isEqualToString:@"-1"])
         {
             cell.downVoteButton.imageView.image = [UIImage imageNamed:@"DownArrowColor"];
-            cell.upVoteButton.imageView.image = [UIImage imageNamed:@"UpArrow"];
-        }
-        else
-        {
-            cell.downVoteButton.imageView.image = [UIImage imageNamed:@"DownArrow"];
-            cell.upVoteButton.imageView.image = [UIImage imageNamed:@"UpArrow"];
         }
     }
+    
+    [cell.ratingLabel setText:tracks[indexPath.row][@"rating"]];
     
     return cell;
 }
@@ -239,44 +237,12 @@
     return NO;
 }
 
-/*
- // Override to support rearranging the table view.
- - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
- {
- }
- */
-
-/*
- // Override to support conditional rearranging of the table view.
- - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
- {
- // Return NO if you do not want the item to be re-orderable.
- return YES;
- }
- */
-
-#pragma mark - Split view
-
-- (void)splitViewController:(UISplitViewController *)splitController willHideViewController:(UIViewController *)viewController withBarButtonItem:(UIBarButtonItem *)barButtonItem forPopoverController:(UIPopoverController *)popoverController
-{
-    barButtonItem.title = NSLocalizedString(@"Master", @"Master");
-    [self.navigationItem setLeftBarButtonItem:barButtonItem animated:YES];
-    self.masterPopoverController = popoverController;
-}
-
-- (void)splitViewController:(UISplitViewController *)splitController willShowViewController:(UIViewController *)viewController invalidatingBarButtonItem:(UIBarButtonItem *)barButtonItem
-{
-    // Called when the view is shown again in the split view, invalidating the button and popover controller.
-    [self.navigationItem setLeftBarButtonItem:nil animated:YES];
-    self.masterPopoverController = nil;
-}
-
 #pragma mark - Segue
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     AddTrackSearchTableViewController* dst = [segue destinationViewController];
-    dst.partyId = _detailItem[@"partyId"];
+    dst.partyId = detailItem[@"partyId"];
 }
 
 @end

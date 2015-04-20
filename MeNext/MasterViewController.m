@@ -78,7 +78,7 @@
 {
     _objects = [[NSMutableArray alloc] init];
     
-    [[[SharedData sharedData] sessionManager] GET:[NSString stringWithFormat:@"handler.php?action=listJoinedParties"] parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+    [[SharedData sessionManager] GET:[NSString stringWithFormat:@"handler.php?action=listJoinedParties"] parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
         //parse parties into _objects
         //Dictionary with one KeyValue, value is array of party Dictionaries
         if(![((NSString*)[responseObject objectForKey:@"status"])  isEqual: @"failed"])
@@ -151,10 +151,9 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
-        NSDate *object = _objects[indexPath.row];
-        self.detailViewController.detailItem = object;
-    }
+    DetailViewController* dst = [[DetailViewController alloc] init];
+    [dst setDetailItem:_objects[indexPath.row]];
+    [self.navigationController pushViewController:dst animated:YES];
 }
 
 #pragma mark - Segue
@@ -167,17 +166,6 @@
 - (void)showJoinParty
 {
     [[self navigationController] pushViewController:[[AddPartyTableViewController alloc] init] animated:YES];
-}
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    //tell detail controller
-    if ([[segue identifier] isEqualToString:@"showDetail"]) {
-        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        NSDate *object = _objects[indexPath.row];
-        DetailViewController* dst = [segue destinationViewController];
-        [dst setDetailItem:object];
-    }
 }
 
 @end

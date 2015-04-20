@@ -261,7 +261,7 @@
 - (void)sendRequest
 {
     //send the actual request asyncronously
-    [[[SharedData sharedData] sessionManager] POST:@"handler.php" parameters:postDictionary success:^(NSURLSessionDataTask *task, id responseObject) {
+    [[SharedData sessionManager] POST:@"handler.php" parameters:postDictionary success:^(NSURLSessionDataTask *task, id responseObject) {
         if([responseObject[@"status"] isEqualToString:@"success"])
         {
             dispatch_async(dispatch_get_main_queue(), ^{
@@ -329,7 +329,7 @@
                                          NSLog(@"FACEBOOK RESULT:%@", [result description]);
                                          if(!error && ![result isCancelled])
                                          {
-                                             postDictionary = @{@"action":@"fbLogin", @"accessToken":[result token], @"userId":[[FBSDKAccessToken currentAccessToken] userID]};
+                                             postDictionary = @{@"action":@"fbLogin", @"accessToken":[[FBSDKAccessToken currentAccessToken] tokenString], @"userId":[[FBSDKAccessToken currentAccessToken] userID]};
                                              [self sendRequest];
                                          }
                                          else

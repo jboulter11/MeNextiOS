@@ -9,8 +9,6 @@
 #import "SharedData.h"
 
 @implementation SharedData
-@synthesize sessionManager;
-@synthesize youtubeSessionManager;
 @synthesize KEY;
 @synthesize splashView;
 @synthesize meNextRed;
@@ -26,6 +24,28 @@
         sharedManager = [[self alloc] init];
     });
     return sharedManager;
+}
+
++(AFHTTPSessionManager*) sessionManager {
+    static AFHTTPSessionManager* sessionManager = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        sessionManager = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:@"https://www.menext.me/"]];
+        sessionManager.responseSerializer = [AFJSONResponseSerializer serializer];
+        sessionManager.responseSerializer.acceptableContentTypes = [sessionManager.responseSerializer.acceptableContentTypes setByAddingObject:@"text/html"];
+    });
+    return sessionManager;
+}
+
++(AFHTTPSessionManager*) youtubeSessionManager {
+    static AFHTTPSessionManager* youtubeSessionManager = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        youtubeSessionManager = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:@"https://www.googleapis.com/youtube/v3/"]];
+        youtubeSessionManager.responseSerializer = [AFJSONResponseSerializer serializer];
+        youtubeSessionManager.responseSerializer.acceptableContentTypes = [youtubeSessionManager.responseSerializer.acceptableContentTypes setByAddingObject:@"text/html"];
+    });
+    return youtubeSessionManager;
 }
 
 +(FBSDKLoginManager*) fbLoginManager {
@@ -50,14 +70,6 @@
 {
     if(self = [super init])
     {
-        sessionManager = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:@"https://www.menext.me/"]];
-        sessionManager.responseSerializer = [AFJSONResponseSerializer serializer];
-        sessionManager.responseSerializer.acceptableContentTypes = [sessionManager.responseSerializer.acceptableContentTypes setByAddingObject:@"text/html"];
-        
-        youtubeSessionManager = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:@"https://www.googleapis.com/youtube/v3/"]];
-        youtubeSessionManager.responseSerializer = [AFJSONResponseSerializer serializer];
-        youtubeSessionManager.responseSerializer.acceptableContentTypes = [youtubeSessionManager.responseSerializer.acceptableContentTypes setByAddingObject:@"text/html"];
-        
         KEY = @"AIzaSyAbh1CseUDq0NKangT-QRIeyOoZLz6jCII";//MeNext Youtube iOS API Key
         splashView = nil;
         
@@ -86,21 +98,21 @@
     {
         if([FBSDKAccessToken currentAccessToken] != nil)
         {
-            [[[SharedData sharedData] sessionManager] POST:@"handler.php" parameters:@{@"action":@"fbLogin", @"accessToken":[FBSDKAccessToken currentAccessToken], @"userId":[[FBSDKAccessToken currentAccessToken] userID]} success:^(NSURLSessionDataTask *task, id responseObject) {
-                if(![responseObject[@"status"] isEqualToString:@"success"])
-                {
-                    [[SharedData appDel] setLogout];
-                }
-                else
+            [[SharedData sessionManager] POST:@"handler.php" parameters:@{@"action":@"fbLogin", @"accessToken":[[FBSDKAccessToken currentAccessToken] tokenString], @"userId":[[FBSDKAccessToken currentAccessToken] userID]} success:^(NSURLSessionDataTask *task, id responseObject) {
+                if([responseObject[@"status"] isEqualToString:@"success"])
                 {
                     if(block)
                     {
                         block();
                     }
                 }
+                else
+                {
+                    [[SharedData appDel] setLogout];
+                }
                 
             } failure:^(NSURLSessionDataTask *task, NSError *error) {
-                UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Error Logging In"
+                UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Oops, looks like you're logged out"
                                                                 message:[error localizedDescription]
                                                                delegate:nil
                                                       cancelButtonTitle:@"OK"

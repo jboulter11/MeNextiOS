@@ -10,6 +10,4 @@
 
 @interface SettingsViewController : UIViewController <UINavigationBarDelegate, UIBarPositioningDelegate>
 
-@property (weak, nonatomic) IBOutlet UINavigationBar *bar;
-
 @end

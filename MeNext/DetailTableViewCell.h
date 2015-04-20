@@ -10,10 +10,11 @@
 
 @interface DetailTableViewCell : UITableViewCell
 
-@property (weak, nonatomic) IBOutlet UIImageView *imageView;
-@property (weak, nonatomic) IBOutlet UILabel *textLabel;
-@property (weak, nonatomic) IBOutlet UIButton* upVoteButton;
-@property (weak, nonatomic) IBOutlet UIButton* downVoteButton;
+@property (nonatomic) UIImageView* imageView;
+@property UITextView* titleTextView;
+@property UILabel* ratingLabel;
+@property UIButton* upVoteButton;
+@property UIButton* downVoteButton;
 
 
 @end

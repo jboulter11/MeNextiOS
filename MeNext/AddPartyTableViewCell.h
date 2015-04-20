@@ -10,7 +10,6 @@
 
 @interface AddPartyTableViewCell : UITableViewCell
 
-@property (weak, nonatomic) IBOutlet UITextField *textField;
-@property (weak, nonatomic) IBOutlet UILabel *textLabel;
+@property UITextField *textField;
 
 @end

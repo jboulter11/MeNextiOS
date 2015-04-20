@@ -88,20 +88,11 @@
 		0C5C71211A9948F900CE9B75 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				0C16C76D19ECA2A5009B62D6 /* AddPartyTableViewController.h */,
-				0C16C76E19ECA2A5009B62D6 /* AddPartyTableViewController.m */,
-				0C999702195373B50067F0A3 /* LoginViewController.h */,
-				0C999703195373B50067F0A3 /* LoginViewController.m */,
-				0C38E62719496A220035FA82 /* SettingsViewController.h */,
-				0C38E62819496A220035FA82 /* SettingsViewController.m */,
-				0CF520D919453E1C0043AC8F /* MasterViewController.h */,
-				0CF520DA19453E1C0043AC8F /* MasterViewController.m */,
-				0CF520DC19453E1C0043AC8F /* DetailViewController.h */,
-				0CF520DD19453E1C0043AC8F /* DetailViewController.m */,
-				0CBFB4FD19707AF90001CED3 /* AddTrackSearchTableViewController.h */,
-				0CBFB4FE19707AF90001CED3 /* AddTrackSearchTableViewController.m */,
-				0CBFB4F719707A4B0001CED3 /* AddTrackDetailViewController.h */,
-				0CBFB4F819707A4B0001CED3 /* AddTrackDetailViewController.m */,
+				0C875FCE1AE4D86C003625D1 /* Add Track */,
+				0C875FCF1AE4D895003625D1 /* Join Party */,
+				0C875FD01AE4D8A4003625D1 /* Login */,
+				0C875FD11AE4D8AB003625D1 /* Settings */,
+				0C875FD21AE4D8B4003625D1 /* Main */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -117,6 +108,55 @@
 				0C16C77119ECA6A8009B62D6 /* AddPartyTableViewCell.m */,
 			);
 			name = "Table View Cells";
+			sourceTree = "<group>";
+		};
+		0C875FCE1AE4D86C003625D1 /* Add Track */ = {
+			isa = PBXGroup;
+			children = (
+				0CBFB4FD19707AF90001CED3 /* AddTrackSearchTableViewController.h */,
+				0CBFB4FE19707AF90001CED3 /* AddTrackSearchTableViewController.m */,
+				0CBFB4F719707A4B0001CED3 /* AddTrackDetailViewController.h */,
+				0CBFB4F819707A4B0001CED3 /* AddTrackDetailViewController.m */,
+			);
+			name = "Add Track";
+			sourceTree = "<group>";
+		};
+		0C875FCF1AE4D895003625D1 /* Join Party */ = {
+			isa = PBXGroup;
+			children = (
+				0C16C76D19ECA2A5009B62D6 /* AddPartyTableViewController.h */,
+				0C16C76E19ECA2A5009B62D6 /* AddPartyTableViewController.m */,
+			);
+			name = "Join Party";
+			sourceTree = "<group>";
+		};
+		0C875FD01AE4D8A4003625D1 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				0C999702195373B50067F0A3 /* LoginViewController.h */,
+				0C999703195373B50067F0A3 /* LoginViewController.m */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		0C875FD11AE4D8AB003625D1 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				0C38E62719496A220035FA82 /* SettingsViewController.h */,
+				0C38E62819496A220035FA82 /* SettingsViewController.m */,
+			);
+			name = Settings;
+			sourceTree = "<group>";
+		};
+		0C875FD21AE4D8B4003625D1 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				0CF520D919453E1C0043AC8F /* MasterViewController.h */,
+				0CF520DA19453E1C0043AC8F /* MasterViewController.m */,
+				0CF520DC19453E1C0043AC8F /* DetailViewController.h */,
+				0CF520DD19453E1C0043AC8F /* DetailViewController.m */,
+			);
+			name = Main;
 			sourceTree = "<group>";
 		};
 		0C93238C1AD94B0700D209AA /* Managers */ = {
