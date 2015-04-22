@@ -10,6 +10,6 @@
 
 @interface AddTrackSearchTableViewController : UITableViewController <UISearchBarDelegate>
 
-@property (strong, nonatomic) NSString* partyId;
+@property NSString* partyId;
 
 @end

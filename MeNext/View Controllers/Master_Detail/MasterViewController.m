@@ -10,6 +10,7 @@
 #import "DetailViewController.h"
 #import "AddPartyTableViewController.h"
 #import "SettingsViewController.h"
+#import "NSString+HTML.h"
 #import "SharedData.h"
 
 @interface MasterViewController () {
@@ -51,9 +52,9 @@
     [gear setImage:[UIImage imageNamed:@"Gear"] forState:UIControlStateNormal];
     [gear addTarget:self action:@selector(showSettings) forControlEvents:UIControlEventTouchUpInside];
     
-    [[self navigationItem] setRightBarButtonItem:[[UIBarButtonItem alloc] initWithCustomView:gear]];
+    [[self navigationItem] setLeftBarButtonItem:[[UIBarButtonItem alloc] initWithCustomView:gear]];
     
-    [[self navigationItem] setLeftBarButtonItem:[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(showJoinParty)]];
+    [[self navigationItem] setRightBarButtonItem:[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(showJoinParty)]];
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -122,8 +123,10 @@
     {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:NSStringFromClass([UITableViewCell class])];
     }
-
-    cell.textLabel.text = _objects[indexPath.row][@"name"];
+    
+    NSString* text = _objects[indexPath.row][@"name"];
+    cell.textLabel.text = text.kv_decodeHTMLCharacterEntities;
+    
     return cell;
 }
 
@@ -132,22 +135,6 @@
     // Return NO if you do not want the specified item to be editable.
     return NO;
 }
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {

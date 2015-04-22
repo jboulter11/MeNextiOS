@@ -10,6 +10,7 @@
 #import "DetailTableViewCell.h"
 #import "AddTrackSearchTableViewController.h"
 #import "UIImageView+WebCache.h"
+#import "NSString+HTML.h"
 #import "SharedData.h"
 
 @interface DetailViewController ()
@@ -18,6 +19,7 @@
     NSMutableDictionary* thumbnails;
     NSString* partyId;
     NSString* partyName;
+    unsigned int loadedCount;
 }
 @end
 
@@ -36,6 +38,7 @@
         partyName = nil;
         
         [self.tableView setAllowsSelection:NO];
+        [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
     }
     return self;
 }
@@ -52,32 +55,37 @@
 
 #pragma mark - Loading content
 
--(void)loadThumbnails
-{
-    //httpget for track details from youtube (thumbnails)
-    for(NSDictionary* track in tracks)
-    {
-        [[SharedData youtubeSessionManager] GET:[NSString stringWithFormat:@"videos?id=%@&key=%@&part=snippet&fields=items(id,snippet(title,thumbnails(default)))", track[@"youtubeId"],
-                      [[SharedData sharedData]KEY]] parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
-            //add URLs for thumbnails to the _thumbnails array
-            [thumbnails setObject:responseObject[@"items"][0][@"snippet"][@"thumbnails"][@"default"][@"url"] forKey:track[@"youtubeId"]];
-            dispatch_async(dispatch_get_main_queue(), ^{
-                [self.tableView reloadData];
-            });
-            
-        } failure:^(NSURLSessionDataTask *task, NSError *error) {
-            UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Error with Youtube API"
-                                                            message:[error localizedDescription]
-                                                           delegate:nil
-                                                  cancelButtonTitle:@"OK"
-                                                  otherButtonTitles:nil];
-            [alert show];
-        }];
-    }
-}
+//-(void)loadThumbnails
+//{
+//    loadedCount=0;
+//    //httpget for track details from youtube (thumbnails)
+//    for(NSDictionary* track in tracks)
+//    {
+//        [[SharedData youtubeSessionManager] GET:[NSString stringWithFormat:@"videos?id=%@&key=%@&part=snippet&fields=items(id,snippet(title,thumbnails(high)))", track[@"youtubeId"],
+//                      [[SharedData sharedData]KEY]] parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+//            //add URLs for thumbnails to the _thumbnails array
+//            [thumbnails setObject:responseObject[@"items"][0][@"snippet"][@"thumbnails"][@"high"][@"url"] forKey:track[@"youtubeId"]];
+//            NSLog(@"%@", [thumbnails objectForKey:track[@"youtubeId"]]);
+//            ++loadedCount;
+//            if(loadedCount == tracks.count)
+//            {
+//                [self.tableView reloadData];
+//            }
+//            
+//        } failure:^(NSURLSessionDataTask *task, NSError *error) {
+//            UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Error with Youtube API"
+//                                                            message:[error localizedDescription]
+//                                                           delegate:nil
+//                                                  cancelButtonTitle:@"OK"
+//                                                  otherButtonTitles:nil];
+//            [alert show];
+//        }];
+//    }
+//}
 
 - (void)loadTracks
 {
+    //tracks = [[NSMutableArray alloc] init];
     [[SharedData sessionManager] GET:[NSString stringWithFormat:@"handler.php?action=listVideos&partyId=%@", partyId] parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
         //parse tracks into _tracks
         //Dictionary, 2kv pairs: status and videos
@@ -86,10 +94,8 @@
             NSMutableArray* _tempTracks = [[NSMutableArray alloc] init];
             [_tempTracks addObjectsFromArray:responseObject[@"videos"]];
             tracks = _tempTracks;
-            dispatch_async(dispatch_get_main_queue(), ^{
-                [self loadThumbnails];
-                [self.tableView reloadData];
-            });
+            //[self loadThumbnails];
+            [self.tableView reloadData];
         }
         else
         {
@@ -126,6 +132,9 @@
 -(void)viewDidLoad
 {
     [super viewDidLoad];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
+                                                                                           target:self
+                                                                                           action:@selector(addTrackButtonPressed:)];
 }
 
 #pragma mark - Voting
@@ -170,6 +179,8 @@
     
 }
 
+#pragma mark - Actions
+
 - (void)upVote:(id)sender
 {
     [self vote:(UIButton*)sender forDirection:@"1"];
@@ -178,6 +189,14 @@
 - (void)downVote:(id)sender
 {
     [self vote:(UIButton*)sender forDirection:@"-1"];
+}
+
+- (void)addTrackButtonPressed:(id)sender
+{
+    AddTrackSearchTableViewController* atstvc = [[AddTrackSearchTableViewController alloc] init];
+    atstvc.partyId = detailItem[@"partyId"];
+    
+    [self.navigationController pushViewController:atstvc animated:YES];
 }
 
 #pragma mark - Table
@@ -205,13 +224,21 @@
         cell = [[DetailTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:NSStringFromClass([DetailTableViewCell class])];
     }
     
-    cell.titleTextView.text = tracks[indexPath.row][@"title"];
-    if((indexPath.row <= thumbnails.count) && (thumbnails[tracks[indexPath.row][@"youtubeId"]] != nil))
-    {
-        [cell.imageView sd_setImageWithURL:[NSURL URLWithString:thumbnails[tracks[indexPath.row][@"youtubeId"]]]];
-    }
+    NSString* songTitle = tracks[indexPath.row][@"title"];
+    cell.titleTextView.text = songTitle.kv_decodeHTMLCharacterEntities;
+    
+    //Make string to get thumbnail
+    NSMutableString* thumbnailURL = [NSMutableString stringWithString:@"https://i.ytimg.com/vi/"];
+    [thumbnailURL appendString:tracks[indexPath.row][@"youtubeId"]];
+    [thumbnailURL appendString:@"/mqdefault.jpg"];
+    
+    [cell.imageView sd_setImageWithURL:[NSURL URLWithString:thumbnailURL]];
+    
     cell.upVoteButton.tag = indexPath.row;
     cell.downVoteButton.tag = indexPath.row;
+    
+    [cell.upVoteButton addTarget:self action:@selector(upVote:) forControlEvents:UIControlEventTouchUpInside];
+    [cell.downVoteButton addTarget:self action:@selector(downVote:) forControlEvents:UIControlEventTouchUpInside];
     
     NSString* rating = tracks[indexPath.row][@"userRating"];
     if(!(rating == (id)[NSNull null] || rating.length == 0))
@@ -219,14 +246,22 @@
         if([rating isEqualToString:@"1"])
         {
             cell.upVoteButton.imageView.image = [UIImage imageNamed:@"UpArrowColor"];
+            cell.downVoteButton.imageView.image = [UIImage imageNamed:@"DownArrow"];
+            
         }
         else if([rating isEqualToString:@"-1"])
         {
             cell.downVoteButton.imageView.image = [UIImage imageNamed:@"DownArrowColor"];
+            cell.upVoteButton.imageView.image = [UIImage imageNamed:@"UpArrow"];
         }
     }
     
     [cell.ratingLabel setText:tracks[indexPath.row][@"rating"]];
+    
+    cell.layer.shadowColor = [[UIColor grayColor] CGColor];
+    cell.layer.shadowOpacity = .2;
+    cell.layer.shadowRadius = 0;
+    cell.layer.shadowOffset = CGSizeMake(0.0, 1.0);
     
     return cell;
 }
