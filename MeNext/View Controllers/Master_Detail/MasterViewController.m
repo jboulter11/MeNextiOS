@@ -19,6 +19,7 @@
 @end
 
 @implementation MasterViewController
+@synthesize detailViewController;
 
 -(instancetype)init
 {
@@ -80,20 +81,22 @@
     _objects = [[NSMutableArray alloc] init];
     
     [[SharedData sessionManager] GET:[NSString stringWithFormat:@"handler.php?action=listJoinedParties"] parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
-        //parse parties into _objects
-        //Dictionary with one KeyValue, value is array of party Dictionaries
-        if(![((NSString*)[responseObject objectForKey:@"status"])  isEqual: @"failed"])
+        
+        if(![_objects isEqual:((NSDictionary*)responseObject)[@"parties"]])
         {
-            [_objects addObjectsFromArray:((NSDictionary*)responseObject)[@"parties"]];
-            dispatch_async(dispatch_get_main_queue(), ^{
+            //parse parties into _objects
+            //Dictionary with one KeyValue, value is array of party Dictionaries
+            if(![((NSString*)[responseObject objectForKey:@"status"])  isEqual: @"failed"])
+            {
+                [_objects addObjectsFromArray:((NSDictionary*)responseObject)[@"parties"]];
                 [self.tableView reloadData];
-            });
-        }
-        else
-        {
-            [SharedData loginCheck:responseObject withCompletion:^{
-                [self refreshTable];
-            }];
+            }
+            else
+            {
+                [SharedData loginCheck:responseObject withCompletion:^{
+                    [self refreshTable];
+                }];
+            }
         }
         
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
@@ -138,12 +141,12 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    DetailViewController* dst = [[DetailViewController alloc] init];
-    [dst setDetailItem:_objects[indexPath.row]];
-    [self.navigationController pushViewController:dst animated:YES];
+    detailViewController = [[DetailViewController alloc] init];
+    [detailViewController setDetailItem:_objects[indexPath.row]];
+    [self.navigationController pushViewController:detailViewController animated:YES];
 }
 
-#pragma mark - Segue
+#pragma mark - Navigation
 
 - (void)showSettings
 {
