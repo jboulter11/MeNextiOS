@@ -7,14 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UIImageView+WebCache.h"
+#import "NSString+HTML.h"
 
 @interface DetailTableViewCell : UITableViewCell
 
 @property (nonatomic) UIImageView* imageView;
+@property (nonatomic, readonly) NSDictionary *track;
 @property UITextView* titleTextView;
 @property UILabel* ratingLabel;
 @property UIButton* upVoteButton;
 @property UIButton* downVoteButton;
+
+-(void)configureForIndexPath:(NSIndexPath*)indexPath withTrack:(NSMutableArray*)tracks;
 
 
 @end

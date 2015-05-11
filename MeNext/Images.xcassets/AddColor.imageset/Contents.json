@@ -3,17 +3,17 @@
     {
       "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "MNSettingsGear.png"
+      "filename" : "MNAddButtonColor.png"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "MNSettingsGear@2x.png"
+      "filename" : "MNAddButtonColor@2x.png"
     },
     {
       "idiom" : "universal",
       "scale" : "3x",
-      "filename" : "MNSettingsGear@3x.png"
+      "filename" : "MNAddButtonColor@3x.png"
     }
   ],
   "info" : {

@@ -55,7 +55,11 @@
     
     [[self navigationItem] setLeftBarButtonItem:[[UIBarButtonItem alloc] initWithCustomView:gear]];
     
-    [[self navigationItem] setRightBarButtonItem:[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(showJoinParty)]];
+    UIButton* add = [UIButton buttonWithType:UIButtonTypeCustom];
+    add.bounds = CGRectMake(0,0,22,22);
+    [add setImage:[UIImage imageNamed:@"Add"] forState:UIControlStateNormal];
+    [add addTarget:self action:@selector(showJoinParty) forControlEvents:UIControlEventTouchUpInside];
+    [[self navigationItem] setRightBarButtonItem:[[UIBarButtonItem alloc] initWithCustomView:add]];
 }
 
 -(void)viewWillAppear:(BOOL)animated

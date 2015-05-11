@@ -26,6 +26,7 @@
 +(AFHTTPSessionManager*) sessionManager;
 +(AFHTTPSessionManager*) youtubeSessionManager;
 +(FBSDKLoginManager*) fbLoginManager;
+
 -(SharedData*) init;
 +(AppDelegate*) appDel;
 +(void) loginCheck:(id)responseObject withCompletion:(void(^)(void))block;

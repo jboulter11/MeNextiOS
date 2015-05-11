@@ -3,16 +3,17 @@
     {
       "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "downgray.png"
+      "filename" : "DownArrow.png"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "down2xgray.png"
+      "filename" : "DownArrow@2x.png"
     },
     {
       "idiom" : "universal",
-      "scale" : "3x"
+      "scale" : "3x",
+      "filename" : "DownArrow@3x.png"
     }
   ],
   "info" : {

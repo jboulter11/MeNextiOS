@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface AddTrackTableViewCell : UITableViewCell
-@property (weak, nonatomic) IBOutlet UIImageView *imageView;
-@property (weak, nonatomic) IBOutlet UILabel *textLabel;
-@property (weak, nonatomic) IBOutlet UIButton *addTrackButton;
+@property (nonatomic) UIImageView* imageView;
+@property (nonatomic, readonly) NSDictionary *track;
+@property UITextView* titleTextView;
+@property UIButton* addTrackButton;
 
 @end

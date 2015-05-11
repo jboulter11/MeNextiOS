@@ -9,6 +9,10 @@
 #import "DetailTableViewCell.h"
 #import "SharedData.h"
 
+@interface DetailTableViewCell ()
+@property (nonatomic) NSDictionary* track;
+@end
+
 @implementation DetailTableViewCell
 @synthesize imageView;
 @synthesize titleTextView;
@@ -56,8 +60,8 @@
         [upVoteButton mas_makeConstraints:^(MASConstraintMaker *make) {
             make.right.equalTo(self.contentView.mas_right).with.offset(-10);
             make.top.equalTo(self.contentView.mas_top).with.offset(10);
-            make.height.equalTo(@23);
-            make.width.equalTo(@35);
+            make.height.equalTo(@24);
+            make.width.equalTo(@45);
         }];
         
         [ratingLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -68,8 +72,8 @@
         [downVoteButton mas_makeConstraints:^(MASConstraintMaker *make) {
             make.right.equalTo(self.contentView.mas_right).with.offset(-10);
             make.bottom.equalTo(self.contentView.mas_bottom).with.offset(-10);
-            make.height.equalTo(@23);
-            make.width.equalTo(@35);
+            make.height.equalTo(@24);
+            make.width.equalTo(@45);
         }];
         
         [titleTextView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -82,11 +86,41 @@
     return self;
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated
+-(void)configureForIndexPath:(NSIndexPath*)indexPath withTrack:(NSDictionary*)track
 {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
+    self.track = track;
+    
+    NSString* songTitle = track[@"title"];
+    self.titleTextView.text = songTitle.kv_decodeHTMLCharacterEntities;
+    
+    [self.ratingLabel setText:track[@"rating"]];
+    
+    //Make string to get thumbnail
+    NSMutableString* thumbnailURL = [NSMutableString stringWithString:@"https://i.ytimg.com/vi/"];
+    [thumbnailURL appendString:track[@"youtubeId"]];
+    [thumbnailURL appendString:@"/mqdefault.jpg"];
+    
+    [self.imageView sd_setImageWithURL:[NSURL URLWithString:thumbnailURL]];
+    
+    NSString* rating = track[@"userRating"];
+    if(!(rating == (id)[NSNull null] || rating.length == 0))
+    {
+        if([rating isEqualToString:@"1"])
+        {
+            [self.upVoteButton setImage:[UIImage imageNamed:@"UpArrowColor"] forState:UIControlStateNormal];
+            [self.downVoteButton setImage:[UIImage imageNamed:@"DownArrow"] forState:UIControlStateNormal];
+        }
+        else if([rating isEqualToString:@"-1"])
+        {
+            [self.upVoteButton setImage:[UIImage imageNamed:@"UpArrow"] forState:UIControlStateNormal];
+            [self.downVoteButton setImage:[UIImage imageNamed:@"DownArrowColor"] forState:UIControlStateNormal];
+        }
+        else
+        {
+            [self.upVoteButton setImage:[UIImage imageNamed:@"UpArrow"] forState:UIControlStateNormal];
+            [self.downVoteButton setImage:[UIImage imageNamed:@"DownArrow"] forState:UIControlStateNormal];
+        }
+    }
 }
 
 @end
