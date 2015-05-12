@@ -1,5 +1,5 @@
 //
-//  LoginViewController.m
+//  LoginTableViewController.m
 //  MeNext
 //
 //  Created by Jim Boulter on 6/19/14.
@@ -12,7 +12,6 @@
 #import "Masonry.h"
 #import "AppDelegate.h"
 #import "SharedData.h"
-#import <FBSDKLoginKit.h>
 
 @interface LoginTableViewController (){
     NSDictionary* postDictionary;
