@@ -8,10 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		0C09E271195CB609001A714B /* DetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C09E270195CB609001A714B /* DetailTableViewCell.m */; };
+		0C0E87191B025C7300542159 /* InitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C0E87181B025C7300542159 /* InitialViewController.m */; };
+		0C0E871C1B025E2D00542159 /* InputTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C0E871B1B025E2D00542159 /* InputTableViewCell.m */; };
 		0C16C76F19ECA2A5009B62D6 /* AddPartyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C16C76E19ECA2A5009B62D6 /* AddPartyTableViewController.m */; };
 		0C16C77219ECA6A8009B62D6 /* AddPartyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C16C77119ECA6A8009B62D6 /* AddPartyTableViewCell.m */; };
 		0C38E62919496A220035FA82 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C38E62819496A220035FA82 /* SettingsViewController.m */; };
-		0C999704195373B50067F0A3 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C999703195373B50067F0A3 /* LoginViewController.m */; };
+		0C999704195373B50067F0A3 /* LoginTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C999703195373B50067F0A3 /* LoginTableViewController.m */; };
 		0CB355051975FDA5005FD24C /* SharedData.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CB355041975FDA5005FD24C /* SharedData.m */; };
 		0CBFB4F3197023B70001CED3 /* AddTrackTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CBFB4F2197023B70001CED3 /* AddTrackTableViewCell.m */; };
 		0CBFB4F919707A4B0001CED3 /* AddTrackDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CBFB4F819707A4B0001CED3 /* AddTrackDetailViewController.m */; };
@@ -32,14 +34,18 @@
 		00B88C4348BD4EAA9B803F68 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C09E26F195CB609001A714B /* DetailTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailTableViewCell.h; sourceTree = "<group>"; };
 		0C09E270195CB609001A714B /* DetailTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailTableViewCell.m; sourceTree = "<group>"; };
+		0C0E87171B025C7300542159 /* InitialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InitialViewController.h; path = "MeNext/View Controllers/Login/InitialViewController.h"; sourceTree = SOURCE_ROOT; };
+		0C0E87181B025C7300542159 /* InitialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InitialViewController.m; path = "MeNext/View Controllers/Login/InitialViewController.m"; sourceTree = SOURCE_ROOT; };
+		0C0E871A1B025E2D00542159 /* InputTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InputTableViewCell.h; path = "MeNext/Table View Cells/InputTableViewCell.h"; sourceTree = SOURCE_ROOT; };
+		0C0E871B1B025E2D00542159 /* InputTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InputTableViewCell.m; path = "MeNext/Table View Cells/InputTableViewCell.m"; sourceTree = SOURCE_ROOT; };
 		0C16C76D19ECA2A5009B62D6 /* AddPartyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddPartyTableViewController.h; sourceTree = "<group>"; };
 		0C16C76E19ECA2A5009B62D6 /* AddPartyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddPartyTableViewController.m; sourceTree = "<group>"; };
 		0C16C77019ECA6A8009B62D6 /* AddPartyTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddPartyTableViewCell.h; sourceTree = "<group>"; };
 		0C16C77119ECA6A8009B62D6 /* AddPartyTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddPartyTableViewCell.m; sourceTree = "<group>"; };
 		0C38E62719496A220035FA82 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		0C38E62819496A220035FA82 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
-		0C999702195373B50067F0A3 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
-		0C999703195373B50067F0A3 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		0C999702195373B50067F0A3 /* LoginTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginTableViewController.h; sourceTree = "<group>"; };
+		0C999703195373B50067F0A3 /* LoginTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginTableViewController.m; sourceTree = "<group>"; };
 		0CB355031975FDA5005FD24C /* SharedData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SharedData.h; sourceTree = "<group>"; };
 		0CB355041975FDA5005FD24C /* SharedData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SharedData.m; sourceTree = "<group>"; };
 		0CBFB4F1197023B70001CED3 /* AddTrackTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddTrackTableViewCell.h; sourceTree = "<group>"; };
@@ -104,6 +110,8 @@
 				0CBFB4F2197023B70001CED3 /* AddTrackTableViewCell.m */,
 				0C16C77019ECA6A8009B62D6 /* AddPartyTableViewCell.h */,
 				0C16C77119ECA6A8009B62D6 /* AddPartyTableViewCell.m */,
+				0C0E871A1B025E2D00542159 /* InputTableViewCell.h */,
+				0C0E871B1B025E2D00542159 /* InputTableViewCell.m */,
 			);
 			path = "Table View Cells";
 			sourceTree = "<group>";
@@ -131,8 +139,10 @@
 		0C875FD01AE4D8A4003625D1 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				0C999702195373B50067F0A3 /* LoginViewController.h */,
-				0C999703195373B50067F0A3 /* LoginViewController.m */,
+				0C999702195373B50067F0A3 /* LoginTableViewController.h */,
+				0C999703195373B50067F0A3 /* LoginTableViewController.m */,
+				0C0E87171B025C7300542159 /* InitialViewController.h */,
+				0C0E87181B025C7300542159 /* InitialViewController.m */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -338,12 +348,14 @@
 				0CF520D219453E1C0043AC8F /* AppDelegate.m in Sources */,
 				0C16C77219ECA6A8009B62D6 /* AddPartyTableViewCell.m in Sources */,
 				0CF520DB19453E1C0043AC8F /* MasterViewController.m in Sources */,
-				0C999704195373B50067F0A3 /* LoginViewController.m in Sources */,
+				0C999704195373B50067F0A3 /* LoginTableViewController.m in Sources */,
 				0CBFB4F3197023B70001CED3 /* AddTrackTableViewCell.m in Sources */,
+				0C0E87191B025C7300542159 /* InitialViewController.m in Sources */,
 				0C16C76F19ECA2A5009B62D6 /* AddPartyTableViewController.m in Sources */,
 				0CB355051975FDA5005FD24C /* SharedData.m in Sources */,
 				0C38E62919496A220035FA82 /* SettingsViewController.m in Sources */,
 				0CF520CE19453E1C0043AC8F /* main.m in Sources */,
+				0C0E871C1B025E2D00542159 /* InputTableViewCell.m in Sources */,
 				0CF520DE19453E1C0043AC8F /* DetailViewController.m in Sources */,
 				0C09E271195CB609001A714B /* DetailTableViewCell.m in Sources */,
 				0CBFB4F919707A4B0001CED3 /* AddTrackDetailViewController.m in Sources */,
@@ -398,7 +410,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -431,7 +443,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;

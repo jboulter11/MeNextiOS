@@ -11,7 +11,7 @@
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
 #import "MasterViewController.h"
-#import "LoginViewController.h"
+#import "InitialViewController.h"
 #import "SharedData.h"
 
 @implementation AppDelegate
@@ -46,7 +46,7 @@
                       duration:0.5
                        options:UIViewAnimationOptionTransitionCrossDissolve
                     animations:^{
-                        [(UINavigationController*)self.window.rootViewController setViewControllers:@[[[LoginViewController alloc] init]]];}
+                        [(UINavigationController*)self.window.rootViewController setViewControllers:@[[[InitialViewController alloc] init]]];}
                     completion:nil];
     
 }

@@ -1,5 +1,5 @@
 //
-//  LoginViewController.h
+//  LoginTableViewController.h
 //  MeNext
 //
 //  Created by Jim Boulter on 6/19/14.
@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 
-@interface LoginViewController : UIViewController
+@interface LoginTableViewController : UITableViewController
+@property BOOL actionRegistration;
 @end
