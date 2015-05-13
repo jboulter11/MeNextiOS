@@ -7,7 +7,7 @@
 //
 
 #import "InitialViewController.h"
-#import "LoginTableViewController.h"
+#import "LoginViewController.h"
 #import "SharedData.h"
 #import "InputTableViewCell.h"
 #import <FBSDKCoreKit.h>
@@ -57,7 +57,7 @@
         [registerButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [registerButton.layer setCornerRadius:6];
         
-        [registerButton addTarget:self action:@selector(register:) forControlEvents:UIControlEventTouchUpInside];
+        [registerButton addTarget:self action:@selector(reg:) forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview:registerButton];
         
         //Custom Login With Facebook Button
@@ -159,7 +159,7 @@
 
 - (void)pushWithRegistration:(BOOL)actionRegistration
 {
-    LoginTableViewController* vc = [[LoginTableViewController alloc] init];
+    LoginViewController* vc = [[LoginViewController alloc] init];
     vc.actionRegistration = actionRegistration;
     
     //    [UIView transitionWithView:self.view
@@ -177,7 +177,7 @@
     [self pushWithRegistration:NO];
 }
 
-- (void)register:(id)sender
+- (void)reg:(id)sender
 {
     //present loginvc with all necessary fields for registration
     [self pushWithRegistration:YES];

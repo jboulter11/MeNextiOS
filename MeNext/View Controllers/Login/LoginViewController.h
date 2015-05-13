@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 
-@interface LoginTableViewController : UITableViewController
+@interface LoginViewController : UIViewController
 @property BOOL actionRegistration;
 @end
