@@ -10,6 +10,7 @@
 		0C09E271195CB609001A714B /* DetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C09E270195CB609001A714B /* DetailTableViewCell.m */; };
 		0C0E87191B025C7300542159 /* InitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C0E87181B025C7300542159 /* InitialViewController.m */; };
 		0C0E871C1B025E2D00542159 /* InputTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C0E871B1B025E2D00542159 /* InputTableViewCell.m */; };
+		0C0E87201B047A5B00542159 /* RLMLoginCredential.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C0E871F1B047A5B00542159 /* RLMLoginCredential.m */; };
 		0C16C76F19ECA2A5009B62D6 /* AddPartyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C16C76E19ECA2A5009B62D6 /* AddPartyTableViewController.m */; };
 		0C16C77219ECA6A8009B62D6 /* AddPartyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C16C77119ECA6A8009B62D6 /* AddPartyTableViewCell.m */; };
 		0C38E62919496A220035FA82 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C38E62819496A220035FA82 /* SettingsViewController.m */; };
@@ -38,6 +39,8 @@
 		0C0E87181B025C7300542159 /* InitialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InitialViewController.m; path = "MeNext/View Controllers/Login/InitialViewController.m"; sourceTree = SOURCE_ROOT; };
 		0C0E871A1B025E2D00542159 /* InputTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InputTableViewCell.h; path = "MeNext/Table View Cells/InputTableViewCell.h"; sourceTree = SOURCE_ROOT; };
 		0C0E871B1B025E2D00542159 /* InputTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InputTableViewCell.m; path = "MeNext/Table View Cells/InputTableViewCell.m"; sourceTree = SOURCE_ROOT; };
+		0C0E871E1B047A5B00542159 /* RLMLoginCredential.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RLMLoginCredential.h; sourceTree = "<group>"; };
+		0C0E871F1B047A5B00542159 /* RLMLoginCredential.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RLMLoginCredential.m; sourceTree = "<group>"; };
 		0C16C76D19ECA2A5009B62D6 /* AddPartyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddPartyTableViewController.h; sourceTree = "<group>"; };
 		0C16C76E19ECA2A5009B62D6 /* AddPartyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddPartyTableViewController.m; sourceTree = "<group>"; };
 		0C16C77019ECA6A8009B62D6 /* AddPartyTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddPartyTableViewCell.h; sourceTree = "<group>"; };
@@ -89,6 +92,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C0E871D1B047A3800542159 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				0C0E871E1B047A5B00542159 /* RLMLoginCredential.h */,
+				0C0E871F1B047A5B00542159 /* RLMLoginCredential.m */,
+			);
+			name = Objects;
+			sourceTree = "<group>";
+		};
 		0C5C71211A9948F900CE9B75 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -210,6 +222,7 @@
 			isa = PBXGroup;
 			children = (
 				0C93238C1AD94B0700D209AA /* Managers */,
+				0C0E871D1B047A3800542159 /* Objects */,
 				0C5C71221A99515C00CE9B75 /* Table View Cells */,
 				0C5C71211A9948F900CE9B75 /* View Controllers */,
 				0CF520D019453E1C0043AC8F /* AppDelegate.h */,
@@ -359,6 +372,7 @@
 				0CF520DE19453E1C0043AC8F /* DetailViewController.m in Sources */,
 				0C09E271195CB609001A714B /* DetailTableViewCell.m in Sources */,
 				0CBFB4F919707A4B0001CED3 /* AddTrackDetailViewController.m in Sources */,
+				0C0E87201B047A5B00542159 /* RLMLoginCredential.m in Sources */,
 				0CBFB4FF19707AF90001CED3 /* AddTrackSearchTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -499,7 +513,7 @@
 				0CF520F519453E1C0043AC8F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		0CF520F619453E1C0043AC8F /* Build configuration list for PBXNativeTarget "MeNext" */ = {
 			isa = XCConfigurationList;
@@ -508,7 +522,7 @@
 				0CF520F819453E1C0043AC8F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};

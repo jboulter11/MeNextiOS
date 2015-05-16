@@ -12,10 +12,10 @@
 #import "AFHTTPSessionManager.h"
 #import "AppDelegate.h"
 #import <Masonry.h>
+#import "RLMLoginCredential.h"
 
 @interface SharedData : NSObject
 @property (readonly) NSString* KEY;
-@property UIImageView* splashView;
 @property UIColor* meNextRed;
 @property UIColor* meNextPurple;
 @property UIColor* fbBlue;

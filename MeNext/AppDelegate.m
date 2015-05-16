@@ -13,41 +13,76 @@
 #import "MasterViewController.h"
 #import "InitialViewController.h"
 #import "SharedData.h"
+#import "Realm.h"
+
+@interface AppDelegate ()
+@property UINavigationController* nav;
+@property UINavigationController* tempNav;
+@end
 
 @implementation AppDelegate
-{
-    UINavigationController* nav;
-}
+@synthesize nav;
+@synthesize tempNav;
 
 #pragma mark - Login
 
 -(void)setLogin
 {
-    //take us to the app
-    nav.navigationBarHidden = NO;
+    //save logged in status
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        RLMRealm* rlm = [RLMRealm defaultRealm];
+        RLMLoginCredential* lc = [[RLMLoginCredential alloc] init];
+        lc.loggedIn = YES;
+        [rlm beginWriteTransaction];
+        [rlm addObject:lc];
+        [rlm commitWriteTransaction];
+    });
     
-    [UIView transitionWithView:self.window.rootViewController.view
+    tempNav = [[UINavigationController alloc] initWithRootViewController:[[MasterViewController alloc] init]];
+    
+    [UIView transitionWithView:self.window
                       duration:0.5
                        options:UIViewAnimationOptionTransitionCrossDissolve
                     animations:^{
-                        [(UINavigationController*)self.window.rootViewController setViewControllers:@[[[MasterViewController alloc] init]]];}
-                    completion:nil];
+                        [self.window setRootViewController:tempNav];}
+                    completion:^(BOOL finished) {
+                        nav = tempNav;
+                    }];
 }
 
 -(void)setLogout
 {
-    //TODO: get rid of navigation controller
-    nav.navigationBarHidden = YES;
-    
     //Kill the current Access Token
     [FBSDKAccessToken setCurrentAccessToken:nil];
     
-    [UIView transitionWithView:self.window.rootViewController.view
+    //Kill cookie
+    NSHTTPCookieStorage *cookieStorage = [NSHTTPCookieStorage sharedHTTPCookieStorage];
+    for (NSHTTPCookie *each in cookieStorage.cookies) {
+        //[cookieStorage deleteCookie:each];
+        if([each.name isEqualToString:@"PHPSESSID"])
+        {
+            [cookieStorage deleteCookie:each];
+        }
+    }
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        RLMRealm* rlm = [RLMRealm defaultRealm];
+        RLMResults* loginCredentials = [RLMLoginCredential allObjects];
+        [rlm beginWriteTransaction];
+        [rlm deleteObjects:loginCredentials];
+        [rlm commitWriteTransaction];
+    });
+    
+    tempNav = [[UINavigationController alloc] initWithRootViewController:[[InitialViewController alloc] init]];
+    
+    [UIView transitionWithView:self.window
                       duration:0.5
                        options:UIViewAnimationOptionTransitionCrossDissolve
                     animations:^{
-                        [(UINavigationController*)self.window.rootViewController setViewControllers:@[[[InitialViewController alloc] init]]];}
-                    completion:nil];
+                        [self.window setRootViewController:tempNav];}
+                    completion:^(BOOL finished) {
+                        nav = tempNav;
+                    }];
     
 }
 
@@ -77,28 +112,14 @@
     [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(0, -60)
                                                          forBarMetrics:UIBarMetricsDefault];
     
-    //Make Navigation Controller
-    nav = [[UINavigationController alloc] init];
-    
-    //Create Splashview
-    [SharedData sharedData].splashView = [[UIImageView alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    [SharedData sharedData].splashView.image = [UIImage imageNamed:[SharedData getLaunchImageName]];
-    
-    //Make Splash visible
-    [nav.view addSubview:[SharedData sharedData].splashView];
-    [nav.view bringSubviewToFront:[SharedData sharedData].splashView];
-    
-    
     //Set up window
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.rootViewController = nav;
     
     BOOL didFBFinishLaunching = [[FBSDKApplicationDelegate sharedInstance] application:application
                                                          didFinishLaunchingWithOptions:launchOptions];
     
-    //TODO: Check if logged in with MeNext, not FB, use Realm?
-    //if FB says we're logged in
-    if([FBSDKAccessToken currentAccessToken])
+    //if we are logged in
+    if([FBSDKAccessToken currentAccessToken] || [RLMLoginCredential allObjects].count == 1)
     {
         //take us to the app
         [self setLogin];

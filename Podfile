@@ -4,7 +4,8 @@ source 'https://github.com/CocoaPods/Specs.git'
 
 pod "AFNetworking"
 pod "SDWebImage"
-pod "Facebook-iOS-SDK"
+pod "FBSDKCoreKit"
+pod "FBSDKLoginKit"
 pod "Masonry"
 pod "Realm"
 pod "NSString-HTML"

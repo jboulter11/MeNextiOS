@@ -9,6 +9,7 @@
 #import "SettingsViewController.h"
 #import "AppDelegate.h"
 #import "SharedData.h"
+#import "Realm.h"
 
 @interface SettingsViewController ()
 {
@@ -32,15 +33,16 @@
         //Logout Button
         logoutButton = [[UIButton alloc] init];
         [logoutButton setTitle:@"Log out" forState:UIControlStateNormal];
-        [[logoutButton titleLabel] setFont:[UIFont boldSystemFontOfSize:24]];
+        logoutButton.layer.cornerRadius = 6;
+        logoutButton.clipsToBounds = YES;
         [logoutButton setBackgroundColor:[[SharedData sharedData] meNextPurple]];
         [logoutButton addTarget:self action:@selector(logoutButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
         [[self view] addSubview:logoutButton];
         
         [logoutButton mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.equalTo([self view].mas_left);
-            make.right.equalTo([self view].mas_right);
-            make.bottom.equalTo([self view].mas_bottom);
+            make.left.equalTo([self view].mas_left).with.offset(10);
+            make.right.equalTo([self view].mas_right).with.offset(-10);
+            make.bottom.equalTo([self view].mas_bottom).with.offset(-10);
             make.height.equalTo(@55);
         }];
     }
@@ -51,9 +53,20 @@
 
 - (void)logoutButtonPressed:(id)sender
 {
-    [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"sessionId"];
-    //[FBSDKLoginManager closeAndClearTokenInformation];
-    [[SharedData appDel] setLogout];
+    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"Are you sure?"
+                                                             delegate:self
+                                                    cancelButtonTitle:@"Cancel"
+                                               destructiveButtonTitle:@"Log out"
+                                                    otherButtonTitles:nil];
+    [actionSheet showInView:[self view]];
+}
+
+-(void)actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex
+{
+    if(buttonIndex == actionSheet.destructiveButtonIndex)
+    {
+        [[SharedData appDel] setLogout];
+    }
 }
 
 #pragma mark - View

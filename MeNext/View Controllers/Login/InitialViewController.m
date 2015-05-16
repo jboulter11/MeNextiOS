@@ -120,7 +120,6 @@
 {
     [super viewWillAppear:animated];
     [self.navigationController.navigationBar setHidden:YES];
-    [[[SharedData sharedData] splashView] removeFromSuperview];
 }
 
 - (void)viewDidLoad
@@ -144,6 +143,7 @@
                                                      if(!error && ![result isCancelled])
                                                      {
                                                          //We're logged in
+                                                         [[SharedData appDel] setLogin];
                                                      }
                                                      else
                                                      {

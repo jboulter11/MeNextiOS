@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SettingsViewController : UIViewController <UINavigationBarDelegate, UIBarPositioningDelegate>
+@interface SettingsViewController : UIViewController <UIActionSheetDelegate>
 
 @end

@@ -13,19 +13,22 @@
 #import "NSString+HTML.h"
 #import "SharedData.h"
 
-@interface MasterViewController () {
-    NSMutableArray* _objects;
-}
+@interface MasterViewController ()
+@property NSMutableArray* parties;
+@property BOOL animateNavBar;
 @end
 
 @implementation MasterViewController
 @synthesize detailViewController;
+@synthesize parties;
+@synthesize animateNavBar;
 
 -(instancetype)init
 {
     if(self = [super init])
     {
         [[self tableView] registerClass:[UITableViewCell class] forCellReuseIdentifier:NSStringFromClass([UITableViewCell class])];
+        self.animateNavBar = YES;
     }
     return self;
 }
@@ -36,7 +39,6 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-    _objects = nil;
 }
 
 #pragma mark - View
@@ -60,6 +62,14 @@
     [add setImage:[UIImage imageNamed:@"Add"] forState:UIControlStateNormal];
     [add addTarget:self action:@selector(showJoinParty) forControlEvents:UIControlEventTouchUpInside];
     [[self navigationItem] setRightBarButtonItem:[[UIBarButtonItem alloc] initWithCustomView:add]];
+    
+    // Initialize the refresh control.
+    self.refreshControl = [[UIRefreshControl alloc] init];
+    self.refreshControl.backgroundColor = [[SharedData sharedData] meNextPurple];
+    self.refreshControl.tintColor = [UIColor whiteColor];
+    [self.refreshControl addTarget:self
+                            action:@selector(refreshTable)
+                  forControlEvents:UIControlEventValueChanged];
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -67,14 +77,19 @@
     [super viewWillAppear:animated];
     
     [self refreshTable];
-    
+    if(animateNavBar)
+    {
+        [self.navigationController setNavigationBarHidden:YES];
+        animateNavBar = NO;
+    }
 }
 
 -(void)viewDidAppear:(BOOL)animated
 {
-    if([[SharedData sharedData] splashView] != nil)
+    
+    if([self.navigationController isNavigationBarHidden])
     {
-        [[[SharedData sharedData] splashView] removeFromSuperview];
+        [self.navigationController setNavigationBarHidden:NO animated:YES];
     }
 }
 
@@ -82,17 +97,16 @@
 
 -(void) refreshTable
 {
-    _objects = [[NSMutableArray alloc] init];
+    parties = [[NSMutableArray alloc] init];
     
     [[SharedData sessionManager] GET:[NSString stringWithFormat:@"handler.php?action=listJoinedParties"] parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
-        
-        if(![_objects isEqual:((NSDictionary*)responseObject)[@"parties"]])
+        if(![parties isEqual:((NSDictionary*)responseObject)[@"parties"]])
         {
             //parse parties into _objects
             //Dictionary with one KeyValue, value is array of party Dictionaries
             if(![((NSString*)[responseObject objectForKey:@"status"])  isEqual: @"failed"])
             {
-                [_objects addObjectsFromArray:((NSDictionary*)responseObject)[@"parties"]];
+                [parties addObjectsFromArray:((NSDictionary*)responseObject)[@"parties"]];
                 [self.tableView reloadData];
             }
             else
@@ -102,6 +116,7 @@
                 }];
             }
         }
+        [self.refreshControl endRefreshing];
         
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
         UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Error Loading Joined Parties"
@@ -120,7 +135,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return _objects.count;
+    return parties.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -131,7 +146,9 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:NSStringFromClass([UITableViewCell class])];
     }
     
-    NSString* text = _objects[indexPath.row][@"name"];
+    [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
+    
+    NSString* text = parties[indexPath.row][@"name"];
     cell.textLabel.text = text.kv_decodeHTMLCharacterEntities;
     
     return cell;
@@ -146,7 +163,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     detailViewController = [[DetailViewController alloc] init];
-    [detailViewController setDetailItem:_objects[indexPath.row]];
+    [detailViewController setDetailItem:parties[indexPath.row]];
     [self.navigationController pushViewController:detailViewController animated:YES];
 }
 

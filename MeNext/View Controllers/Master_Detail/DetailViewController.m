@@ -37,6 +37,14 @@
         partyName = nil;
         
         [self.tableView setAllowsSelection:NO];
+        
+        // Initialize the refresh control.
+        self.refreshControl = [[UIRefreshControl alloc] init];
+        self.refreshControl.backgroundColor = [[SharedData sharedData] meNextPurple];
+        self.refreshControl.tintColor = [UIColor whiteColor];
+        [self.refreshControl addTarget:self
+                                action:@selector(loadTracks)
+                      forControlEvents:UIControlEventValueChanged];
     }
     return self;
 }
@@ -72,6 +80,7 @@
                 [self loadTracks];
             }];
         }
+        [self.refreshControl endRefreshing];
         
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
         UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Error Logging In"

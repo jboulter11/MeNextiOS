@@ -12,6 +12,7 @@
 #import "Masonry.h"
 #import "AppDelegate.h"
 #import "SharedData.h"
+#import "Realm.h"
 
 @interface LoginViewController (){
     NSDictionary* postDictionary;
@@ -67,16 +68,17 @@
     if(username)
     {
         usernameTextField.text = username;
-    }
-    
-    if(usernameTextField.text != nil)
-    {
         [passwordTextField becomeFirstResponder];
     }
     else
     {
         [usernameTextField becomeFirstResponder];
     }
+}
+
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
 }
 
 - (void)viewDidLoad
@@ -106,7 +108,13 @@
     continueButton.backgroundColor = (actionRegistration ? [[SharedData sharedData] meNextPurple] : [[SharedData sharedData] meNextRed]);
     continueButton.layer.cornerRadius = 6;
     continueButton.clipsToBounds = YES;
-    continueButton.titleLabel.text = (actionRegistration ? @"Sign up" : @"Log in");
+    [continueButton setTitle:(actionRegistration ? @"Sign up" : @"Log in") forState:UIControlStateNormal];
+    [continueButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [continueButton addTarget:self
+                       action:(actionRegistration ?
+                               @selector(registerButtonPressed:) :
+                               @selector(loginButtonPressed:))
+             forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:continueButton];
     
     //Username
@@ -116,11 +124,12 @@
     
     //Divider between username and password
     divider1 = [[UIView alloc] init];
-    divider1.backgroundColor = [UIColor lightGrayColor];
+    divider1.backgroundColor = [UIColor colorWithWhite:200/255.0 alpha:.5];
     [baseView addSubview:divider1];
     
     //Password
     passwordTextField = [[UITextField alloc] init];
+    passwordTextField.secureTextEntry = YES;
     passwordTextField.placeholder = @"Password";
     [baseView addSubview:passwordTextField];
     
@@ -128,12 +137,13 @@
     {
         //Divider between password and confirm
         divider2 = [[UIView alloc] init];
-        divider2.backgroundColor = [UIColor lightGrayColor];
+        divider2.backgroundColor = [UIColor colorWithWhite:200/255.0 alpha:.5];
         [baseView addSubview:divider2];
         
         //Confirm Password
         confirmTextField = [[UITextField alloc] init];
-        confirmTextField.placeholder = @"Password";
+        confirmTextField.secureTextEntry = YES;
+        confirmTextField.placeholder = @"Confirm";
         [baseView addSubview:confirmTextField];
     }
     
@@ -193,7 +203,7 @@
         }];
         
         [confirmTextField mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(divider1.mas_bottom);
+            make.top.equalTo(divider2.mas_bottom);
             make.left.equalTo(baseView.mas_left).with.offset(10);
             make.right.equalTo(baseView.mas_right).with.offset(-10);
             make.height.equalTo(@55);
@@ -209,9 +219,7 @@
     [[SharedData sessionManager] POST:@"handler.php" parameters:postDictionary success:^(NSURLSessionDataTask *task, id responseObject) {
         if([responseObject[@"status"] isEqualToString:@"success"])
         {
-            dispatch_async(dispatch_get_main_queue(), ^{
-                [activityIndicator stopAnimating];
-            });
+            [activityIndicator stopAnimating];
             [[SharedData appDel] setLogin];
         }
         else
@@ -226,9 +234,7 @@
                                                            delegate:nil
                                                   cancelButtonTitle:@"OK"
                                                   otherButtonTitles:nil];
-            dispatch_async(dispatch_get_main_queue(), ^{
-                [activityIndicator stopAnimating];
-            });
+            [activityIndicator stopAnimating];
             [alert show];
         }
         
@@ -238,9 +244,7 @@
                                                        delegate:nil
                                               cancelButtonTitle:@"OK"
                                               otherButtonTitles:nil];
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [activityIndicator stopAnimating];
-        });
+        [activityIndicator stopAnimating];
         [alert show];
     }];
 }
@@ -276,13 +280,6 @@
 -(void)registerButtonPressed:(id)sender
 {
     [self handleRequest:@"register"];
-}
-
-#pragma mark - Misc
-
-- (UIStatusBarStyle)preferredStatusBarStyle
-{
-    return UIStatusBarStyleLightContent;
 }
 
 @end

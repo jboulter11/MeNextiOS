@@ -30,6 +30,7 @@
 {
     if(self = [super initWithStyle:UITableViewStyleGrouped])
     {
+        self.title = @"Join Parties";
         //Register Cells
         [self.tableView registerClass:[AddPartyTableViewCell class] forCellReuseIdentifier:NSStringFromClass([AddPartyTableViewCell class])];
         [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:NSStringFromClass([UITableViewCell class])];
@@ -41,7 +42,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationController.navigationBar.topItem.title = @"";
 }
 
 #pragma mark - Actions

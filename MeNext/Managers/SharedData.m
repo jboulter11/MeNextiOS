@@ -10,7 +10,6 @@
 
 @implementation SharedData
 @synthesize KEY;
-@synthesize splashView;
 @synthesize meNextRed;
 @synthesize meNextPurple;
 @synthesize fbBlue;
@@ -71,7 +70,6 @@
     if(self = [super init])
     {
         KEY = @"AIzaSyAbh1CseUDq0NKangT-QRIeyOoZLz6jCII";//MeNext Youtube iOS API Key
-        splashView = nil;
         
         meNextRed = [UIColor colorWithRed:239/255.0 green:35/255.0 blue:53/255.0 alpha:1];
         meNextPurple = [UIColor colorWithRed:136/255.0 green:44/255.0 blue:215/255.0 alpha:1];
