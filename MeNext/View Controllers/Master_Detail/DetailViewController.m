@@ -23,7 +23,7 @@
 @end
 
 @implementation DetailViewController
-@synthesize detailItem;
+@synthesize party;
 
 #pragma mark - Init
 
@@ -64,7 +64,7 @@
 {
     //tracks = [[NSMutableArray alloc] init];
     [[SharedData sessionManager] GET:[NSString stringWithFormat:@"handler.php?action=listVideos&partyId=%@", partyId] parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
-        //parse tracks into _tracks
+        //parse tracks
         //Dictionary, 2kv pairs: status and videos
         if([responseObject[@"status"] isEqualToString:@"success"])
         {
@@ -98,8 +98,8 @@
 {
     [super viewWillAppear:animated];
     
-    partyId = detailItem[@"partyId"];
-    partyName = detailItem[@"name"];
+    partyId = party[@"partyId"];
+    partyName = party[@"name"];
     
     self.title = partyName;
     
@@ -175,7 +175,8 @@
 - (void)addTrackButtonPressed:(id)sender
 {
     AddTrackSearchTableViewController* atstvc = [[AddTrackSearchTableViewController alloc] init];
-    atstvc.partyId = detailItem[@"partyId"];
+    atstvc.partyId = party[@"partyId"];
+    atstvc.currentPartyTracks = tracks;
     
     [self.navigationController pushViewController:atstvc animated:YES];
 }

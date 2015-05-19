@@ -29,7 +29,6 @@
         [self.contentView addSubview:imageView];
         
         addTrackButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        [addTrackButton setImage:[UIImage imageNamed:@"AddColor"] forState:UIControlStateNormal];
         [self.contentView addSubview:addTrackButton];
         
         titleTextView = [[UITextView alloc] init];
@@ -61,7 +60,7 @@
     return self;
 }
 
--(void)configureForIndexPath:(NSIndexPath*)indexPath withTrack:(NSDictionary*)track
+-(void)configureForIndexPath:(NSIndexPath*)indexPath withButtonImageNamed:(NSString*)name
 {
     
 }

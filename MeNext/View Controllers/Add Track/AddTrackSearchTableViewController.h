@@ -11,5 +11,6 @@
 @interface AddTrackSearchTableViewController : UITableViewController <UISearchBarDelegate>
 
 @property NSString* partyId;
+@property NSArray* currentPartyTracks;
 
 @end

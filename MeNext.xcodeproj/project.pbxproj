@@ -17,7 +17,6 @@
 		0C999704195373B50067F0A3 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C999703195373B50067F0A3 /* LoginViewController.m */; };
 		0CB355051975FDA5005FD24C /* SharedData.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CB355041975FDA5005FD24C /* SharedData.m */; };
 		0CBFB4F3197023B70001CED3 /* AddTrackTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CBFB4F2197023B70001CED3 /* AddTrackTableViewCell.m */; };
-		0CBFB4F919707A4B0001CED3 /* AddTrackDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CBFB4F819707A4B0001CED3 /* AddTrackDetailViewController.m */; };
 		0CBFB4FF19707AF90001CED3 /* AddTrackSearchTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CBFB4FE19707AF90001CED3 /* AddTrackSearchTableViewController.m */; };
 		0CF520C219453E1C0043AC8F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CF520C119453E1C0043AC8F /* Foundation.framework */; };
 		0CF520C419453E1C0043AC8F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CF520C319453E1C0043AC8F /* CoreGraphics.framework */; };
@@ -53,8 +52,6 @@
 		0CB355041975FDA5005FD24C /* SharedData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SharedData.m; sourceTree = "<group>"; };
 		0CBFB4F1197023B70001CED3 /* AddTrackTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddTrackTableViewCell.h; sourceTree = "<group>"; };
 		0CBFB4F2197023B70001CED3 /* AddTrackTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddTrackTableViewCell.m; sourceTree = "<group>"; };
-		0CBFB4F719707A4B0001CED3 /* AddTrackDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddTrackDetailViewController.h; sourceTree = "<group>"; };
-		0CBFB4F819707A4B0001CED3 /* AddTrackDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddTrackDetailViewController.m; sourceTree = "<group>"; };
 		0CBFB4FD19707AF90001CED3 /* AddTrackSearchTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddTrackSearchTableViewController.h; sourceTree = "<group>"; };
 		0CBFB4FE19707AF90001CED3 /* AddTrackSearchTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddTrackSearchTableViewController.m; sourceTree = "<group>"; };
 		0CF520BE19453E1C0043AC8F /* MeNext.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeNext.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -133,8 +130,6 @@
 			children = (
 				0CBFB4FD19707AF90001CED3 /* AddTrackSearchTableViewController.h */,
 				0CBFB4FE19707AF90001CED3 /* AddTrackSearchTableViewController.m */,
-				0CBFB4F719707A4B0001CED3 /* AddTrackDetailViewController.h */,
-				0CBFB4F819707A4B0001CED3 /* AddTrackDetailViewController.m */,
 			);
 			path = "Add Track";
 			sourceTree = "<group>";
@@ -371,7 +366,6 @@
 				0C0E871C1B025E2D00542159 /* InputTableViewCell.m in Sources */,
 				0CF520DE19453E1C0043AC8F /* DetailViewController.m in Sources */,
 				0C09E271195CB609001A714B /* DetailTableViewCell.m in Sources */,
-				0CBFB4F919707A4B0001CED3 /* AddTrackDetailViewController.m in Sources */,
 				0C0E87201B047A5B00542159 /* RLMLoginCredential.m in Sources */,
 				0CBFB4FF19707AF90001CED3 /* AddTrackSearchTableViewController.m in Sources */,
 			);

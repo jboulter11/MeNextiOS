@@ -163,7 +163,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     detailViewController = [[DetailViewController alloc] init];
-    [detailViewController setDetailItem:parties[indexPath.row]];
+    [detailViewController setParty:parties[indexPath.row]];
     [self.navigationController pushViewController:detailViewController animated:YES];
 }
 

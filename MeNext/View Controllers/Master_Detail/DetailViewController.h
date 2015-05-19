@@ -10,6 +10,6 @@
 
 @interface DetailViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate, UISplitViewControllerDelegate, NSURLSessionDelegate>
 
-@property id detailItem;
+@property id party;
 
 @end

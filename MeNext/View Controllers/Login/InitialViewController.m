@@ -139,7 +139,6 @@
 {
     [[SharedData fbLoginManager] logInWithReadPermissions:@[@"email"]
                                                  handler:^(FBSDKLoginManagerLoginResult *result, NSError *error) {
-                                                     NSLog(@"FACEBOOK RESULT:%@", [result description]);
                                                      if(!error && ![result isCancelled])
                                                      {
                                                          //We're logged in
