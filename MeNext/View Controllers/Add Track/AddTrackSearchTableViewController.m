@@ -71,9 +71,7 @@
 -(void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    
-    [searchController setActive:YES];
-    [searchBar becomeFirstResponder];
+    [self.searchController.searchBar becomeFirstResponder];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -103,12 +101,10 @@
         [[SharedData youtubeSessionManager] GET:path parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
             @try {
                 NSMutableArray* tempTracks = [[NSMutableArray alloc] init];
-                for(NSInteger trackNum = 0; trackNum<15;++trackNum)
+                for(NSInteger trackNum = 0; trackNum<15; ++trackNum)
                 {
                     [tempTracks addObject:responseObject[@"items"][trackNum]];
                 }
-                //[tracks addObjectsFromArray:responseObject[@"items"]];
-                //[searchBar resignFirstResponder];
                 if(![tracks isEqualToArray:tempTracks])
                 {
                     //reset our stuff
@@ -139,6 +135,12 @@
     {
         [self performSearch:aSearchController.searchBar.text];
     }
+}
+
+-(BOOL)searchBarShouldEndEditing:(UISearchBar *)aSearchBar
+{
+    [aSearchBar resignFirstResponder];
+    return NO;
 }
 
 #pragma mark - Action Methods
