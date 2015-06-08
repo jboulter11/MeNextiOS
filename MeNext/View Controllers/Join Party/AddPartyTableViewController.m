@@ -180,6 +180,7 @@
             cell = [[AddPartyTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:NSStringFromClass([AddPartyTableViewCell class])];
         }
         [cell.textField becomeFirstResponder];
+        [cell.textField setDelegate:self];
         return cell;
     }
     else

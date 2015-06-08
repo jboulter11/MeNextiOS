@@ -14,7 +14,7 @@
 #import "SharedData.h"
 #import "Realm.h"
 
-@interface LoginViewController (){
+@interface LoginViewController () <UITextFieldDelegate>{
     NSDictionary* postDictionary;
     
     UIActivityIndicatorView* activityIndicator;
@@ -28,6 +28,7 @@
 @property UIButton* continueButton;
 @property UIButton* xButton;
 @property UIImageView* backgroundImageView;
+@property NSMutableArray* textFields;
 
 @end
 
@@ -42,6 +43,7 @@
 @synthesize continueButton;
 @synthesize xButton;
 @synthesize backgroundImageView;
+@synthesize textFields;
 
 #pragma mark - Init
 
@@ -85,6 +87,8 @@
 {
     [super viewDidLoad];
     
+    textFields = [[NSMutableArray alloc] init];
+    
     //Background ImageView
     backgroundImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Turntable"]];
     [backgroundImageView setContentMode:UIViewContentModeScaleAspectFill];
@@ -120,6 +124,10 @@
     //Username
     usernameTextField = [[UITextField alloc] init];
     usernameTextField.placeholder = @"Username";
+    usernameTextField.delegate = self;
+    usernameTextField.tag = 0;
+    usernameTextField.returnKeyType = UIReturnKeyNext;
+    [textFields addObject:usernameTextField];
     [baseView addSubview:usernameTextField];
     
     //Divider between username and password
@@ -131,6 +139,10 @@
     passwordTextField = [[UITextField alloc] init];
     passwordTextField.secureTextEntry = YES;
     passwordTextField.placeholder = @"Password";
+    passwordTextField.delegate = self;
+    passwordTextField.tag = 1;
+    passwordTextField.returnKeyType = (actionRegistration ? UIReturnKeyNext : UIReturnKeyDone);
+    [textFields addObject:passwordTextField];
     [baseView addSubview:passwordTextField];
     
     if(actionRegistration)
@@ -144,6 +156,10 @@
         confirmTextField = [[UITextField alloc] init];
         confirmTextField.secureTextEntry = YES;
         confirmTextField.placeholder = @"Confirm";
+        confirmTextField.delegate = self;
+        confirmTextField.tag = 2;
+        confirmTextField.returnKeyType = UIReturnKeyDone;
+        [textFields addObject:confirmTextField];
         [baseView addSubview:confirmTextField];
     }
     
@@ -224,13 +240,8 @@
         }
         else
         {
-            NSString* msg = @"Error logging in";
-            if([responseObject[@"errors"][0] isEqualToString:@"bad username/password combination"])
-            {
-                msg = @"Wrong username or password";
-            }
-            UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Error Logging In"
-                                                            message:msg
+            UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                            message:responseObject[@"errors"][0]
                                                            delegate:nil
                                                   cancelButtonTitle:@"OK"
                                                   otherButtonTitles:nil];
@@ -252,8 +263,17 @@
 - (void)handleRequest:(NSString*)action
 {
     //only proceed if we have credentials for login
-    if(usernameTextField.text.length != 0 || passwordTextField.text.length != 0)
+    if(usernameTextField.text.length != 0 && passwordTextField.text.length != 0)
     {
+        if(actionRegistration && ![confirmTextField.text isEqualToString:passwordTextField.text]){
+            UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Password fields do not match"
+                                                            message:nil
+                                                           delegate:nil
+                                                  cancelButtonTitle:@"Oops"
+                                                  otherButtonTitles:nil];
+            [alert show];
+            return;
+        }
         [activityIndicator startAnimating];
         
         //SANITIZE INPUTS
@@ -265,6 +285,21 @@
     }
 }
 
+#pragma mark - UITextFieldDelegate
+
+-(BOOL)textFieldShouldReturn:(UITextField*)textField
+{
+    NSInteger nextTag = textField.tag + 1;
+    // Try to find next responder
+    if (textFields.count > nextTag) {
+        // Found next responder, so set it.
+        [textFields[nextTag] becomeFirstResponder];
+    } else {
+        // Not found, so try to login/register.
+        [self handleRequest:(actionRegistration ? @"register" : @"login")];
+    }
+    return NO; // We do not want UITextField to insert line-breaks.
+}
 #pragma mark - Actions
 
 -(void)back:(id)sender

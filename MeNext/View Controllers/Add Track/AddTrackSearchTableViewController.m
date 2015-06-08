@@ -12,14 +12,15 @@
 #import "SharedData.h"
 #import "CRToast.h"
 
-@interface AddTrackSearchTableViewController ()
+@interface AddTrackSearchTableViewController () <UISearchResultsUpdating>
 @property NSMutableArray* tracks;
+@property UISearchController* searchController;
 @property UISearchBar* searchBar;
 @end
 
 @implementation AddTrackSearchTableViewController
 @synthesize partyId;
-@synthesize searchBar;
+@synthesize searchController, searchBar;
 @synthesize tracks;
 @synthesize currentPartyTracks;
 
@@ -33,8 +34,17 @@
         
         tracks = [[NSMutableArray alloc] init];
         
-        searchBar = [[UISearchBar alloc] init];
-        searchBar.delegate = self;
+        searchController = [[UISearchController alloc] initWithSearchResultsController:nil];
+        searchBar = searchController.searchBar;
+        searchController.searchResultsUpdater = self;
+        
+        self.searchController.dimsBackgroundDuringPresentation = NO;
+        self.searchController.hidesNavigationBarDuringPresentation = NO;
+        
+        self.searchController.searchBar.frame = CGRectMake(self.searchController.searchBar.frame.origin.x, self.searchController.searchBar.frame.origin.y, self.searchController.searchBar.frame.size.width, 44.0);
+        
+        self.tableView.tableHeaderView = self.searchController.searchBar;
+        self.searchController.searchBar.clipsToBounds = YES;
         
         [self.searchBar sizeToFit];
         
@@ -49,8 +59,28 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
     
-    [self.searchBar becomeFirstResponder];
+    [searchBar setHidden:NO];
+}
+
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    [searchController setActive:YES];
+    [searchBar becomeFirstResponder];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    [searchBar setHidden:YES];
+    [searchController setActive:NO];
 }
 
 - (void)didReceiveMemoryWarning
@@ -67,9 +97,10 @@
     dispatch_async(queue, ^{
         
         
-        NSString* query = (NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(NULL, (CFStringRef)searchBar.text, NULL, (CFStringRef)@"!*'();:@&=+$,/?%#[]", kCFStringEncodingUTF8));
+        NSString* filteredQuery = (NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(NULL, (CFStringRef)query, NULL, (CFStringRef)@"!*'();:@&=+$,/?%#[]", kCFStringEncodingUTF8));
+        NSString* path = [NSString stringWithFormat:@"search?&key=%@&type=video&part=id,snippet&maxResults=15&q=%@&fields=items(id,snippet(title,description))", [[SharedData sharedData] KEY], filteredQuery];
         
-        [[SharedData youtubeSessionManager] GET:[NSString stringWithFormat:@"search?&key=%@&type=video&part=id,snippet&maxResults=15&q=%@&fields=items(id,snippet(title,description))", [[SharedData sharedData] KEY], query] parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+        [[SharedData youtubeSessionManager] GET:path parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
             @try {
                 NSMutableArray* tempTracks = [[NSMutableArray alloc] init];
                 for(NSInteger trackNum = 0; trackNum<15;++trackNum)
@@ -100,29 +131,14 @@
     });
 }
 
-- (void)searchBarSearchButtonClicked:(UISearchBar *)aSearchBar
-{
-    if(aSearchBar.text.length > 1)
-    {
-        [self performSearch:searchBar.text];
-    }
-}
 
--(void)searchBar:(UISearchBar *)aSearchBar textDidChange:(NSString *)searchText
-{
-    if(aSearchBar.text.length > 1)
-    {
-        [self performSearch:searchText];
-    }
-}
 
--(BOOL)searchBarShouldEndEditing:(UISearchBar *)aSearchBar
+-(void)updateSearchResultsForSearchController:(UISearchController *)aSearchController
 {
-    if(aSearchBar.text.length > 1)
+    if(aSearchController.searchBar.text.length > 1)
     {
-        [self performSearch:searchBar.text];
+        [self performSearch:aSearchController.searchBar.text];
     }
-    return YES;
 }
 
 #pragma mark - Action Methods
@@ -214,7 +230,6 @@
             NSString* buttonImageName;
             for(NSDictionary* track in currentPartyTracks)
             {
-                NSLog(@"%@ ? %@", track[@"youtubeId"], currentSearchTracks[indexPath.row][@"id"][@"videoId"]);
                 if([(NSString*)track[@"youtubeId"] isEqualToString:(NSString*)currentSearchTracks[indexPath.row][@"id"][@"videoId"]])
                 {
                     buttonImageName = @"Check";
