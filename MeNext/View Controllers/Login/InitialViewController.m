@@ -53,7 +53,7 @@
         //Register Button
         registerButton = [[UIButton alloc] init];
         [registerButton setTitle:@"Sign up" forState:UIControlStateNormal];
-        [registerButton setBackgroundColor:[[SharedData sharedData] meNextPurple]];
+        [registerButton setBackgroundColor:[UIColor meNextPurpleColor]];
         [registerButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [registerButton.layer setCornerRadius:6];
         
@@ -63,7 +63,7 @@
         //Custom Login With Facebook Button
         fbLoginButton = [[UIButton alloc] init];
         [fbLoginButton setTitle:@"Log in with Facebook" forState:UIControlStateNormal];
-        [fbLoginButton setBackgroundColor:[[SharedData sharedData] fbBlue]];
+        [fbLoginButton setBackgroundColor:[UIColor fbBlueColor]];
         [fbLoginButton.layer setCornerRadius:6];
         
         [fbLoginButton addTarget:self action:@selector(fbLogin:) forControlEvents:UIControlEventTouchUpInside];
@@ -72,7 +72,7 @@
         //Login With Email Button
         loginButton = [[UIButton alloc] init];
         [loginButton setTitle:@"Log in" forState:UIControlStateNormal];
-        [loginButton setBackgroundColor:[[SharedData sharedData] meNextRed]];
+        [loginButton setBackgroundColor:[UIColor meNextRedColor]];
         [loginButton.layer setCornerRadius:6];
         
         [loginButton addTarget:self action:@selector(login:) forControlEvents:UIControlEventTouchUpInside];
@@ -138,6 +138,7 @@
 - (void)fbLogin:(id)sender
 {
     [[SharedData fbLoginManager] logInWithReadPermissions:@[@"email"]
+                                       fromViewController:self
                                                  handler:^(FBSDKLoginManagerLoginResult *result, NSError *error) {
                                                      if(!error && ![result isCancelled])
                                                      {

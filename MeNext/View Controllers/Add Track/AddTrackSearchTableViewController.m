@@ -160,7 +160,7 @@
                                      kCRToastTextKey : @"Added!",
                                      kCRToastFontKey : [UIFont boldSystemFontOfSize:16],
                                      kCRToastTextAlignmentKey : @(NSTextAlignmentCenter),
-                                     kCRToastBackgroundColorKey : [[SharedData sharedData] meNextRed],
+                                     kCRToastBackgroundColorKey : [UIColor meNextRedColor],
                                      kCRToastAnimationInTypeKey : @(CRToastAnimationTypeGravity),
                                      kCRToastAnimationOutTypeKey : @(CRToastAnimationTypeGravity),
                                      kCRToastAnimationInDirectionKey : @(CRToastAnimationDirectionTop),

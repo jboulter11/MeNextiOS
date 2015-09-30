@@ -35,7 +35,7 @@
         [logoutButton setTitle:@"Log out" forState:UIControlStateNormal];
         logoutButton.layer.cornerRadius = 6;
         logoutButton.clipsToBounds = YES;
-        [logoutButton setBackgroundColor:[[SharedData sharedData] meNextPurple]];
+        [logoutButton setBackgroundColor:[UIColor meNextPurpleColor]];
         [logoutButton addTarget:self action:@selector(logoutButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
         [[self view] addSubview:logoutButton];
         

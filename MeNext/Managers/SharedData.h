@@ -13,12 +13,10 @@
 #import "AppDelegate.h"
 #import <Masonry.h>
 #import "RLMLoginCredential.h"
+#import "UIColor+MeNext.h"
 
 @interface SharedData : NSObject
 @property (readonly) NSString* KEY;
-@property UIColor* meNextRed;
-@property UIColor* meNextPurple;
-@property UIColor* fbBlue;
 
 +(NSMutableString *) sanitizeNSString:(NSString *)string;
 
@@ -27,8 +25,9 @@
 +(AFHTTPSessionManager*) youtubeSessionManager;
 +(FBSDKLoginManager*) fbLoginManager;
 
--(SharedData*) init;
+
 +(AppDelegate*) appDel;
++(NSString*)youtubeKey;
 +(void) loginCheck:(id)responseObject withCompletion:(void(^)(void))block;
 +(NSString*)getLaunchImageName;
 

@@ -36,7 +36,7 @@
         
         ratingLabel = [[UILabel alloc] init];
         [ratingLabel setFont:[UIFont systemFontOfSize:12]];
-        [ratingLabel setTextColor:[[SharedData sharedData] meNextRed]];
+        [ratingLabel setTextColor:[UIColor meNextRedColor]];
         [self.contentView addSubview:ratingLabel];
         
         downVoteButton = [[UIButton alloc] init];

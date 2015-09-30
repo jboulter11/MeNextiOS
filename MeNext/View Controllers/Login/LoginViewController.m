@@ -109,7 +109,7 @@
     
     //Button to Log in / Register
     continueButton = [[UIButton alloc] init];
-    continueButton.backgroundColor = (actionRegistration ? [[SharedData sharedData] meNextPurple] : [[SharedData sharedData] meNextRed]);
+    continueButton.backgroundColor = (actionRegistration ? [UIColor meNextPurpleColor] : [UIColor meNextRedColor]);
     continueButton.layer.cornerRadius = 6;
     continueButton.clipsToBounds = YES;
     [continueButton setTitle:(actionRegistration ? @"Sign up" : @"Log in") forState:UIControlStateNormal];
