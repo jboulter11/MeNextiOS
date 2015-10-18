@@ -18,6 +18,10 @@
 {
     return [UIColor colorWithRed:136/255.0 green:44/255.0 blue:215/255.0 alpha:1];
 }
++(UIColor*) meNextChicagoColor
+{
+    return [UIColor colorWithRed:0.36 green:0.36 blue:0.34 alpha:1];
+}
 +(UIColor*) fbBlueColor
 {
     return [UIColor colorWithRed:59/255.0 green:89/255.0 blue:152/255.0 alpha:1];

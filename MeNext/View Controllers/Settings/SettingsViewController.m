@@ -12,13 +12,12 @@
 #import "Realm.h"
 
 @interface SettingsViewController ()
-{
-    UIButton* logoutButton;
-}
-
+@property UIButton* bugReportButton;
+@property UIButton* logoutButton;
 @end
 
 @implementation SettingsViewController
+@synthesize bugReportButton, logoutButton;
 
 #pragma mark - Init
 
@@ -30,6 +29,15 @@
         
         [self setTitle:@"Settings"];
         
+        //Bug reporting
+        bugReportButton = [[UIButton alloc] init];
+        [bugReportButton setTitle:@"Report a bug" forState:UIControlStateNormal];
+        bugReportButton.layer.cornerRadius = 6;
+        bugReportButton.clipsToBounds = YES;
+        [bugReportButton setBackgroundColor:[UIColor meNextChicagoColor]];
+        [bugReportButton addTarget:self action:@selector(bugReportButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
+        [[self view] addSubview:bugReportButton];
+        
         //Logout Button
         logoutButton = [[UIButton alloc] init];
         [logoutButton setTitle:@"Log out" forState:UIControlStateNormal];
@@ -39,10 +47,19 @@
         [logoutButton addTarget:self action:@selector(logoutButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
         [[self view] addSubview:logoutButton];
         
+        UIEdgeInsets padding = UIEdgeInsetsMake(10, 10, -10, -10);
+        
+        [bugReportButton mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self.view.mas_top).with.offset(padding.top);
+            make.left.equalTo(self.view.mas_left).with.offset(padding.left);
+            make.right.equalTo(self.view.mas_right).with.offset(padding.right);
+            make.height.equalTo(@55);
+        }];
+        
         [logoutButton mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.equalTo([self view].mas_left).with.offset(10);
-            make.right.equalTo([self view].mas_right).with.offset(-10);
-            make.bottom.equalTo([self view].mas_bottom).with.offset(-10);
+            make.left.equalTo([self view].mas_left).with.offset(padding.left);
+            make.right.equalTo([self view].mas_right).with.offset(padding.right);
+            make.bottom.equalTo([self view].mas_bottom).with.offset(padding.bottom);
             make.height.equalTo(@55);
         }];
     }
@@ -50,6 +67,13 @@
 }
 
 #pragma mark - Actions
+
+-(void)bugReportButtonPressed:(id)sender
+{
+    NSString* email = [[NSString stringWithFormat:
+                        @"mailto:jboulter11@gmail.com?subject=MeNext iOS Bug&body=Please provide details about the bug.\n----------------------------------------\n\n----------------------------------------\nWhat can I do to make it happen for me too?\n----------------------------------------\n\n----------------------------------------\n"] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:email]];
+}
 
 - (void)logoutButtonPressed:(id)sender
 {

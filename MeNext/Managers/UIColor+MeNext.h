@@ -12,6 +12,7 @@
 
 +(UIColor*) meNextRedColor;
 +(UIColor*) meNextPurpleColor;
++(UIColor*) meNextChicagoColor;
 +(UIColor*) fbBlueColor;
 
 @end
