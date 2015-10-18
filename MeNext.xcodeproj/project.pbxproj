@@ -35,10 +35,10 @@
 		00B88C4348BD4EAA9B803F68 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C09E26F195CB609001A714B /* DetailTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailTableViewCell.h; sourceTree = "<group>"; };
 		0C09E270195CB609001A714B /* DetailTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailTableViewCell.m; sourceTree = "<group>"; };
-		0C0E87171B025C7300542159 /* InitialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InitialViewController.h; path = "MeNext/View Controllers/Login/InitialViewController.h"; sourceTree = SOURCE_ROOT; };
-		0C0E87181B025C7300542159 /* InitialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InitialViewController.m; path = "MeNext/View Controllers/Login/InitialViewController.m"; sourceTree = SOURCE_ROOT; };
-		0C0E871A1B025E2D00542159 /* InputTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InputTableViewCell.h; path = "MeNext/Table View Cells/InputTableViewCell.h"; sourceTree = SOURCE_ROOT; };
-		0C0E871B1B025E2D00542159 /* InputTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InputTableViewCell.m; path = "MeNext/Table View Cells/InputTableViewCell.m"; sourceTree = SOURCE_ROOT; };
+		0C0E87171B025C7300542159 /* InitialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InitialViewController.h; sourceTree = "<group>"; };
+		0C0E87181B025C7300542159 /* InitialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InitialViewController.m; sourceTree = "<group>"; };
+		0C0E871A1B025E2D00542159 /* InputTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputTableViewCell.h; sourceTree = "<group>"; };
+		0C0E871B1B025E2D00542159 /* InputTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputTableViewCell.m; sourceTree = "<group>"; };
 		0C0E871E1B047A5B00542159 /* RLMLoginCredential.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RLMLoginCredential.h; sourceTree = "<group>"; };
 		0C0E871F1B047A5B00542159 /* RLMLoginCredential.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RLMLoginCredential.m; sourceTree = "<group>"; };
 		0C16C76D19ECA2A5009B62D6 /* AddPartyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddPartyTableViewController.h; sourceTree = "<group>"; };
@@ -98,7 +98,7 @@
 				0C0E871E1B047A5B00542159 /* RLMLoginCredential.h */,
 				0C0E871F1B047A5B00542159 /* RLMLoginCredential.m */,
 			);
-			name = Objects;
+			path = Objects;
 			sourceTree = "<group>";
 		};
 		0C5C71211A9948F900CE9B75 /* View Controllers */ = {
@@ -107,8 +107,8 @@
 				0C875FCE1AE4D86C003625D1 /* Add Track */,
 				0C875FCF1AE4D895003625D1 /* Join Party */,
 				0C875FD01AE4D8A4003625D1 /* Login */,
-				0C875FD11AE4D8AB003625D1 /* Settings */,
 				0C875FD21AE4D8B4003625D1 /* Master_Detail */,
+				0C875FD11AE4D8AB003625D1 /* Settings */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -116,12 +116,12 @@
 		0C5C71221A99515C00CE9B75 /* Table View Cells */ = {
 			isa = PBXGroup;
 			children = (
-				0C09E26F195CB609001A714B /* DetailTableViewCell.h */,
-				0C09E270195CB609001A714B /* DetailTableViewCell.m */,
-				0CBFB4F1197023B70001CED3 /* AddTrackTableViewCell.h */,
-				0CBFB4F2197023B70001CED3 /* AddTrackTableViewCell.m */,
 				0C16C77019ECA6A8009B62D6 /* AddPartyTableViewCell.h */,
 				0C16C77119ECA6A8009B62D6 /* AddPartyTableViewCell.m */,
+				0CBFB4F1197023B70001CED3 /* AddTrackTableViewCell.h */,
+				0CBFB4F2197023B70001CED3 /* AddTrackTableViewCell.m */,
+				0C09E26F195CB609001A714B /* DetailTableViewCell.h */,
+				0C09E270195CB609001A714B /* DetailTableViewCell.m */,
 				0C0E871A1B025E2D00542159 /* InputTableViewCell.h */,
 				0C0E871B1B025E2D00542159 /* InputTableViewCell.m */,
 			);
@@ -149,10 +149,10 @@
 		0C875FD01AE4D8A4003625D1 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				0C999702195373B50067F0A3 /* LoginViewController.h */,
-				0C999703195373B50067F0A3 /* LoginViewController.m */,
 				0C0E87171B025C7300542159 /* InitialViewController.h */,
 				0C0E87181B025C7300542159 /* InitialViewController.m */,
+				0C999702195373B50067F0A3 /* LoginViewController.h */,
+				0C999703195373B50067F0A3 /* LoginViewController.m */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -169,10 +169,10 @@
 		0C875FD21AE4D8B4003625D1 /* Master_Detail */ = {
 			isa = PBXGroup;
 			children = (
-				0CF520D919453E1C0043AC8F /* MasterViewController.h */,
-				0CF520DA19453E1C0043AC8F /* MasterViewController.m */,
 				0CF520DC19453E1C0043AC8F /* DetailViewController.h */,
 				0CF520DD19453E1C0043AC8F /* DetailViewController.m */,
+				0CF520D919453E1C0043AC8F /* MasterViewController.h */,
+				0CF520DA19453E1C0043AC8F /* MasterViewController.m */,
 			);
 			path = Master_Detail;
 			sourceTree = "<group>";
@@ -191,10 +191,10 @@
 		0CF520B519453E1C0043AC8F = {
 			isa = PBXGroup;
 			children = (
-				0CF520C719453E1C0043AC8F /* MeNext */,
 				0CF520C019453E1C0043AC8F /* Frameworks */,
-				0CF520BF19453E1C0043AC8F /* Products */,
+				0CF520C719453E1C0043AC8F /* MeNext */,
 				20DA99595D2A7C590CDAC694 /* Pods */,
+				0CF520BF19453E1C0043AC8F /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -223,12 +223,12 @@
 			children = (
 				0C93238C1AD94B0700D209AA /* Managers */,
 				0C0E871D1B047A3800542159 /* Objects */,
+				0CF520C819453E1C0043AC8F /* Supporting Files */,
 				0C5C71221A99515C00CE9B75 /* Table View Cells */,
 				0C5C71211A9948F900CE9B75 /* View Controllers */,
 				0CF520D019453E1C0043AC8F /* AppDelegate.h */,
 				0CF520D119453E1C0043AC8F /* AppDelegate.m */,
 				0CF520DF19453E1C0043AC8F /* Images.xcassets */,
-				0CF520C819453E1C0043AC8F /* Supporting Files */,
 			);
 			path = MeNext;
 			sourceTree = "<group>";
@@ -236,10 +236,10 @@
 		0CF520C819453E1C0043AC8F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				0CF520C919453E1C0043AC8F /* MeNext-Info.plist */,
 				0CF520CA19453E1C0043AC8F /* InfoPlist.strings */,
-				0CF520CD19453E1C0043AC8F /* main.m */,
+				0CF520C919453E1C0043AC8F /* MeNext-Info.plist */,
 				0CF520CF19453E1C0043AC8F /* MeNext-Prefix.pch */,
+				0CF520CD19453E1C0043AC8F /* main.m */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";

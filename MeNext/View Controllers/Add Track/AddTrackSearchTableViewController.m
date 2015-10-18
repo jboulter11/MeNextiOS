@@ -96,7 +96,7 @@
         
         
         NSString* filteredQuery = (NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(NULL, (CFStringRef)query, NULL, (CFStringRef)@"!*'();:@&=+$,/?%#[]", kCFStringEncodingUTF8));
-        NSString* path = [NSString stringWithFormat:@"search?&key=%@&type=video&part=id,snippet&maxResults=15&q=%@&fields=items(id,snippet(title,description))", [[SharedData sharedData] KEY], filteredQuery];
+        NSString* path = [NSString stringWithFormat:@"search?&key=%@&type=video&part=id,snippet&maxResults=15&q=%@&fields=items(id,snippet(title,description))", [SharedData youtubeKey], filteredQuery];
         
         [[SharedData youtubeSessionManager] GET:path parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
             @try {

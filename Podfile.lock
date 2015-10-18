@@ -40,9 +40,9 @@ PODS:
     - FBSDKCoreKit
   - Masonry (0.6.3)
   - NSString-HTML (0.0.1)
-  - Realm (0.95.2):
-    - Realm/Headers (= 0.95.2)
-  - Realm/Headers (0.95.2)
+  - Realm (0.95.3):
+    - Realm/Headers (= 0.95.3)
+  - Realm/Headers (0.95.3)
   - SDWebImage (3.7.3):
     - SDWebImage/Core (= 3.7.3)
   - SDWebImage/Core (3.7.3)
@@ -65,7 +65,7 @@ SPEC CHECKSUMS:
   FBSDKLoginKit: 3d07febbfa884b9878cacba54f705bb41f07d4b6
   Masonry: ff105a956abcd19a618b2028b121cb638d7a8e2f
   NSString-HTML: 0dc0ae9d430d20a96dda961a346fa842fffa8c1f
-  Realm: 4c026902041bb39c4bd083ebc5e88f4f17973d72
+  Realm: 55885fa05865344994ad8b56da96669ffa39fbf1
   SDWebImage: 1d2b1a1efda1ade1b00b6f8498865f8ddedc8a84
 
 COCOAPODS: 0.38.2
