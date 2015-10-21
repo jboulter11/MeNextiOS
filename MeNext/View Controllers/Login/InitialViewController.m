@@ -147,12 +147,12 @@
                                                      }
                                                      else
                                                      {
-                                                         UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Could not login with Facebook"
-                                                                                                         message:@"Try again"
-                                                                                                        delegate:self
-                                                                                               cancelButtonTitle:@"OK"
-                                                                                               otherButtonTitles: nil];
-                                                         [alert show];
+                                                         UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Could not log into facebook"
+                                                                                                                         message:[error localizedDescription]
+                                                                                                                  preferredStyle:UIAlertControllerStyleAlert];
+                                                         
+                                                         [alert addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil]];
+                                                         [self presentViewController:alert animated:YES completion:nil];
                                                      }
                                                  }];
 }

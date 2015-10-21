@@ -23,7 +23,8 @@
 
 -(instancetype)init
 {
-    if(self = [super init])
+    self = [super init];
+    if(self)
     {
         [self.view setBackgroundColor:[UIColor whiteColor]];
         
@@ -70,27 +71,21 @@
 
 -(void)bugReportButtonPressed:(id)sender
 {
-    NSString* email = [[NSString stringWithFormat:
-                        @"mailto:jboulter11@gmail.com?subject=MeNext iOS Bug&body=Please provide details about the bug.\n----------------------------------------\n\n----------------------------------------\nWhat can I do to make it happen for me too?\n----------------------------------------\n\n----------------------------------------\n"] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:email]];
+    NSURL* url = [NSURL URLWithString:@"mailto:jboulter11@gmail.com?subject=MeNext%20iOS%20Bug&body=Please%20provide%20details%20about%20the%20bug.%0A----------------------------------------%0A%0A----------------------------------------%0AWhat%20can%20I%20do%20to%20make%20it%20happen%20for%20me%20too?%0A----------------------------------------%0A%0A----------------------------------------%0A"];
+    [[UIApplication sharedApplication] openURL:url];
 }
 
 - (void)logoutButtonPressed:(id)sender
 {
-    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"Are you sure?"
-                                                             delegate:self
-                                                    cancelButtonTitle:@"Cancel"
-                                               destructiveButtonTitle:@"Log out"
-                                                    otherButtonTitles:nil];
-    [actionSheet showInView:[self view]];
-}
-
--(void)actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex
-{
-    if(buttonIndex == actionSheet.destructiveButtonIndex)
-    {
+    UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Are you sure?"
+                                                                   message:nil
+                                                            preferredStyle:UIAlertControllerStyleActionSheet];
+    
+    [alert addAction:[UIAlertAction actionWithTitle:@"Log out" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
         [[SharedData appDel] setLogout];
-    }
+    }]];
+    [alert addAction:[UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleDefault handler:nil]];
+    [self presentViewController:alert animated:YES completion:nil];
 }
 
 #pragma mark - View

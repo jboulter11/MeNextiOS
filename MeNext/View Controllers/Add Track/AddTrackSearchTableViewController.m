@@ -93,8 +93,7 @@
 {
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         
-        
-        NSString* filteredQuery = (NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(NULL, (CFStringRef)query, NULL, (CFStringRef)@"!*'();:@&=+$,/?%#[]", kCFStringEncodingUTF8));
+        NSString* filteredQuery = [query stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet characterSetWithCharactersInString:@"!*'();:@&=+$,/?%#[]"]];
         NSString* path = [NSString stringWithFormat:@"search?&key=%@&type=video&part=id,snippet&maxResults=15&q=%@&fields=items(id,snippet(title,description))", [SharedData youtubeKey], filteredQuery];
         
         [[SharedData youtubeSessionManager] GET:path parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
@@ -116,12 +115,12 @@
             }
             
         } failure:^(NSURLSessionDataTask *task, NSError *error) {
-            UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Error with Youtube API"
-                                                            message:[error localizedDescription]
-                                                           delegate:nil
-                                                  cancelButtonTitle:@"OK"
-                                                  otherButtonTitles:nil];
-            [alert show];
+            UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Error with the Youtube API"
+                                                                           message:[error localizedDescription]
+                                                                    preferredStyle:UIAlertControllerStyleAlert];
+            
+            [alert addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil]];
+            [self presentViewController:alert animated:YES completion:nil];
         }];
     });
 }
@@ -184,12 +183,12 @@
         }
         
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
-        UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Error Adding Track"
-                                                        message:[error localizedDescription]
-                                                       delegate:nil
-                                              cancelButtonTitle:@"OK"
-                                              otherButtonTitles:nil];
-        [alert show];
+        UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Error adding track"
+                                                                       message:[error localizedDescription]
+                                                                preferredStyle:UIAlertControllerStyleAlert];
+        
+        [alert addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil]];
+        [self presentViewController:alert animated:YES completion:nil];
     }];
 }
 

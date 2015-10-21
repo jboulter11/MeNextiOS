@@ -83,12 +83,12 @@
         [self.refreshControl endRefreshing];
         
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
-        UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Error Logging In"
-                                                        message:[error localizedDescription]
-                                                       delegate:nil
-                                              cancelButtonTitle:@"OK"
-                                              otherButtonTitles:nil];
-        [alert show];
+        UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Error loading tracks"
+                                                                       message:[error localizedDescription]
+                                                                preferredStyle:UIAlertControllerStyleAlert];
+        
+        [alert addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil]];
+        [self presentViewController:alert animated:YES completion:nil];
     }];
 }
 
@@ -148,12 +148,12 @@
             }
             
         } failure:^(NSURLSessionDataTask *task, NSError *error) {
-            UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Error Voting"
-                                                            message:[error localizedDescription]
-                                                           delegate:nil
-                                                  cancelButtonTitle:@"OK"
-                                                  otherButtonTitles:nil];
-            [alert show];
+            UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Error voting"
+                                                                           message:[error localizedDescription]
+                                                                    preferredStyle:UIAlertControllerStyleAlert];
+            
+            [alert addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil]];
+            [self presentViewController:alert animated:YES completion:nil];
         }];
     }
     

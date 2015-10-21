@@ -107,12 +107,6 @@
                 }
                 
             } failure:^(NSURLSessionDataTask *task, NSError *error) {
-                UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Oops, looks like you're logged out"
-                                                                message:[error localizedDescription]
-                                                               delegate:nil
-                                                      cancelButtonTitle:@"OK"
-                                                      otherButtonTitles:nil];
-                [alert show];
                 [[SharedData appDel] setLogout];
             }];
         }

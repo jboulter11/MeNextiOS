@@ -39,6 +39,11 @@
     });
     
     tempNav = [[UINavigationController alloc] initWithRootViewController:[[MasterViewController alloc] init]];
+//    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
+//        UISplitViewController *splitViewController = (UISplitViewController *)self.window.rootViewController;
+//        UINavigationController *navigationController = [splitViewController.viewControllers lastObject];
+//        splitViewController.delegate = (id)navigationController.topViewController;
+//    }
     
     [UIView transitionWithView:self.window
                       duration:0.5
@@ -90,19 +95,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
-//    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
-//        UISplitViewController *splitViewController = (UISplitViewController *)self.window.rootViewController;
-//        UINavigationController *navigationController = [splitViewController.viewControllers lastObject];
-//        splitViewController.delegate = (id)navigationController.topViewController;
-//    }
-    
     //Let AFNetworking deal with our networking activity indicator
     [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
     
-    //Status Bar Config
-    [application setStatusBarStyle:UIStatusBarStyleLightContent];
-    
+    //Status Bar Config    
     [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:239/255.0 green:35/255.0 blue:53/255.0 alpha:1]];
     [[UINavigationBar appearance] setTranslucent:NO];
     [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];

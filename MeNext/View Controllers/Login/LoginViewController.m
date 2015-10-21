@@ -240,23 +240,23 @@
         }
         else
         {
-            UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Error"
-                                                            message:responseObject[@"errors"][0]
-                                                           delegate:nil
-                                                  cancelButtonTitle:@"OK"
-                                                  otherButtonTitles:nil];
+            UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Error logging in"
+                                                                           message:responseObject[@"status"]
+                                                                    preferredStyle:UIAlertControllerStyleAlert];
+            
+            [alert addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil]];
             [activityIndicator stopAnimating];
-            [alert show];
+            [self presentViewController:alert animated:YES completion:nil];
         }
         
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
-        UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Error Logging In"
-                                                        message:[error localizedDescription]
-                                                       delegate:nil
-                                              cancelButtonTitle:@"OK"
-                                              otherButtonTitles:nil];
+        UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Error logging in"
+                                                                       message:[error localizedDescription]
+                                                                preferredStyle:UIAlertControllerStyleAlert];
+        
+        [alert addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil]];
         [activityIndicator stopAnimating];
-        [alert show];
+        [self presentViewController:alert animated:YES completion:nil];        
     }];
 }
 
@@ -266,12 +266,12 @@
     if(usernameTextField.text.length != 0 && passwordTextField.text.length != 0)
     {
         if(actionRegistration && ![confirmTextField.text isEqualToString:passwordTextField.text]){
-            UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Password fields do not match"
-                                                            message:nil
-                                                           delegate:nil
-                                                  cancelButtonTitle:@"Oops"
-                                                  otherButtonTitles:nil];
-            [alert show];
+            UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Password fields don't match"
+                                                                           message:nil
+                                                                    preferredStyle:UIAlertControllerStyleAlert];
+            
+            [alert addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil]];
+            [self presentViewController:alert animated:YES completion:nil];
             return;
         }
         [activityIndicator startAnimating];

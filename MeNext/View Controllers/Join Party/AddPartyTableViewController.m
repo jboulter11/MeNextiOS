@@ -70,12 +70,12 @@
         }
         else
         {
-            UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Error Joining Party"
-                                                            message:nil
-                                                           delegate:nil
-                                                  cancelButtonTitle:@"OK"
-                                                  otherButtonTitles:nil];
-            [alert show];
+            UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Error joining party"
+                                                                           message:[responseObject objectForKey:@"status"]
+                                                                    preferredStyle:UIAlertControllerStyleAlert];
+            
+            [alert addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil]];
+            [self presentViewController:alert animated:YES completion:nil];
             [SharedData loginCheck:responseObject withCompletion:^{
                 [self sendRequestWithId:partyId];
             }];
@@ -85,12 +85,12 @@
         });
         
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
-        UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Error Joining Party"
-                                                        message:[error localizedDescription]
-                                                       delegate:nil
-                                              cancelButtonTitle:@"OK"
-                                              otherButtonTitles:nil];
-        [alert show];
+        UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Error joining party"
+                                                                       message:[error localizedDescription]
+                                                                preferredStyle:UIAlertControllerStyleAlert];
+        
+        [alert addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil]];
+        [self presentViewController:alert animated:YES completion:nil];
     }];
 }
 
