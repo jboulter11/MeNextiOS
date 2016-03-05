@@ -9,7 +9,7 @@
 #import "SettingsViewController.h"
 #import "AppDelegate.h"
 #import "SharedData.h"
-#import "Realm.h"
+#import "Realm/Realm.h"
 
 @interface SettingsViewController ()
 @property UIButton* bugReportButton;

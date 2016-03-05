@@ -63,7 +63,7 @@
 - (void)loadTracks
 {
     //tracks = [[NSMutableArray alloc] init];
-    [[SharedData sessionManager] GET:[NSString stringWithFormat:@"handler.php?action=listVideos&partyId=%@", partyId] parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+    [[SharedData sessionManager] GET:[NSString stringWithFormat:@"handler.php?action=listVideos&partyId=%@", partyId] parameters:nil progress:nil success:^(NSURLSessionDataTask *task, id responseObject) {
         //parse tracks
         //Dictionary, 2kv pairs: status and videos
         if([responseObject[@"status"] isEqualToString:@"success"])
@@ -134,7 +134,7 @@
         NSString* submissionId = tracks[row][@"submissionId"];
         NSDictionary* postDictionary = @{@"action": @"vote", @"direction": direction, @"submissionId":submissionId};
         
-        [[SharedData sessionManager] POST:@"handler.php" parameters:postDictionary success:^(NSURLSessionDataTask *task, id responseObject) {
+        [[SharedData sessionManager] POST:@"handler.php" parameters:postDictionary progress:nil success:^(NSURLSessionDataTask *task, id responseObject) {
             //re-fetch data on tracks to reflect new order
             if(![((NSString*)[responseObject objectForKey:@"status"])  isEqual: @"failed"])
             {

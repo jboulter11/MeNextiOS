@@ -13,7 +13,7 @@
 #import "MasterViewController.h"
 #import "InitialViewController.h"
 #import "SharedData.h"
-#import "Realm.h"
+#import <Realm/Realm.h>
 
 @interface AppDelegate ()
 @property UINavigationController* nav;

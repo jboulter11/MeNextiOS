@@ -99,7 +99,7 @@
 {
     parties = [[NSMutableArray alloc] init];
     
-    [[SharedData sessionManager] GET:[NSString stringWithFormat:@"handler.php?action=listJoinedParties"] parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+    [[SharedData sessionManager] GET:[NSString stringWithFormat:@"handler.php?action=listJoinedParties"] parameters:nil progress:nil success:^(NSURLSessionDataTask *task, id responseObject) {
         if(![parties isEqual:((NSDictionary*)responseObject)[@"parties"]])
         {
             //parse parties into _objects

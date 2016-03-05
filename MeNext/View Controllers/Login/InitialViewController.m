@@ -10,7 +10,7 @@
 #import "LoginViewController.h"
 #import "SharedData.h"
 #import "InputTableViewCell.h"
-#import <FBSDKCoreKit.h>
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <FBSDKLoginKit.h>
 
 @interface InitialViewController ()

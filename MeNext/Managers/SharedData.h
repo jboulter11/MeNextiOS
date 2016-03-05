@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <QuartzCore/QuartzCore.h>
-#import <FBSDKCoreKit.h>
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <FBSDKLoginKit.h>
 #import "AFHTTPSessionManager.h"
 #import "AppDelegate.h"

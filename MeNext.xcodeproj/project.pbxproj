@@ -14,7 +14,7 @@
 		0C16C76F19ECA2A5009B62D6 /* AddPartyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C16C76E19ECA2A5009B62D6 /* AddPartyTableViewController.m */; };
 		0C16C77219ECA6A8009B62D6 /* AddPartyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C16C77119ECA6A8009B62D6 /* AddPartyTableViewCell.m */; };
 		0C38E62919496A220035FA82 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C38E62819496A220035FA82 /* SettingsViewController.m */; };
-		0C435D3E1BB9B6E20056AE2E /* UIColor+MeNext.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C435D3D1BB9B6E20056AE2E /* UIColor+MeNext.m */; settings = {ASSET_TAGS = (); }; };
+		0C435D3E1BB9B6E20056AE2E /* UIColor+MeNext.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C435D3D1BB9B6E20056AE2E /* UIColor+MeNext.m */; };
 		0C999704195373B50067F0A3 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C999703195373B50067F0A3 /* LoginViewController.m */; };
 		0CB355051975FDA5005FD24C /* SharedData.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CB355041975FDA5005FD24C /* SharedData.m */; };
 		0CBFB4F3197023B70001CED3 /* AddTrackTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CBFB4F2197023B70001CED3 /* AddTrackTableViewCell.m */; };
@@ -265,6 +265,7 @@
 				0CF520BB19453E1C0043AC8F /* Frameworks */,
 				0CF520BC19453E1C0043AC8F /* Resources */,
 				F5004779EA7B4262A8CD44EF /* Copy Pods Resources */,
+				EFE47B6161EDF4AF6F7FC8F5 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -334,6 +335,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EFE47B6161EDF4AF6F7FC8F5 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F5004779EA7B4262A8CD44EF /* Copy Pods Resources */ = {
@@ -479,7 +495,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MeNext/Supporting Files/MeNext-Prefix.pch";
 				INFOPLIST_FILE = "MeNext/Supporting Files/MeNext-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jimboulter.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -500,7 +516,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MeNext/Supporting Files/MeNext-Prefix.pch";
 				INFOPLIST_FILE = "MeNext/Supporting Files/MeNext-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jimboulter.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";

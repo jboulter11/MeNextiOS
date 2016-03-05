@@ -93,7 +93,7 @@
     {
         if([FBSDKAccessToken currentAccessToken] != nil)
         {
-            [[SharedData sessionManager] POST:@"handler.php" parameters:@{@"action":@"fbLogin", @"accessToken":[[FBSDKAccessToken currentAccessToken] tokenString], @"userId":[[FBSDKAccessToken currentAccessToken] userID]} success:^(NSURLSessionDataTask *task, id responseObject) {
+            [[SharedData sessionManager] POST:@"handler.php" parameters:@{@"action":@"fbLogin", @"accessToken":[[FBSDKAccessToken currentAccessToken] tokenString], @"userId":[[FBSDKAccessToken currentAccessToken] userID]} progress:nil success:^(NSURLSessionDataTask *task, id responseObject) {
                 if([responseObject[@"status"] isEqualToString:@"success"])
                 {
                     if(block)

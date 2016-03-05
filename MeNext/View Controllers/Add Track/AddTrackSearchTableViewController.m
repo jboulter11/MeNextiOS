@@ -96,7 +96,7 @@
         NSString* filteredQuery = [query stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet characterSetWithCharactersInString:@"!*'();:@&=+$,/?%#[]"]];
         NSString* path = [NSString stringWithFormat:@"search?&key=%@&type=video&part=id,snippet&maxResults=15&q=%@&fields=items(id,snippet(title,description))", [SharedData youtubeKey], filteredQuery];
         
-        [[SharedData youtubeSessionManager] GET:path parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+        [[SharedData youtubeSessionManager] GET:path parameters:nil progress:nil success:^(NSURLSessionDataTask *task, id responseObject) {
             @try {
                 NSMutableArray* tempTracks = [[NSMutableArray alloc] init];
                 for(NSInteger trackNum = 0; trackNum<15; ++trackNum)
@@ -151,7 +151,7 @@
     //send request to add track to party
     
     NSDictionary* postDictionary = @{@"action":@"addVideo", @"partyId":partyId, @"youtubeId":tracks[row][@"id"][@"videoId"]};
-    [[SharedData sessionManager] POST:@"handler.php" parameters:postDictionary success:^(NSURLSessionDataTask *task, id responseObject) {
+    [[SharedData sessionManager] POST:@"handler.php" parameters:postDictionary progress:nil success:^(NSURLSessionDataTask *task, id responseObject) {
         if(![((NSString*)[responseObject objectForKey:@"status"])  isEqual: @"failed"])
         {
             NSDictionary* options = @{

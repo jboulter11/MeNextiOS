@@ -62,7 +62,7 @@
 - (void)sendRequestWithId:(NSString*)partyId
 {
     NSDictionary* postDictionary = @{@"action": @"joinParty", @"partyId": partyId};
-    [[SharedData sessionManager] POST:@"handler.php" parameters:postDictionary success:^(NSURLSessionDataTask *task, id responseObject) {
+    [[SharedData sessionManager] POST:@"handler.php" parameters:postDictionary progress:nil success:^(NSURLSessionDataTask *task, id responseObject) {
         
         if(![((NSString*)[responseObject objectForKey:@"status"])  isEqual: @"failed"])
         {

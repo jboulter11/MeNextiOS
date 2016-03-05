@@ -12,7 +12,7 @@
 #import "Masonry.h"
 #import "AppDelegate.h"
 #import "SharedData.h"
-#import "Realm.h"
+#import "Realm/Realm.h"
 
 @interface LoginViewController () <UITextFieldDelegate>{
     NSDictionary* postDictionary;
@@ -232,7 +232,7 @@
 - (void)sendRequest
 {
     //send the actual request asyncronously
-    [[SharedData sessionManager] POST:@"handler.php" parameters:postDictionary success:^(NSURLSessionDataTask *task, id responseObject) {
+    [[SharedData sessionManager] POST:@"handler.php" parameters:postDictionary progress:nil success:^(NSURLSessionDataTask *task, id responseObject) {
         if([responseObject[@"status"] isEqualToString:@"success"])
         {
             [activityIndicator stopAnimating];
