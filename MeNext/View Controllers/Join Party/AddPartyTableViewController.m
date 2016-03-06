@@ -70,6 +70,7 @@
         }
         else
         {
+            
             UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Error joining party"
                                                                            message:[responseObject objectForKey:@"status"]
                                                                     preferredStyle:UIAlertControllerStyleAlert];
@@ -98,7 +99,7 @@
 
 -(void)startScanner
 {
-    //SOME CRAZY VIEW CODE TO SHOW CAMERA AND HIGHLIGHT BARCODE, AS WELL AS RUN THE SCANNER
+    //SOME VIEW CODE TO SHOW CAMERA AND HIGHLIGHT BARCODE, AS WELL AS RUN THE SCANNER
     _highlightView = [[UIView alloc] init];
     _highlightView.autoresizingMask = UIViewAutoresizingFlexibleTopMargin|UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleRightMargin|UIViewAutoresizingFlexibleBottomMargin;
     _highlightView.layer.borderColor = [UIColor greenColor].CGColor;
